@@ -1,0 +1,13 @@
+# Output products list for <mult_18_18_18>
+mult_18_18_18.asy
+mult_18_18_18.gise
+mult_18_18_18.ngc
+mult_18_18_18.v
+mult_18_18_18.veo
+mult_18_18_18.xco
+mult_18_18_18.xise
+mult_18_18_18\doc\mult_gen_ds255.pdf
+mult_18_18_18\doc\mult_gen_v11_2_readme.txt
+mult_18_18_18\doc\mult_gen_v11_2_vinfo.html
+mult_18_18_18_flist.txt
+mult_18_18_18_xmdf.tcl

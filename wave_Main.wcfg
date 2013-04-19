@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="D:/Dropbox/NUS/FYP/RiskCalculationFPGA/test_Main_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="numeric_std" />
+            <top_module name="std_logic_1164" />
+            <top_module name="std_logic_arith" />
+            <top_module name="std_logic_signed" />
+            <top_module name="std_logic_unsigned" />
+            <top_module name="test_Main" />
+            <top_module name="textio" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="23" />
+   <wvobject fp_name="/test_Main/iMu" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">iMu[17:0]</obj_property>
+      <obj_property name="ObjectShortName">iMu[17:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_Main/iS" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">iS[17:0]</obj_property>
+      <obj_property name="ObjectShortName">iS[17:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_Main/iSigma" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">iSigma[17:0]</obj_property>
+      <obj_property name="ObjectShortName">iSigma[17:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_Main/CLK" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">CLK</obj_property>
+      <obj_property name="ObjectShortName">CLK</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_Main/uut/readyOption" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">readyOption</obj_property>
+      <obj_property name="ObjectShortName">readyOption</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_Main/uut/startExpMu" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">startExpMu</obj_property>
+      <obj_property name="ObjectShortName">startExpMu</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_Main/uut/busyExpMu" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">busyExpMu</obj_property>
+      <obj_property name="ObjectShortName">busyExpMu</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_Main/uut/addrExpMuUsed" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">addrExpMuUsed[8:0]</obj_property>
+      <obj_property name="ObjectShortName">addrExpMuUsed[8:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_Main/uut/ExpMuUsed" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">ExpMuUsed[1:0]</obj_property>
+      <obj_property name="ObjectShortName">ExpMuUsed[1:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_Main/uut/dataExpMuUsed" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">dataExpMuUsed[17:0]</obj_property>
+      <obj_property name="ObjectShortName">dataExpMuUsed[17:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_Main/uut/doneExpMu[0]" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">[0]</obj_property>
+      <obj_property name="ObjectShortName">doneExpMu[0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_Main/uut/readyExpMu" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">readyExpMu</obj_property>
+      <obj_property name="ObjectShortName">readyExpMu</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_Main/uut/startExpSigma" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">startExpSigma</obj_property>
+      <obj_property name="ObjectShortName">startExpSigma</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_Main/uut/busyExpSigma" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">busyExpSigma</obj_property>
+      <obj_property name="ObjectShortName">busyExpSigma</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_Main/uut/ExpSigmaUsed" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">ExpSigmaUsed[1:0]</obj_property>
+      <obj_property name="ObjectShortName">ExpSigmaUsed[1:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_Main/uut/addrExpSigmaUsed" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">addrExpSigmaUsed[9:0]</obj_property>
+      <obj_property name="ObjectShortName">addrExpSigmaUsed[9:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_Main/uut/dataExpSigmaUsed" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">dataExpSigmaUsed[17:0]</obj_property>
+      <obj_property name="ObjectShortName">dataExpSigmaUsed[17:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_Main/uut/doneExpSigma[0]" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">[0]</obj_property>
+      <obj_property name="ObjectShortName">doneExpSigma[0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_Main/uut/readyExpSigma" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">readyExpSigma</obj_property>
+      <obj_property name="ObjectShortName">readyExpSigma</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_Main/uut/startCores" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">startCores</obj_property>
+      <obj_property name="ObjectShortName">startCores</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_Main/uut/busyCores" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">busyCores</obj_property>
+      <obj_property name="ObjectShortName">busyCores</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_Main/uut/oDone[0]" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">[0]</obj_property>
+      <obj_property name="ObjectShortName">oDone[0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_Main/uut/oAcc[0]" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">[0,26:0]</obj_property>
+      <obj_property name="ObjectShortName">oAcc[0,26:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+</wave_config>

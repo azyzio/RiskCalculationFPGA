@@ -74,9 +74,9 @@ begin
 	end
 end
 
-mult_18_9_18 mul1(CLK, iMu, t, tmu);
+mult_9_18_18 mult1(CLK, t, iMu, tmu);
 Exponential exp(CLK, 1'b0, tmu, exp_tmu);
-Mult mul2(CLK, exp_tmu[21:4], iS, product);
+mult_18_18_18_muexp mult2(CLK, exp_tmu[21:4], iS, product);
 
 assign oData = product;
 assign oAddr = t_delayed;

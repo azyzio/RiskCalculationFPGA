@@ -7,7 +7,7 @@ module RAM_X_18(
 	readAddr,
 	writeAddr,
 	readData,
-	writeData,
+	writeData
 );
 
 parameter addr_size = 10;

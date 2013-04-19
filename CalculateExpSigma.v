@@ -85,9 +85,9 @@ end
 assign xsigma_f = xsigma_shift[17:0];
 assign xsigma_i = xsigma_shift[20:18];
 
-mult_9_18_21 x_sigma_mult(CLK, x, iSigma, xsigma);
+mult_10_18_21 x_sigma_mult(CLK, x, iSigma, xsigma);
 
-rom_3_13 exp_i_table(CLK, xsigma_i, exp_int);
+ROM_3_13 exp_i_table(CLK, xsigma_i, exp_int);
 Exponential exp(CLK, 1'b0, xsigma_f, exp_frac);
 
 mult_12_13_18 exp_mult(CLK, enable_exp_mul, exp_frac[19:8], exp_int_delayed, exp_xsigma);
