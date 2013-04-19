@@ -97,7 +97,7 @@ begin
 	end
 end
 
-ROM_9_11 #(N) PATH (CLK, t, SigmaReadAddress);
+ROM_path #(N) path (CLK, t, SigmaReadAddress);
 	 
 RAM_X_18 #(pathWidth) exp_sigma (
 	.CLK(CLK),
@@ -119,10 +119,8 @@ RAM_X_18 #(logT) mu_sigma ( // probably one extra register needed
 	.writeData(iMuWriteData)
 );
 
-MUL_18bit Mult(CLK, 1'b1, MuReadData, SigmaReadData, product);
+mult_18_18_18 Mult(CLK, 1'b1, MuReadData, SigmaReadData, product);
 // IntMultiplier_UsingDSP_18_18_unsigned_uid2 Mult(CLK, 1'b0, currentExpMu, SigmaReadData, MultOutput);
-
-
 
 always @(negedge enable_acc) // change
 begin
