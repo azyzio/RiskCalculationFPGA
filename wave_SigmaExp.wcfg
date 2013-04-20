@@ -16,7 +16,7 @@
          </top_modules>
       </db_ref>
    </db_ref_list>
-   <WVObjectSize size="15" />
+   <WVObjectSize size="19" />
    <wvobject fp_name="/test_CalculateExpSigma/iSigma" type="array" db_ref_id="1">
       <obj_property name="ElementShortName">iSigma[17:0]</obj_property>
       <obj_property name="ObjectShortName">iSigma[17:0]</obj_property>
@@ -30,9 +30,22 @@
       <obj_property name="ElementShortName">iStart</obj_property>
       <obj_property name="ObjectShortName">iStart</obj_property>
    </wvobject>
+   <wvobject fp_name="/test_CalculateExpSigma/uut/enable_control/CLK" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">CLK</obj_property>
+      <obj_property name="ObjectShortName">CLK</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_CalculateExpSigma/uut/enable" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">enable</obj_property>
+      <obj_property name="ObjectShortName">enable</obj_property>
+   </wvobject>
    <wvobject fp_name="/test_CalculateExpSigma/uut/x" type="array" db_ref_id="1">
       <obj_property name="ElementShortName">x[9:0]</obj_property>
       <obj_property name="ObjectShortName">x[9:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_CalculateExpSigma/uut/x_next" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">x_next[9:0]</obj_property>
+      <obj_property name="ObjectShortName">x_next[9:0]</obj_property>
       <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/test_CalculateExpSigma/uut/xsigma" type="array" db_ref_id="1">
@@ -60,19 +73,15 @@
       <obj_property name="ObjectShortName">exp_int[12:0]</obj_property>
       <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
-   <wvobject fp_name="/test_CalculateExpSigma/uut/exp_xsigma" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">exp_xsigma[17:0]</obj_property>
-      <obj_property name="ObjectShortName">exp_xsigma[17:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-   </wvobject>
    <wvobject fp_name="/test_CalculateExpSigma/uut/exp_frac" type="array" db_ref_id="1">
       <obj_property name="ElementShortName">exp_frac[21:0]</obj_property>
       <obj_property name="ObjectShortName">exp_frac[21:0]</obj_property>
       <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
-   <wvobject fp_name="/test_CalculateExpSigma/uut/exp_int_delayed" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">exp_int_delayed[12:0]</obj_property>
-      <obj_property name="ObjectShortName">exp_int_delayed[12:0]</obj_property>
+   <wvobject fp_name="/test_CalculateExpSigma/uut/exp_xsigma" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">exp_xsigma[17:0]</obj_property>
+      <obj_property name="ObjectShortName">exp_xsigma[17:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/test_CalculateExpSigma/oAddr" type="array" db_ref_id="1">
       <obj_property name="ElementShortName">oAddr[9:0]</obj_property>
@@ -83,6 +92,14 @@
       <obj_property name="ElementShortName">oData[17:0]</obj_property>
       <obj_property name="ObjectShortName">oData[17:0]</obj_property>
       <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_CalculateExpSigma/uut/oValid" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">oValid</obj_property>
+      <obj_property name="ObjectShortName">oValid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_CalculateExpSigma/uut/done" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">done</obj_property>
+      <obj_property name="ObjectShortName">done</obj_property>
    </wvobject>
    <wvobject fp_name="/test_CalculateExpSigma/oDone" type="logic" db_ref_id="1">
       <obj_property name="ElementShortName">oDone</obj_property>

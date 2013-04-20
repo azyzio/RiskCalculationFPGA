@@ -12,13 +12,15 @@ module test_CalculateExpSigma;
 	wire [17:0] oData;
 	wire [9:0] oAddr;
 	wire oDone;
-
+	wire oValid;
+	
 	// Instantiate the Unit Under Test (UUT)
 	CalculateExpSigma uut (
 		.CLK(CLK), 
 		.iSigma(iSigma), 
 		.iStart(iStart), 
-		.oData(oData), 
+		.oData(oData),
+		.oValid(oValid),
 		.oAddr(oAddr), 
 		.oDone(oDone)
 	);
@@ -32,14 +34,18 @@ module test_CalculateExpSigma;
 		// Wait 100 ns for global reset to finish
 		#100;
 		iStart <= 1;
+      #1;
+		iStart <= 0;
+		#4000;
+		
+		iStart <=1;
 		#2;
 		iStart <= 0;
-        	
 	end
 	
 	always
 	begin
-		#0.5 CLK = ~CLK;
+		#1 CLK = ~CLK;
 	end
       
 endmodule
