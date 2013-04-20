@@ -16,7 +16,7 @@
          </top_modules>
       </db_ref>
    </db_ref_list>
-   <WVObjectSize size="12" />
+   <WVObjectSize size="13" />
    <wvobject fp_name="/test_CalculateExpMu/iMu" type="array" db_ref_id="1">
       <obj_property name="ElementShortName">iMu[17:0]</obj_property>
       <obj_property name="ObjectShortName">iMu[17:0]</obj_property>
@@ -54,6 +54,10 @@
       <obj_property name="ElementShortName">product[17:0]</obj_property>
       <obj_property name="ObjectShortName">product[17:0]</obj_property>
       <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_CalculateExpMu/uut/enable" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">enable</obj_property>
+      <obj_property name="ObjectShortName">enable</obj_property>
    </wvobject>
    <wvobject fp_name="/test_CalculateExpMu/uut/t_delayed" type="array" db_ref_id="1">
       <obj_property name="ElementShortName">t_delayed[8:0]</obj_property>

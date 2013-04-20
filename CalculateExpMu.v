@@ -50,7 +50,7 @@ end
 
 always @ (posedge CLK)
 begin
-	t_delayed <= #12 t;
+	t_delayed <= #6 t;
 	if (iStart && ~enable)
 	begin
 		enable <= 1;
@@ -60,18 +60,18 @@ begin
 	begin
 		if (t == t_max)
 		begin
-			enable <= #2 0; // delay to enable the last change
-			#18;
+			enable <= 0;
+			#9;
 			t <= t_min;
 			done <= 1;
-			#4;
+			#2;
 			done <= 0;
 		end
 		else
 		begin
 			if (enable)
 			begin
-				t	<= #4 t + 1;
+				t	<= #2 t + 1;
 			end
 		end
 	end
