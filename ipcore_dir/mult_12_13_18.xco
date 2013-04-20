@@ -1,7 +1,7 @@
 ##############################################################
 #
 # Xilinx Core Generator version 14.4
-# Date: Fri Apr 19 12:08:31 2013
+# Date: Fri Apr 19 16:10:55 2013
 #
 ##############################################################
 #
@@ -31,7 +31,7 @@ SET implementationfiletype = Ngc
 SET package = fgg484
 SET removerpms = false
 SET simulationfiles = Structural
-SET speedgrade = -2
+SET speedgrade = -3
 SET verilogsim = true
 SET vhdlsim = false
 # END Project Options
@@ -50,9 +50,9 @@ CSET optgoal=Speed
 CSET outputwidthhigh=22
 CSET outputwidthlow=5
 CSET pipestages=2
-CSET portatype=Signed
+CSET portatype=Unsigned
 CSET portawidth=12
-CSET portbtype=Signed
+CSET portbtype=Unsigned
 CSET portbwidth=13
 CSET roundpoint=0
 CSET sclrcepriority=SCLR_Overrides_CE
@@ -65,4 +65,4 @@ CSET zerodetect=false
 MISC pkg_timestamp=2012-11-05T14:23:07Z
 # END Extra information
 GENERATE
-# CRC: 8f37a307
+# CRC: 901ceaff

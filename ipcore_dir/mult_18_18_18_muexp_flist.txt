@@ -1,4 +1,5 @@
 # Output products list for <mult_18_18_18_muexp>
+_xmsgs\pn_parser.xmsgs
 mult_18_18_18_muexp.asy
 mult_18_18_18_muexp.gise
 mult_18_18_18_muexp.ngc

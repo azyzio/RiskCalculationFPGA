@@ -7,7 +7,7 @@
 // \   \   \/     Version: P.49d
 //  \   \         Application: netgen
 //  /   /         Filename: mult_9_18_18.v
-// /___/   /\     Timestamp: Fri Apr 19 18:23:50 2013
+// /___/   /\     Timestamp: Sat Apr 20 08:54:59 2013
 // \   \  /  \ 
 //  \___\/\___\
 //             
@@ -230,8 +230,8 @@ module mult_9_18_18 (
   DSP48A1 #(
     .CARRYINSEL ( "OPMODE5" ),
     .A0REG ( 0 ),
-    .A1REG ( 0 ),
-    .B0REG ( 0 ),
+    .A1REG ( 1 ),
+    .B0REG ( 1 ),
     .B1REG ( 0 ),
     .CREG ( 0 ),
     .MREG ( 1 ),
@@ -255,10 +255,10 @@ module mult_9_18_18 (
     .CLK(clk),
     .RSTB(\blk00000001/sig0000001e ),
     .CEM(\blk00000001/sig0000001d ),
-    .CEB(\blk00000001/sig0000001e ),
+    .CEB(\blk00000001/sig0000001d ),
     .CARRYIN(\blk00000001/sig0000001e ),
     .CEP(\blk00000001/sig0000001e ),
-    .CEA(\blk00000001/sig0000001e ),
+    .CEA(\blk00000001/sig0000001d ),
     .CARRYOUT(\NLW_blk00000001/blk00000004_CARRYOUT_UNCONNECTED ),
     .RSTA(\blk00000001/sig0000001e ),
     .RSTP(\blk00000001/sig0000001e ),
@@ -353,7 +353,9 @@ module mult_9_18_18 (
 \NLW_blk00000001/blk00000004_PCOUT<5>_UNCONNECTED , \NLW_blk00000001/blk00000004_PCOUT<4>_UNCONNECTED , 
 \NLW_blk00000001/blk00000004_PCOUT<3>_UNCONNECTED , \NLW_blk00000001/blk00000004_PCOUT<2>_UNCONNECTED , 
 \NLW_blk00000001/blk00000004_PCOUT<1>_UNCONNECTED , \NLW_blk00000001/blk00000004_PCOUT<0>_UNCONNECTED }),
-    .A({a[8], a[8], a[8], a[8], a[8], a[8], a[8], a[8], a[8], a[8], a[7], a[6], a[5], a[4], a[3], a[2], a[1], a[0]}),
+    .A({\blk00000001/sig0000001e , \blk00000001/sig0000001e , \blk00000001/sig0000001e , \blk00000001/sig0000001e , \blk00000001/sig0000001e , 
+\blk00000001/sig0000001e , \blk00000001/sig0000001e , \blk00000001/sig0000001e , \blk00000001/sig0000001e , a[8], a[7], a[6], a[5], a[4], a[3], a[2], 
+a[1], a[0]}),
     .M({\NLW_blk00000001/blk00000004_M<35>_UNCONNECTED , \NLW_blk00000001/blk00000004_M<34>_UNCONNECTED , 
 \NLW_blk00000001/blk00000004_M<33>_UNCONNECTED , \NLW_blk00000001/blk00000004_M<32>_UNCONNECTED , \NLW_blk00000001/blk00000004_M<31>_UNCONNECTED , 
 \NLW_blk00000001/blk00000004_M<30>_UNCONNECTED , \NLW_blk00000001/blk00000004_M<29>_UNCONNECTED , \NLW_blk00000001/blk00000004_M<28>_UNCONNECTED , 

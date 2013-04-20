@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="D:/Dropbox/NUS/FYP/RiskCalculationFPGA/test_CalculateExpMu_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="numeric_std" />
+            <top_module name="std_logic_1164" />
+            <top_module name="std_logic_arith" />
+            <top_module name="std_logic_signed" />
+            <top_module name="std_logic_unsigned" />
+            <top_module name="test_CalculateExpMu" />
+            <top_module name="textio" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="12" />
+   <wvobject fp_name="/test_CalculateExpMu/iMu" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">iMu[17:0]</obj_property>
+      <obj_property name="ObjectShortName">iMu[17:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_CalculateExpMu/iS" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">iS[17:0]</obj_property>
+      <obj_property name="ObjectShortName">iS[17:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_CalculateExpMu/CLK" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">CLK</obj_property>
+      <obj_property name="ObjectShortName">CLK</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_CalculateExpMu/iStart" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">iStart</obj_property>
+      <obj_property name="ObjectShortName">iStart</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_CalculateExpMu/uut/t" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">t[8:0]</obj_property>
+      <obj_property name="ObjectShortName">t[8:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_CalculateExpMu/uut/tmu" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">tmu[17:0]</obj_property>
+      <obj_property name="ObjectShortName">tmu[17:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_CalculateExpMu/uut/exp_tmu" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">exp_tmu[21:0]</obj_property>
+      <obj_property name="ObjectShortName">exp_tmu[21:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_CalculateExpMu/uut/product" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">product[17:0]</obj_property>
+      <obj_property name="ObjectShortName">product[17:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_CalculateExpMu/uut/t_delayed" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">t_delayed[8:0]</obj_property>
+      <obj_property name="ObjectShortName">t_delayed[8:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_CalculateExpMu/oAddr" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">oAddr[8:0]</obj_property>
+      <obj_property name="ObjectShortName">oAddr[8:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_CalculateExpMu/oData" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">oData[17:0]</obj_property>
+      <obj_property name="ObjectShortName">oData[17:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_CalculateExpMu/oDone" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">oDone</obj_property>
+      <obj_property name="ObjectShortName">oDone</obj_property>
+   </wvobject>
+</wave_config>

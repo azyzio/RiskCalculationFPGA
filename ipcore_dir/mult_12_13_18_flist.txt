@@ -3,7 +3,6 @@ _xmsgs\pn_parser.xmsgs
 mult_12_13_18.asy
 mult_12_13_18.gise
 mult_12_13_18.ngc
-mult_12_13_18.sym
 mult_12_13_18.v
 mult_12_13_18.veo
 mult_12_13_18.xco

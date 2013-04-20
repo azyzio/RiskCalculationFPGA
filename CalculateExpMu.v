@@ -14,8 +14,8 @@ module CalculateExpMu(
 	oDone
 	);
 
-parameter t_min = 171;
-parameter t_max = 341;
+parameter t_min = 343;
+parameter t_max = 511;
 parameter logT = 9;
 
 input						CLK;
@@ -58,18 +58,21 @@ begin
 	end
 	else
 	begin
-		if (enable)
-		begin
-			t	<= #4 t + 1;
-		end
-		
 		if (t == t_max)
 		begin
 			enable <= #2 0; // delay to enable the last change
-			#14;
-			done = 1;
+			#18;
+			t <= t_min;
+			done <= 1;
 			#4;
-			done = 0;
+			done <= 0;
+		end
+		else
+		begin
+			if (enable)
+			begin
+				t	<= #4 t + 1;
+			end
 		end
 	end
 end

@@ -7,14 +7,14 @@
 // \   \   \/     Version: P.49d
 //  \   \         Application: netgen
 //  /   /         Filename: mult_12_13_18.v
-// /___/   /\     Timestamp: Fri Apr 19 20:10:31 2013
+// /___/   /\     Timestamp: Sat Apr 20 00:11:59 2013
 // \   \  /  \ 
 //  \___\/\___\
 //             
-// Command	: -w -sim -ofmt verilog D:/Dropbox/NUS/FYP/RiskCalculationFPGA/ipcore_dir/tmp/_cg/mult_12_13_18.ngc D:/Dropbox/NUS/FYP/RiskCalculationFPGA/ipcore_dir/tmp/_cg/mult_12_13_18.v 
-// Device	: 6slx45fgg484-2
-// Input file	: D:/Dropbox/NUS/FYP/RiskCalculationFPGA/ipcore_dir/tmp/_cg/mult_12_13_18.ngc
-// Output file	: D:/Dropbox/NUS/FYP/RiskCalculationFPGA/ipcore_dir/tmp/_cg/mult_12_13_18.v
+// Command	: -w -sim -ofmt verilog C:/TEMP/_cg/mult_12_13_18.ngc C:/TEMP/_cg/mult_12_13_18.v 
+// Device	: 6slx45fgg484-3
+// Input file	: C:/TEMP/_cg/mult_12_13_18.ngc
+// Output file	: C:/TEMP/_cg/mult_12_13_18.v
 // # of Modules	: 1
 // Design Name	: mult_12_13_18
 // Xilinx        : C:\Xilinx\14.4\ISE_DS\ISE\
@@ -263,7 +263,8 @@ module mult_12_13_18 (
     .CARRYOUT(\NLW_blk00000001/blk00000004_CARRYOUT_UNCONNECTED ),
     .RSTA(\blk00000001/sig0000001d ),
     .RSTP(\blk00000001/sig0000001d ),
-    .B({b[12], b[12], b[12], b[12], b[12], b[12], b[11], b[10], b[9], b[8], b[7], b[6], b[5], b[4], b[3], b[2], b[1], b[0]}),
+    .B({\blk00000001/sig0000001d , \blk00000001/sig0000001d , \blk00000001/sig0000001d , \blk00000001/sig0000001d , \blk00000001/sig0000001d , b[12], 
+b[11], b[10], b[9], b[8], b[7], b[6], b[5], b[4], b[3], b[2], b[1], b[0]}),
     .BCOUT({\NLW_blk00000001/blk00000004_BCOUT<17>_UNCONNECTED , \NLW_blk00000001/blk00000004_BCOUT<16>_UNCONNECTED , 
 \NLW_blk00000001/blk00000004_BCOUT<15>_UNCONNECTED , \NLW_blk00000001/blk00000004_BCOUT<14>_UNCONNECTED , 
 \NLW_blk00000001/blk00000004_BCOUT<13>_UNCONNECTED , \NLW_blk00000001/blk00000004_BCOUT<12>_UNCONNECTED , 
@@ -354,7 +355,8 @@ module mult_12_13_18 (
 \NLW_blk00000001/blk00000004_PCOUT<5>_UNCONNECTED , \NLW_blk00000001/blk00000004_PCOUT<4>_UNCONNECTED , 
 \NLW_blk00000001/blk00000004_PCOUT<3>_UNCONNECTED , \NLW_blk00000001/blk00000004_PCOUT<2>_UNCONNECTED , 
 \NLW_blk00000001/blk00000004_PCOUT<1>_UNCONNECTED , \NLW_blk00000001/blk00000004_PCOUT<0>_UNCONNECTED }),
-    .A({a[11], a[11], a[11], a[11], a[11], a[11], a[11], a[10], a[9], a[8], a[7], a[6], a[5], a[4], a[3], a[2], a[1], a[0]}),
+    .A({\blk00000001/sig0000001d , \blk00000001/sig0000001d , \blk00000001/sig0000001d , \blk00000001/sig0000001d , \blk00000001/sig0000001d , 
+\blk00000001/sig0000001d , a[11], a[10], a[9], a[8], a[7], a[6], a[5], a[4], a[3], a[2], a[1], a[0]}),
     .M({\NLW_blk00000001/blk00000004_M<35>_UNCONNECTED , \NLW_blk00000001/blk00000004_M<34>_UNCONNECTED , 
 \NLW_blk00000001/blk00000004_M<33>_UNCONNECTED , \NLW_blk00000001/blk00000004_M<32>_UNCONNECTED , \NLW_blk00000001/blk00000004_M<31>_UNCONNECTED , 
 \NLW_blk00000001/blk00000004_M<30>_UNCONNECTED , \NLW_blk00000001/blk00000004_M<29>_UNCONNECTED , \NLW_blk00000001/blk00000004_M<28>_UNCONNECTED , 

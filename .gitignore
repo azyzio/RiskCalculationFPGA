@@ -38,7 +38,8 @@ pepExtractor.prj
 impact.xsl
 impact_impact.xwbt
 *readme.txt
-
+_xmsgs\
+*\tmp\
 #ignore OS noise
  
 Thumbs.db

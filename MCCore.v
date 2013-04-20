@@ -113,7 +113,7 @@ RAM_X_18 #(logT) mu_sigma ( // probably one extra register needed
 	.CLK(CLK),
 	.WE(iMuWE),
 	.switch(iSwitch),
-	.readAddr(t),
+	.readAddr(MuReadAddress),
 	.writeAddr(iMuWriteAddress),
 	.readData(MuReadData),
 	.writeData(iMuWriteData)

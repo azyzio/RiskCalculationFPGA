@@ -94,7 +94,7 @@ wire							oDone[0:CoreN-1];
 		.CLK(CLK), 
 		.iMu(iMu), 
 		.iS(iS), 
-		.iStart(busyExpMu), 
+		.iStart(startExpMu), 
 		.oData(dataExpMu[0]), 
 		.oAddr(addrExpMu[0]), 
 		.oDone(doneExpMu[0])
@@ -104,7 +104,7 @@ wire							oDone[0:CoreN-1];
 		.CLK(CLK), 
 		.iMu(iMu), 
 		.iS(iS), 
-		.iStart(busyExpMu), 
+		.iStart(startExpMu), 
 		.oData(dataExpMu[1]), 
 		.oAddr(addrExpMu[1]), 
 		.oDone(doneExpMu[1])
@@ -114,7 +114,7 @@ wire							oDone[0:CoreN-1];
 		.CLK(CLK), 
 		.iMu(iMu), 
 		.iS(iS), 
-		.iStart(busyExpMu), 
+		.iStart(startExpMu), 
 		.oData(dataExpMu[2]), 
 		.oAddr(addrExpMu[2]), 
 		.oDone(doneExpMu[2])
