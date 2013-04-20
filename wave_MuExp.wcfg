@@ -35,6 +35,10 @@
       <obj_property name="ElementShortName">iStart</obj_property>
       <obj_property name="ObjectShortName">iStart</obj_property>
    </wvobject>
+   <wvobject fp_name="/test_CalculateExpMu/uut/enable" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">enable</obj_property>
+      <obj_property name="ObjectShortName">enable</obj_property>
+   </wvobject>
    <wvobject fp_name="/test_CalculateExpMu/uut/t" type="array" db_ref_id="1">
       <obj_property name="ElementShortName">t[8:0]</obj_property>
       <obj_property name="ObjectShortName">t[8:0]</obj_property>
@@ -55,15 +59,6 @@
       <obj_property name="ObjectShortName">product[17:0]</obj_property>
       <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
-   <wvobject fp_name="/test_CalculateExpMu/uut/enable" type="logic" db_ref_id="1">
-      <obj_property name="ElementShortName">enable</obj_property>
-      <obj_property name="ObjectShortName">enable</obj_property>
-   </wvobject>
-   <wvobject fp_name="/test_CalculateExpMu/uut/t_delayed" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">t_delayed[8:0]</obj_property>
-      <obj_property name="ObjectShortName">t_delayed[8:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-   </wvobject>
    <wvobject fp_name="/test_CalculateExpMu/oAddr" type="array" db_ref_id="1">
       <obj_property name="ElementShortName">oAddr[8:0]</obj_property>
       <obj_property name="ObjectShortName">oAddr[8:0]</obj_property>
@@ -73,6 +68,10 @@
       <obj_property name="ElementShortName">oData[17:0]</obj_property>
       <obj_property name="ObjectShortName">oData[17:0]</obj_property>
       <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_CalculateExpMu/oValid" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">oValid</obj_property>
+      <obj_property name="ObjectShortName">oValid</obj_property>
    </wvobject>
    <wvobject fp_name="/test_CalculateExpMu/oDone" type="logic" db_ref_id="1">
       <obj_property name="ElementShortName">oDone</obj_property>

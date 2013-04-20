@@ -11,6 +11,7 @@ module test_CalculateExpMu;
 	// Outputs
 	wire [17:0] oData;
 	wire [8:0] oAddr;
+	wire oValid;
 	wire oDone;
 
 	// Instantiate the Unit Under Test (UUT)
@@ -21,6 +22,7 @@ module test_CalculateExpMu;
 		.iStart(iStart), 
 		.oData(oData), 
 		.oAddr(oAddr), 
+		.oValid(oValid),
 		.oDone(oDone)
 	);
 
