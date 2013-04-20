@@ -60,9 +60,9 @@ begin
 	begin
 		if (t == t_max)
 		begin
-			enable <= 0;
+			enable <= 0; // delay to enable the last change
 			#9;
-			t <= t_min;
+			t <= t_min; // to avoid sending the done signal many times
 			done <= 1;
 			#2;
 			done <= 0;
@@ -78,7 +78,7 @@ begin
 end
 
 mult_9_18_18 mult1(CLK, t, iMu, tmu);
-Exponential exp(CLK, 1'b0, tmu, exp_tmu);
+Exponential exp(CLK, ~enable, tmu, exp_tmu);
 mult_18_18_18_muexp mult2(CLK, exp_tmu[21:4], iS, product);
 
 assign oData = product;

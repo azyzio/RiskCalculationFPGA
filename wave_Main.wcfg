@@ -53,11 +53,6 @@
       <obj_property name="ObjectShortName">ExpMuUsed[1:0]</obj_property>
       <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
-   <wvobject fp_name="/test_Main/uut/addrExpMuUsed" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">addrExpMuUsed[8:0]</obj_property>
-      <obj_property name="ObjectShortName">addrExpMuUsed[8:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-   </wvobject>
    <wvobject fp_name="/test_Main/uut/addrExpMu" type="array" db_ref_id="1">
       <obj_property name="ElementShortName">addrExpMu[0:2,8:0]</obj_property>
       <obj_property name="ObjectShortName">addrExpMu[0:2,8:0]</obj_property>
@@ -77,6 +72,11 @@
          <obj_property name="ObjectShortName">addrExpMu[2,8:0]</obj_property>
          <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
       </wvobject>
+   </wvobject>
+   <wvobject fp_name="/test_Main/uut/addrExpMuUsed" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">addrExpMuUsed[8:0]</obj_property>
+      <obj_property name="ObjectShortName">addrExpMuUsed[8:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/test_Main/uut/dataExpMu" type="array" db_ref_id="1">
       <obj_property name="ElementShortName">dataExpMu[0:2,17:0]</obj_property>

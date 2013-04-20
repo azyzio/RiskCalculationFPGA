@@ -68,7 +68,7 @@ end
 
 always @ (posedge CLK)
 begin
-	enable_acc <= #6 enable; // should be 4
+	enable_acc <= #3 enable; // should be 4
 	MuReadAddress <= t;
 	if (iStart && ~enable)
 	// When the module is supposed to do the calculation
@@ -83,16 +83,16 @@ begin
 	begin
 		if (enable)
 		begin
-			t	<= #2 t + 1;
+			t	<= #1 t + 1;
 			if (t == T-1)
 			begin
-				enable <= #2 0;
+				enable <= 0; // might be sth wrong
 			end
 		end
 		if (enable_acc)
 		begin
 			acc <= acc + product;
-			#4;
+			#2; // how does it work?
 		end
 	end
 end
@@ -125,7 +125,7 @@ mult_18_18_18_core mult(CLK, MuReadData, SigmaReadData, product);
 always @(negedge enable_acc) // change
 begin
 	done <= 1;
-	#6;
+	#2;
 	done <= 0;
 end
 

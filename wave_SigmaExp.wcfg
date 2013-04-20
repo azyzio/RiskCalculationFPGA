@@ -16,7 +16,7 @@
          </top_modules>
       </db_ref>
    </db_ref_list>
-   <WVObjectSize size="14" />
+   <WVObjectSize size="15" />
    <wvobject fp_name="/test_CalculateExpSigma/iSigma" type="array" db_ref_id="1">
       <obj_property name="ElementShortName">iSigma[17:0]</obj_property>
       <obj_property name="ObjectShortName">iSigma[17:0]</obj_property>
@@ -55,11 +55,6 @@
       <obj_property name="ObjectShortName">xsigma_i[2:0]</obj_property>
       <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
-   <wvobject fp_name="/test_CalculateExpSigma/uut/exp_frac" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">exp_frac[21:0]</obj_property>
-      <obj_property name="ObjectShortName">exp_frac[21:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-   </wvobject>
    <wvobject fp_name="/test_CalculateExpSigma/uut/exp_int" type="array" db_ref_id="1">
       <obj_property name="ElementShortName">exp_int[12:0]</obj_property>
       <obj_property name="ObjectShortName">exp_int[12:0]</obj_property>
@@ -69,6 +64,15 @@
       <obj_property name="ElementShortName">exp_xsigma[17:0]</obj_property>
       <obj_property name="ObjectShortName">exp_xsigma[17:0]</obj_property>
       <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_CalculateExpSigma/uut/exp_frac" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">exp_frac[21:0]</obj_property>
+      <obj_property name="ObjectShortName">exp_frac[21:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_CalculateExpSigma/uut/exp_int_delayed" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">exp_int_delayed[12:0]</obj_property>
+      <obj_property name="ObjectShortName">exp_int_delayed[12:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/test_CalculateExpSigma/oAddr" type="array" db_ref_id="1">
       <obj_property name="ElementShortName">oAddr[9:0]</obj_property>

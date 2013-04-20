@@ -1,0 +1,231 @@
+Release 14.4 Map P.49d (nt)
+Xilinx Map Application Log File for Design 'Main'
+
+Design Information
+------------------
+Command Line   : map -intstyle ise -p xc6slx45-fgg484-3 -w -logic_opt off -ol
+high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off
+-pr off -lc off -power off -o Main_map.ncd Main.ngd Main.pcf 
+Target Device  : xc6slx45
+Target Package : fgg484
+Target Speed   : -3
+Mapper Version : spartan6 -- $Revision: 1.55 $
+Mapped Date    : Sat Apr 20 14:24:48 2013
+
+Mapping design into LUTs...
+WARNING:MapLib:701 - Signal iMu<17> connected to top level port iMu<17> has been
+   removed.
+WARNING:MapLib:701 - Signal iMu<16> connected to top level port iMu<16> has been
+   removed.
+WARNING:MapLib:701 - Signal iMu<15> connected to top level port iMu<15> has been
+   removed.
+WARNING:MapLib:701 - Signal iMu<14> connected to top level port iMu<14> has been
+   removed.
+WARNING:MapLib:701 - Signal iMu<13> connected to top level port iMu<13> has been
+   removed.
+WARNING:MapLib:701 - Signal iMu<12> connected to top level port iMu<12> has been
+   removed.
+WARNING:MapLib:701 - Signal iMu<11> connected to top level port iMu<11> has been
+   removed.
+WARNING:MapLib:701 - Signal iMu<10> connected to top level port iMu<10> has been
+   removed.
+WARNING:MapLib:701 - Signal iMu<9> connected to top level port iMu<9> has been
+   removed.
+WARNING:MapLib:701 - Signal iMu<8> connected to top level port iMu<8> has been
+   removed.
+WARNING:MapLib:701 - Signal iMu<7> connected to top level port iMu<7> has been
+   removed.
+WARNING:MapLib:701 - Signal iMu<6> connected to top level port iMu<6> has been
+   removed.
+WARNING:MapLib:701 - Signal iMu<5> connected to top level port iMu<5> has been
+   removed.
+WARNING:MapLib:701 - Signal iMu<4> connected to top level port iMu<4> has been
+   removed.
+WARNING:MapLib:701 - Signal iMu<3> connected to top level port iMu<3> has been
+   removed.
+WARNING:MapLib:701 - Signal iMu<2> connected to top level port iMu<2> has been
+   removed.
+WARNING:MapLib:701 - Signal iMu<1> connected to top level port iMu<1> has been
+   removed.
+WARNING:MapLib:701 - Signal iMu<0> connected to top level port iMu<0> has been
+   removed.
+WARNING:MapLib:701 - Signal iS<17> connected to top level port iS<17> has been
+   removed.
+WARNING:MapLib:701 - Signal iS<16> connected to top level port iS<16> has been
+   removed.
+WARNING:MapLib:701 - Signal iS<15> connected to top level port iS<15> has been
+   removed.
+WARNING:MapLib:701 - Signal iS<14> connected to top level port iS<14> has been
+   removed.
+WARNING:MapLib:701 - Signal iS<13> connected to top level port iS<13> has been
+   removed.
+WARNING:MapLib:701 - Signal iS<12> connected to top level port iS<12> has been
+   removed.
+WARNING:MapLib:701 - Signal iS<11> connected to top level port iS<11> has been
+   removed.
+WARNING:MapLib:701 - Signal iS<10> connected to top level port iS<10> has been
+   removed.
+WARNING:MapLib:701 - Signal iS<9> connected to top level port iS<9> has been
+   removed.
+WARNING:MapLib:701 - Signal iS<8> connected to top level port iS<8> has been
+   removed.
+WARNING:MapLib:701 - Signal iS<7> connected to top level port iS<7> has been
+   removed.
+WARNING:MapLib:701 - Signal iS<6> connected to top level port iS<6> has been
+   removed.
+WARNING:MapLib:701 - Signal iS<5> connected to top level port iS<5> has been
+   removed.
+WARNING:MapLib:701 - Signal iS<4> connected to top level port iS<4> has been
+   removed.
+WARNING:MapLib:701 - Signal iS<3> connected to top level port iS<3> has been
+   removed.
+WARNING:MapLib:701 - Signal iS<2> connected to top level port iS<2> has been
+   removed.
+WARNING:MapLib:701 - Signal iS<1> connected to top level port iS<1> has been
+   removed.
+WARNING:MapLib:701 - Signal iS<0> connected to top level port iS<0> has been
+   removed.
+WARNING:MapLib:701 - Signal iSigma<17> connected to top level port iSigma<17>
+   has been removed.
+WARNING:MapLib:701 - Signal iSigma<16> connected to top level port iSigma<16>
+   has been removed.
+WARNING:MapLib:701 - Signal iSigma<15> connected to top level port iSigma<15>
+   has been removed.
+WARNING:MapLib:701 - Signal iSigma<14> connected to top level port iSigma<14>
+   has been removed.
+WARNING:MapLib:701 - Signal iSigma<13> connected to top level port iSigma<13>
+   has been removed.
+WARNING:MapLib:701 - Signal iSigma<12> connected to top level port iSigma<12>
+   has been removed.
+WARNING:MapLib:701 - Signal iSigma<11> connected to top level port iSigma<11>
+   has been removed.
+WARNING:MapLib:701 - Signal iSigma<10> connected to top level port iSigma<10>
+   has been removed.
+WARNING:MapLib:701 - Signal iSigma<9> connected to top level port iSigma<9> has
+   been removed.
+WARNING:MapLib:701 - Signal iSigma<8> connected to top level port iSigma<8> has
+   been removed.
+WARNING:MapLib:701 - Signal iSigma<7> connected to top level port iSigma<7> has
+   been removed.
+WARNING:MapLib:701 - Signal iSigma<6> connected to top level port iSigma<6> has
+   been removed.
+WARNING:MapLib:701 - Signal iSigma<5> connected to top level port iSigma<5> has
+   been removed.
+WARNING:MapLib:701 - Signal iSigma<4> connected to top level port iSigma<4> has
+   been removed.
+WARNING:MapLib:701 - Signal iSigma<3> connected to top level port iSigma<3> has
+   been removed.
+WARNING:MapLib:701 - Signal iSigma<2> connected to top level port iSigma<2> has
+   been removed.
+WARNING:MapLib:701 - Signal iSigma<1> connected to top level port iSigma<1> has
+   been removed.
+WARNING:MapLib:701 - Signal iSigma<0> connected to top level port iSigma<0> has
+   been removed.
+WARNING:MapLib:701 - Signal CLK connected to top level port CLK has been
+   removed.
+WARNING:MapLib:41 - All members of TNM group "CLK" have been optimized out of
+   the design.
+WARNING:MapLib:50 - The period specification "TS_CLK" has been discarded because
+   the group "CLK" has been optimized away.
+Running directed packing...
+Running delay-based LUT packing...
+Updating timing models...
+INFO:Map:215 - The Interim Design Summary has been generated in the MAP Report
+   (.mrp).
+Running timing-driven placement...
+Total REAL time at the beginning of Placer: 33 secs 
+Total CPU  time at the beginning of Placer: 24 secs 
+
+Phase 1.1  Initial Placement Analysis
+Phase 1.1  Initial Placement Analysis (Checksum:59c) REAL time: 38 secs 
+
+Phase 2.7  Design Feasibility Check
+Phase 2.7  Design Feasibility Check (Checksum:59c) REAL time: 38 secs 
+
+Phase 3.31  Local Placement Optimization
+Phase 3.31  Local Placement Optimization (Checksum:59c) REAL time: 38 secs 
+
+Phase 4.2  Initial Placement for Architecture Specific Features
+...
+Phase 4.2  Initial Placement for Architecture Specific Features (Checksum:59c) REAL time: 47 secs 
+
+Phase 5.36  Local Placement Optimization
+Phase 5.36  Local Placement Optimization (Checksum:59c) REAL time: 47 secs 
+
+Phase 6.30  Global Clock Region Assignment
+Phase 6.30  Global Clock Region Assignment (Checksum:59c) REAL time: 47 secs 
+
+Phase 7.3  Local Placement Optimization
+...
+Phase 7.3  Local Placement Optimization (Checksum:7f8ee8e3) REAL time: 51 secs 
+
+Phase 8.5  Local Placement Optimization
+Phase 8.5  Local Placement Optimization (Checksum:7f8ee8e3) REAL time: 51 secs 
+
+Phase 9.8  Global Placement
+Phase 9.8  Global Placement (Checksum:7f8ee8e3) REAL time: 51 secs 
+
+Phase 10.5  Local Placement Optimization
+Phase 10.5  Local Placement Optimization (Checksum:7f8ee8e3) REAL time: 51 secs 
+
+Phase 11.18  Placement Optimization
+Phase 11.18  Placement Optimization (Checksum:7f8ee8e3) REAL time: 54 secs 
+
+Phase 12.5  Local Placement Optimization
+Phase 12.5  Local Placement Optimization (Checksum:7f8ee8e3) REAL time: 54 secs 
+
+Phase 13.34  Placement Validation
+Phase 13.34  Placement Validation (Checksum:7f8ee8e3) REAL time: 55 secs 
+
+Total REAL time to Placer completion: 55 secs 
+Total CPU  time to Placer completion: 43 secs 
+Running post-placement packing...
+Writing output files...
+
+Design Summary
+--------------
+
+Design Summary:
+Number of errors:      0
+Number of warnings:   57
+Slice Logic Utilization:
+  Number of Slice Registers:                     0 out of  54,576    0%
+  Number of Slice LUTs:                          0 out of  27,288    0%
+
+Slice Logic Distribution:
+  Number of occupied Slices:                     0 out of   6,822    0%
+  Number of MUXCYs used:                         0 out of  13,644    0%
+  Number of LUT Flip Flop pairs used:            0
+
+IO Utilization:
+  Number of bonded IOBs:                        54 out of     316   17%
+
+Specific Feature Utilization:
+  Number of RAMB16BWERs:                         0 out of     116    0%
+  Number of RAMB8BWERs:                          0 out of     232    0%
+  Number of BUFIO2/BUFIO2_2CLKs:                 0 out of      32    0%
+  Number of BUFIO2FB/BUFIO2FB_2CLKs:             0 out of      32    0%
+  Number of BUFG/BUFGMUXs:                       0 out of      16    0%
+  Number of DCM/DCM_CLKGENs:                     0 out of       8    0%
+  Number of ILOGIC2/ISERDES2s:                   0 out of     376    0%
+  Number of IODELAY2/IODRP2/IODRP2_MCBs:         0 out of     376    0%
+  Number of OLOGIC2/OSERDES2s:                   0 out of     376    0%
+  Number of BSCANs:                              0 out of       4    0%
+  Number of BUFHs:                               0 out of     256    0%
+  Number of BUFPLLs:                             0 out of       8    0%
+  Number of BUFPLL_MCBs:                         0 out of       4    0%
+  Number of DSP48A1s:                            0 out of      58    0%
+  Number of ICAPs:                               0 out of       1    0%
+  Number of MCBs:                                0 out of       2    0%
+  Number of PCILOGICSEs:                         0 out of       2    0%
+  Number of PLL_ADVs:                            0 out of       4    0%
+  Number of PMVs:                                0 out of       1    0%
+  Number of STARTUPs:                            0 out of       1    0%
+  Number of SUSPEND_SYNCs:                       0 out of       1    0%
+
+Peak Memory Usage:  330 MB
+Total REAL time to MAP completion:  56 secs 
+Total CPU time to MAP completion:   44 secs 
+
+Mapping completed.
+See MAP report file "Main_map.mrp" for details.

@@ -25,21 +25,21 @@ module test_CalculateExpSigma;
 
 	initial begin
 		// Initialize Inputs
-		CLK = 0;
-		iSigma = 3408;
-		iStart = 0;
+		CLK <= 0;
+		iSigma <= 3408;
+		iStart <= 0;
 
 		// Wait 100 ns for global reset to finish
 		#100;
-		iStart = 1;
-		#6;
-		iStart = 0;
+		iStart <= 1;
+		#2;
+		iStart <= 0;
         	
 	end
 	
 	always
 	begin
-		#1 CLK = ~CLK;
+		#0.5 CLK = ~CLK;
 	end
       
 endmodule

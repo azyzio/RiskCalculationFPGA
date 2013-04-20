@@ -4,7 +4,9 @@ module Main(
 	CLK,
 	iMu,
 	iS,
-	iSigma
+	iSigma,
+	oAcc1,
+	oAcc2
 	);
 
 parameter T = 512;
@@ -19,6 +21,7 @@ input	[17:0]				iMu;			// 18 Fract
 input	[17:0]				iS;			// 4 int, 14 fract
 input	[17:0]				iSigma;		// 18 fract
 
+reg							doneOptionCalc;
 reg							readyOption; // shows the readiness of new option to be used in calculations
 	
 reg							Switch;		// Controls which RAM is written to and read from
@@ -52,8 +55,12 @@ wire							doneCore[0:CoreN-1];
 wire	[26:0]				oAcc[0:CoreN-1];
 wire							oDone[0:CoreN-1];
 
+output	[26:0]			oAcc1;
+output	[26:0]			oAcc2;
+
 	initial begin
 		readyOption <= 0;
+		doneOptionCalc <= 0;
 		Switch <= 0;
 		busyExpMu <= 0;
 		startExpMu <= 0;
@@ -70,21 +77,49 @@ wire							oDone[0:CoreN-1];
 	// Send a start signal when Mu or S changes
 	always @ (iMu or iS or iSigma)
 	begin
-		readyOption = 1;
+		#100; // only for testing
+		doneOptionCalc <= 1;
+		#2;
+		doneOptionCalc <= 0;
 	end
 	
 	always @ (posedge CLK)
 	begin
-		if (readyOption && ~busyExpSigma && ~busyExpMu)
-		begin
-			readyOption <= 0;
+		if (readyOption && ~busyExpSigma && ~busyExpMu) begin
 			busyExpSigma <= 1;
 			busyExpMu <= 1;
 			startExpSigma <= 1;
 			startExpMu <= 1;
-			#4;
+			#2;
 			startExpSigma <= 0;
 			startExpMu <= 0;
+			readyOption <= 0;
+		end
+		else begin
+			if (doneOptionCalc)
+				readyOption <= 1;
+			if (doneExpSigma[0])
+				busyExpSigma <= 0;
+			if (doneExpMu[0])
+				busyExpMu <= 0;
+		end
+		
+		if (readyExpSigma && readyExpMu && ~busyCores) begin
+			Switch <= ~Switch;
+			readyExpSigma <= 0;
+			readyExpMu <= 0;
+			busyCores <= 1;
+			startCores <= 1;
+			#2;
+			startCores <= 0;
+		end
+		else begin
+			if (doneExpSigma[0])
+				readyExpSigma <= #1 1;
+			if (doneExpMu[0])
+				readyExpMu <= #1 1;
+			if (doneCore[0])
+				busyCores <= #1 0;
 		end
 	end
 	
@@ -147,35 +182,7 @@ wire							oDone[0:CoreN-1];
 		.oAddr(addrExpSigma[2]),
 		.oDone(doneExpSigma[2])
 	);
-	always @ (posedge CLK)
-	begin
-		// Sunchronication Busy and ready signal controls
-		if (doneExpSigma[0])
-		begin
-			readyExpSigma <= 1;
-			busyExpSigma <= 0;
-		end
-		
-		if (doneExpMu[0])
-		begin
-			readyExpMu <= 1;
-			busyExpMu <= 0;
-		end
-		
-		if (readyExpSigma && readyExpMu && ~busyCores)
-		begin
-			Switch <= ~Switch;
-			readyExpSigma <= 0;
-			readyExpMu <= 0;
-			busyCores <= 1;
-			startCores <= 1;
-			#6;
-			startCores <= 0;
-		end
-		
-		if (doneCore[0])
-			busyCores <= 0;
-	end
+
 	
 	assign addrExpSigmaUsed = addrExpSigma[ExpSigmaUsed];
 	assign dataExpSigmaUsed = dataExpSigma[ExpSigmaUsed];
@@ -216,5 +223,8 @@ MCCore #("1") core1 (CLK, startCores, Switch, addrExpSigmaUsed, dataExpSigmaUsed
 
 assign oDone[0] = doneCore[0];
 assign oDone[1] = doneCore[1];
+
+assign oAcc1 = oAcc[0];
+assign oAcc2 = oAcc[1];
 
 endmodule

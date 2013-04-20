@@ -54,8 +54,8 @@ end
 
 always @ (posedge CLK)
 begin
-	enable_exp_mul <= #10 enable;
-	xsigma_shift <= xsigma + 524288; // 2^19	
+	enable_exp_mul <= #5 enable;
+	xsigma_shift <= xsigma + 2**19;
 	if (iStart && ~enable)
 	begin
 		enable <= 1;
@@ -66,17 +66,17 @@ begin
 	begin
 		if (enable)
 		begin
-			x <= #4 x + 1;
-			exp_int_delayed <= #2 exp_int;
-			addr <= #14 x;
+			x <= #2 x + 1;
+			exp_int_delayed <= #1 exp_int;
+			addr <= #7 x;
 		end
 		
 		if (x == x_max)
 		begin
-			enable <= #2 0;
-			#20;
+			enable <= 0;
+			#10;
 			done = 1;
-			#4;
+			#2;
 			done = 0;
 		end
 	end
@@ -88,7 +88,7 @@ assign xsigma_i = xsigma_shift[20:18];
 mult_10_18_21 x_sigma_mult(CLK, x, iSigma, xsigma);
 
 ROM_3_13 exp_i_table(CLK, xsigma_i, exp_int);
-Exponential exp(CLK, 1'b0, xsigma_f, exp_frac);
+Exponential exp(CLK, ~enable, xsigma_f, exp_frac);
 
 mult_12_13_18 exp_mult(CLK, enable_exp_mul, exp_frac[19:8], exp_int_delayed, exp_xsigma);
 
