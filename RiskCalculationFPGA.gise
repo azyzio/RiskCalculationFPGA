@@ -70,11 +70,12 @@
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="ipcore_dir/mult_12_13_18.sym" xil_pn:origination="imported"/>
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="isim"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_CMD" xil_pn:name="isim.cmd"/>
-    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="test_CalculateExpMu_beh.prj"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="test_CalculateExpMu_isim_beh.exe"/>
-    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="test_CalculateExpMu_isim_beh.wdb"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="test_CalculateExpSigma_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="test_Main_beh.prj"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="test_Main_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="test_Main_isim_beh.wdb"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="test_Main_stx_beh.prj"/>
     <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="webtalk_pn.xml"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_INI" xil_pn:name="xilinxsim.ini"/>
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xlnx_auto_0_xdb"/>
@@ -86,13 +87,9 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1366466552" xil_pn:in_ck="-338596827476265782" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1366466552">
+    <transform xil_pn:end_ts="1366503785" xil_pn:in_ck="-338596827476265782" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1366503785">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="InputChanged"/>
-      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="CalculateExpMu.v"/>
       <outfile xil_pn:name="CalculateExpSigma.v"/>
       <outfile xil_pn:name="MCCore.v"/>
@@ -106,11 +103,11 @@
       <outfile xil_pn:name="test_ExpMu.v"/>
       <outfile xil_pn:name="test_Main.v"/>
     </transform>
-    <transform xil_pn:end_ts="1366466470" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="7053471351441078643" xil_pn:start_ts="1366466470">
+    <transform xil_pn:end_ts="1366503051" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="-6987045207801913317" xil_pn:start_ts="1366503051">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1366466470" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="5674049563828606769" xil_pn:start_ts="1366466470">
+    <transform xil_pn:end_ts="1366503051" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="-896748263429632551" xil_pn:start_ts="1366503051">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
@@ -128,14 +125,9 @@
       <outfile xil_pn:name="ipcore_dir/mult_9_18_18.ngc"/>
       <outfile xil_pn:name="ipcore_dir/mult_9_18_18.v"/>
     </transform>
-    <transform xil_pn:end_ts="1366466552" xil_pn:in_ck="-338596827476265782" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1366466552">
+    <transform xil_pn:end_ts="1366503785" xil_pn:in_ck="-338596827476265782" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1366503785">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="InputChanged"/>
-      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="CalculateExpMu.v"/>
       <outfile xil_pn:name="CalculateExpSigma.v"/>
       <outfile xil_pn:name="MCCore.v"/>
@@ -149,30 +141,20 @@
       <outfile xil_pn:name="test_ExpMu.v"/>
       <outfile xil_pn:name="test_Main.v"/>
     </transform>
-    <transform xil_pn:end_ts="1366466578" xil_pn:in_ck="3820441753890038168" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="6288535710055202405" xil_pn:start_ts="1366466552">
+    <transform xil_pn:end_ts="1366503798" xil_pn:in_ck="3820441753890038168" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="7395785675722580661" xil_pn:start_ts="1366503785">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForProperties"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="InputChanged"/>
-      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="fuse.log"/>
       <outfile xil_pn:name="isim"/>
-      <outfile xil_pn:name="test_CalculateExpMu_beh.prj"/>
-      <outfile xil_pn:name="test_CalculateExpMu_isim_beh.exe"/>
+      <outfile xil_pn:name="test_Main_beh.prj"/>
+      <outfile xil_pn:name="test_Main_isim_beh.exe"/>
       <outfile xil_pn:name="xilinxsim.ini"/>
     </transform>
-    <transform xil_pn:end_ts="1366466579" xil_pn:in_ck="-5920272204463816350" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-8873185422841717112" xil_pn:start_ts="1366466578">
+    <transform xil_pn:end_ts="1366503800" xil_pn:in_ck="-5920272204463816350" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-1901781321606048488" xil_pn:start_ts="1366503798">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForProperties"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="isim.cmd"/>
-      <outfile xil_pn:name="test_CalculateExpMu_isim_beh.wdb"/>
+      <outfile xil_pn:name="test_Main_isim_beh.wdb"/>
     </transform>
     <transform xil_pn:end_ts="1366426937" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1366426936">
       <status xil_pn:value="SuccessfullyRun"/>

@@ -16,7 +16,7 @@
          </top_modules>
       </db_ref>
    </db_ref_list>
-   <WVObjectSize size="35" />
+   <WVObjectSize size="45" />
    <wvobject fp_name="/test_Main/iMu" type="array" db_ref_id="1">
       <obj_property name="ElementShortName">iMu[17:0]</obj_property>
       <obj_property name="ObjectShortName">iMu[17:0]</obj_property>
@@ -36,17 +36,49 @@
       <obj_property name="ElementShortName">CLK</obj_property>
       <obj_property name="ObjectShortName">CLK</obj_property>
    </wvobject>
+   <wvobject fp_name="/test_Main/uut/doneOptionCalc" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">doneOptionCalc</obj_property>
+      <obj_property name="ObjectShortName">doneOptionCalc</obj_property>
+   </wvobject>
    <wvobject fp_name="/test_Main/uut/readyOption" type="logic" db_ref_id="1">
       <obj_property name="ElementShortName">readyOption</obj_property>
       <obj_property name="ObjectShortName">readyOption</obj_property>
    </wvobject>
-   <wvobject fp_name="/test_Main/uut/startExpMu" type="logic" db_ref_id="1">
-      <obj_property name="ElementShortName">startExpMu</obj_property>
-      <obj_property name="ObjectShortName">startExpMu</obj_property>
+   <wvobject fp_name="/test_Main/uut/startCalc" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">startCalc</obj_property>
+      <obj_property name="ObjectShortName">startCalc</obj_property>
    </wvobject>
    <wvobject fp_name="/test_Main/uut/busyExpMu" type="logic" db_ref_id="1">
       <obj_property name="ElementShortName">busyExpMu</obj_property>
       <obj_property name="ObjectShortName">busyExpMu</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_Main/uut/calcExpMu0/enable" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">enable</obj_property>
+      <obj_property name="ObjectShortName">enable</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_Main/uut/calcExpMu0/t" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">t[8:0]</obj_property>
+      <obj_property name="ObjectShortName">t[8:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_Main/uut/calcExpMu0/tmu" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">tmu[17:0]</obj_property>
+      <obj_property name="ObjectShortName">tmu[17:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_Main/uut/calcExpMu0/exp_tmu" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">exp_tmu[21:0]</obj_property>
+      <obj_property name="ObjectShortName">exp_tmu[21:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_Main/uut/calcExpMu0/product" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">product[17:0]</obj_property>
+      <obj_property name="ObjectShortName">product[17:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_Main/uut/calcExpMu0/valid" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">valid</obj_property>
+      <obj_property name="ObjectShortName">valid</obj_property>
    </wvobject>
    <wvobject fp_name="/test_Main/uut/ExpMuUsed" type="array" db_ref_id="1">
       <obj_property name="ElementShortName">ExpMuUsed[1:0]</obj_property>
@@ -2675,10 +2707,6 @@
    <wvobject fp_name="/test_Main/uut/readyExpMu" type="logic" db_ref_id="1">
       <obj_property name="ElementShortName">readyExpMu</obj_property>
       <obj_property name="ObjectShortName">readyExpMu</obj_property>
-   </wvobject>
-   <wvobject fp_name="/test_Main/uut/startExpSigma" type="logic" db_ref_id="1">
-      <obj_property name="ElementShortName">startExpSigma</obj_property>
-      <obj_property name="ObjectShortName">startExpSigma</obj_property>
    </wvobject>
    <wvobject fp_name="/test_Main/uut/busyExpSigma" type="logic" db_ref_id="1">
       <obj_property name="ElementShortName">busyExpSigma</obj_property>
@@ -7837,6 +7865,10 @@
       <obj_property name="ElementShortName">readyExpSigma</obj_property>
       <obj_property name="ObjectShortName">readyExpSigma</obj_property>
    </wvobject>
+   <wvobject fp_name="/test_Main/uut/Switch" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">Switch</obj_property>
+      <obj_property name="ObjectShortName">Switch</obj_property>
+   </wvobject>
    <wvobject fp_name="/test_Main/uut/startCores" type="logic" db_ref_id="1">
       <obj_property name="ElementShortName">startCores</obj_property>
       <obj_property name="ObjectShortName">startCores</obj_property>
@@ -7855,19 +7887,19 @@
       <obj_property name="ObjectShortName">SigmaReadAddress[9:0]</obj_property>
       <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
    </wvobject>
+   <wvobject fp_name="/test_Main/uut/core1/MuReadData" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">MuReadData[17:0]</obj_property>
+      <obj_property name="ObjectShortName">MuReadData[17:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
    <wvobject fp_name="/test_Main/uut/core1/SigmaReadData" type="array" db_ref_id="1">
       <obj_property name="ElementShortName">SigmaReadData[17:0]</obj_property>
       <obj_property name="ObjectShortName">SigmaReadData[17:0]</obj_property>
       <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
-   <wvobject fp_name="/test_Main/uut/core1/MuReadAddress" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">MuReadAddress[8:0]</obj_property>
-      <obj_property name="ObjectShortName">MuReadAddress[8:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/test_Main/uut/core1/MuReadData" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">MuReadData[17:0]</obj_property>
-      <obj_property name="ObjectShortName">MuReadData[17:0]</obj_property>
+   <wvobject fp_name="/test_Main/uut/core1/MuReadData_d1" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">MuReadData_d1[17:0]</obj_property>
+      <obj_property name="ObjectShortName">MuReadData_d1[17:0]</obj_property>
       <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/test_Main/uut/core1/product" type="array" db_ref_id="1">
@@ -7875,9 +7907,22 @@
       <obj_property name="ObjectShortName">product[17:0]</obj_property>
       <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
-   <wvobject fp_name="/test_Main/uut/oAcc[1]" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">[1,26:0]</obj_property>
-      <obj_property name="ObjectShortName">oAcc[1,26:0]</obj_property>
+   <wvobject fp_name="/test_Main/uut/core1/validProduct" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">validProduct</obj_property>
+      <obj_property name="ObjectShortName">validProduct</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_Main/uut/core1/bit_ctr" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">bit_ctr</obj_property>
+      <obj_property name="ObjectShortName">bit_ctr</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_Main/uut/core1/acc" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">acc[26:0]</obj_property>
+      <obj_property name="ObjectShortName">acc[26:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_Main/uut/core1/oAcc" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">oAcc[26:0]</obj_property>
+      <obj_property name="ObjectShortName">oAcc[26:0]</obj_property>
       <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/test_Main/uut/oDone[0]" type="logic" db_ref_id="1">

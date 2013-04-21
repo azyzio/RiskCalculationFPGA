@@ -6,13 +6,19 @@ module test_Main;
 	reg [17:0] iMu;
 	reg [17:0] iS;
 	reg [17:0] iSigma;
+	
+	// Outputs
+	wire [26:0] oAcc1;
+	wire [26:0] oAcc2;
 
 	// Instantiate the Unit Under Test (UUT)
 	Main uut (
 		.CLK(CLK), 
 		.iMu(iMu), 
 		.iS(iS), 
-		.iSigma(iSigma)
+		.iSigma(iSigma),
+		.oAcc1(oAcc1),
+		.oAcc2(oAcc2)
 	);
 
 	initial begin
@@ -21,7 +27,6 @@ module test_Main;
 		iMu = 0;
 		iS = 0;
 		iSigma = 0;
-
 		// Wait 100 ns for global reset to finish
 		#100;
         
@@ -32,7 +37,7 @@ module test_Main;
 	end
 	always
 	begin
-		#0.5 CLK = ~CLK;
+		#1 CLK = ~CLK;
 	end  
       
 endmodule

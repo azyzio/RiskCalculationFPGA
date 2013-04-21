@@ -22,7 +22,7 @@ module SR_FF(
 			{1'b0,1'b0}: begin Q=Q; end
 			{1'b0,1'b1}: begin Q=1'b0; end
 			{1'b1,1'b0}: begin Q=1'b1; end
-			{1'b1,1'b1}: begin Q=1'bx; end
+			{1'b1,1'b1}: begin Q=1'b0; end
 		endcase
 	end
 	
