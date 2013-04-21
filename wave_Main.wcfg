@@ -36,9 +36,9 @@
       <obj_property name="ElementShortName">CLK</obj_property>
       <obj_property name="ObjectShortName">CLK</obj_property>
    </wvobject>
-   <wvobject fp_name="/test_Main/uut/doneOptionCalc" type="logic" db_ref_id="1">
-      <obj_property name="ElementShortName">doneOptionCalc</obj_property>
-      <obj_property name="ObjectShortName">doneOptionCalc</obj_property>
+   <wvobject fp_name="/test_Main/uut/iDoneOptionCalc" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">iDoneOptionCalc</obj_property>
+      <obj_property name="ObjectShortName">iDoneOptionCalc</obj_property>
    </wvobject>
    <wvobject fp_name="/test_Main/uut/readyOption" type="logic" db_ref_id="1">
       <obj_property name="ElementShortName">readyOption</obj_property>
@@ -76,14 +76,14 @@
       <obj_property name="ObjectShortName">product[17:0]</obj_property>
       <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
-   <wvobject fp_name="/test_Main/uut/calcExpMu0/valid" type="logic" db_ref_id="1">
-      <obj_property name="ElementShortName">valid</obj_property>
-      <obj_property name="ObjectShortName">valid</obj_property>
-   </wvobject>
    <wvobject fp_name="/test_Main/uut/ExpMuUsed" type="array" db_ref_id="1">
       <obj_property name="ElementShortName">ExpMuUsed[1:0]</obj_property>
       <obj_property name="ObjectShortName">ExpMuUsed[1:0]</obj_property>
       <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_Main/uut/validExpMuUsed" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">validExpMuUsed</obj_property>
+      <obj_property name="ObjectShortName">validExpMuUsed</obj_property>
    </wvobject>
    <wvobject fp_name="/test_Main/uut/addrExpMu" type="array" db_ref_id="1">
       <obj_property name="ElementShortName">addrExpMu[0:2,8:0]</obj_property>

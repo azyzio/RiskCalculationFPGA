@@ -42,6 +42,7 @@ reg		[logT-1:0]	t_d2;
 reg		[logT-1:0]	t_d3;
 reg		[logT-1:0]	t_d4;
 reg		[logT-1:0]	t_d5;
+reg		[logT-1:0]	t_d6;
 
 wire		[pathWidth-1:0]	SigmaReadAddress;	// The Brownian Motion variable. 10 integer
 wire		[17:0]				SigmaReadData;		// Output of the exponential table. 3 integer, 15 fraction bits
@@ -73,6 +74,7 @@ begin
 	t_d3 <= 0;
 	t_d4 <= 0;
 	t_d5 <= 0;
+	t_d6 <= 0;
 	MuReadData_d1 <= 0;
 	acc <= 0;
 	out <= 0;
@@ -91,10 +93,11 @@ begin
 		t_d3 <= t_d2;
 		t_d4 <= t_d3;
 		t_d5 <= t_d4;
+		t_d6 <= t_d5;
 		MuReadData_d1 <= MuReadData;
 		bit_ctr <= ~bit_ctr;
 		
-		if (t_d5 == T-1) begin
+		if (t_d6 == T-1) begin
 			out <= acc;
 			done <= 1;
 		end
@@ -104,7 +107,7 @@ begin
 				done <= 0;
 		end
 		
-		if (t_d5 == T-1)
+		if (t_d6 == T-1)
 			validProduct <= 0;
 		else begin
 		if  (t_d4 == 0)
@@ -123,6 +126,7 @@ begin
 		t_d3 <= 20;
 		t_d4 <= 20;
 		t_d5 <= 20;
+		t_d6 <= 20;
 		validProduct <= 0;
 		done <= 0;
 	end
@@ -130,7 +134,11 @@ end
 
 SR_FF enable_control(CLK, iStart, done, enable);
 
-ROM_path #(N) path (CLK, t, SigmaReadAddress);
+ROM_path #(N) path (
+	.CLK(CLK),
+	.iADDRESS(t),
+	.oDATA(SigmaReadAddress)
+);
 	 
 RAM_X_18 #(pathWidth) exp_sigma (
 	.CLK(CLK),
@@ -142,7 +150,7 @@ RAM_X_18 #(pathWidth) exp_sigma (
 	.writeData(iSigmaWriteData)
 );
 
-RAM_X_18 #(logT) mu_sigma (
+RAM_X_18 #(logT) exp_mu (
 	.CLK(CLK),
 	.WE(iMuWE),
 	.switch(iSwitch),

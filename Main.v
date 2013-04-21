@@ -2,6 +2,7 @@
 
 module Main(	
 	CLK,
+	iDoneOptionCalc,
 	iMu,
 	iS,
 	iSigma,
@@ -17,13 +18,13 @@ parameter ExpSigmaN = 3;
 parameter ExpMuN = 3;
 
 input 						CLK;
+input							iDoneOptionCalc;
 input	[17:0]				iMu;			// 18 Fract
 input	[17:0]				iS;			// 4 int, 14 fract
 input	[17:0]				iSigma;		// 18 fract
 
 wire							enable;
 
-reg							doneOptionCalc; // pulse
 wire							readyOption; // shows the readiness of new option to be used in calculations
 	
 reg							Switch;		// Controls which RAM is written to and read from
@@ -47,10 +48,12 @@ wire							readyExpSigma;
 reg	[1:0]					ExpMuUsed;
 wire	[logT-1:0]			addrExpMuUsed;
 wire	[17:0]				dataExpMuUsed;
+wire							validExpMuUsed;
 
 reg	[1:0]					ExpSigmaUsed;
 wire	[pathWidth-1:0]	addrExpSigmaUsed;
 wire	[17:0]				dataExpSigmaUsed;
+wire							validExpSigmaUsed;
 
 wire							busyCores;
 wire 							startCores;
@@ -63,46 +66,28 @@ output	[26:0]			oAcc1;
 output	[26:0]			oAcc2;
 
 	initial begin
-		doneOptionCalc <= 0;
 		Switch <= 0;
 		ExpMuUsed <= 0;
 		ExpSigmaUsed <= 0;
 	end
-	
-	// Send a start signal when Mu or S changes
-	always @ (iMu or iS or iSigma) begin
-		if (iMu != 0)
-			doneOptionCalc <= 1;
-	end
-	
-	always @ (posedge CLK) begin
 
-		// temporary solution (maybe)
-		if (doneOptionCalc)
-			doneOptionCalc <= #1 0;
-		if (startCores)
-			Switch <= ~Switch;
-	end
 	assign	startCalc = (~busyExpMu && ~busyExpSigma && readyOption);
 	assign	startCores = (~busyCores && readyExpSigma && readyExpMu);
 	
 	SR_FF busyExpMu_control(CLK, startCalc, doneExpMu[0], busyExpMu);
 	SR_FF busyExpSigma_control(CLK, startCalc, doneExpSigma[0], busyExpSigma);
-	SR_FF readyOption_control(CLK, doneOptionCalc, startCalc, readyOption);
+	SR_FF readyOption_control(CLK, iDoneOptionCalc, startCalc, readyOption);
 	
 	SR_FF busyCores_control(CLK, startCores, doneCore[0], busyCores);
 	SR_FF readySigmaExp_control(CLK, doneExpSigma[0], startCores, readyExpSigma);
 	SR_FF readyMuExp_control(CLK, doneExpMu[0], startCores, readyExpMu);
 	
-	assign addrExpSigmaUsed = addrExpSigma[ExpSigmaUsed];
-	assign dataExpSigmaUsed = dataExpSigma[ExpSigmaUsed];
-	
-	assign addrExpMuUsed = addrExpMu[ExpMuUsed];
-	assign dataExpMuUsed = dataExpMu[ExpMuUsed];
-	
 	// Control of output from ExpMu ad ExpSigma modules used.
 	always @ (posedge CLK)
 	begin
+		if (startCores)
+			Switch <= ~Switch;
+			
 		if ((ExpSigmaUsed < ExpSigmaN-1) && busyExpSigma)
 			ExpSigmaUsed <= ExpSigmaUsed + 1;
 		else
@@ -114,7 +99,14 @@ output	[26:0]			oAcc2;
 			ExpMuUsed <= 0;
 	end
 	
-		
+	assign addrExpSigmaUsed = addrExpSigma[ExpSigmaUsed];
+	assign dataExpSigmaUsed = dataExpSigma[ExpSigmaUsed];
+	assign validaExpSigmaUsed = validExpSigma[ExpSigmaUsed];
+	
+	assign addrExpMuUsed = addrExpMu[ExpMuUsed];
+	assign dataExpMuUsed = dataExpMu[ExpMuUsed];	
+	assign validExpMuUsed = validExpMu[ExpMuUsed];	
+	
 	// 512 is not divisible by 3. First module has to be longer (171) as it controls the done signal.
 	CalculateExpMu #(.t_min(9'd0), .t_max(9'd170)) calcExpMu0
 	(
@@ -196,8 +188,34 @@ generate
 		 core (CLK, EXP_MU, oAcc[i]);
    end
 endgenerate*/
-MCCore #("0") core0 (CLK, startCores, Switch, addrExpSigmaUsed, dataExpSigmaUsed, validExpSigma[ExpMuUsed], addrExpMuUsed, dataExpMuUsed, busyExpMu, oAcc[0], doneCore[0]);
-MCCore #("1") core1 (CLK, startCores, Switch, addrExpSigmaUsed, dataExpSigmaUsed, validExpSigma[ExpMuUsed], addrExpMuUsed, dataExpMuUsed, busyExpMu, oAcc[1], doneCore[1]);
+MCCore #("0") core0 
+(
+	CLK,
+	startCores,
+	Switch,
+	addrExpSigmaUsed,
+	dataExpSigmaUsed,
+	validExpSigma[ExpSigmaUsed],
+	addrExpMuUsed,
+	dataExpMuUsed,
+	validExpMuUsed,
+	oAcc[0],
+	doneCore[0]
+);
+MCCore #("1") core1 
+(
+	CLK,
+	startCores,
+	Switch,
+	addrExpSigmaUsed,
+	dataExpSigmaUsed,
+	validExpSigma[ExpSigmaUsed],
+	addrExpMuUsed,
+	dataExpMuUsed,
+	validExpMuUsed,
+	oAcc[1],
+	doneCore[1]
+);
 
 assign oDone[0] = doneCore[0];
 assign oDone[1] = doneCore[1];

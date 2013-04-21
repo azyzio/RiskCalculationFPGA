@@ -1,3 +1,4 @@
+verilog work "SR_FF.v"
 verilog work "ROM_path.v"
 verilog work "ROM_3_13.v"
 verilog work "RAM_X_18.v"

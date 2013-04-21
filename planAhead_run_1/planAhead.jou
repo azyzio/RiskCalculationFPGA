@@ -1,0 +1,10 @@
+#-----------------------------------------------------------
+# PlanAhead v14.4.1
+# Build 222254 by xbuild on Tue Dec 18 05:23:01 MST 2012
+# Start of session at: Sun Apr 21 13:52:52 2013
+# Process ID: 5512
+# Log file: D:/Dropbox/NUS/FYP/RiskCalculationFPGA/planAhead_run_1/planAhead.log
+# Journal file: D:/Dropbox/NUS/FYP/RiskCalculationFPGA/planAhead_run_1/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source D:/Dropbox/NUS/FYP/RiskCalculationFPGA/pa.fromNcd.tcl

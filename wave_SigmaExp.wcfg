@@ -16,7 +16,7 @@
          </top_modules>
       </db_ref>
    </db_ref_list>
-   <WVObjectSize size="19" />
+   <WVObjectSize size="20" />
    <wvobject fp_name="/test_CalculateExpSigma/iSigma" type="array" db_ref_id="1">
       <obj_property name="ElementShortName">iSigma[17:0]</obj_property>
       <obj_property name="ObjectShortName">iSigma[17:0]</obj_property>
@@ -74,8 +74,13 @@
       <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/test_CalculateExpSigma/uut/exp_frac" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">exp_frac[21:0]</obj_property>
-      <obj_property name="ObjectShortName">exp_frac[21:0]</obj_property>
+      <obj_property name="ElementShortName">exp_frac[13:0]</obj_property>
+      <obj_property name="ObjectShortName">exp_frac[13:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_CalculateExpSigma/uut/exp_int_d5" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">exp_int_d5[12:0]</obj_property>
+      <obj_property name="ObjectShortName">exp_int_d5[12:0]</obj_property>
       <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/test_CalculateExpSigma/uut/exp_xsigma" type="array" db_ref_id="1">

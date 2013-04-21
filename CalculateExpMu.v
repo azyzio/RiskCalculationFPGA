@@ -43,9 +43,14 @@ reg		[logT-1:0]	t_d6;
 reg		[logT-1:0]	t_d7;
 reg		[logT-1:0]	t_d8;
 reg		[logT-1:0]	t_d9;
+reg		[logT-1:0]	t_d10;
+reg		[logT-1:0]	t_d11;
 
 wire 		[17:0]		tmu;			// (t * mu) used for current exp calculation. 18 Franction Bits
+reg		[17:0]		tmu_d1;
+
 wire		[21:0]		exp_tmu;		// exp(t * mu). 4 Integer. 18 Franction Bits.
+reg		[17:0]		exp_tmu_d1;	// 4 LSB cut. 4 int, 14 frac
 
 wire		[17:0]		product;		// S0 * exp(t * mu). 3 Integer, 15 Franction Bits.
 											// Multiplier cuts 5 MSB and 13 LSB
@@ -66,6 +71,10 @@ begin
 	t_d7 <= 0;
 	t_d8 <= 0;
 	t_d9 <= 0;
+	t_d10 <= 0;
+	t_d11 <= 0;
+	tmu_d1 <= 0;
+	exp_tmu_d1 <= 0;
 	valid <= 0;
 	done <= 0;
 end
@@ -84,8 +93,13 @@ always @ (posedge CLK) begin
 		t_d7 <= t_d6;
 		t_d8 <= t_d7;
 		t_d9 <= t_d8;
+		t_d10 <= t_d9;
+		t_d11 <= t_d10;
 		
-		if (t_d9 == t_max) begin 
+		tmu_d1 <= tmu;
+		exp_tmu_d1 <= exp_tmu[21:4];
+		
+		if (t_d11 == t_max) begin 
 			done <= 1;
 			valid <= 0;
 		end
@@ -93,7 +107,7 @@ always @ (posedge CLK) begin
 		begin
 			if (done == 1)
 				done <= 0;
-			if (t_d6 == t_min) // one before the actual input comes
+			if (t_d8 == t_min) // one before the actual input comes
 				valid <= 1;
 		end
 	end		
@@ -110,6 +124,10 @@ always @ (posedge CLK) begin
 		t_d7 <= t_min+20;
 		t_d8 <= t_min+20;
 		t_d9 <= t_min+20;
+		t_d10 <= t_min+20;
+		t_d11 <= t_min+20;
+		tmu_d1 <= 0;
+		exp_tmu_d1 <= 0;
 		done <= 0;
 		valid <= 0;
 	end
@@ -118,11 +136,11 @@ end
 SR_FF enable_control(CLK, iStart, done, enable);
 
 mult_9_18_18 mult1(CLK, t, iMu, tmu);
-Exponential exp(CLK, ~enable, tmu, exp_tmu);
-mult_18_18_18_muexp mult2(CLK, exp_tmu[21:4], iS, product);
+//Exponential exp(CLK, ~enable, tmu_d1, exp_tmu);
+mult_18_18_18_muexp mult2(CLK, tmu_d1, iS, product);
 
 assign oData = product;
-assign oAddr = t_d7;
+assign oAddr = t_d9;
 assign oValid = valid;
 assign oDone = done;
 

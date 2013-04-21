@@ -3,6 +3,7 @@ module test_Main;
 
 	// Inputs
 	reg CLK;
+	reg			iDoneOptionCalc;
 	reg [17:0] iMu;
 	reg [17:0] iS;
 	reg [17:0] iSigma;
@@ -13,7 +14,8 @@ module test_Main;
 
 	// Instantiate the Unit Under Test (UUT)
 	Main uut (
-		.CLK(CLK), 
+		.CLK(CLK),
+		.iDoneOptionCalc(iDoneOptionCalc),
 		.iMu(iMu), 
 		.iS(iS), 
 		.iSigma(iSigma),
@@ -34,6 +36,10 @@ module test_Main;
 		iMu <= 184;
 		iSigma <= 3408;
 		iS <= 24576;
+		#1;
+		iDoneOptionCalc <= 1;
+		#2;
+		iDoneOptionCalc <= 0;
 	end
 	always
 	begin
