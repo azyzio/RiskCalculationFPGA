@@ -12,7 +12,7 @@ module MCCore(
 	iMuWriteAddress,
 	iMuWriteData,
 	iMuWE,
-	oAcc,
+	oPrice,
 	oDone
    );
 
@@ -54,16 +54,16 @@ reg		[17:0]				MuReadData_d1;
 reg		[17:0]				MuReadData_d2;
 reg		[17:0]				MuReadData_d3;
 
-reg								validProduct;
+wire								validProduct;
 wire		[17:0]				product;	// S0 * exp (t*mu + W*sigma).
 												// 18 bits. 4 integer, 14 fraction. 2MSB and 16LSB cut down.
 											
 reg		[17+logT:0]			acc;	// Accumulator summing the products. 14 fract
 											// 27 bits as 18 bits can be maximally shifted left 9 times by adding them 8 times
-reg		[17+logT:0]			out;
-reg 								done;
+reg		[17+logT:0]			price;
+wire 								done;
 											
-output	[17+logT:0]			oAcc;				// The output indicating the sum of prices caluculated at each time slot
+output	[17+logT:0]			oPrice;		// 4 int, 23 fract. Shift tight by 8 performed in head
 output							oDone;
 
 // ------------- All the delays are twice as long to correspond to a slower clock
@@ -71,22 +71,21 @@ output							oDone;
 initial
 begin
 	t <= 0;
-	t_d1 <= 0;
-	t_d2 <= 0;
-	t_d3 <= 0;
-	t_d4 <= 0;
-	t_d5 <= 0;
-	t_d6 <= 0;
-	t_d7 <= 0;
+	t_d1 <= 20;
+	t_d2 <= 20;
+	t_d3 <= 20;
+	t_d4 <= 20;
+	t_d5 <= 20;
+	t_d6 <= 20;
+	t_d7 <= 20;
 	SigmaReadAddress <= 0;
 	SigmaReadData_d1 <= 0;
 	MuReadData_d1 <= 0;
 	MuReadData_d2 <= 0;
 	MuReadData_d3 <= 0;
 	acc <= 0;
-	out <= 0;
+	price <= 0;
 	t <= 0;
-	done <= 0;
 end
 
 always @ (posedge CLK)
@@ -107,25 +106,10 @@ begin
 		MuReadData_d2 <= MuReadData_d1;
 		MuReadData_d3 <= MuReadData_d2;
 		
-		if (t_d6 == T-1) begin
-			out <= acc;
-			done <= 1;
-		end
-		else begin
-			if (done == 1)
-				done <= 0;
-		end
-		
-		if (t_d5 == T-1)
-			validProduct <= 0;
-		else begin
-		if  (t_d4 == 0)
-			validProduct <= 1;
-		end
-		
+		if (t_d7 == T-1)
+			price <= acc;
 		if (validProduct)
 			acc <= acc + product;
-			
 	end	
 	else begin
 		t <= 0;
@@ -136,12 +120,12 @@ begin
 		t_d5 <= 20;
 		t_d6 <= 20;
 		t_d7 <= 20;
-		validProduct <= 0;
-		done <= 0;
 	end
 end
 
-SR_FF enable_control(CLK, iStart, done, enable);
+SR_FF done_control (CLK, (t_d7 == T-1), (done == 1), done);
+SR_FF validProduct_control (CLK, (t_d5 == 0), (t_d6 == T-1), validProduct);
+SR_FF enable_control (CLK, iStart, done, enable);
 
 ROM_path #(N) path (
 	.CLK(CLK),
@@ -170,9 +154,9 @@ RAM_X_18 #(logT) exp_mu (
 );
 
 mult_18_18_18_core mult(CLK, MuReadData_d3, SigmaReadData_d1, product);
-// IntMultiplier_UsingDSP_18_18_unsigned_uid2 Mult(CLK, 1'b0, currentExpMu, SigmaReadData, MultOutput);
 
-assign oAcc = out;
+assign oPrice = price;
+assign oPrice = price;
 assign oDone = done;
 
 endmodule

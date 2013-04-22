@@ -56,30 +56,28 @@ reg		[17:0]		exp_tmu_d1;	// 4 LSB cut. 4 int, 14 frac
 
 wire		[17:0]		product;		// S0 * exp(t * mu). 3 Integer, 15 Franction Bits.
 											// Multiplier cuts 5 MSB and 13 LSB
-reg						valid;											
-reg						done;
+wire						valid;											
+wire						done;
 
 initial
 begin
-	t <= 0;
-	t_d1 <= 0;
-	t_d2 <= 0;
-	t_d3 <= 0;
-	t_d4 <= 0;
-	t_d5 <= 0;
-	t_d6 <= 0;
-	t_d7 <= 0;
-	t_d8 <= 0;
-	t_d9 <= 0;
-	t_d10 <= 0;
-	t_d11 <= 0;
-	t_d12 <= 0;
-	t_d13 <= 0;
+	t <= t_min;
+	t_d1 <= t_min+20;
+	t_d2 <= t_min+20;
+	t_d3 <= t_min+20;
+	t_d4 <= t_min+20;
+	t_d5 <= t_min+20;
+	t_d6 <= t_min+20;
+	t_d7 <= t_min+20;
+	t_d8 <= t_min+20;
+	t_d9 <= t_min+20;
+	t_d10 <= t_min+20;
+	t_d11 <= t_min+20;
+	t_d12 <= t_min+20;
+	t_d13 <= t_min+20;
 	t_add1 <= 1;
 	tmu_d1 <= 0;
 	exp_tmu_d1 <= 0;
-	valid <= 0;
-	done <= 0;
 end
 
 always @ (posedge CLK) begin
@@ -105,17 +103,6 @@ always @ (posedge CLK) begin
 		tmu_d1 <= tmu;
 		exp_tmu_d1 <= exp_tmu;
 		
-		if (t_d13 == t_max) begin 
-			done <= 1;
-			valid <= 0;
-		end
-		else
-		begin
-			if (done == 1)
-				done <= 0;
-			if (t_d12 == t_min)
-				valid <= 1;
-		end
 	end		
 	else begin
 		t <= t_min;
@@ -135,11 +122,11 @@ always @ (posedge CLK) begin
 		t_add1 <= 1;
 		tmu_d1 <= 0;
 		exp_tmu_d1 <= 0;
-		done <= 0;
-		valid <= 0;
 	end
 end
 
+SR_FF done_control(CLK, (t_d13 == t_max), (done == 1), done);
+SR_FF valid_control(CLK, (t_d12 == t_min), (t_d13 == t_max), valid);
 SR_FF enable_control(CLK, iStart, done, enable);
 
 mult_9_18_18 mult1(CLK, t_add1, iMu, tmu);

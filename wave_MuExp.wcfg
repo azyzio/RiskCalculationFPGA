@@ -3,7 +3,7 @@
    <wave_state>
    </wave_state>
    <db_ref_list>
-      <db_ref path="D:/Dropbox/NUS/FYP/RiskCalculationFPGA/test_CalculateExpMu_isim_beh.wdb" id="1" type="auto">
+      <db_ref path="D:/Dropbox/NUS/FYP/RiskCalculationFPGA/test_CalculateExpMu_isim_beh1.wdb" id="1" type="auto">
          <top_modules>
             <top_module name="glbl" />
             <top_module name="numeric_std" />
@@ -16,7 +16,7 @@
          </top_modules>
       </db_ref>
    </db_ref_list>
-   <WVObjectSize size="14" />
+   <WVObjectSize size="13" />
    <wvobject fp_name="/test_CalculateExpMu/iMu" type="array" db_ref_id="1">
       <obj_property name="ElementShortName">iMu[17:0]</obj_property>
       <obj_property name="ObjectShortName">iMu[17:0]</obj_property>
@@ -67,11 +67,6 @@
    <wvobject fp_name="/test_CalculateExpMu/oData" type="array" db_ref_id="1">
       <obj_property name="ElementShortName">oData[17:0]</obj_property>
       <obj_property name="ObjectShortName">oData[17:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/test_CalculateExpMu/uut/t_d12" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">t_d12[8:0]</obj_property>
-      <obj_property name="ObjectShortName">t_d12[8:0]</obj_property>
       <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/test_CalculateExpMu/oValid" type="logic" db_ref_id="1">

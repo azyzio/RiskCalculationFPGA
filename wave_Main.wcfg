@@ -7794,24 +7794,24 @@
       <obj_property name="ObjectShortName">t[8:0]</obj_property>
       <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
-   <wvobject fp_name="/test_Main/uut/core1/SigmaReadAddress" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">SigmaReadAddress[9:0]</obj_property>
-      <obj_property name="ObjectShortName">SigmaReadAddress[9:0]</obj_property>
-      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-   </wvobject>
    <wvobject fp_name="/test_Main/uut/core1/MuReadData" type="array" db_ref_id="1">
       <obj_property name="ElementShortName">MuReadData[17:0]</obj_property>
       <obj_property name="ObjectShortName">MuReadData[17:0]</obj_property>
       <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
+   <wvobject fp_name="/test_Main/uut/core1/pathOutput" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">pathOutput[9:0]</obj_property>
+      <obj_property name="ObjectShortName">pathOutput[9:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_Main/uut/core1/MuReadData_d2" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">MuReadData_d2[17:0]</obj_property>
+      <obj_property name="ObjectShortName">MuReadData_d2[17:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
    <wvobject fp_name="/test_Main/uut/core1/SigmaReadData" type="array" db_ref_id="1">
       <obj_property name="ElementShortName">SigmaReadData[17:0]</obj_property>
       <obj_property name="ObjectShortName">SigmaReadData[17:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/test_Main/uut/core1/MuReadData_d1" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">MuReadData_d1[17:0]</obj_property>
-      <obj_property name="ObjectShortName">MuReadData_d1[17:0]</obj_property>
       <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/test_Main/uut/core1/product" type="array" db_ref_id="1">
@@ -7823,22 +7823,22 @@
       <obj_property name="ElementShortName">validProduct</obj_property>
       <obj_property name="ObjectShortName">validProduct</obj_property>
    </wvobject>
+   <wvobject fp_name="/test_Main/uut/oDone[0]" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">[0]</obj_property>
+      <obj_property name="ObjectShortName">oDone[0]</obj_property>
+   </wvobject>
    <wvobject fp_name="/test_Main/uut/core1/acc" type="array" db_ref_id="1">
       <obj_property name="ElementShortName">acc[26:0]</obj_property>
       <obj_property name="ObjectShortName">acc[26:0]</obj_property>
       <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
-   <wvobject fp_name="/test_Main/uut/core1/oAcc" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">oAcc[26:0]</obj_property>
-      <obj_property name="ObjectShortName">oAcc[26:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/test_Main/uut/oDone[0]" type="logic" db_ref_id="1">
-      <obj_property name="ElementShortName">[0]</obj_property>
-      <obj_property name="ObjectShortName">oDone[0]</obj_property>
-   </wvobject>
    <wvobject fp_name="/test_Main/CLK" type="logic" db_ref_id="1">
       <obj_property name="ElementShortName">CLK</obj_property>
       <obj_property name="ObjectShortName">CLK</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_Main/oAcc2" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">oAcc2[26:0]</obj_property>
+      <obj_property name="ObjectShortName">oAcc2[26:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
 </wave_config>

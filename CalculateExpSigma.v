@@ -48,6 +48,7 @@ reg		[2:0]					xsigma_i;	// integer part of xsigma+2. 3 int bits.
 
 wire		[13:0]				exp_frac;	// exponent of the fractional part. 4 int, 10 fract
 reg		[11:0]				exp_frac_d1;// 2 MSB cut. 2 int, 10 fract
+
 wire		[12:0]				exp_int;		// exponent of the integer part. 3 int, 10 fract
 reg		[12:0]				exp_int_d1;
 reg		[12:0]				exp_int_d2;
@@ -58,8 +59,8 @@ reg		[12:0]				exp_int_d6;
 
 wire		[17:0]				exp_xsigma;	// the result of multiplying frac and int. 3 int, 15 frac
 
-reg								valid;
-reg								done;
+wire								valid;
+wire								done;
 
 initial
 begin
@@ -87,8 +88,6 @@ begin
 	exp_int_d4 <= 0;
 	exp_int_d5 <= 0;
 	exp_int_d6 <= 0;
-	valid <= 0;
-	done <= 0;
 end
 
 always @ (posedge CLK)
@@ -121,19 +120,6 @@ begin
 		exp_int_d4 <= exp_int_d3;
 		exp_int_d5 <= exp_int_d4;
 		exp_int_d6 <= exp_int_d5;
-		
-		if (x_d13 == x_max) begin 
-			done <= 1;
-			valid <= 0;
-		end
-		else
-		begin
-			if (done == 1)
-				done <= 0;
-			if (x_d12 == x_min)
-				valid <= 1;
-		end		
-		
 	end
 	else begin
 		x <= x_min;
@@ -160,12 +146,11 @@ begin
 		exp_int_d4 <= 0;
 		exp_int_d5 <= 0;
 		exp_int_d6 <= 0;
-		done <= 0;
-		valid <= 0;
 	end
-	
 end
-
+	
+SR_FF done_control(CLK, (x_d13 == x_max), (done == 1), done);
+SR_FF valid_control(CLK, (x_d12 == x_min), (x_d13 == x_max), valid);
 SR_FF enable_control(CLK, iStart, done, enable);
 
 mult_10_18_21 mult0(CLK, x, iSigma, xsigma);
