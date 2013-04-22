@@ -3,14 +3,16 @@
 <!--The data in this file is primarily intended for consumption by Xilinx tools.
 The structure and the elements are likely to change over the next few releases.
 This means code written to parse this file will need to be revisited each subsequent release.-->
-<application name="pn" timeStamp="Sun Apr 21 14:58:14 2013">
+<application name="pn" timeStamp="Mon Apr 22 08:15:12 2013">
 <section name="Project Information" visible="false">
 <property name="ProjectID" value="343DEB97A17C4B3485664952A45C1D50" type="project"/>
-<property name="ProjectIteration" value="14" type="project"/>
+<property name="ProjectIteration" value="17" type="project"/>
 <property name="ProjectFile" value="D:/Dropbox/NUS/FYP/RiskCalculationFPGA/RiskCalculationFPGA.xise" type="project"/>
 <property name="ProjectCreationTimestamp" value="2013-04-19T16:32:47" type="project"/>
 </section>
 <section name="Project Statistics" visible="true">
+<property name="PROPEXT_xilxSynthAddBufg_virtex5" value="16" type="process"/>
+<property name="PROP_Board" value="Virtex 6 ML605 Evaluation Platform" type="process"/>
 <property name="PROP_Enable_Message_Filtering" value="false" type="design"/>
 <property name="PROP_FitterReportFormat" value="HTML" type="process"/>
 <property name="PROP_LastAppliedGoal" value="Balanced" type="design"/>
@@ -27,19 +29,18 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="PROP_UserConstraintEditorPreference" value="Text Editor" type="process"/>
 <property name="PROP_intProjectCreationTimestamp" value="2013-04-19T16:32:47" type="design"/>
 <property name="PROP_intWbtProjectID" value="343DEB97A17C4B3485664952A45C1D50" type="design"/>
-<property name="PROP_intWbtProjectIteration" value="14" type="process"/>
+<property name="PROP_intWbtProjectIteration" value="17" type="process"/>
 <property name="PROP_intWorkingDirLocWRTProjDir" value="Same" type="design"/>
 <property name="PROP_intWorkingDirUsed" value="No" type="design"/>
 <property name="PROP_lockPinsUcfFile" value="changed" type="process"/>
 <property name="PROP_selectedSimRootSourceNode_behav" value="work.test_Main" type="process"/>
-<property name="PROP_xilxBitgStart_IntDone" value="true" type="process"/>
 <property name="PROP_AutoTop" value="true" type="design"/>
-<property name="PROP_DevFamily" value="Spartan6" type="design"/>
-<property name="PROP_DevDevice" value="xc6slx45" type="design"/>
-<property name="PROP_DevFamilyPMName" value="spartan6" type="design"/>
-<property name="PROP_DevPackage" value="fgg484" type="design"/>
+<property name="PROP_DevFamily" value="Virtex6" type="design"/>
+<property name="PROP_DevDevice" value="xc6vlx240t" type="design"/>
+<property name="PROP_DevFamilyPMName" value="virtex6" type="design"/>
+<property name="PROP_DevPackage" value="ff1156" type="design"/>
 <property name="PROP_Synthesis_Tool" value="XST (VHDL/Verilog)" type="design"/>
-<property name="PROP_DevSpeed" value="-3" type="design"/>
+<property name="PROP_DevSpeed" value="-1" type="design"/>
 <property name="PROP_PreferredLanguage" value="Verilog" type="design"/>
 <property name="FILE_COREGEN" value="5" type="source"/>
 <property name="FILE_UCF" value="1" type="source"/>

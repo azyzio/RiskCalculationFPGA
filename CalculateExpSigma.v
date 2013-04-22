@@ -38,6 +38,7 @@ reg	signed	[pathWidth-1:0]	x_d9;
 reg	signed	[pathWidth-1:0]	x_d10;
 reg	signed	[pathWidth-1:0]	x_d11;
 reg	signed	[pathWidth-1:0]	x_d12;
+reg	signed	[pathWidth-1:0]	x_d13;
 
 wire 	signed	[20:0]				xsigma;		// (x * sigma). Signed, 3 int, 18 fract
 reg 				[20:0]				xsigma_shift;	// (x * sigma) + 2. Unsigned, 3 int, 18 fract
@@ -53,6 +54,7 @@ reg		[12:0]				exp_int_d2;
 reg		[12:0]				exp_int_d3;
 reg		[12:0]				exp_int_d4;
 reg		[12:0]				exp_int_d5;
+reg		[12:0]				exp_int_d6;
 
 wire		[17:0]				exp_xsigma;	// the result of multiplying frac and int. 3 int, 15 frac
 
@@ -74,12 +76,17 @@ begin
 	x_d10 <= 0;
 	x_d11 <= 0;
 	x_d12 <= 0;
+	x_d13 <= 0;
 	xsigma_shift <= 0;
 	xsigma_f <= 0;
 	xsigma_i <= 0;
 	exp_frac_d1 <= 0;
 	exp_int_d1 <= 0;
 	exp_int_d2 <= 0;
+	exp_int_d3 <= 0;
+	exp_int_d4 <= 0;
+	exp_int_d5 <= 0;
+	exp_int_d6 <= 0;
 	valid <= 0;
 	done <= 0;
 end
@@ -100,6 +107,7 @@ begin
 		x_d10 <= x_d9;
 		x_d11 <= x_d10;
 		x_d12 <= x_d11;
+		x_d13 <= x_d12;
 		
 		xsigma_shift <= xsigma + 2**19;
 		
@@ -112,8 +120,9 @@ begin
 		exp_int_d3 <= exp_int_d2;
 		exp_int_d4 <= exp_int_d3;
 		exp_int_d5 <= exp_int_d4;
+		exp_int_d6 <= exp_int_d5;
 		
-		if (x_d11 == x_max) begin 
+		if (x_d13 == x_max) begin 
 			done <= 1;
 			valid <= 0;
 		end
@@ -121,7 +130,7 @@ begin
 		begin
 			if (done == 1)
 				done <= 0;
-			if (x_d11 == x_min)
+			if (x_d12 == x_min)
 				valid <= 1;
 		end		
 		
@@ -140,6 +149,7 @@ begin
 		x_d10 <= x_min+20;
 		x_d11 <= x_min+20;
 		x_d12 <= x_min+20;
+		x_d13 <= x_min+20;
 		xsigma_shift <= 0;
 		xsigma_f <= 0;
 		xsigma_i <= 0;
@@ -149,6 +159,7 @@ begin
 		exp_int_d3 <= 0;
 		exp_int_d4 <= 0;
 		exp_int_d5 <= 0;
+		exp_int_d6 <= 0;
 		done <= 0;
 		valid <= 0;
 	end
@@ -161,10 +172,10 @@ mult_10_18_21 mult0(CLK, x, iSigma, xsigma);
 
 ROM_3_13 exp_i(CLK, xsigma_i, exp_int);
 exp_18_14 exp_f(CLK, 1'b0, xsigma_f, exp_frac);
-mult_12_13_18 mult1(CLK, 1'b1, exp_frac_d1, exp_int_d5, exp_xsigma);
+mult_12_13_18 mult1(CLK, 1'b1, exp_frac_d1, exp_int_d6, exp_xsigma);
 
 assign oData = exp_xsigma;
-assign oAddr = x_d12;
+assign oAddr = x_d13;
 assign oValid = valid;
 assign oDone = done;
 

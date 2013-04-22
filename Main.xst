@@ -4,7 +4,7 @@ run
 -ifn Main.prj
 -ofn Main
 -ofmt NGC
--p xc6slx45-3-fgg484
+-p xc6vlx240t-1-ff1156
 -top Main
 -opt_mode Speed
 -opt_level 1

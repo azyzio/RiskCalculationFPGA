@@ -46,7 +46,7 @@ Ignore Synthesis Constraint File   : NO
 ---- Target Parameters
 Output File Name                   : "Main"
 Output Format                      : NGC
-Target Device                      : xc6slx45-3-fgg484
+Target Device                      : xc6vlx240t-1-ff1156
 
 ---- Source Options
 Top Module Name                    : Main
@@ -139,24 +139,42 @@ Parsing entity <Compressor_2_2>.
 Parsing architecture <arch> of entity <compressor_2_2>.
 Parsing entity <Compressor_3_2>.
 Parsing architecture <arch> of entity <compressor_3_2>.
-Parsing entity <PolyCoeffTable_8_50>.
-Parsing architecture <arch> of entity <polycoefftable_8_50>.
-Parsing entity <IntAdder_14_f200_uid20>.
-Parsing architecture <arch> of entity <intadder_14_f200_uid20>.
-Parsing entity <IntMultiplier_UsingDSP_11_9_9_signed_uid7>.
-Parsing architecture <arch> of entity <intmultiplier_usingdsp_11_9_9_signed_uid7>.
-Parsing entity <IntAdder_18_f200_uid28>.
-Parsing architecture <arch> of entity <intadder_18_f200_uid28>.
-Parsing entity <IntAdder_23_f200_uid48>.
-Parsing architecture <arch> of entity <intadder_23_f200_uid48>.
-Parsing entity <IntMultiplier_UsingDSP_11_18_18_signed_uid35>.
-Parsing architecture <arch> of entity <intmultiplier_usingdsp_11_18_18_signed_uid35>.
-Parsing entity <IntAdder_25_f200_uid56>.
-Parsing architecture <arch> of entity <intadder_25_f200_uid56>.
+Parsing entity <PolyCoeffTable_8_31>.
+Parsing architecture <arch> of entity <polycoefftable_8_31>.
+Parsing entity <IntAdder_10_f700_uid20>.
+Parsing architecture <arch> of entity <intadder_10_f700_uid20>.
+Parsing entity <IntMultiplier_UsingDSP_11_6_5_signed_uid7>.
+Parsing architecture <arch> of entity <intmultiplier_usingdsp_11_6_5_signed_uid7>.
+Parsing entity <IntAdder_10_f700_uid28>.
+Parsing architecture <arch> of entity <intadder_10_f700_uid28>.
+Parsing entity <IntAdder_15_f700_uid48>.
+Parsing architecture <arch> of entity <intadder_15_f700_uid48>.
+Parsing entity <IntMultiplier_UsingDSP_11_10_10_signed_uid35>.
+Parsing architecture <arch> of entity <intmultiplier_usingdsp_11_10_10_signed_uid35>.
+Parsing entity <IntAdder_17_f700_uid56>.
+Parsing architecture <arch> of entity <intadder_17_f700_uid56>.
 Parsing entity <PolynomialEvaluator_degree2_uid5>.
 Parsing architecture <arch> of entity <polynomialevaluator_degree2_uid5>.
-Parsing entity <Exponential>.
-Parsing architecture <arch> of entity <exponential>.
+Parsing entity <exp_18_14>.
+Parsing architecture <arch> of entity <exp_18_14>.
+Parsing entity <PolyCoeffTable_8_39>.
+Parsing architecture <arch> of entity <polycoefftable_8_39>.
+Parsing entity <IntAdder_11_f700_uid83>.
+Parsing architecture <arch> of entity <intadder_11_f700_uid83>.
+Parsing entity <IntMultiplier_UsingDSP_11_6_6_signed_uid70>.
+Parsing architecture <arch> of entity <intmultiplier_usingdsp_11_6_6_signed_uid70>.
+Parsing entity <IntAdder_14_f700_uid91>.
+Parsing architecture <arch> of entity <intadder_14_f700_uid91>.
+Parsing entity <IntAdder_19_f700_uid111>.
+Parsing architecture <arch> of entity <intadder_19_f700_uid111>.
+Parsing entity <IntMultiplier_UsingDSP_11_14_14_signed_uid98>.
+Parsing architecture <arch> of entity <intmultiplier_usingdsp_11_14_14_signed_uid98>.
+Parsing entity <IntAdder_21_f700_uid119>.
+Parsing architecture <arch> of entity <intadder_21_f700_uid119>.
+Parsing entity <PolynomialEvaluator_degree2_uid68>.
+Parsing architecture <arch> of entity <polynomialevaluator_degree2_uid68>.
+Parsing entity <exp_18_18>.
+Parsing architecture <arch> of entity <exp_18_18>.
 
 =========================================================================
 *                            HDL Elaboration                            *
@@ -165,78 +183,69 @@ Parsing architecture <arch> of entity <exponential>.
 Elaborating module <Main>.
 
 Elaborating module <SR_FF>.
-WARNING:HDLCompiler:413 - "D:\Dropbox\NUS\FYP\RiskCalculationFPGA\Main.v" Line 92: Result of 3-bit expression is truncated to fit in 2-bit target.
-WARNING:HDLCompiler:413 - "D:\Dropbox\NUS\FYP\RiskCalculationFPGA\Main.v" Line 97: Result of 3-bit expression is truncated to fit in 2-bit target.
-WARNING:HDLCompiler:1127 - "D:\Dropbox\NUS\FYP\RiskCalculationFPGA\Main.v" Line 104: Assignment to validaExpSigmaUsed ignored, since the identifier is never used
 
-Elaborating module <CalculateExpMu(t_min=9'b0,t_max=9'b010101010)>.
-WARNING:HDLCompiler:413 - "D:\Dropbox\NUS\FYP\RiskCalculationFPGA\CalculateExpMu.v" Line 85: Result of 10-bit expression is truncated to fit in 9-bit target.
-WARNING:HDLCompiler:1127 - "D:\Dropbox\NUS\FYP\RiskCalculationFPGA\CalculateExpMu.v" Line 82: Assignment to exp_tmu_d1 ignored, since the identifier is never used
+Elaborating module <CalculateExpMu>.
+WARNING:HDLCompiler:413 - "D:\Dropbox\NUS\FYP\RiskCalculationFPGA\CalculateExpMu.v" Line 83: Result of 10-bit expression is truncated to fit in 9-bit target.
 
 Elaborating module <mult_9_18_18>.
+Going to vhdl side to elaborate module exp_18_18
+
+Elaborating entity <exp_18_18> (architecture <arch>) from library <work>.
+
+Elaborating entity <PolyCoeffTable_8_39> (architecture <arch>) from library <work>.
+
+Elaborating entity <PolynomialEvaluator_degree2_uid68> (architecture <arch>) from library <work>.
+
+Elaborating entity <IntMultiplier_UsingDSP_11_6_6_signed_uid70> (architecture <arch>) from library <work>.
+
+Elaborating entity <IntAdder_11_f700_uid83> (architecture <arch>) from library <work>.
+
+Elaborating entity <IntAdder_14_f700_uid91> (architecture <arch>) from library <work>.
+
+Elaborating entity <IntMultiplier_UsingDSP_11_14_14_signed_uid98> (architecture <arch>) from library <work>.
+
+Elaborating entity <IntAdder_19_f700_uid111> (architecture <arch>) from library <work>.
+
+Elaborating entity <IntAdder_21_f700_uid119> (architecture <arch>) from library <work>.
+Back to verilog to continue elaboration
 
 Elaborating module <mult_18_18_18_muexp>.
 
-Elaborating module <CalculateExpMu(t_min=9'b010101011,t_max=9'b101010101)>.
-WARNING:HDLCompiler:413 - "D:\Dropbox\NUS\FYP\RiskCalculationFPGA\CalculateExpMu.v" Line 85: Result of 10-bit expression is truncated to fit in 9-bit target.
-WARNING:HDLCompiler:1127 - "D:\Dropbox\NUS\FYP\RiskCalculationFPGA\CalculateExpMu.v" Line 82: Assignment to exp_tmu_d1 ignored, since the identifier is never used
-
-Elaborating module <CalculateExpMu(t_min=9'b101010110,t_max=9'b111111111)>.
-WARNING:HDLCompiler:413 - "D:\Dropbox\NUS\FYP\RiskCalculationFPGA\CalculateExpMu.v" Line 85: Result of 10-bit expression is truncated to fit in 9-bit target.
-WARNING:HDLCompiler:1127 - "D:\Dropbox\NUS\FYP\RiskCalculationFPGA\CalculateExpMu.v" Line 82: Assignment to exp_tmu_d1 ignored, since the identifier is never used
-
-Elaborating module <CalculateExpSigma(x_min=10'b1011001101,x_max=10'b1110010000)>.
-WARNING:HDLCompiler:413 - "D:\Dropbox\NUS\FYP\RiskCalculationFPGA\CalculateExpSigma.v" Line 92: Result of 11-bit expression is truncated to fit in 10-bit target.
-WARNING:HDLCompiler:413 - "D:\Dropbox\NUS\FYP\RiskCalculationFPGA\CalculateExpSigma.v" Line 106: Result of 22-bit expression is truncated to fit in 21-bit target.
+Elaborating module <CalculateExpSigma>.
+WARNING:HDLCompiler:413 - "D:\Dropbox\NUS\FYP\RiskCalculationFPGA\CalculateExpSigma.v" Line 97: Result of 11-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:413 - "D:\Dropbox\NUS\FYP\RiskCalculationFPGA\CalculateExpSigma.v" Line 112: Result of 22-bit expression is truncated to fit in 21-bit target.
 
 Elaborating module <mult_10_18_21>.
 
 Elaborating module <ROM_3_13>.
 Reading initialization file \"memory_data/3bit_exp.data\".
 WARNING:HDLCompiler:1670 - "D:\Dropbox\NUS\FYP\RiskCalculationFPGA\ROM_3_13.v" Line 20: Signal <ROM> in initial block is partially initialized.
-Going to vhdl side to elaborate module Exponential
+Going to vhdl side to elaborate module exp_18_14
 
-Elaborating entity <Exponential> (architecture <arch>) from library <work>.
+Elaborating entity <exp_18_14> (architecture <arch>) from library <work>.
 
-Elaborating entity <PolyCoeffTable_8_50> (architecture <arch>) from library <work>.
+Elaborating entity <PolyCoeffTable_8_31> (architecture <arch>) from library <work>.
 
 Elaborating entity <PolynomialEvaluator_degree2_uid5> (architecture <arch>) from library <work>.
 
-Elaborating entity <IntMultiplier_UsingDSP_11_9_9_signed_uid7> (architecture <arch>) from library <work>.
+Elaborating entity <IntMultiplier_UsingDSP_11_6_5_signed_uid7> (architecture <arch>) from library <work>.
 
-Elaborating entity <IntAdder_14_f200_uid20> (architecture <arch>) from library <work>.
+Elaborating entity <IntAdder_10_f700_uid20> (architecture <arch>) from library <work>.
 
-Elaborating entity <IntAdder_18_f200_uid28> (architecture <arch>) from library <work>.
+Elaborating entity <IntAdder_10_f700_uid28> (architecture <arch>) from library <work>.
 
-Elaborating entity <IntMultiplier_UsingDSP_11_18_18_signed_uid35> (architecture <arch>) from library <work>.
+Elaborating entity <IntMultiplier_UsingDSP_11_10_10_signed_uid35> (architecture <arch>) from library <work>.
 
-Elaborating entity <IntAdder_23_f200_uid48> (architecture <arch>) from library <work>.
+Elaborating entity <IntAdder_15_f700_uid48> (architecture <arch>) from library <work>.
 
-Elaborating entity <IntAdder_25_f200_uid56> (architecture <arch>) from library <work>.
+Elaborating entity <IntAdder_17_f700_uid56> (architecture <arch>) from library <work>.
 Back to verilog to continue elaboration
 
 Elaborating module <mult_12_13_18>.
 
-Elaborating module <CalculateExpSigma(x_min=10'b1110010001,x_max=10'b01010100)>.
-WARNING:HDLCompiler:413 - "D:\Dropbox\NUS\FYP\RiskCalculationFPGA\CalculateExpSigma.v" Line 92: Result of 11-bit expression is truncated to fit in 10-bit target.
-WARNING:HDLCompiler:413 - "D:\Dropbox\NUS\FYP\RiskCalculationFPGA\CalculateExpSigma.v" Line 106: Result of 22-bit expression is truncated to fit in 21-bit target.
-Going to vhdl side to elaborate module Exponential
-
-Elaborating entity <Exponential> (architecture <arch>) from library <work>.
-WARNING:HDLCompiler:758 - "D:\Dropbox\NUS\FYP\RiskCalculationFPGA\flopoco.vhdl" Line 1140: Replacing existing netlist Exponential(arch)
-Back to verilog to continue elaboration
-
-Elaborating module <CalculateExpSigma(x_min=10'b01010101,x_max=10'b0100011000)>.
-WARNING:HDLCompiler:413 - "D:\Dropbox\NUS\FYP\RiskCalculationFPGA\CalculateExpSigma.v" Line 92: Result of 11-bit expression is truncated to fit in 10-bit target.
-WARNING:HDLCompiler:413 - "D:\Dropbox\NUS\FYP\RiskCalculationFPGA\CalculateExpSigma.v" Line 106: Result of 22-bit expression is truncated to fit in 21-bit target.
-Going to vhdl side to elaborate module Exponential
-
-Elaborating entity <Exponential> (architecture <arch>) from library <work>.
-WARNING:HDLCompiler:758 - "D:\Dropbox\NUS\FYP\RiskCalculationFPGA\flopoco.vhdl" Line 1140: Replacing existing netlist Exponential(arch)
-Back to verilog to continue elaboration
-
 Elaborating module <MCCore(N="0")>.
-WARNING:HDLCompiler:413 - "D:\Dropbox\NUS\FYP\RiskCalculationFPGA\MCCore.v" Line 90: Result of 10-bit expression is truncated to fit in 9-bit target.
+WARNING:HDLCompiler:413 - "D:\Dropbox\NUS\FYP\RiskCalculationFPGA\MCCore.v" Line 96: Result of 10-bit expression is truncated to fit in 9-bit target.
+WARNING:HDLCompiler:1127 - "D:\Dropbox\NUS\FYP\RiskCalculationFPGA\MCCore.v" Line 92: Assignment to t_d7 ignored, since the identifier is never used
 
 Elaborating module <ROM_path(N="0")>.
 Reading initialization file \"memory_data/path0.data\".
@@ -248,12 +257,13 @@ Elaborating module <RAM_X_18(addr_size=9)>.
 Elaborating module <mult_18_18_18_core>.
 
 Elaborating module <MCCore(N="1")>.
-WARNING:HDLCompiler:413 - "D:\Dropbox\NUS\FYP\RiskCalculationFPGA\MCCore.v" Line 90: Result of 10-bit expression is truncated to fit in 9-bit target.
+WARNING:HDLCompiler:413 - "D:\Dropbox\NUS\FYP\RiskCalculationFPGA\MCCore.v" Line 96: Result of 10-bit expression is truncated to fit in 9-bit target.
+WARNING:HDLCompiler:1127 - "D:\Dropbox\NUS\FYP\RiskCalculationFPGA\MCCore.v" Line 92: Assignment to t_d7 ignored, since the identifier is never used
 
 Elaborating module <ROM_path(N="1")>.
 Reading initialization file \"memory_data/path1.data\".
-WARNING:HDLCompiler:1127 - "D:\Dropbox\NUS\FYP\RiskCalculationFPGA\Main.v" Line 220: Assignment to oDone ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "D:\Dropbox\NUS\FYP\RiskCalculationFPGA\Main.v" Line 221: Assignment to oDone ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "D:\Dropbox\NUS\FYP\RiskCalculationFPGA\Main.v" Line 143: Assignment to oDone ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "D:\Dropbox\NUS\FYP\RiskCalculationFPGA\Main.v" Line 144: Assignment to oDone ignored, since the identifier is never used
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -265,31 +275,10 @@ Synthesizing Unit <Main>.
         logT = 9
         pathWidth = 10
         CoreN = 2
-        ExpSigmaN = 3
-        ExpMuN = 3
-INFO:Xst:3210 - "D:\Dropbox\NUS\FYP\RiskCalculationFPGA\Main.v" line 122: Output port <oDone> of the instance <calcExpMu1> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Dropbox\NUS\FYP\RiskCalculationFPGA\Main.v" line 133: Output port <oDone> of the instance <calcExpMu2> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Dropbox\NUS\FYP\RiskCalculationFPGA\Main.v" line 155: Output port <oDone> of the instance <calcExpSigma1> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Dropbox\NUS\FYP\RiskCalculationFPGA\Main.v" line 165: Output port <oDone> of the instance <calcExpSigma2> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Dropbox\NUS\FYP\RiskCalculationFPGA\Main.v" line 205: Output port <oDone> of the instance <core1> is unconnected or connected to loadless signal.
-    Found 2-bit register for signal <ExpSigmaUsed>.
-    Found 2-bit register for signal <ExpMuUsed>.
+INFO:Xst:3210 - "D:\Dropbox\NUS\FYP\RiskCalculationFPGA\Main.v" line 128: Output port <oDone> of the instance <core1> is unconnected or connected to loadless signal.
     Found 1-bit register for signal <Switch>.
-    Found 2-bit adder for signal <ExpSigmaUsed[1]_GND_1_o_add_2_OUT> created at line 92.
-    Found 2-bit adder for signal <ExpMuUsed[1]_GND_1_o_add_5_OUT> created at line 97.
-    Found 10-bit 3-to-1 multiplexer for signal <addrExpSigmaUsed> created at line 102.
-    Found 18-bit 3-to-1 multiplexer for signal <dataExpSigmaUsed> created at line 103.
-    Found 9-bit 3-to-1 multiplexer for signal <addrExpMuUsed> created at line 106.
-    Found 18-bit 3-to-1 multiplexer for signal <dataExpMuUsed> created at line 107.
-    Found 1-bit 3-to-1 multiplexer for signal <validExpMuUsed> created at line 108.
-    Found 1-bit 3-to-1 multiplexer for signal <ExpSigmaUsed[1]_X_1_o_Mux_15_o> created at line 198.
-    Found 2-bit comparator greater for signal <ExpSigmaUsed[1]_PWR_1_o_LessThan_2_o> created at line 91
-    Found 2-bit comparator greater for signal <ExpMuUsed[1]_PWR_1_o_LessThan_5_o> created at line 96
     Summary:
-	inferred   2 Adder/Subtractor(s).
-	inferred   5 D-type flip-flop(s).
-	inferred   2 Comparator(s).
-	inferred   6 Multiplexer(s).
+	inferred   1 D-type flip-flop(s).
 Unit <Main> synthesized.
 
 Synthesizing Unit <SR_FF>.
@@ -300,13 +289,11 @@ Synthesizing Unit <SR_FF>.
 	inferred   1 Multiplexer(s).
 Unit <SR_FF> synthesized.
 
-Synthesizing Unit <CalculateExpMu_1>.
+Synthesizing Unit <CalculateExpMu>.
     Related source file is "D:\Dropbox\NUS\FYP\RiskCalculationFPGA\CalculateExpMu.v".
-        t_min = 9'b000000000
-        t_max = 9'b010101010
+        t_min = 0
+        t_max = 511
         logT = 9
-    Found 9-bit register for signal <t_next0>.
-    Found 9-bit register for signal <t_next1>.
     Found 9-bit register for signal <t_d1>.
     Found 9-bit register for signal <t_d2>.
     Found 9-bit register for signal <t_d3>.
@@ -318,81 +305,141 @@ Synthesizing Unit <CalculateExpMu_1>.
     Found 9-bit register for signal <t_d9>.
     Found 9-bit register for signal <t_d10>.
     Found 9-bit register for signal <t_d11>.
+    Found 9-bit register for signal <t_d12>.
     Found 18-bit register for signal <tmu_d1>.
+    Found 18-bit register for signal <exp_tmu_d1>.
     Found 1-bit register for signal <done>.
     Found 1-bit register for signal <valid>.
     Found 9-bit register for signal <t>.
-    Found 9-bit adder for signal <t[8]_GND_3_o_add_1_OUT> created at line 85.
+    Found 9-bit adder for signal <t[8]_GND_3_o_add_2_OUT> created at line 83.
+    Found 9-bit comparator greater for signal <t[8]_PWR_3_o_LessThan_2_o> created at line 82
     Summary:
 	inferred   1 Adder/Subtractor(s).
-	inferred 146 D-type flip-flop(s).
-	inferred  11 Multiplexer(s).
-Unit <CalculateExpMu_1> synthesized.
+	inferred 155 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+	inferred  12 Multiplexer(s).
+Unit <CalculateExpMu> synthesized.
 
-Synthesizing Unit <CalculateExpMu_2>.
-    Related source file is "D:\Dropbox\NUS\FYP\RiskCalculationFPGA\CalculateExpMu.v".
-        t_min = 9'b010101011
-        t_max = 9'b101010101
-        logT = 9
-    Found 9-bit register for signal <t_next0>.
-    Found 9-bit register for signal <t_next1>.
-    Found 9-bit register for signal <t_d1>.
-    Found 9-bit register for signal <t_d2>.
-    Found 9-bit register for signal <t_d3>.
-    Found 9-bit register for signal <t_d4>.
-    Found 9-bit register for signal <t_d5>.
-    Found 9-bit register for signal <t_d6>.
-    Found 9-bit register for signal <t_d7>.
-    Found 9-bit register for signal <t_d8>.
-    Found 9-bit register for signal <t_d9>.
-    Found 9-bit register for signal <t_d10>.
-    Found 9-bit register for signal <t_d11>.
-    Found 18-bit register for signal <tmu_d1>.
-    Found 1-bit register for signal <done>.
-    Found 1-bit register for signal <valid>.
-    Found 9-bit register for signal <t>.
-    Found 9-bit adder for signal <t[8]_GND_6_o_add_1_OUT> created at line 85.
+Synthesizing Unit <exp_18_18>.
+    Related source file is "D:\Dropbox\NUS\FYP\RiskCalculationFPGA\flopoco.vhdl".
+    Found 18-bit register for signal <X_d1>.
+    Found 10-bit register for signal <X_d2<9:0>>.
+    Found 39-bit register for signal <Coef_d1>.
+    Summary:
+	inferred  67 D-type flip-flop(s).
+Unit <exp_18_18> synthesized.
+
+Synthesizing Unit <PolyCoeffTable_8_39>.
+    Related source file is "D:\Dropbox\NUS\FYP\RiskCalculationFPGA\flopoco.vhdl".
+WARNING:Xst:647 - Input <rst> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:2999 - Signal 'rom', unconnected in block 'PolyCoeffTable_8_39', is tied to its initial value.
+    Found 512x20-bit dual-port Read Only RAM <Mram_rom> for signal <rom>.
+    Found 19-bit register for signal <Y0<18:0>>.
+    Found 20-bit register for signal <Y1>.
+    Summary:
+	inferred   1 RAM(s).
+	inferred  39 D-type flip-flop(s).
+Unit <PolyCoeffTable_8_39> synthesized.
+
+Synthesizing Unit <PolynomialEvaluator_degree2_uid68>.
+    Related source file is "D:\Dropbox\NUS\FYP\RiskCalculationFPGA\flopoco.vhdl".
+    Register <yT1_d1> equivalent to <Y_d1> has been removed
+    Found 10-bit register for signal <Y_d1>.
+    Found 10-bit register for signal <Y_d2>.
+    Found 20-bit register for signal <a0_d1>.
+    Found 20-bit register for signal <a0_d2>.
+    Found 20-bit register for signal <a0_d3>.
+    Found 20-bit register for signal <a0_d4>.
+    Found 13-bit register for signal <a1_d1>.
+    Found 13-bit register for signal <a1_d2>.
+    Found 6-bit register for signal <sigmaP0_d1>.
+    WARNING:Xst:2404 -  FFs/Latches <yT1_d1<10:10>> (without init value) have a constant value of 0 in block <PolynomialEvaluator_degree2_uid68>.
+    Summary:
+	inferred 132 D-type flip-flop(s).
+Unit <PolynomialEvaluator_degree2_uid68> synthesized.
+
+Synthesizing Unit <IntMultiplier_UsingDSP_11_6_6_signed_uid70>.
+    Related source file is "D:\Dropbox\NUS\FYP\RiskCalculationFPGA\flopoco.vhdl".
+    Found 43-bit register for signal <DSP_bh72_ch0_0_d1>.
+    Found 25x18-bit multiplier for signal <DSP_bh72_ch0_0> created at line 1602.
+    WARNING:Xst:2404 -  FFs/Latches <heap_bh72_w3_1_d1<0:0>> (without init value) have a constant value of 1 in block <IntMultiplier_UsingDSP_11_6_6_signed_uid70>.
+    Summary:
+	inferred   1 Multiplier(s).
+	inferred  43 D-type flip-flop(s).
+Unit <IntMultiplier_UsingDSP_11_6_6_signed_uid70> synthesized.
+
+Synthesizing Unit <IntAdder_11_f700_uid83>.
+    Related source file is "D:\Dropbox\NUS\FYP\RiskCalculationFPGA\flopoco.vhdl".
+WARNING:Xst:647 - Input <clk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <rst> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 11-bit adder for signal <R> created at line 1523.
     Summary:
 	inferred   1 Adder/Subtractor(s).
-	inferred 146 D-type flip-flop(s).
-	inferred  14 Multiplexer(s).
-Unit <CalculateExpMu_2> synthesized.
+Unit <IntAdder_11_f700_uid83> synthesized.
 
-Synthesizing Unit <CalculateExpMu_3>.
-    Related source file is "D:\Dropbox\NUS\FYP\RiskCalculationFPGA\CalculateExpMu.v".
-        t_min = 9'b101010110
-        t_max = 9'b111111111
-        logT = 9
-    Found 9-bit register for signal <t_next0>.
-    Found 9-bit register for signal <t_next1>.
-    Found 9-bit register for signal <t_d1>.
-    Found 9-bit register for signal <t_d2>.
-    Found 9-bit register for signal <t_d3>.
-    Found 9-bit register for signal <t_d4>.
-    Found 9-bit register for signal <t_d5>.
-    Found 9-bit register for signal <t_d6>.
-    Found 9-bit register for signal <t_d7>.
-    Found 9-bit register for signal <t_d8>.
-    Found 9-bit register for signal <t_d9>.
-    Found 9-bit register for signal <t_d10>.
-    Found 9-bit register for signal <t_d11>.
-    Found 18-bit register for signal <tmu_d1>.
-    Found 1-bit register for signal <done>.
-    Found 1-bit register for signal <valid>.
-    Found 9-bit register for signal <t>.
-    Found 9-bit adder for signal <t[8]_GND_7_o_add_1_OUT> created at line 85.
+Synthesizing Unit <IntAdder_14_f700_uid91>.
+    Related source file is "D:\Dropbox\NUS\FYP\RiskCalculationFPGA\flopoco.vhdl".
+WARNING:Xst:647 - Input <clk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <rst> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 14-bit adder for signal <n0010> created at line 1669.
+    Found 14-bit adder for signal <R> created at line 1669.
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+Unit <IntAdder_14_f700_uid91> synthesized.
+
+Synthesizing Unit <IntMultiplier_UsingDSP_11_14_14_signed_uid98>.
+    Related source file is "D:\Dropbox\NUS\FYP\RiskCalculationFPGA\flopoco.vhdl".
+    Found 1-bit register for signal <heap_bh100_w17_0_d1>.
+    Found 1-bit register for signal <heap_bh100_w16_0_d1>.
+    Found 1-bit register for signal <heap_bh100_w15_0_d1>.
+    Found 1-bit register for signal <heap_bh100_w14_0_d1>.
+    Found 1-bit register for signal <heap_bh100_w13_0_d1>.
+    Found 1-bit register for signal <heap_bh100_w12_0_d1>.
+    Found 1-bit register for signal <heap_bh100_w11_0_d1>.
+    Found 1-bit register for signal <heap_bh100_w10_0_d1>.
+    Found 1-bit register for signal <heap_bh100_w9_0_d1>.
+    Found 1-bit register for signal <heap_bh100_w8_0_d1>.
+    Found 1-bit register for signal <heap_bh100_w7_0_d1>.
+    Found 1-bit register for signal <heap_bh100_w6_0_d1>.
+    Found 1-bit register for signal <heap_bh100_w5_0_d1>.
+    Found 1-bit register for signal <heap_bh100_w4_0_d1>.
+    Found 1-bit register for signal <heap_bh100_w3_0_d1>.
+    Found 1-bit register for signal <heap_bh100_w2_0_d1>.
+    Found 1-bit register for signal <heap_bh100_w1_0_d1>.
+    Found 1-bit register for signal <heap_bh100_w0_0_d1>.
+    Found 43-bit register for signal <DSP_bh100_ch0_0_d1>.
+    Found 25x18-bit multiplier for signal <DSP_bh100_ch0_0> created at line 1800.
+    WARNING:Xst:2404 -  FFs/Latches <heap_bh100_w3_1_d1<0:0>> (without init value) have a constant value of 1 in block <IntMultiplier_UsingDSP_11_14_14_signed_uid98>.
+    WARNING:Xst:2404 -  FFs/Latches <heap_bh100_w3_1_d2<0:0>> (without init value) have a constant value of 1 in block <IntMultiplier_UsingDSP_11_14_14_signed_uid98>.
+    Summary:
+	inferred   1 Multiplier(s).
+	inferred  61 D-type flip-flop(s).
+Unit <IntMultiplier_UsingDSP_11_14_14_signed_uid98> synthesized.
+
+Synthesizing Unit <IntAdder_19_f700_uid111>.
+    Related source file is "D:\Dropbox\NUS\FYP\RiskCalculationFPGA\flopoco.vhdl".
+WARNING:Xst:647 - Input <clk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <rst> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 19-bit adder for signal <R> created at line 1694.
     Summary:
 	inferred   1 Adder/Subtractor(s).
-	inferred 146 D-type flip-flop(s).
-	inferred  14 Multiplexer(s).
-Unit <CalculateExpMu_3> synthesized.
+Unit <IntAdder_19_f700_uid111> synthesized.
 
-Synthesizing Unit <CalculateExpSigma_1>.
+Synthesizing Unit <IntAdder_21_f700_uid119>.
+    Related source file is "D:\Dropbox\NUS\FYP\RiskCalculationFPGA\flopoco.vhdl".
+WARNING:Xst:647 - Input <clk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <rst> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 21-bit adder for signal <n0010> created at line 1876.
+    Found 21-bit adder for signal <R> created at line 1876.
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+Unit <IntAdder_21_f700_uid119> synthesized.
+
+Synthesizing Unit <CalculateExpSigma>.
     Related source file is "D:\Dropbox\NUS\FYP\RiskCalculationFPGA\CalculateExpSigma.v".
-        x_min = 10'b1011001101
-        x_max = 10'b1110010000
+        x_min = -307
+        x_max = 280
         pathWidth = 10
-    Found 10-bit register for signal <x_next>.
     Found 10-bit register for signal <x_d1>.
     Found 10-bit register for signal <x_d2>.
     Found 10-bit register for signal <x_d3>.
@@ -405,6 +452,7 @@ Synthesizing Unit <CalculateExpSigma_1>.
     Found 10-bit register for signal <x_d10>.
     Found 10-bit register for signal <x_d11>.
     Found 10-bit register for signal <x_d12>.
+    Found 10-bit register for signal <x_d13>.
     Found 21-bit register for signal <xsigma_shift>.
     Found 18-bit register for signal <xsigma_f>.
     Found 3-bit register for signal <xsigma_i>.
@@ -412,16 +460,19 @@ Synthesizing Unit <CalculateExpSigma_1>.
     Found 13-bit register for signal <exp_int_d1>.
     Found 13-bit register for signal <exp_int_d2>.
     Found 13-bit register for signal <exp_int_d3>.
+    Found 13-bit register for signal <exp_int_d4>.
+    Found 13-bit register for signal <exp_int_d5>.
+    Found 13-bit register for signal <exp_int_d6>.
     Found 1-bit register for signal <done>.
     Found 1-bit register for signal <valid>.
     Found 10-bit register for signal <x>.
-    Found 11-bit adder for signal <n0087> created at line 92.
-    Found 22-bit adder for signal <n0088> created at line 106.
+    Found 11-bit adder for signal <n0096> created at line 97.
+    Found 22-bit adder for signal <n0097> created at line 112.
     Summary:
 	inferred   2 Adder/Subtractor(s).
-	inferred 235 D-type flip-flop(s).
+	inferred 274 D-type flip-flop(s).
 	inferred  14 Multiplexer(s).
-Unit <CalculateExpSigma_1> synthesized.
+Unit <CalculateExpSigma> synthesized.
 
 Synthesizing Unit <ROM_3_13>.
     Related source file is "D:\Dropbox\NUS\FYP\RiskCalculationFPGA\ROM_3_13.v".
@@ -434,162 +485,115 @@ WARNING:Xst:3015 - Contents of array <ROM> may be accessed with an index that do
 	inferred  13 D-type flip-flop(s).
 Unit <ROM_3_13> synthesized.
 
-Synthesizing Unit <Exponential>.
+Synthesizing Unit <exp_18_14>.
     Related source file is "D:\Dropbox\NUS\FYP\RiskCalculationFPGA\flopoco.vhdl".
     Found 18-bit register for signal <X_d1>.
     Found 10-bit register for signal <X_d2<9:0>>.
-    Found 50-bit register for signal <Coef_d1>.
+    Found 31-bit register for signal <Coef_d1>.
     Summary:
-	inferred  78 D-type flip-flop(s).
-Unit <Exponential> synthesized.
+	inferred  59 D-type flip-flop(s).
+Unit <exp_18_14> synthesized.
 
-Synthesizing Unit <PolyCoeffTable_8_50>.
+Synthesizing Unit <PolyCoeffTable_8_31>.
     Related source file is "D:\Dropbox\NUS\FYP\RiskCalculationFPGA\flopoco.vhdl".
 WARNING:Xst:647 - Input <rst> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:2999 - Signal 'rom', unconnected in block 'PolyCoeffTable_8_50', is tied to its initial value.
-    Found 512x25-bit dual-port Read Only RAM <Mram_rom> for signal <rom>.
-    Found 25-bit register for signal <Y0>.
-    Found 25-bit register for signal <Y1>.
+WARNING:Xst:2999 - Signal 'rom', unconnected in block 'PolyCoeffTable_8_31', is tied to its initial value.
+    Found 256x31-bit single-port Read Only RAM <Mram_rom> for signal <rom>.
+    Found 31-bit register for signal <Y0>.
     Summary:
 	inferred   1 RAM(s).
-	inferred  50 D-type flip-flop(s).
-Unit <PolyCoeffTable_8_50> synthesized.
+	inferred  31 D-type flip-flop(s).
+Unit <PolyCoeffTable_8_31> synthesized.
 
 Synthesizing Unit <PolynomialEvaluator_degree2_uid5>.
     Related source file is "D:\Dropbox\NUS\FYP\RiskCalculationFPGA\flopoco.vhdl".
     Register <yT1_d1> equivalent to <Y_d1> has been removed
     Found 10-bit register for signal <Y_d1>.
-    Found 24-bit register for signal <a0_d1>.
-    Found 17-bit register for signal <a1_d1>.
-    Found 9-bit register for signal <sigmaP0_d1>.
+    Found 10-bit register for signal <Y_d2>.
+    Found 16-bit register for signal <a0_d1>.
+    Found 16-bit register for signal <a0_d2>.
+    Found 16-bit register for signal <a0_d3>.
+    Found 16-bit register for signal <a0_d4>.
+    Found 9-bit register for signal <a1_d1>.
+    Found 9-bit register for signal <a1_d2>.
+    Found 6-bit register for signal <sigmaP0_d1>.
     WARNING:Xst:2404 -  FFs/Latches <yT1_d1<10:10>> (without init value) have a constant value of 0 in block <PolynomialEvaluator_degree2_uid5>.
     Summary:
-	inferred  60 D-type flip-flop(s).
+	inferred 108 D-type flip-flop(s).
 Unit <PolynomialEvaluator_degree2_uid5> synthesized.
 
-Synthesizing Unit <IntMultiplier_UsingDSP_11_9_9_signed_uid7>.
+Synthesizing Unit <IntMultiplier_UsingDSP_11_6_5_signed_uid7>.
     Related source file is "D:\Dropbox\NUS\FYP\RiskCalculationFPGA\flopoco.vhdl".
-    Found 25x18-bit multiplier for signal <DSP_bh9_ch0_0> created at line 733.
+    Found 43-bit register for signal <DSP_bh9_ch0_0_d1>.
+    Found 25x18-bit multiplier for signal <DSP_bh9_ch0_0> created at line 468.
+    WARNING:Xst:2404 -  FFs/Latches <heap_bh9_w3_1_d1<0:0>> (without init value) have a constant value of 1 in block <IntMultiplier_UsingDSP_11_6_5_signed_uid7>.
     Summary:
 	inferred   1 Multiplier(s).
-Unit <IntMultiplier_UsingDSP_11_9_9_signed_uid7> synthesized.
+	inferred  43 D-type flip-flop(s).
+Unit <IntMultiplier_UsingDSP_11_6_5_signed_uid7> synthesized.
 
-Synthesizing Unit <IntAdder_14_f200_uid20>.
+Synthesizing Unit <IntAdder_10_f700_uid20>.
     Related source file is "D:\Dropbox\NUS\FYP\RiskCalculationFPGA\flopoco.vhdl".
 WARNING:Xst:647 - Input <clk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <rst> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-    Found 14-bit adder for signal <R> created at line 652.
+    Found 10-bit adder for signal <R> created at line 390.
     Summary:
 	inferred   1 Adder/Subtractor(s).
-Unit <IntAdder_14_f200_uid20> synthesized.
+Unit <IntAdder_10_f700_uid20> synthesized.
 
-Synthesizing Unit <IntAdder_18_f200_uid28>.
+Synthesizing Unit <IntAdder_10_f700_uid28>.
     Related source file is "D:\Dropbox\NUS\FYP\RiskCalculationFPGA\flopoco.vhdl".
 WARNING:Xst:647 - Input <clk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <rst> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-    Found 18-bit adder for signal <n0010> created at line 803.
-    Found 18-bit adder for signal <R> created at line 803.
+    Found 10-bit adder for signal <n0010> created at line 534.
+    Found 10-bit adder for signal <R> created at line 534.
     Summary:
 	inferred   2 Adder/Subtractor(s).
-Unit <IntAdder_18_f200_uid28> synthesized.
+Unit <IntAdder_10_f700_uid28> synthesized.
 
-Synthesizing Unit <IntMultiplier_UsingDSP_11_18_18_signed_uid35>.
+Synthesizing Unit <IntMultiplier_UsingDSP_11_10_10_signed_uid35>.
     Related source file is "D:\Dropbox\NUS\FYP\RiskCalculationFPGA\flopoco.vhdl".
-    Found 25x18-bit multiplier for signal <DSP_bh37_ch0_0> created at line 918.
+    Found 1-bit register for signal <heap_bh37_w13_0_d1>.
+    Found 1-bit register for signal <heap_bh37_w12_0_d1>.
+    Found 1-bit register for signal <heap_bh37_w11_0_d1>.
+    Found 1-bit register for signal <heap_bh37_w10_0_d1>.
+    Found 1-bit register for signal <heap_bh37_w9_0_d1>.
+    Found 1-bit register for signal <heap_bh37_w8_0_d1>.
+    Found 1-bit register for signal <heap_bh37_w7_0_d1>.
+    Found 1-bit register for signal <heap_bh37_w6_0_d1>.
+    Found 1-bit register for signal <heap_bh37_w5_0_d1>.
+    Found 1-bit register for signal <heap_bh37_w4_0_d1>.
+    Found 1-bit register for signal <heap_bh37_w3_0_d1>.
+    Found 1-bit register for signal <heap_bh37_w2_0_d1>.
+    Found 1-bit register for signal <heap_bh37_w1_0_d1>.
+    Found 1-bit register for signal <heap_bh37_w0_0_d1>.
+    Found 43-bit register for signal <DSP_bh37_ch0_0_d1>.
+    Found 25x18-bit multiplier for signal <DSP_bh37_ch0_0> created at line 657.
+    WARNING:Xst:2404 -  FFs/Latches <heap_bh37_w3_1_d1<0:0>> (without init value) have a constant value of 1 in block <IntMultiplier_UsingDSP_11_10_10_signed_uid35>.
+    WARNING:Xst:2404 -  FFs/Latches <heap_bh37_w3_1_d2<0:0>> (without init value) have a constant value of 1 in block <IntMultiplier_UsingDSP_11_10_10_signed_uid35>.
     Summary:
 	inferred   1 Multiplier(s).
-Unit <IntMultiplier_UsingDSP_11_18_18_signed_uid35> synthesized.
+	inferred  57 D-type flip-flop(s).
+Unit <IntMultiplier_UsingDSP_11_10_10_signed_uid35> synthesized.
 
-Synthesizing Unit <IntAdder_23_f200_uid48>.
+Synthesizing Unit <IntAdder_15_f700_uid48>.
     Related source file is "D:\Dropbox\NUS\FYP\RiskCalculationFPGA\flopoco.vhdl".
 WARNING:Xst:647 - Input <clk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <rst> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-    Found 23-bit adder for signal <R> created at line 828.
+    Found 15-bit adder for signal <R> created at line 559.
     Summary:
 	inferred   1 Adder/Subtractor(s).
-Unit <IntAdder_23_f200_uid48> synthesized.
+Unit <IntAdder_15_f700_uid48> synthesized.
 
-Synthesizing Unit <IntAdder_25_f200_uid56>.
+Synthesizing Unit <IntAdder_17_f700_uid56>.
     Related source file is "D:\Dropbox\NUS\FYP\RiskCalculationFPGA\flopoco.vhdl".
 WARNING:Xst:647 - Input <clk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <rst> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-    Found 25-bit adder for signal <n0010> created at line 997.
-    Found 25-bit adder for signal <R> created at line 997.
+    Found 17-bit adder for signal <n0010> created at line 729.
+    Found 17-bit adder for signal <R> created at line 729.
     Summary:
 	inferred   2 Adder/Subtractor(s).
-Unit <IntAdder_25_f200_uid56> synthesized.
-
-Synthesizing Unit <CalculateExpSigma_2>.
-    Related source file is "D:\Dropbox\NUS\FYP\RiskCalculationFPGA\CalculateExpSigma.v".
-        x_min = 10'b1110010001
-        x_max = 10'b0001010100
-        pathWidth = 10
-    Found 10-bit register for signal <x_next>.
-    Found 10-bit register for signal <x_d1>.
-    Found 10-bit register for signal <x_d2>.
-    Found 10-bit register for signal <x_d3>.
-    Found 10-bit register for signal <x_d4>.
-    Found 10-bit register for signal <x_d5>.
-    Found 10-bit register for signal <x_d6>.
-    Found 10-bit register for signal <x_d7>.
-    Found 10-bit register for signal <x_d8>.
-    Found 10-bit register for signal <x_d9>.
-    Found 10-bit register for signal <x_d10>.
-    Found 10-bit register for signal <x_d11>.
-    Found 10-bit register for signal <x_d12>.
-    Found 21-bit register for signal <xsigma_shift>.
-    Found 18-bit register for signal <xsigma_f>.
-    Found 3-bit register for signal <xsigma_i>.
-    Found 12-bit register for signal <exp_frac_d1>.
-    Found 13-bit register for signal <exp_int_d1>.
-    Found 13-bit register for signal <exp_int_d2>.
-    Found 13-bit register for signal <exp_int_d3>.
-    Found 1-bit register for signal <done>.
-    Found 1-bit register for signal <valid>.
-    Found 10-bit register for signal <x>.
-    Found 11-bit adder for signal <n0087> created at line 92.
-    Found 22-bit adder for signal <n0088> created at line 106.
-    Summary:
-	inferred   2 Adder/Subtractor(s).
-	inferred 235 D-type flip-flop(s).
-	inferred  14 Multiplexer(s).
-Unit <CalculateExpSigma_2> synthesized.
-
-Synthesizing Unit <CalculateExpSigma_3>.
-    Related source file is "D:\Dropbox\NUS\FYP\RiskCalculationFPGA\CalculateExpSigma.v".
-        x_min = 10'b0001010101
-        x_max = 10'b0100011000
-        pathWidth = 10
-    Found 10-bit register for signal <x_next>.
-    Found 10-bit register for signal <x_d1>.
-    Found 10-bit register for signal <x_d2>.
-    Found 10-bit register for signal <x_d3>.
-    Found 10-bit register for signal <x_d4>.
-    Found 10-bit register for signal <x_d5>.
-    Found 10-bit register for signal <x_d6>.
-    Found 10-bit register for signal <x_d7>.
-    Found 10-bit register for signal <x_d8>.
-    Found 10-bit register for signal <x_d9>.
-    Found 10-bit register for signal <x_d10>.
-    Found 10-bit register for signal <x_d11>.
-    Found 10-bit register for signal <x_d12>.
-    Found 21-bit register for signal <xsigma_shift>.
-    Found 18-bit register for signal <xsigma_f>.
-    Found 3-bit register for signal <xsigma_i>.
-    Found 12-bit register for signal <exp_frac_d1>.
-    Found 13-bit register for signal <exp_int_d1>.
-    Found 13-bit register for signal <exp_int_d2>.
-    Found 13-bit register for signal <exp_int_d3>.
-    Found 1-bit register for signal <done>.
-    Found 1-bit register for signal <valid>.
-    Found 10-bit register for signal <x>.
-    Found 11-bit adder for signal <n0087> created at line 92.
-    Found 22-bit adder for signal <n0088> created at line 106.
-    Summary:
-	inferred   2 Adder/Subtractor(s).
-	inferred 235 D-type flip-flop(s).
-	inferred  14 Multiplexer(s).
-Unit <CalculateExpSigma_3> synthesized.
+Unit <IntAdder_17_f700_uid56> synthesized.
 
 Synthesizing Unit <MCCore_1>.
     Related source file is "D:\Dropbox\NUS\FYP\RiskCalculationFPGA\MCCore.v".
@@ -597,25 +601,27 @@ Synthesizing Unit <MCCore_1>.
         T = 512
         logT = 9
         pathWidth = 10
-    Found 9-bit register for signal <t_next>.
     Found 9-bit register for signal <t_d1>.
     Found 9-bit register for signal <t_d2>.
     Found 9-bit register for signal <t_d3>.
     Found 9-bit register for signal <t_d4>.
     Found 9-bit register for signal <t_d5>.
     Found 9-bit register for signal <t_d6>.
+    Found 10-bit register for signal <SigmaReadAddress>.
+    Found 18-bit register for signal <SigmaReadData_d1>.
     Found 18-bit register for signal <MuReadData_d1>.
-    Found 1-bit register for signal <bit_ctr>.
+    Found 18-bit register for signal <MuReadData_d2>.
+    Found 18-bit register for signal <MuReadData_d3>.
     Found 27-bit register for signal <out>.
     Found 1-bit register for signal <done>.
     Found 1-bit register for signal <validProduct>.
     Found 27-bit register for signal <acc>.
     Found 9-bit register for signal <t>.
-    Found 9-bit adder for signal <t[8]_GND_33_o_add_1_OUT> created at line 90.
-    Found 27-bit adder for signal <acc[26]_GND_33_o_add_7_OUT> created at line 118.
+    Found 9-bit adder for signal <t[8]_GND_36_o_add_2_OUT> created at line 96.
+    Found 27-bit adder for signal <acc[26]_GND_36_o_add_9_OUT> created at line 127.
     Summary:
 	inferred   2 Adder/Subtractor(s).
-	inferred 147 D-type flip-flop(s).
+	inferred 201 D-type flip-flop(s).
 	inferred   6 Multiplexer(s).
 Unit <MCCore_1> synthesized.
 
@@ -660,25 +666,27 @@ Synthesizing Unit <MCCore_2>.
         T = 512
         logT = 9
         pathWidth = 10
-    Found 9-bit register for signal <t_next>.
     Found 9-bit register for signal <t_d1>.
     Found 9-bit register for signal <t_d2>.
     Found 9-bit register for signal <t_d3>.
     Found 9-bit register for signal <t_d4>.
     Found 9-bit register for signal <t_d5>.
     Found 9-bit register for signal <t_d6>.
+    Found 10-bit register for signal <SigmaReadAddress>.
+    Found 18-bit register for signal <SigmaReadData_d1>.
     Found 18-bit register for signal <MuReadData_d1>.
-    Found 1-bit register for signal <bit_ctr>.
+    Found 18-bit register for signal <MuReadData_d2>.
+    Found 18-bit register for signal <MuReadData_d3>.
     Found 27-bit register for signal <out>.
     Found 1-bit register for signal <done>.
     Found 1-bit register for signal <validProduct>.
     Found 27-bit register for signal <acc>.
     Found 9-bit register for signal <t>.
-    Found 9-bit adder for signal <t[8]_GND_38_o_add_1_OUT> created at line 90.
-    Found 27-bit adder for signal <acc[26]_GND_38_o_add_7_OUT> created at line 118.
+    Found 9-bit adder for signal <t[8]_GND_41_o_add_2_OUT> created at line 96.
+    Found 27-bit adder for signal <acc[26]_GND_41_o_add_9_OUT> created at line 127.
     Summary:
 	inferred   2 Adder/Subtractor(s).
-	inferred 147 D-type flip-flop(s).
+	inferred 201 D-type flip-flop(s).
 	inferred   6 Multiplexer(s).
 Unit <MCCore_2> synthesized.
 
@@ -697,49 +705,49 @@ Unit <ROM_path_2> synthesized.
 HDL Synthesis Report
 
 Macro Statistics
-# RAMs                                                 : 16
+# RAMs                                                 : 13
  1024x18-bit dual-port RAM                             : 4
+ 256x31-bit single-port Read Only RAM                  : 1
  512x10-bit single-port Read Only RAM                  : 2
  512x18-bit dual-port RAM                              : 4
- 512x25-bit dual-port Read Only RAM                    : 3
- 8x13-bit single-port Read Only RAM                    : 3
-# Multipliers                                          : 6
- 25x18-bit multiplier                                  : 6
-# Adders/Subtractors                                   : 33
- 11-bit adder                                          : 3
- 14-bit adder                                          : 3
- 18-bit adder                                          : 6
- 2-bit adder                                           : 2
- 22-bit adder                                          : 3
- 23-bit adder                                          : 3
- 25-bit adder                                          : 6
+ 512x20-bit dual-port Read Only RAM                    : 1
+ 8x13-bit single-port Read Only RAM                    : 1
+# Multipliers                                          : 4
+ 25x18-bit multiplier                                  : 4
+# Adders/Subtractors                                   : 19
+ 10-bit adder                                          : 3
+ 11-bit adder                                          : 2
+ 14-bit adder                                          : 2
+ 15-bit adder                                          : 1
+ 17-bit adder                                          : 2
+ 19-bit adder                                          : 1
+ 21-bit adder                                          : 2
+ 22-bit adder                                          : 1
  27-bit adder                                          : 2
- 9-bit adder                                           : 5
-# Registers                                            : 198
- 1-bit register                                        : 33
- 10-bit register                                       : 50
- 12-bit register                                       : 3
- 13-bit register                                       : 12
- 17-bit register                                       : 3
- 18-bit register                                       : 15
- 2-bit register                                        : 2
- 21-bit register                                       : 3
- 24-bit register                                       : 3
+ 9-bit adder                                           : 3
+# Registers                                            : 155
+ 1-bit register                                        : 51
+ 10-bit register                                       : 24
+ 12-bit register                                       : 1
+ 13-bit register                                       : 9
+ 16-bit register                                       : 4
+ 18-bit register                                       : 17
+ 20-bit register                                       : 4
+ 21-bit register                                       : 1
  27-bit register                                       : 4
- 3-bit register                                        : 3
- 50-bit register                                       : 6
- 9-bit register                                        : 61
-# Comparators                                          : 2
- 2-bit comparator greater                              : 2
-# Multiplexers                                         : 121
- 1-bit 2-to-1 multiplexer                              : 18
- 1-bit 3-to-1 multiplexer                              : 2
- 10-bit 2-to-1 multiplexer                             : 42
- 10-bit 3-to-1 multiplexer                             : 1
+ 3-bit register                                        : 1
+ 31-bit register                                       : 2
+ 39-bit register                                       : 2
+ 43-bit register                                       : 4
+ 6-bit register                                        : 2
+ 9-bit register                                        : 29
+# Comparators                                          : 1
+ 9-bit comparator greater                              : 1
+# Multiplexers                                         : 56
+ 1-bit 2-to-1 multiplexer                              : 14
+ 10-bit 2-to-1 multiplexer                             : 14
  18-bit 2-to-1 multiplexer                             : 4
- 18-bit 3-to-1 multiplexer                             : 2
- 9-bit 2-to-1 multiplexer                              : 51
- 9-bit 3-to-1 multiplexer                              : 1
+ 9-bit 2-to-1 multiplexer                              : 24
 
 =========================================================================
 
@@ -759,34 +767,139 @@ Reading core <ipcore_dir/mult_18_18_18_core.ngc>.
 Reading Secure Unit <blk00000001>.
 Loading core <mult_9_18_18> for timing and area information for instance <mult1>.
 Loading core <mult_18_18_18_muexp> for timing and area information for instance <mult2>.
-Loading core <mult_9_18_18> for timing and area information for instance <mult1>.
-Loading core <mult_18_18_18_muexp> for timing and area information for instance <mult2>.
-Loading core <mult_9_18_18> for timing and area information for instance <mult1>.
-Loading core <mult_18_18_18_muexp> for timing and area information for instance <mult2>.
-Loading core <mult_10_18_21> for timing and area information for instance <mult0>.
-Loading core <mult_12_13_18> for timing and area information for instance <mult1>.
-Loading core <mult_10_18_21> for timing and area information for instance <mult0>.
-Loading core <mult_12_13_18> for timing and area information for instance <mult1>.
 Loading core <mult_10_18_21> for timing and area information for instance <mult0>.
 Loading core <mult_12_13_18> for timing and area information for instance <mult1>.
 Loading core <mult_18_18_18_core> for timing and area information for instance <mult>.
 Loading core <mult_18_18_18_core> for timing and area information for instance <mult>.
-WARNING:Xst:2677 - Node <X_d1_10> of sequential type is unconnected in block <exp_f>.
-WARNING:Xst:2677 - Node <X_d1_11> of sequential type is unconnected in block <exp_f>.
-WARNING:Xst:2677 - Node <X_d1_12> of sequential type is unconnected in block <exp_f>.
-WARNING:Xst:2677 - Node <X_d1_13> of sequential type is unconnected in block <exp_f>.
-WARNING:Xst:2677 - Node <X_d1_14> of sequential type is unconnected in block <exp_f>.
-WARNING:Xst:2677 - Node <X_d1_15> of sequential type is unconnected in block <exp_f>.
-WARNING:Xst:2677 - Node <X_d1_16> of sequential type is unconnected in block <exp_f>.
-WARNING:Xst:2677 - Node <X_d1_17> of sequential type is unconnected in block <exp_f>.
-WARNING:Xst:2677 - Node <X_d1_10> of sequential type is unconnected in block <exp_f>.
-WARNING:Xst:2677 - Node <X_d1_11> of sequential type is unconnected in block <exp_f>.
-WARNING:Xst:2677 - Node <X_d1_12> of sequential type is unconnected in block <exp_f>.
-WARNING:Xst:2677 - Node <X_d1_13> of sequential type is unconnected in block <exp_f>.
-WARNING:Xst:2677 - Node <X_d1_14> of sequential type is unconnected in block <exp_f>.
-WARNING:Xst:2677 - Node <X_d1_15> of sequential type is unconnected in block <exp_f>.
-WARNING:Xst:2677 - Node <X_d1_16> of sequential type is unconnected in block <exp_f>.
-WARNING:Xst:2677 - Node <X_d1_17> of sequential type is unconnected in block <exp_f>.
+WARNING:Xst:2677 - Node <DSP_bh72_ch0_0_d1_0> of sequential type is unconnected in block <Product_1>.
+WARNING:Xst:2677 - Node <DSP_bh72_ch0_0_d1_1> of sequential type is unconnected in block <Product_1>.
+WARNING:Xst:2677 - Node <DSP_bh72_ch0_0_d1_2> of sequential type is unconnected in block <Product_1>.
+WARNING:Xst:2677 - Node <DSP_bh72_ch0_0_d1_3> of sequential type is unconnected in block <Product_1>.
+WARNING:Xst:2677 - Node <DSP_bh72_ch0_0_d1_4> of sequential type is unconnected in block <Product_1>.
+WARNING:Xst:2677 - Node <DSP_bh72_ch0_0_d1_5> of sequential type is unconnected in block <Product_1>.
+WARNING:Xst:2677 - Node <DSP_bh72_ch0_0_d1_6> of sequential type is unconnected in block <Product_1>.
+WARNING:Xst:2677 - Node <DSP_bh72_ch0_0_d1_7> of sequential type is unconnected in block <Product_1>.
+WARNING:Xst:2677 - Node <DSP_bh72_ch0_0_d1_8> of sequential type is unconnected in block <Product_1>.
+WARNING:Xst:2677 - Node <DSP_bh72_ch0_0_d1_9> of sequential type is unconnected in block <Product_1>.
+WARNING:Xst:2677 - Node <DSP_bh72_ch0_0_d1_10> of sequential type is unconnected in block <Product_1>.
+WARNING:Xst:2677 - Node <DSP_bh72_ch0_0_d1_11> of sequential type is unconnected in block <Product_1>.
+WARNING:Xst:2677 - Node <DSP_bh72_ch0_0_d1_12> of sequential type is unconnected in block <Product_1>.
+WARNING:Xst:2677 - Node <DSP_bh72_ch0_0_d1_13> of sequential type is unconnected in block <Product_1>.
+WARNING:Xst:2677 - Node <DSP_bh72_ch0_0_d1_14> of sequential type is unconnected in block <Product_1>.
+WARNING:Xst:2677 - Node <DSP_bh72_ch0_0_d1_15> of sequential type is unconnected in block <Product_1>.
+WARNING:Xst:2677 - Node <DSP_bh72_ch0_0_d1_16> of sequential type is unconnected in block <Product_1>.
+WARNING:Xst:2677 - Node <DSP_bh72_ch0_0_d1_17> of sequential type is unconnected in block <Product_1>.
+WARNING:Xst:2677 - Node <DSP_bh72_ch0_0_d1_18> of sequential type is unconnected in block <Product_1>.
+WARNING:Xst:2677 - Node <DSP_bh72_ch0_0_d1_19> of sequential type is unconnected in block <Product_1>.
+WARNING:Xst:2677 - Node <DSP_bh72_ch0_0_d1_20> of sequential type is unconnected in block <Product_1>.
+WARNING:Xst:2677 - Node <DSP_bh72_ch0_0_d1_21> of sequential type is unconnected in block <Product_1>.
+WARNING:Xst:2677 - Node <DSP_bh72_ch0_0_d1_22> of sequential type is unconnected in block <Product_1>.
+WARNING:Xst:2677 - Node <DSP_bh72_ch0_0_d1_23> of sequential type is unconnected in block <Product_1>.
+WARNING:Xst:2677 - Node <DSP_bh72_ch0_0_d1_24> of sequential type is unconnected in block <Product_1>.
+WARNING:Xst:2677 - Node <DSP_bh72_ch0_0_d1_25> of sequential type is unconnected in block <Product_1>.
+WARNING:Xst:2677 - Node <DSP_bh72_ch0_0_d1_26> of sequential type is unconnected in block <Product_1>.
+WARNING:Xst:2677 - Node <DSP_bh72_ch0_0_d1_27> of sequential type is unconnected in block <Product_1>.
+WARNING:Xst:2677 - Node <DSP_bh72_ch0_0_d1_28> of sequential type is unconnected in block <Product_1>.
+WARNING:Xst:2677 - Node <DSP_bh72_ch0_0_d1_29> of sequential type is unconnected in block <Product_1>.
+WARNING:Xst:2677 - Node <DSP_bh72_ch0_0_d1_30> of sequential type is unconnected in block <Product_1>.
+WARNING:Xst:2677 - Node <DSP_bh72_ch0_0_d1_41> of sequential type is unconnected in block <Product_1>.
+WARNING:Xst:2677 - Node <DSP_bh72_ch0_0_d1_42> of sequential type is unconnected in block <Product_1>.
+WARNING:Xst:2677 - Node <DSP_bh100_ch0_0_d1_0> of sequential type is unconnected in block <Product_2>.
+WARNING:Xst:2677 - Node <DSP_bh100_ch0_0_d1_1> of sequential type is unconnected in block <Product_2>.
+WARNING:Xst:2677 - Node <DSP_bh100_ch0_0_d1_2> of sequential type is unconnected in block <Product_2>.
+WARNING:Xst:2677 - Node <DSP_bh100_ch0_0_d1_3> of sequential type is unconnected in block <Product_2>.
+WARNING:Xst:2677 - Node <DSP_bh100_ch0_0_d1_4> of sequential type is unconnected in block <Product_2>.
+WARNING:Xst:2677 - Node <DSP_bh100_ch0_0_d1_5> of sequential type is unconnected in block <Product_2>.
+WARNING:Xst:2677 - Node <DSP_bh100_ch0_0_d1_6> of sequential type is unconnected in block <Product_2>.
+WARNING:Xst:2677 - Node <DSP_bh100_ch0_0_d1_7> of sequential type is unconnected in block <Product_2>.
+WARNING:Xst:2677 - Node <DSP_bh100_ch0_0_d1_8> of sequential type is unconnected in block <Product_2>.
+WARNING:Xst:2677 - Node <DSP_bh100_ch0_0_d1_9> of sequential type is unconnected in block <Product_2>.
+WARNING:Xst:2677 - Node <DSP_bh100_ch0_0_d1_10> of sequential type is unconnected in block <Product_2>.
+WARNING:Xst:2677 - Node <DSP_bh100_ch0_0_d1_11> of sequential type is unconnected in block <Product_2>.
+WARNING:Xst:2677 - Node <DSP_bh100_ch0_0_d1_12> of sequential type is unconnected in block <Product_2>.
+WARNING:Xst:2677 - Node <DSP_bh100_ch0_0_d1_13> of sequential type is unconnected in block <Product_2>.
+WARNING:Xst:2677 - Node <DSP_bh100_ch0_0_d1_14> of sequential type is unconnected in block <Product_2>.
+WARNING:Xst:2677 - Node <DSP_bh100_ch0_0_d1_15> of sequential type is unconnected in block <Product_2>.
+WARNING:Xst:2677 - Node <DSP_bh100_ch0_0_d1_16> of sequential type is unconnected in block <Product_2>.
+WARNING:Xst:2677 - Node <DSP_bh100_ch0_0_d1_17> of sequential type is unconnected in block <Product_2>.
+WARNING:Xst:2677 - Node <DSP_bh100_ch0_0_d1_18> of sequential type is unconnected in block <Product_2>.
+WARNING:Xst:2677 - Node <DSP_bh100_ch0_0_d1_19> of sequential type is unconnected in block <Product_2>.
+WARNING:Xst:2677 - Node <DSP_bh100_ch0_0_d1_20> of sequential type is unconnected in block <Product_2>.
+WARNING:Xst:2677 - Node <DSP_bh100_ch0_0_d1_21> of sequential type is unconnected in block <Product_2>.
+WARNING:Xst:2677 - Node <DSP_bh100_ch0_0_d1_22> of sequential type is unconnected in block <Product_2>.
+WARNING:Xst:2677 - Node <DSP_bh100_ch0_0_d1_41> of sequential type is unconnected in block <Product_2>.
+WARNING:Xst:2677 - Node <DSP_bh100_ch0_0_d1_42> of sequential type is unconnected in block <Product_2>.
+WARNING:Xst:2677 - Node <X_d1_10> of sequential type is unconnected in block <exp>.
+WARNING:Xst:2677 - Node <X_d1_11> of sequential type is unconnected in block <exp>.
+WARNING:Xst:2677 - Node <X_d1_12> of sequential type is unconnected in block <exp>.
+WARNING:Xst:2677 - Node <X_d1_13> of sequential type is unconnected in block <exp>.
+WARNING:Xst:2677 - Node <X_d1_14> of sequential type is unconnected in block <exp>.
+WARNING:Xst:2677 - Node <X_d1_15> of sequential type is unconnected in block <exp>.
+WARNING:Xst:2677 - Node <X_d1_16> of sequential type is unconnected in block <exp>.
+WARNING:Xst:2677 - Node <X_d1_17> of sequential type is unconnected in block <exp>.
+WARNING:Xst:2677 - Node <DSP_bh9_ch0_0_d1_0> of sequential type is unconnected in block <Product_1>.
+WARNING:Xst:2677 - Node <DSP_bh9_ch0_0_d1_1> of sequential type is unconnected in block <Product_1>.
+WARNING:Xst:2677 - Node <DSP_bh9_ch0_0_d1_2> of sequential type is unconnected in block <Product_1>.
+WARNING:Xst:2677 - Node <DSP_bh9_ch0_0_d1_3> of sequential type is unconnected in block <Product_1>.
+WARNING:Xst:2677 - Node <DSP_bh9_ch0_0_d1_4> of sequential type is unconnected in block <Product_1>.
+WARNING:Xst:2677 - Node <DSP_bh9_ch0_0_d1_5> of sequential type is unconnected in block <Product_1>.
+WARNING:Xst:2677 - Node <DSP_bh9_ch0_0_d1_6> of sequential type is unconnected in block <Product_1>.
+WARNING:Xst:2677 - Node <DSP_bh9_ch0_0_d1_7> of sequential type is unconnected in block <Product_1>.
+WARNING:Xst:2677 - Node <DSP_bh9_ch0_0_d1_8> of sequential type is unconnected in block <Product_1>.
+WARNING:Xst:2677 - Node <DSP_bh9_ch0_0_d1_9> of sequential type is unconnected in block <Product_1>.
+WARNING:Xst:2677 - Node <DSP_bh9_ch0_0_d1_10> of sequential type is unconnected in block <Product_1>.
+WARNING:Xst:2677 - Node <DSP_bh9_ch0_0_d1_11> of sequential type is unconnected in block <Product_1>.
+WARNING:Xst:2677 - Node <DSP_bh9_ch0_0_d1_12> of sequential type is unconnected in block <Product_1>.
+WARNING:Xst:2677 - Node <DSP_bh9_ch0_0_d1_13> of sequential type is unconnected in block <Product_1>.
+WARNING:Xst:2677 - Node <DSP_bh9_ch0_0_d1_14> of sequential type is unconnected in block <Product_1>.
+WARNING:Xst:2677 - Node <DSP_bh9_ch0_0_d1_15> of sequential type is unconnected in block <Product_1>.
+WARNING:Xst:2677 - Node <DSP_bh9_ch0_0_d1_16> of sequential type is unconnected in block <Product_1>.
+WARNING:Xst:2677 - Node <DSP_bh9_ch0_0_d1_17> of sequential type is unconnected in block <Product_1>.
+WARNING:Xst:2677 - Node <DSP_bh9_ch0_0_d1_18> of sequential type is unconnected in block <Product_1>.
+WARNING:Xst:2677 - Node <DSP_bh9_ch0_0_d1_19> of sequential type is unconnected in block <Product_1>.
+WARNING:Xst:2677 - Node <DSP_bh9_ch0_0_d1_20> of sequential type is unconnected in block <Product_1>.
+WARNING:Xst:2677 - Node <DSP_bh9_ch0_0_d1_21> of sequential type is unconnected in block <Product_1>.
+WARNING:Xst:2677 - Node <DSP_bh9_ch0_0_d1_22> of sequential type is unconnected in block <Product_1>.
+WARNING:Xst:2677 - Node <DSP_bh9_ch0_0_d1_23> of sequential type is unconnected in block <Product_1>.
+WARNING:Xst:2677 - Node <DSP_bh9_ch0_0_d1_24> of sequential type is unconnected in block <Product_1>.
+WARNING:Xst:2677 - Node <DSP_bh9_ch0_0_d1_25> of sequential type is unconnected in block <Product_1>.
+WARNING:Xst:2677 - Node <DSP_bh9_ch0_0_d1_26> of sequential type is unconnected in block <Product_1>.
+WARNING:Xst:2677 - Node <DSP_bh9_ch0_0_d1_27> of sequential type is unconnected in block <Product_1>.
+WARNING:Xst:2677 - Node <DSP_bh9_ch0_0_d1_28> of sequential type is unconnected in block <Product_1>.
+WARNING:Xst:2677 - Node <DSP_bh9_ch0_0_d1_29> of sequential type is unconnected in block <Product_1>.
+WARNING:Xst:2677 - Node <DSP_bh9_ch0_0_d1_30> of sequential type is unconnected in block <Product_1>.
+WARNING:Xst:2677 - Node <DSP_bh9_ch0_0_d1_31> of sequential type is unconnected in block <Product_1>.
+WARNING:Xst:2677 - Node <DSP_bh9_ch0_0_d1_41> of sequential type is unconnected in block <Product_1>.
+WARNING:Xst:2677 - Node <DSP_bh9_ch0_0_d1_42> of sequential type is unconnected in block <Product_1>.
+WARNING:Xst:2677 - Node <DSP_bh37_ch0_0_d1_0> of sequential type is unconnected in block <Product_2>.
+WARNING:Xst:2677 - Node <DSP_bh37_ch0_0_d1_1> of sequential type is unconnected in block <Product_2>.
+WARNING:Xst:2677 - Node <DSP_bh37_ch0_0_d1_2> of sequential type is unconnected in block <Product_2>.
+WARNING:Xst:2677 - Node <DSP_bh37_ch0_0_d1_3> of sequential type is unconnected in block <Product_2>.
+WARNING:Xst:2677 - Node <DSP_bh37_ch0_0_d1_4> of sequential type is unconnected in block <Product_2>.
+WARNING:Xst:2677 - Node <DSP_bh37_ch0_0_d1_5> of sequential type is unconnected in block <Product_2>.
+WARNING:Xst:2677 - Node <DSP_bh37_ch0_0_d1_6> of sequential type is unconnected in block <Product_2>.
+WARNING:Xst:2677 - Node <DSP_bh37_ch0_0_d1_7> of sequential type is unconnected in block <Product_2>.
+WARNING:Xst:2677 - Node <DSP_bh37_ch0_0_d1_8> of sequential type is unconnected in block <Product_2>.
+WARNING:Xst:2677 - Node <DSP_bh37_ch0_0_d1_9> of sequential type is unconnected in block <Product_2>.
+WARNING:Xst:2677 - Node <DSP_bh37_ch0_0_d1_10> of sequential type is unconnected in block <Product_2>.
+WARNING:Xst:2677 - Node <DSP_bh37_ch0_0_d1_11> of sequential type is unconnected in block <Product_2>.
+WARNING:Xst:2677 - Node <DSP_bh37_ch0_0_d1_12> of sequential type is unconnected in block <Product_2>.
+WARNING:Xst:2677 - Node <DSP_bh37_ch0_0_d1_13> of sequential type is unconnected in block <Product_2>.
+WARNING:Xst:2677 - Node <DSP_bh37_ch0_0_d1_14> of sequential type is unconnected in block <Product_2>.
+WARNING:Xst:2677 - Node <DSP_bh37_ch0_0_d1_15> of sequential type is unconnected in block <Product_2>.
+WARNING:Xst:2677 - Node <DSP_bh37_ch0_0_d1_16> of sequential type is unconnected in block <Product_2>.
+WARNING:Xst:2677 - Node <DSP_bh37_ch0_0_d1_17> of sequential type is unconnected in block <Product_2>.
+WARNING:Xst:2677 - Node <DSP_bh37_ch0_0_d1_18> of sequential type is unconnected in block <Product_2>.
+WARNING:Xst:2677 - Node <DSP_bh37_ch0_0_d1_19> of sequential type is unconnected in block <Product_2>.
+WARNING:Xst:2677 - Node <DSP_bh37_ch0_0_d1_20> of sequential type is unconnected in block <Product_2>.
+WARNING:Xst:2677 - Node <DSP_bh37_ch0_0_d1_21> of sequential type is unconnected in block <Product_2>.
+WARNING:Xst:2677 - Node <DSP_bh37_ch0_0_d1_22> of sequential type is unconnected in block <Product_2>.
+WARNING:Xst:2677 - Node <DSP_bh37_ch0_0_d1_23> of sequential type is unconnected in block <Product_2>.
+WARNING:Xst:2677 - Node <DSP_bh37_ch0_0_d1_24> of sequential type is unconnected in block <Product_2>.
+WARNING:Xst:2677 - Node <DSP_bh37_ch0_0_d1_25> of sequential type is unconnected in block <Product_2>.
+WARNING:Xst:2677 - Node <DSP_bh37_ch0_0_d1_26> of sequential type is unconnected in block <Product_2>.
+WARNING:Xst:2677 - Node <DSP_bh37_ch0_0_d1_41> of sequential type is unconnected in block <Product_2>.
+WARNING:Xst:2677 - Node <DSP_bh37_ch0_0_d1_42> of sequential type is unconnected in block <Product_2>.
 WARNING:Xst:2677 - Node <X_d1_10> of sequential type is unconnected in block <exp_f>.
 WARNING:Xst:2677 - Node <X_d1_11> of sequential type is unconnected in block <exp_f>.
 WARNING:Xst:2677 - Node <X_d1_12> of sequential type is unconnected in block <exp_f>.
@@ -796,299 +909,49 @@ WARNING:Xst:2677 - Node <X_d1_15> of sequential type is unconnected in block <ex
 WARNING:Xst:2677 - Node <X_d1_16> of sequential type is unconnected in block <exp_f>.
 WARNING:Xst:2677 - Node <X_d1_17> of sequential type is unconnected in block <exp_f>.
 
-Synthesizing (advanced) Unit <CalculateExpSigma_1>.
-INFO:Xst:3226 - The RAM <exp_f/GeneratedTable/Mram_rom> will be implemented as a BLOCK RAM, absorbing the following register(s): <exp_f/GeneratedTable/Y1,Y0_sliced1> <exp_f/GeneratedTable/Y1,Y0_sliced> <exp_f/Coef_d1_sliced1> <exp_f/Coef_d1_sliced>
+Synthesizing (advanced) Unit <CalculateExpMu>.
+The following registers are absorbed into counter <t>: 1 register on signal <t>.
+INFO:Xst:3226 - The RAM <exp/GeneratedTable/Mram_rom> will be implemented as a BLOCK RAM, absorbing the following register(s): <exp/GeneratedTable/Y1,Y0<18:0>_sliced1> <exp/GeneratedTable/Y1,Y0<18:0>_sliced> <exp/Coef_d1_sliced1> <exp/Coef_d1_sliced>
     -----------------------------------------------------------------------
     | ram_type           | Block                               |          |
     -----------------------------------------------------------------------
     | Port A                                                              |
-    |     aspect ratio   | 512-word x 25-bit                   |          |
+    |     aspect ratio   | 512-word x 20-bit                   |          |
     |     mode           | write-first                         |          |
     |     clkA           | connected to signal <CLK>           | rise     |
     |     weA            | connected to signal <GND>           | high     |
-    |     addrA          | connected to signal <("0",xsigma_f<17:10>)> |          |
+    |     addrA          | connected to signal <("0",tmu_d1<17:10>)> |          |
     |     diA            | connected to signal <GND>           |          |
-    |     doA            | connected to signal <exp_f/Coef_d1> |          |
+    |     doA            | connected to signal <exp/Coef_d1>   |          |
     -----------------------------------------------------------------------
     | optimization       | speed                               |          |
     -----------------------------------------------------------------------
     | Port B                                                              |
-    |     aspect ratio   | 512-word x 25-bit                   |          |
+    |     aspect ratio   | 512-word x 20-bit                   |          |
     |     mode           | write-first                         |          |
     |     clkB           | connected to signal <CLK>           | rise     |
     |     weB            | connected to signal <GND>           | high     |
-    |     addrB          | connected to signal <("1",xsigma_f<17:10>)> |          |
+    |     addrB          | connected to signal <("1",tmu_d1<17:10>)> |          |
     |     diB            | connected to signal <GND>           |          |
-    |     doB            | connected to signal <exp_f/Coef_d1> |          |
+    |     doB            | connected to signal <exp/Coef_d1>   |          |
     -----------------------------------------------------------------------
     | optimization       | speed                               |          |
     -----------------------------------------------------------------------
-Unit <CalculateExpSigma_1> synthesized (advanced).
+Unit <CalculateExpMu> synthesized (advanced).
 
-Synthesizing (advanced) Unit <CalculateExpSigma_2>.
-INFO:Xst:3226 - The RAM <exp_f/GeneratedTable/Mram_rom> will be implemented as a BLOCK RAM, absorbing the following register(s): <exp_f/GeneratedTable/Y1,Y0_sliced1> <exp_f/GeneratedTable/Y1,Y0_sliced> <exp_f/Coef_d1_sliced1> <exp_f/Coef_d1_sliced>
-    -----------------------------------------------------------------------
-    | ram_type           | Block                               |          |
-    -----------------------------------------------------------------------
-    | Port A                                                              |
-    |     aspect ratio   | 512-word x 25-bit                   |          |
-    |     mode           | write-first                         |          |
-    |     clkA           | connected to signal <CLK>           | rise     |
-    |     weA            | connected to signal <GND>           | high     |
-    |     addrA          | connected to signal <("0",xsigma_f<17:10>)> |          |
-    |     diA            | connected to signal <GND>           |          |
-    |     doA            | connected to signal <exp_f/Coef_d1> |          |
-    -----------------------------------------------------------------------
-    | optimization       | speed                               |          |
-    -----------------------------------------------------------------------
-    | Port B                                                              |
-    |     aspect ratio   | 512-word x 25-bit                   |          |
-    |     mode           | write-first                         |          |
-    |     clkB           | connected to signal <CLK>           | rise     |
-    |     weB            | connected to signal <GND>           | high     |
-    |     addrB          | connected to signal <("1",xsigma_f<17:10>)> |          |
-    |     diB            | connected to signal <GND>           |          |
-    |     doB            | connected to signal <exp_f/Coef_d1> |          |
-    -----------------------------------------------------------------------
-    | optimization       | speed                               |          |
-    -----------------------------------------------------------------------
-Unit <CalculateExpSigma_2> synthesized (advanced).
-
-Synthesizing (advanced) Unit <CalculateExpSigma_3>.
-INFO:Xst:3226 - The RAM <exp_f/GeneratedTable/Mram_rom> will be implemented as a BLOCK RAM, absorbing the following register(s): <exp_f/GeneratedTable/Y1,Y0_sliced1> <exp_f/GeneratedTable/Y1,Y0_sliced> <exp_f/Coef_d1_sliced1> <exp_f/Coef_d1_sliced>
-    -----------------------------------------------------------------------
-    | ram_type           | Block                               |          |
-    -----------------------------------------------------------------------
-    | Port A                                                              |
-    |     aspect ratio   | 512-word x 25-bit                   |          |
-    |     mode           | write-first                         |          |
-    |     clkA           | connected to signal <CLK>           | rise     |
-    |     weA            | connected to signal <GND>           | high     |
-    |     addrA          | connected to signal <("0",xsigma_f<17:10>)> |          |
-    |     diA            | connected to signal <GND>           |          |
-    |     doA            | connected to signal <exp_f/Coef_d1> |          |
-    -----------------------------------------------------------------------
-    | optimization       | speed                               |          |
-    -----------------------------------------------------------------------
-    | Port B                                                              |
-    |     aspect ratio   | 512-word x 25-bit                   |          |
-    |     mode           | write-first                         |          |
-    |     clkB           | connected to signal <CLK>           | rise     |
-    |     weB            | connected to signal <GND>           | high     |
-    |     addrB          | connected to signal <("1",xsigma_f<17:10>)> |          |
-    |     diB            | connected to signal <GND>           |          |
-    |     doB            | connected to signal <exp_f/Coef_d1> |          |
-    -----------------------------------------------------------------------
-    | optimization       | speed                               |          |
-    -----------------------------------------------------------------------
-Unit <CalculateExpSigma_3> synthesized (advanced).
+Synthesizing (advanced) Unit <CalculateExpSigma>.
+The following registers are absorbed into counter <x>: 1 register on signal <x>.
+Unit <CalculateExpSigma> synthesized (advanced).
 
 Synthesizing (advanced) Unit <MCCore_1>.
 The following registers are absorbed into accumulator <acc>: 1 register on signal <acc>.
-INFO:Xst:3226 - The RAM <exp_sigma/Mram_RAM1> will be implemented as a BLOCK RAM, absorbing the following register(s): <path/oDATA>
-    -----------------------------------------------------------------------
-    | ram_type           | Block                               |          |
-    -----------------------------------------------------------------------
-    | Port A                                                              |
-    |     aspect ratio   | 1024-word x 18-bit                  |          |
-    |     mode           | read-first                          |          |
-    |     clkA           | connected to signal <CLK>           | rise     |
-    |     weA            | connected to internal node          | high     |
-    |     addrA          | connected to signal <iSigmaWriteAddress> |          |
-    |     diA            | connected to signal <iSigmaWriteData> |          |
-    -----------------------------------------------------------------------
-    | optimization       | speed                               |          |
-    -----------------------------------------------------------------------
-    | Port B                                                              |
-    |     aspect ratio   | 1024-word x 18-bit                  |          |
-    |     mode           | write-first                         |          |
-    |     clkB           | connected to signal <CLK>           | rise     |
-    |     addrB          | connected to signal <path/_n0005>   |          |
-    |     doB            | connected to internal node          |          |
-    -----------------------------------------------------------------------
-    | optimization       | speed                               |          |
-    -----------------------------------------------------------------------
-INFO:Xst:3226 - The RAM <exp_sigma/Mram_RAM0> will be implemented as a BLOCK RAM, absorbing the following register(s): <path/oDATA>
-    -----------------------------------------------------------------------
-    | ram_type           | Block                               |          |
-    -----------------------------------------------------------------------
-    | Port A                                                              |
-    |     aspect ratio   | 1024-word x 18-bit                  |          |
-    |     mode           | read-first                          |          |
-    |     clkA           | connected to signal <CLK>           | rise     |
-    |     weA            | connected to signal <exp_sigma/WE_0> | high     |
-    |     addrA          | connected to signal <iSigmaWriteAddress> |          |
-    |     diA            | connected to signal <iSigmaWriteData> |          |
-    -----------------------------------------------------------------------
-    | optimization       | speed                               |          |
-    -----------------------------------------------------------------------
-    | Port B                                                              |
-    |     aspect ratio   | 1024-word x 18-bit                  |          |
-    |     mode           | write-first                         |          |
-    |     clkB           | connected to signal <CLK>           | rise     |
-    |     addrB          | connected to signal <path/_n0005>   |          |
-    |     doB            | connected to internal node          |          |
-    -----------------------------------------------------------------------
-    | optimization       | speed                               |          |
-    -----------------------------------------------------------------------
-INFO:Xst:3226 - The RAM <exp_mu/Mram_RAM1> will be implemented as a BLOCK RAM, absorbing the following register(s): <t>
-    -----------------------------------------------------------------------
-    | ram_type           | Block                               |          |
-    -----------------------------------------------------------------------
-    | Port A                                                              |
-    |     aspect ratio   | 512-word x 18-bit                   |          |
-    |     mode           | read-first                          |          |
-    |     clkA           | connected to signal <CLK>           | rise     |
-    |     weA            | connected to internal node          | high     |
-    |     addrA          | connected to signal <iMuWriteAddress> |          |
-    |     diA            | connected to signal <iMuWriteData>  |          |
-    -----------------------------------------------------------------------
-    | optimization       | speed                               |          |
-    -----------------------------------------------------------------------
-    | Port B                                                              |
-    |     aspect ratio   | 512-word x 18-bit                   |          |
-    |     mode           | write-first                         |          |
-    |     clkB           | connected to signal <CLK>           | rise     |
-    |     addrB          | connected to signal <t_next>        |          |
-    |     doB            | connected to internal node          |          |
-    -----------------------------------------------------------------------
-    | optimization       | speed                               |          |
-    -----------------------------------------------------------------------
-INFO:Xst:3226 - The RAM <exp_mu/Mram_RAM0> will be implemented as a BLOCK RAM, absorbing the following register(s): <t>
-    -----------------------------------------------------------------------
-    | ram_type           | Block                               |          |
-    -----------------------------------------------------------------------
-    | Port A                                                              |
-    |     aspect ratio   | 512-word x 18-bit                   |          |
-    |     mode           | read-first                          |          |
-    |     clkA           | connected to signal <CLK>           | rise     |
-    |     weA            | connected to signal <exp_mu/WE_0>   | high     |
-    |     addrA          | connected to signal <iMuWriteAddress> |          |
-    |     diA            | connected to signal <iMuWriteData>  |          |
-    -----------------------------------------------------------------------
-    | optimization       | speed                               |          |
-    -----------------------------------------------------------------------
-    | Port B                                                              |
-    |     aspect ratio   | 512-word x 18-bit                   |          |
-    |     mode           | write-first                         |          |
-    |     clkB           | connected to signal <CLK>           | rise     |
-    |     addrB          | connected to signal <t_next>        |          |
-    |     doB            | connected to internal node          |          |
-    -----------------------------------------------------------------------
-    | optimization       | speed                               |          |
-    -----------------------------------------------------------------------
-INFO:Xst:3226 - The RAM <path/Mram_ROM> will be implemented as a BLOCK RAM, absorbing the following register(s): <t>
-    -----------------------------------------------------------------------
-    | ram_type           | Block                               |          |
-    -----------------------------------------------------------------------
-    | Port A                                                              |
-    |     aspect ratio   | 512-word x 10-bit                   |          |
-    |     mode           | write-first                         |          |
-    |     clkA           | connected to signal <CLK>           | rise     |
-    |     weA            | connected to signal <GND>           | high     |
-    |     addrA          | connected to signal <t_next>        |          |
-    |     diA            | connected to signal <GND>           |          |
-    |     doA            | connected to internal node          |          |
-    -----------------------------------------------------------------------
-    | optimization       | speed                               |          |
-    -----------------------------------------------------------------------
+The following registers are absorbed into counter <t>: 1 register on signal <t>.
 Unit <MCCore_1> synthesized (advanced).
 
 Synthesizing (advanced) Unit <MCCore_2>.
 The following registers are absorbed into accumulator <acc>: 1 register on signal <acc>.
-INFO:Xst:3226 - The RAM <exp_sigma/Mram_RAM1> will be implemented as a BLOCK RAM, absorbing the following register(s): <path/oDATA>
-    -----------------------------------------------------------------------
-    | ram_type           | Block                               |          |
-    -----------------------------------------------------------------------
-    | Port A                                                              |
-    |     aspect ratio   | 1024-word x 18-bit                  |          |
-    |     mode           | read-first                          |          |
-    |     clkA           | connected to signal <CLK>           | rise     |
-    |     weA            | connected to internal node          | high     |
-    |     addrA          | connected to signal <iSigmaWriteAddress> |          |
-    |     diA            | connected to signal <iSigmaWriteData> |          |
-    -----------------------------------------------------------------------
-    | optimization       | speed                               |          |
-    -----------------------------------------------------------------------
-    | Port B                                                              |
-    |     aspect ratio   | 1024-word x 18-bit                  |          |
-    |     mode           | write-first                         |          |
-    |     clkB           | connected to signal <CLK>           | rise     |
-    |     addrB          | connected to signal <path/_n0005>   |          |
-    |     doB            | connected to internal node          |          |
-    -----------------------------------------------------------------------
-    | optimization       | speed                               |          |
-    -----------------------------------------------------------------------
-INFO:Xst:3226 - The RAM <exp_sigma/Mram_RAM0> will be implemented as a BLOCK RAM, absorbing the following register(s): <path/oDATA>
-    -----------------------------------------------------------------------
-    | ram_type           | Block                               |          |
-    -----------------------------------------------------------------------
-    | Port A                                                              |
-    |     aspect ratio   | 1024-word x 18-bit                  |          |
-    |     mode           | read-first                          |          |
-    |     clkA           | connected to signal <CLK>           | rise     |
-    |     weA            | connected to signal <exp_sigma/WE_0> | high     |
-    |     addrA          | connected to signal <iSigmaWriteAddress> |          |
-    |     diA            | connected to signal <iSigmaWriteData> |          |
-    -----------------------------------------------------------------------
-    | optimization       | speed                               |          |
-    -----------------------------------------------------------------------
-    | Port B                                                              |
-    |     aspect ratio   | 1024-word x 18-bit                  |          |
-    |     mode           | write-first                         |          |
-    |     clkB           | connected to signal <CLK>           | rise     |
-    |     addrB          | connected to signal <path/_n0005>   |          |
-    |     doB            | connected to internal node          |          |
-    -----------------------------------------------------------------------
-    | optimization       | speed                               |          |
-    -----------------------------------------------------------------------
-INFO:Xst:3226 - The RAM <exp_mu/Mram_RAM1> will be implemented as a BLOCK RAM, absorbing the following register(s): <t>
-    -----------------------------------------------------------------------
-    | ram_type           | Block                               |          |
-    -----------------------------------------------------------------------
-    | Port A                                                              |
-    |     aspect ratio   | 512-word x 18-bit                   |          |
-    |     mode           | read-first                          |          |
-    |     clkA           | connected to signal <CLK>           | rise     |
-    |     weA            | connected to internal node          | high     |
-    |     addrA          | connected to signal <iMuWriteAddress> |          |
-    |     diA            | connected to signal <iMuWriteData>  |          |
-    -----------------------------------------------------------------------
-    | optimization       | speed                               |          |
-    -----------------------------------------------------------------------
-    | Port B                                                              |
-    |     aspect ratio   | 512-word x 18-bit                   |          |
-    |     mode           | write-first                         |          |
-    |     clkB           | connected to signal <CLK>           | rise     |
-    |     addrB          | connected to signal <t_next>        |          |
-    |     doB            | connected to internal node          |          |
-    -----------------------------------------------------------------------
-    | optimization       | speed                               |          |
-    -----------------------------------------------------------------------
-INFO:Xst:3226 - The RAM <exp_mu/Mram_RAM0> will be implemented as a BLOCK RAM, absorbing the following register(s): <t>
-    -----------------------------------------------------------------------
-    | ram_type           | Block                               |          |
-    -----------------------------------------------------------------------
-    | Port A                                                              |
-    |     aspect ratio   | 512-word x 18-bit                   |          |
-    |     mode           | read-first                          |          |
-    |     clkA           | connected to signal <CLK>           | rise     |
-    |     weA            | connected to signal <exp_mu/WE_0>   | high     |
-    |     addrA          | connected to signal <iMuWriteAddress> |          |
-    |     diA            | connected to signal <iMuWriteData>  |          |
-    -----------------------------------------------------------------------
-    | optimization       | speed                               |          |
-    -----------------------------------------------------------------------
-    | Port B                                                              |
-    |     aspect ratio   | 512-word x 18-bit                   |          |
-    |     mode           | write-first                         |          |
-    |     clkB           | connected to signal <CLK>           | rise     |
-    |     addrB          | connected to signal <t_next>        |          |
-    |     doB            | connected to internal node          |          |
-    -----------------------------------------------------------------------
-    | optimization       | speed                               |          |
-    -----------------------------------------------------------------------
-INFO:Xst:3226 - The RAM <path/Mram_ROM> will be implemented as a BLOCK RAM, absorbing the following register(s): <t>
+The following registers are absorbed into counter <t>: 1 register on signal <t>.
+INFO:Xst:3226 - The RAM <path/Mram_ROM> will be implemented as a BLOCK RAM, absorbing the following register(s): <path/oDATA> <SigmaReadAddress>
     -----------------------------------------------------------------------
     | ram_type           | Block                               |          |
     -----------------------------------------------------------------------
@@ -1097,18 +960,149 @@ INFO:Xst:3226 - The RAM <path/Mram_ROM> will be implemented as a BLOCK RAM, abso
     |     mode           | write-first                         |          |
     |     clkA           | connected to signal <CLK>           | rise     |
     |     weA            | connected to signal <GND>           | high     |
-    |     addrA          | connected to signal <t_next>        |          |
+    |     addrA          | connected to signal <t>             |          |
     |     diA            | connected to signal <GND>           |          |
-    |     doA            | connected to internal node          |          |
+    |     doA            | connected to signal <SigmaReadAddress> |          |
     -----------------------------------------------------------------------
     | optimization       | speed                               |          |
     -----------------------------------------------------------------------
 Unit <MCCore_2> synthesized (advanced).
 
 Synthesizing (advanced) Unit <Main>.
-The following registers are absorbed into counter <ExpSigmaUsed>: 1 register on signal <ExpSigmaUsed>.
-The following registers are absorbed into counter <ExpMuUsed>: 1 register on signal <ExpMuUsed>.
+INFO:Xst:3226 - The RAM <core0/exp_sigma/Mram_RAM1> will be implemented as a BLOCK RAM, absorbing the following register(s): <core0/SigmaReadAddress>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 1024-word x 18-bit                  |          |
+    |     mode           | read-first                          |          |
+    |     clkA           | connected to signal <CLK>           | rise     |
+    |     weA            | connected to internal node          | high     |
+    |     addrA          | connected to signal <addrExpSigma>  |          |
+    |     diA            | connected to signal <dataExpSigma>  |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 1024-word x 18-bit                  |          |
+    |     mode           | write-first                         |          |
+    |     clkB           | connected to signal <CLK>           | rise     |
+    |     addrB          | connected to signal <core0/pathOutput> |          |
+    |     doB            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <core0/exp_sigma/Mram_RAM0> will be implemented as a BLOCK RAM, absorbing the following register(s): <core0/SigmaReadAddress>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 1024-word x 18-bit                  |          |
+    |     mode           | read-first                          |          |
+    |     clkA           | connected to signal <CLK>           | rise     |
+    |     weA            | connected to signal <core0/exp_sigma/WE_0> | high     |
+    |     addrA          | connected to signal <addrExpSigma>  |          |
+    |     diA            | connected to signal <dataExpSigma>  |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 1024-word x 18-bit                  |          |
+    |     mode           | write-first                         |          |
+    |     clkB           | connected to signal <CLK>           | rise     |
+    |     addrB          | connected to signal <core0/pathOutput> |          |
+    |     doB            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <calcExpSigma/exp_f/GeneratedTable/Mram_rom> will be implemented as a BLOCK RAM, absorbing the following register(s): <calcExpSigma/exp_f/GeneratedTable/Y0> <calcExpSigma/exp_f/Coef_d1>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 31-bit                   |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <CLK>           | rise     |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <calcExpSigma/xsigma_f<17:10>> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <calcExpSigma/exp_f/Coef_d1> |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <core0/path/Mram_ROM> will be implemented as a BLOCK RAM, absorbing the following register(s): <core0/path/oDATA>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 512-word x 10-bit                   |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <CLK>           | rise     |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <core0/t>       |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <core0/pathOutput> |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
 Unit <Main> synthesized (advanced).
+
+Synthesizing (advanced) Unit <PolynomialEvaluator_degree2_uid5>.
+	Found pipelined multiplier on signal <Product_2/DSP_bh37_ch0_0>:
+		- 1 pipeline level(s) found in a register connected to the multiplier macro output.
+		Pushing register(s) into the multiplier macro.
+	Found pipelined multiplier on signal <Product_1/DSP_bh9_ch0_0>:
+		- 1 pipeline level(s) found in a register connected to the multiplier macro output.
+		Pushing register(s) into the multiplier macro.
+INFO:Xst:2385 - HDL ADVISOR - You can improve the performance of the multiplier Product_2/Mmult_DSP_bh37_ch0_0 by adding 1 register level(s).
+INFO:Xst:2385 - HDL ADVISOR - You can improve the performance of the multiplier Product_1/Mmult_DSP_bh9_ch0_0 by adding 1 register level(s).
+Unit <PolynomialEvaluator_degree2_uid5> synthesized (advanced).
+
+Synthesizing (advanced) Unit <PolynomialEvaluator_degree2_uid68>.
+	Found pipelined multiplier on signal <Product_2/DSP_bh100_ch0_0>:
+		- 1 pipeline level(s) found in a register connected to the multiplier macro output.
+		Pushing register(s) into the multiplier macro.
+	Found pipelined multiplier on signal <Product_1/DSP_bh72_ch0_0>:
+		- 1 pipeline level(s) found in a register connected to the multiplier macro output.
+		Pushing register(s) into the multiplier macro.
+INFO:Xst:2385 - HDL ADVISOR - You can improve the performance of the multiplier Product_2/Mmult_DSP_bh100_ch0_0 by adding 1 register level(s).
+INFO:Xst:2385 - HDL ADVISOR - You can improve the performance of the multiplier Product_1/Mmult_DSP_bh72_ch0_0 by adding 1 register level(s).
+Unit <PolynomialEvaluator_degree2_uid68> synthesized (advanced).
+
+Synthesizing (advanced) Unit <RAM_X_18_2>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_RAM0> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 512-word x 18-bit                   |          |
+    |     clkA           | connected to signal <CLK>           | rise     |
+    |     weA            | connected to signal <WE_0>          | high     |
+    |     addrA          | connected to signal <writeAddr>     |          |
+    |     diA            | connected to signal <writeData>     |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 512-word x 18-bit                   |          |
+    |     addrB          | connected to signal <readAddr>      |          |
+    |     doB            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_RAM1> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 512-word x 18-bit                   |          |
+    |     clkA           | connected to signal <CLK>           | rise     |
+    |     weA            | connected to internal node          | high     |
+    |     addrA          | connected to signal <writeAddr>     |          |
+    |     diA            | connected to signal <writeData>     |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 512-word x 18-bit                   |          |
+    |     addrB          | connected to signal <readAddr>      |          |
+    |     doB            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <RAM_X_18_2> synthesized (advanced).
 
 Synthesizing (advanced) Unit <ROM_3_13>.
 INFO:Xst:3231 - The small RAM <Mram_ROM> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
@@ -1123,108 +1117,97 @@ INFO:Xst:3231 - The small RAM <Mram_ROM> will be implemented on LUTs in order to
     |     doA            | connected to internal node          |          |
     -----------------------------------------------------------------------
 Unit <ROM_3_13> synthesized (advanced).
-WARNING:Xst:2677 - Node <exp_f/X_d1_10> of sequential type is unconnected in block <CalculateExpSigma_1>.
-WARNING:Xst:2677 - Node <exp_f/X_d1_11> of sequential type is unconnected in block <CalculateExpSigma_1>.
-WARNING:Xst:2677 - Node <exp_f/X_d1_12> of sequential type is unconnected in block <CalculateExpSigma_1>.
-WARNING:Xst:2677 - Node <exp_f/X_d1_13> of sequential type is unconnected in block <CalculateExpSigma_1>.
-WARNING:Xst:2677 - Node <exp_f/X_d1_14> of sequential type is unconnected in block <CalculateExpSigma_1>.
-WARNING:Xst:2677 - Node <exp_f/X_d1_15> of sequential type is unconnected in block <CalculateExpSigma_1>.
-WARNING:Xst:2677 - Node <exp_f/X_d1_16> of sequential type is unconnected in block <CalculateExpSigma_1>.
-WARNING:Xst:2677 - Node <exp_f/X_d1_17> of sequential type is unconnected in block <CalculateExpSigma_1>.
-WARNING:Xst:2677 - Node <exp_f/X_d1_10> of sequential type is unconnected in block <CalculateExpSigma_2>.
-WARNING:Xst:2677 - Node <exp_f/X_d1_11> of sequential type is unconnected in block <CalculateExpSigma_2>.
-WARNING:Xst:2677 - Node <exp_f/X_d1_12> of sequential type is unconnected in block <CalculateExpSigma_2>.
-WARNING:Xst:2677 - Node <exp_f/X_d1_13> of sequential type is unconnected in block <CalculateExpSigma_2>.
-WARNING:Xst:2677 - Node <exp_f/X_d1_14> of sequential type is unconnected in block <CalculateExpSigma_2>.
-WARNING:Xst:2677 - Node <exp_f/X_d1_15> of sequential type is unconnected in block <CalculateExpSigma_2>.
-WARNING:Xst:2677 - Node <exp_f/X_d1_16> of sequential type is unconnected in block <CalculateExpSigma_2>.
-WARNING:Xst:2677 - Node <exp_f/X_d1_17> of sequential type is unconnected in block <CalculateExpSigma_2>.
-WARNING:Xst:2677 - Node <exp_f/X_d1_10> of sequential type is unconnected in block <CalculateExpSigma_3>.
-WARNING:Xst:2677 - Node <exp_f/X_d1_11> of sequential type is unconnected in block <CalculateExpSigma_3>.
-WARNING:Xst:2677 - Node <exp_f/X_d1_12> of sequential type is unconnected in block <CalculateExpSigma_3>.
-WARNING:Xst:2677 - Node <exp_f/X_d1_13> of sequential type is unconnected in block <CalculateExpSigma_3>.
-WARNING:Xst:2677 - Node <exp_f/X_d1_14> of sequential type is unconnected in block <CalculateExpSigma_3>.
-WARNING:Xst:2677 - Node <exp_f/X_d1_15> of sequential type is unconnected in block <CalculateExpSigma_3>.
-WARNING:Xst:2677 - Node <exp_f/X_d1_16> of sequential type is unconnected in block <CalculateExpSigma_3>.
-WARNING:Xst:2677 - Node <exp_f/X_d1_17> of sequential type is unconnected in block <CalculateExpSigma_3>.
+WARNING:Xst:2677 - Node <exp/X_d1_10> of sequential type is unconnected in block <CalculateExpMu>.
+WARNING:Xst:2677 - Node <exp/X_d1_11> of sequential type is unconnected in block <CalculateExpMu>.
+WARNING:Xst:2677 - Node <exp/X_d1_12> of sequential type is unconnected in block <CalculateExpMu>.
+WARNING:Xst:2677 - Node <exp/X_d1_13> of sequential type is unconnected in block <CalculateExpMu>.
+WARNING:Xst:2677 - Node <exp/X_d1_14> of sequential type is unconnected in block <CalculateExpMu>.
+WARNING:Xst:2677 - Node <exp/X_d1_15> of sequential type is unconnected in block <CalculateExpMu>.
+WARNING:Xst:2677 - Node <exp/X_d1_16> of sequential type is unconnected in block <CalculateExpMu>.
+WARNING:Xst:2677 - Node <exp/X_d1_17> of sequential type is unconnected in block <CalculateExpMu>.
+WARNING:Xst:2677 - Node <calcExpSigma/exp_f/X_d1_10> of sequential type is unconnected in block <Main>.
+WARNING:Xst:2677 - Node <calcExpSigma/exp_f/X_d1_11> of sequential type is unconnected in block <Main>.
+WARNING:Xst:2677 - Node <calcExpSigma/exp_f/X_d1_12> of sequential type is unconnected in block <Main>.
+WARNING:Xst:2677 - Node <calcExpSigma/exp_f/X_d1_13> of sequential type is unconnected in block <Main>.
+WARNING:Xst:2677 - Node <calcExpSigma/exp_f/X_d1_14> of sequential type is unconnected in block <Main>.
+WARNING:Xst:2677 - Node <calcExpSigma/exp_f/X_d1_15> of sequential type is unconnected in block <Main>.
+WARNING:Xst:2677 - Node <calcExpSigma/exp_f/X_d1_16> of sequential type is unconnected in block <Main>.
+WARNING:Xst:2677 - Node <calcExpSigma/exp_f/X_d1_17> of sequential type is unconnected in block <Main>.
 
 =========================================================================
 Advanced HDL Synthesis Report
 
 Macro Statistics
-# RAMs                                                 : 16
- 1024x18-bit dual-port block RAM                       : 4
+# RAMs                                                 : 13
+ 1024x18-bit dual-port block RAM                       : 2
+ 1024x18-bit dual-port distributed RAM                 : 2
+ 256x31-bit single-port block Read Only RAM            : 1
  512x10-bit single-port block Read Only RAM            : 2
- 512x18-bit dual-port block RAM                        : 4
- 512x25-bit dual-port block Read Only RAM              : 3
- 8x13-bit single-port distributed Read Only RAM        : 3
-# Multipliers                                          : 6
- 25x18-bit multiplier                                  : 6
-# Adders/Subtractors                                   : 23
- 10-bit adder                                          : 3
- 14-bit adder                                          : 3
- 18-bit adder carry in                                 : 3
- 21-bit adder                                          : 3
- 23-bit adder                                          : 3
- 25-bit adder carry in                                 : 3
- 9-bit adder                                           : 5
-# Counters                                             : 2
- 2-bit up counter                                      : 2
+ 512x18-bit dual-port distributed RAM                  : 4
+ 512x20-bit dual-port block Read Only RAM              : 1
+ 8x13-bit single-port distributed Read Only RAM        : 1
+# Multipliers                                          : 4
+ 25x18-bit registered multiplier                       : 4
+# Adders/Subtractors                                   : 9
+ 10-bit adder                                          : 1
+ 10-bit adder carry in                                 : 1
+ 11-bit adder                                          : 1
+ 14-bit adder carry in                                 : 1
+ 15-bit adder                                          : 1
+ 17-bit adder carry in                                 : 1
+ 19-bit adder                                          : 1
+ 21-bit adder                                          : 1
+ 21-bit adder carry in                                 : 1
+# Counters                                             : 4
+ 10-bit up counter                                     : 1
+ 9-bit up counter                                      : 3
 # Accumulators                                         : 2
  27-bit up accumulator                                 : 2
-# Registers                                            : 1749
- Flip-Flops                                            : 1749
-# Comparators                                          : 2
- 2-bit comparator greater                              : 2
-# Multiplexers                                         : 107
+# Registers                                            : 1138
+ Flip-Flops                                            : 1138
+# Comparators                                          : 1
+ 9-bit comparator greater                              : 1
+# Multiplexers                                         : 45
  1-bit 2-to-1 multiplexer                              : 4
- 1-bit 3-to-1 multiplexer                              : 2
- 10-bit 2-to-1 multiplexer                             : 42
- 10-bit 3-to-1 multiplexer                             : 1
+ 10-bit 2-to-1 multiplexer                             : 13
  18-bit 2-to-1 multiplexer                             : 4
- 18-bit 3-to-1 multiplexer                             : 2
- 9-bit 2-to-1 multiplexer                              : 51
- 9-bit 3-to-1 multiplexer                              : 1
+ 9-bit 2-to-1 multiplexer                              : 24
 
 =========================================================================
 
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
-INFO:Xst:2261 - The FF/Latch <busyExpSigma_control/Q> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <calcExpSigma0/enable_control/Q> 
-INFO:Xst:2261 - The FF/Latch <busyCores_control/Q> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <core0/enable_control/Q> 
-INFO:Xst:2261 - The FF/Latch <calcExpMu0/enable_control/Q> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <busyExpMu_control/Q> 
-WARNING:Xst:2677 - Node <calcExpSigma0/exp_f/PolynomialEvaluator/a0_d1_23> of sequential type is unconnected in block <Main>.
-WARNING:Xst:2677 - Node <calcExpSigma1/exp_f/PolynomialEvaluator/a0_d1_23> of sequential type is unconnected in block <Main>.
-WARNING:Xst:2677 - Node <calcExpSigma2/exp_f/PolynomialEvaluator/a0_d1_23> of sequential type is unconnected in block <Main>.
-INFO:Xst:2261 - The FF/Latch <calcExpSigma1/exp_i/oData_2> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <calcExpSigma1/exp_i/oData_12> 
-INFO:Xst:2261 - The FF/Latch <calcExpSigma2/exp_i/oData_5> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <calcExpSigma2/exp_i/oData_6> 
-INFO:Xst:2261 - The FF/Latch <calcExpSigma2/exp_i/oData_2> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <calcExpSigma2/exp_i/oData_12> 
-INFO:Xst:2261 - The FF/Latch <calcExpSigma0/exp_i/oData_12> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <calcExpSigma0/exp_i/oData_2> 
-INFO:Xst:2261 - The FF/Latch <calcExpSigma0/exp_i/oData_6> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <calcExpSigma0/exp_i/oData_5> 
-INFO:Xst:2261 - The FF/Latch <calcExpSigma1/exp_i/oData_5> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <calcExpSigma1/exp_i/oData_6> 
-INFO:Xst:2261 - The FF/Latch <calcExpSigma0/exp_int_d1_12> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <calcExpSigma0/exp_int_d1_2> 
-INFO:Xst:2261 - The FF/Latch <calcExpSigma1/exp_int_d1_6> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <calcExpSigma1/exp_int_d1_5> 
-INFO:Xst:2261 - The FF/Latch <calcExpSigma0/exp_int_d1_6> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <calcExpSigma0/exp_int_d1_5> 
-INFO:Xst:2261 - The FF/Latch <calcExpSigma2/exp_int_d1_6> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <calcExpSigma2/exp_int_d1_5> 
-INFO:Xst:2261 - The FF/Latch <calcExpSigma1/exp_int_d1_12> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <calcExpSigma1/exp_int_d1_2> 
-INFO:Xst:2261 - The FF/Latch <calcExpSigma2/exp_int_d1_12> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <calcExpSigma2/exp_int_d1_2> 
-INFO:Xst:2261 - The FF/Latch <calcExpSigma2/exp_int_d2_6> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <calcExpSigma2/exp_int_d2_5> 
-INFO:Xst:2261 - The FF/Latch <calcExpSigma1/exp_int_d2_6> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <calcExpSigma1/exp_int_d2_5> 
-INFO:Xst:2261 - The FF/Latch <calcExpSigma0/exp_int_d2_6> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <calcExpSigma0/exp_int_d2_5> 
-INFO:Xst:2261 - The FF/Latch <calcExpSigma1/exp_int_d2_12> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <calcExpSigma1/exp_int_d2_2> 
-INFO:Xst:2261 - The FF/Latch <calcExpSigma2/exp_int_d2_12> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <calcExpSigma2/exp_int_d2_2> 
-INFO:Xst:2261 - The FF/Latch <calcExpSigma0/exp_int_d2_12> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <calcExpSigma0/exp_int_d2_2> 
-INFO:Xst:2261 - The FF/Latch <calcExpSigma2/exp_int_d3_12> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <calcExpSigma2/exp_int_d3_2> 
-INFO:Xst:2261 - The FF/Latch <calcExpSigma1/exp_int_d3_6> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <calcExpSigma1/exp_int_d3_5> 
-INFO:Xst:2261 - The FF/Latch <calcExpSigma0/exp_int_d3_6> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <calcExpSigma0/exp_int_d3_5> 
-INFO:Xst:2261 - The FF/Latch <calcExpSigma0/exp_int_d3_12> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <calcExpSigma0/exp_int_d3_2> 
-INFO:Xst:2261 - The FF/Latch <calcExpSigma1/exp_int_d3_12> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <calcExpSigma1/exp_int_d3_2> 
-INFO:Xst:2261 - The FF/Latch <calcExpSigma2/exp_int_d3_6> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <calcExpSigma2/exp_int_d3_5> 
+WARNING:Xst:1989 - Unit <Main>: instances <busyExpSigma_control>, <calcExpSigma/enable_control> of unit <SR_FF> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <Main>: instances <busyCores_control>, <core0/enable_control> of unit <SR_FF> are equivalent, second instance is removed
+WARNING:Xst:2677 - Node <Product_2/heap_bh100_w0_0_d1> of sequential type is unconnected in block <PolynomialEvaluator_degree2_uid68>.
+WARNING:Xst:2677 - Node <Product_2/heap_bh100_w1_0_d1> of sequential type is unconnected in block <PolynomialEvaluator_degree2_uid68>.
+WARNING:Xst:2677 - Node <Product_2/heap_bh100_w2_0_d1> of sequential type is unconnected in block <PolynomialEvaluator_degree2_uid68>.
+WARNING:Xst:2677 - Node <Product_2/heap_bh37_w0_0_d1> of sequential type is unconnected in block <PolynomialEvaluator_degree2_uid5>.
+WARNING:Xst:2677 - Node <Product_2/heap_bh37_w1_0_d1> of sequential type is unconnected in block <PolynomialEvaluator_degree2_uid5>.
+WARNING:Xst:2677 - Node <Product_2/heap_bh37_w2_0_d1> of sequential type is unconnected in block <PolynomialEvaluator_degree2_uid5>.
+INFO:Xst:2261 - The FF/Latch <oData_2> in Unit <ROM_3_13> is equivalent to the following FF/Latch, which will be removed : <oData_12> 
+INFO:Xst:2261 - The FF/Latch <oData_5> in Unit <ROM_3_13> is equivalent to the following FF/Latch, which will be removed : <oData_6> 
 
 Optimizing unit <Main> ...
+
+Optimizing unit <CalculateExpMu> ...
+
+Optimizing unit <PolynomialEvaluator_degree2_uid68> ...
+
+Optimizing unit <ROM_3_13> ...
+
+Optimizing unit <PolynomialEvaluator_degree2_uid5> ...
+
+Optimizing unit <RAM_X_18_2> ...
+WARNING:Xst:2677 - Node <calcExpSigma/exp_f/PolynomialEvaluator/a0_d4_15> of sequential type is unconnected in block <Main>.
+WARNING:Xst:2677 - Node <calcExpSigma/exp_f/PolynomialEvaluator/a0_d3_15> of sequential type is unconnected in block <Main>.
+WARNING:Xst:2677 - Node <calcExpSigma/exp_f/PolynomialEvaluator/a0_d2_15> of sequential type is unconnected in block <Main>.
+WARNING:Xst:2677 - Node <calcExpSigma/exp_f/PolynomialEvaluator/a0_d1_15> of sequential type is unconnected in block <Main>.
+INFO:Xst:2261 - The FF/Latch <calcExpSigma/exp_int_d6_2> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <calcExpSigma/exp_int_d6_12> 
+INFO:Xst:2261 - The FF/Latch <calcExpSigma/exp_int_d6_5> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <calcExpSigma/exp_int_d6_6> 
+INFO:Xst:2261 - The FF/Latch <core1/enable_control/Q> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <busyCores_control/Q> 
 INFO:Xst:2261 - The FF/Latch <core0/t_d1_0> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <core1/t_d1_0> 
-INFO:Xst:2261 - The FF/Latch <core0/done> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <core1/done> 
 INFO:Xst:2261 - The FF/Latch <core0/t_d1_1> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <core1/t_d1_1> 
 INFO:Xst:2261 - The FF/Latch <core0/t_d1_2> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <core1/t_d1_2> 
 INFO:Xst:2261 - The FF/Latch <core0/t_d1_3> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <core1/t_d1_3> 
@@ -1242,7 +1225,10 @@ INFO:Xst:2261 - The FF/Latch <core0/t_d2_5> in Unit <Main> is equivalent to the 
 INFO:Xst:2261 - The FF/Latch <core0/t_d2_6> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <core1/t_d2_6> 
 INFO:Xst:2261 - The FF/Latch <core0/t_d2_7> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <core1/t_d2_7> 
 INFO:Xst:2261 - The FF/Latch <core0/t_d2_8> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <core1/t_d2_8> 
+INFO:Xst:2261 - The FF/Latch <core1/done> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <core0/done> 
 INFO:Xst:2261 - The FF/Latch <core0/validProduct> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <core1/validProduct> 
+INFO:Xst:2261 - The FF/Latch <calcExpSigma/exp_int_d1_2> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <calcExpSigma/exp_int_d1_12> 
+INFO:Xst:2261 - The FF/Latch <calcExpSigma/exp_int_d1_5> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <calcExpSigma/exp_int_d1_6> 
 INFO:Xst:2261 - The FF/Latch <core0/t_d3_0> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <core1/t_d3_0> 
 INFO:Xst:2261 - The FF/Latch <core0/t_d3_1> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <core1/t_d3_1> 
 INFO:Xst:2261 - The FF/Latch <core0/t_d3_2> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <core1/t_d3_2> 
@@ -1258,10 +1244,11 @@ INFO:Xst:2261 - The FF/Latch <core0/t_2> in Unit <Main> is equivalent to the fol
 INFO:Xst:2261 - The FF/Latch <core0/t_3> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <core1/t_3> 
 INFO:Xst:2261 - The FF/Latch <core0/t_4> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <core1/t_4> 
 INFO:Xst:2261 - The FF/Latch <core0/t_5> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <core1/t_5> 
+INFO:Xst:2261 - The FF/Latch <calcExpSigma/exp_int_d2_2> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <calcExpSigma/exp_int_d2_12> 
 INFO:Xst:2261 - The FF/Latch <core0/t_6> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <core1/t_6> 
 INFO:Xst:2261 - The FF/Latch <core0/t_7> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <core1/t_7> 
 INFO:Xst:2261 - The FF/Latch <core0/t_8> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <core1/t_8> 
-INFO:Xst:2261 - The FF/Latch <core0/bit_ctr> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <core1/bit_ctr> 
+INFO:Xst:2261 - The FF/Latch <calcExpSigma/exp_int_d2_5> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <calcExpSigma/exp_int_d2_6> 
 INFO:Xst:2261 - The FF/Latch <core0/t_d4_0> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <core1/t_d4_0> 
 INFO:Xst:2261 - The FF/Latch <core0/t_d4_1> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <core1/t_d4_1> 
 INFO:Xst:2261 - The FF/Latch <core0/t_d4_2> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <core1/t_d4_2> 
@@ -1271,6 +1258,8 @@ INFO:Xst:2261 - The FF/Latch <core0/t_d4_5> in Unit <Main> is equivalent to the 
 INFO:Xst:2261 - The FF/Latch <core0/t_d4_6> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <core1/t_d4_6> 
 INFO:Xst:2261 - The FF/Latch <core0/t_d4_7> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <core1/t_d4_7> 
 INFO:Xst:2261 - The FF/Latch <core0/t_d4_8> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <core1/t_d4_8> 
+INFO:Xst:2261 - The FF/Latch <calcExpSigma/exp_int_d3_2> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <calcExpSigma/exp_int_d3_12> 
+INFO:Xst:2261 - The FF/Latch <calcExpSigma/exp_int_d3_5> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <calcExpSigma/exp_int_d3_6> 
 INFO:Xst:2261 - The FF/Latch <core0/t_d5_0> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <core1/t_d5_0> 
 INFO:Xst:2261 - The FF/Latch <core0/t_d5_1> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <core1/t_d5_1> 
 INFO:Xst:2261 - The FF/Latch <core0/t_d5_2> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <core1/t_d5_2> 
@@ -1279,17 +1268,10 @@ INFO:Xst:2261 - The FF/Latch <core0/t_d5_4> in Unit <Main> is equivalent to the 
 INFO:Xst:2261 - The FF/Latch <core0/t_d5_5> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <core1/t_d5_5> 
 INFO:Xst:2261 - The FF/Latch <core0/t_d5_6> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <core1/t_d5_6> 
 INFO:Xst:2261 - The FF/Latch <core0/t_d5_7> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <core1/t_d5_7> 
+INFO:Xst:2261 - The FF/Latch <busyExpMu_control/Q> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <calcExpMu/enable_control/Q> 
 INFO:Xst:2261 - The FF/Latch <core0/t_d5_8> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <core1/t_d5_8> 
-INFO:Xst:2261 - The FF/Latch <core0/t_next_0> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <core1/t_next_0> 
-INFO:Xst:2261 - The FF/Latch <core0/t_next_1> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <core1/t_next_1> 
-INFO:Xst:2261 - The FF/Latch <core0/t_next_2> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <core1/t_next_2> 
-INFO:Xst:2261 - The FF/Latch <core0/t_next_3> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <core1/t_next_3> 
-INFO:Xst:2261 - The FF/Latch <core0/t_next_4> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <core1/t_next_4> 
-INFO:Xst:2261 - The FF/Latch <busyCores_control/Q> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <core1/enable_control/Q> 
-INFO:Xst:2261 - The FF/Latch <core0/t_next_5> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <core1/t_next_5> 
-INFO:Xst:2261 - The FF/Latch <core0/t_next_6> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <core1/t_next_6> 
-INFO:Xst:2261 - The FF/Latch <core0/t_next_7> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <core1/t_next_7> 
-INFO:Xst:2261 - The FF/Latch <core0/t_next_8> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <core1/t_next_8> 
+INFO:Xst:2261 - The FF/Latch <calcExpSigma/exp_int_d4_2> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <calcExpSigma/exp_int_d4_12> 
+INFO:Xst:2261 - The FF/Latch <calcExpSigma/exp_int_d4_5> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <calcExpSigma/exp_int_d4_6> 
 INFO:Xst:2261 - The FF/Latch <core0/t_d6_0> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <core1/t_d6_0> 
 INFO:Xst:2261 - The FF/Latch <core0/t_d6_1> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <core1/t_d6_1> 
 INFO:Xst:2261 - The FF/Latch <core0/t_d6_2> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <core1/t_d6_2> 
@@ -1299,75 +1281,229 @@ INFO:Xst:2261 - The FF/Latch <core0/t_d6_5> in Unit <Main> is equivalent to the 
 INFO:Xst:2261 - The FF/Latch <core0/t_d6_6> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <core1/t_d6_6> 
 INFO:Xst:2261 - The FF/Latch <core0/t_d6_7> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <core1/t_d6_7> 
 INFO:Xst:2261 - The FF/Latch <core0/t_d6_8> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <core1/t_d6_8> 
+INFO:Xst:2261 - The FF/Latch <calcExpSigma/exp_int_d5_2> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <calcExpSigma/exp_int_d5_12> 
+INFO:Xst:2261 - The FF/Latch <calcExpSigma/exp_int_d5_5> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <calcExpSigma/exp_int_d5_6> 
 
 Mapping all equations...
 Building and optimizing final netlist ...
-INFO:Xst:2399 - RAMs <core0/exp_mu/Mram_RAM0>, <core1/exp_mu/Mram_RAM0> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <core0/exp_mu/Mram_RAM1>, <core1/exp_mu/Mram_RAM1> are equivalent, second RAM is removed
-Found area constraint ratio of 100 (+ 5) on block Main, actual ratio is 8.
-INFO:Xst:2260 - The FF/Latch <core0/exp_mu/readData_16> in Unit <Main> is equivalent to the following FF/Latch : <core1/exp_mu/readData_16> 
-INFO:Xst:2260 - The FF/Latch <core0/exp_mu/readData_17> in Unit <Main> is equivalent to the following FF/Latch : <core1/exp_mu/readData_17> 
-INFO:Xst:2260 - The FF/Latch <core0/exp_mu/readData_0> in Unit <Main> is equivalent to the following FF/Latch : <core1/exp_mu/readData_0> 
-INFO:Xst:2260 - The FF/Latch <core0/exp_mu/readData_1> in Unit <Main> is equivalent to the following FF/Latch : <core1/exp_mu/readData_1> 
-INFO:Xst:2260 - The FF/Latch <core0/exp_mu/readData_2> in Unit <Main> is equivalent to the following FF/Latch : <core1/exp_mu/readData_2> 
-INFO:Xst:2260 - The FF/Latch <core0/exp_mu/readData_3> in Unit <Main> is equivalent to the following FF/Latch : <core1/exp_mu/readData_3> 
-INFO:Xst:2260 - The FF/Latch <core0/exp_mu/readData_4> in Unit <Main> is equivalent to the following FF/Latch : <core1/exp_mu/readData_4> 
-INFO:Xst:2260 - The FF/Latch <core0/exp_mu/readData_5> in Unit <Main> is equivalent to the following FF/Latch : <core1/exp_mu/readData_5> 
-INFO:Xst:2260 - The FF/Latch <core0/exp_mu/readData_6> in Unit <Main> is equivalent to the following FF/Latch : <core1/exp_mu/readData_6> 
-INFO:Xst:2260 - The FF/Latch <core0/exp_mu/readData_7> in Unit <Main> is equivalent to the following FF/Latch : <core1/exp_mu/readData_7> 
-INFO:Xst:2260 - The FF/Latch <core0/exp_mu/readData_8> in Unit <Main> is equivalent to the following FF/Latch : <core1/exp_mu/readData_8> 
-INFO:Xst:2260 - The FF/Latch <core0/exp_mu/readData_9> in Unit <Main> is equivalent to the following FF/Latch : <core1/exp_mu/readData_9> 
-INFO:Xst:2260 - The FF/Latch <core0/exp_mu/readData_10> in Unit <Main> is equivalent to the following FF/Latch : <core1/exp_mu/readData_10> 
-INFO:Xst:2260 - The FF/Latch <core0/exp_mu/readData_11> in Unit <Main> is equivalent to the following FF/Latch : <core1/exp_mu/readData_11> 
-INFO:Xst:2260 - The FF/Latch <core0/exp_mu/readData_12> in Unit <Main> is equivalent to the following FF/Latch : <core1/exp_mu/readData_12> 
-INFO:Xst:2260 - The FF/Latch <core0/exp_mu/readData_13> in Unit <Main> is equivalent to the following FF/Latch : <core1/exp_mu/readData_13> 
-INFO:Xst:2260 - The FF/Latch <core0/exp_mu/readData_14> in Unit <Main> is equivalent to the following FF/Latch : <core1/exp_mu/readData_14> 
-INFO:Xst:2260 - The FF/Latch <core0/exp_mu/readData_15> in Unit <Main> is equivalent to the following FF/Latch : <core1/exp_mu/readData_15> 
-INFO:Xst:2261 - The FF/Latch <core0/exp_mu/readData_16> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <core1/exp_mu/readData_16> 
-INFO:Xst:2261 - The FF/Latch <core0/exp_mu/readData_17> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <core1/exp_mu/readData_17> 
-INFO:Xst:2261 - The FF/Latch <core0/exp_mu/readData_0> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <core1/exp_mu/readData_0> 
-INFO:Xst:2261 - The FF/Latch <core0/exp_mu/readData_1> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <core1/exp_mu/readData_1> 
-INFO:Xst:2261 - The FF/Latch <core0/exp_mu/readData_2> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <core1/exp_mu/readData_2> 
-INFO:Xst:2261 - The FF/Latch <core0/exp_mu/readData_3> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <core1/exp_mu/readData_3> 
-INFO:Xst:2261 - The FF/Latch <core0/exp_mu/readData_4> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <core1/exp_mu/readData_4> 
-INFO:Xst:2261 - The FF/Latch <core0/exp_mu/readData_5> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <core1/exp_mu/readData_5> 
-INFO:Xst:2261 - The FF/Latch <core0/exp_mu/readData_6> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <core1/exp_mu/readData_6> 
-INFO:Xst:2261 - The FF/Latch <core0/exp_mu/readData_7> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <core1/exp_mu/readData_7> 
-INFO:Xst:2261 - The FF/Latch <core0/exp_mu/readData_8> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <core1/exp_mu/readData_8> 
-INFO:Xst:2261 - The FF/Latch <core0/exp_mu/readData_9> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <core1/exp_mu/readData_9> 
-INFO:Xst:2261 - The FF/Latch <core0/exp_mu/readData_10> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <core1/exp_mu/readData_10> 
-INFO:Xst:2261 - The FF/Latch <core0/exp_mu/readData_11> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <core1/exp_mu/readData_11> 
-INFO:Xst:2261 - The FF/Latch <core0/exp_mu/readData_12> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <core1/exp_mu/readData_12> 
-INFO:Xst:2261 - The FF/Latch <core0/exp_mu/readData_13> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <core1/exp_mu/readData_13> 
-INFO:Xst:2261 - The FF/Latch <core0/exp_mu/readData_14> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <core1/exp_mu/readData_14> 
-INFO:Xst:2261 - The FF/Latch <core0/exp_mu/readData_15> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <core1/exp_mu/readData_15> 
-INFO:Xst:2261 - The FF/Latch <core0/MuReadData_d1_0> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <core1/MuReadData_d1_0> 
-INFO:Xst:2261 - The FF/Latch <core0/MuReadData_d1_1> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <core1/MuReadData_d1_1> 
-INFO:Xst:2261 - The FF/Latch <core0/MuReadData_d1_2> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <core1/MuReadData_d1_2> 
-INFO:Xst:2261 - The FF/Latch <core0/MuReadData_d1_3> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <core1/MuReadData_d1_3> 
-INFO:Xst:2261 - The FF/Latch <core0/MuReadData_d1_4> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <core1/MuReadData_d1_4> 
-INFO:Xst:2261 - The FF/Latch <core0/MuReadData_d1_5> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <core1/MuReadData_d1_5> 
-INFO:Xst:2261 - The FF/Latch <core0/MuReadData_d1_6> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <core1/MuReadData_d1_6> 
-INFO:Xst:2261 - The FF/Latch <core0/MuReadData_d1_7> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <core1/MuReadData_d1_7> 
-INFO:Xst:2261 - The FF/Latch <core0/MuReadData_d1_8> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <core1/MuReadData_d1_8> 
-INFO:Xst:2261 - The FF/Latch <core0/MuReadData_d1_9> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <core1/MuReadData_d1_9> 
-INFO:Xst:2261 - The FF/Latch <core0/MuReadData_d1_10> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <core1/MuReadData_d1_10> 
-INFO:Xst:2261 - The FF/Latch <core0/MuReadData_d1_11> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <core1/MuReadData_d1_11> 
-INFO:Xst:2261 - The FF/Latch <core0/MuReadData_d1_12> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <core1/MuReadData_d1_12> 
-INFO:Xst:2261 - The FF/Latch <core0/MuReadData_d1_13> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <core1/MuReadData_d1_13> 
-INFO:Xst:2261 - The FF/Latch <core0/MuReadData_d1_14> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <core1/MuReadData_d1_14> 
-INFO:Xst:2261 - The FF/Latch <core0/MuReadData_d1_15> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <core1/MuReadData_d1_15> 
-INFO:Xst:2261 - The FF/Latch <core0/MuReadData_d1_16> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <core1/MuReadData_d1_16> 
-INFO:Xst:2261 - The FF/Latch <core0/MuReadData_d1_17> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <core1/MuReadData_d1_17> 
+INFO:Xst:2399 - RAMs <core1/exp_mu/Mram_RAM148>, <core0/exp_mu/Mram_RAM148> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <core1/exp_mu/Mram_RAM147>, <core0/exp_mu/Mram_RAM147> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <core1/exp_mu/Mram_RAM146>, <core0/exp_mu/Mram_RAM146> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <core1/exp_mu/Mram_RAM145>, <core0/exp_mu/Mram_RAM145> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <core1/exp_mu/Mram_RAM144>, <core0/exp_mu/Mram_RAM144> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <core1/exp_mu/Mram_RAM143>, <core0/exp_mu/Mram_RAM143> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <core1/exp_mu/Mram_RAM142>, <core0/exp_mu/Mram_RAM142> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <core1/exp_mu/Mram_RAM141>, <core0/exp_mu/Mram_RAM141> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <core1/exp_mu/Mram_RAM140>, <core0/exp_mu/Mram_RAM140> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <core1/exp_mu/Mram_RAM139>, <core0/exp_mu/Mram_RAM139> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <core1/exp_mu/Mram_RAM138>, <core0/exp_mu/Mram_RAM138> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <core1/exp_mu/Mram_RAM137>, <core0/exp_mu/Mram_RAM137> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <core1/exp_mu/Mram_RAM136>, <core0/exp_mu/Mram_RAM136> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <core1/exp_mu/Mram_RAM134>, <core0/exp_mu/Mram_RAM134> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <core1/exp_mu/Mram_RAM133>, <core0/exp_mu/Mram_RAM133> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <core1/exp_mu/Mram_RAM135>, <core0/exp_mu/Mram_RAM135> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <core1/exp_mu/Mram_RAM132>, <core0/exp_mu/Mram_RAM132> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <core1/exp_mu/Mram_RAM131>, <core0/exp_mu/Mram_RAM131> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <core1/exp_mu/Mram_RAM130>, <core0/exp_mu/Mram_RAM130> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <core1/exp_mu/Mram_RAM129>, <core0/exp_mu/Mram_RAM129> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <core1/exp_mu/Mram_RAM128>, <core0/exp_mu/Mram_RAM128> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <core1/exp_mu/Mram_RAM127>, <core0/exp_mu/Mram_RAM127> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <core1/exp_mu/Mram_RAM126>, <core0/exp_mu/Mram_RAM126> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <core1/exp_mu/Mram_RAM125>, <core0/exp_mu/Mram_RAM125> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <core1/exp_mu/Mram_RAM124>, <core0/exp_mu/Mram_RAM124> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <core1/exp_mu/Mram_RAM123>, <core0/exp_mu/Mram_RAM123> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <core1/exp_mu/Mram_RAM122>, <core0/exp_mu/Mram_RAM122> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <core1/exp_mu/Mram_RAM121>, <core0/exp_mu/Mram_RAM121> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <core1/exp_mu/Mram_RAM120>, <core0/exp_mu/Mram_RAM120> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <core1/exp_mu/Mram_RAM119>, <core0/exp_mu/Mram_RAM119> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <core1/exp_mu/Mram_RAM117>, <core0/exp_mu/Mram_RAM117> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <core1/exp_mu/Mram_RAM116>, <core0/exp_mu/Mram_RAM116> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <core1/exp_mu/Mram_RAM118>, <core0/exp_mu/Mram_RAM118> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <core1/exp_mu/Mram_RAM115>, <core0/exp_mu/Mram_RAM115> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <core1/exp_mu/Mram_RAM114>, <core0/exp_mu/Mram_RAM114> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <core1/exp_mu/Mram_RAM113>, <core0/exp_mu/Mram_RAM113> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <core1/exp_mu/Mram_RAM112>, <core0/exp_mu/Mram_RAM112> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <core1/exp_mu/Mram_RAM111>, <core0/exp_mu/Mram_RAM111> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <core1/exp_mu/Mram_RAM110>, <core0/exp_mu/Mram_RAM110> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <core1/exp_mu/Mram_RAM19>, <core0/exp_mu/Mram_RAM19> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <core1/exp_mu/Mram_RAM18>, <core0/exp_mu/Mram_RAM18> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <core1/exp_mu/Mram_RAM17>, <core0/exp_mu/Mram_RAM17> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <core1/exp_mu/Mram_RAM16>, <core0/exp_mu/Mram_RAM16> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <core1/exp_mu/Mram_RAM15>, <core0/exp_mu/Mram_RAM15> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <core1/exp_mu/Mram_RAM14>, <core0/exp_mu/Mram_RAM14> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <core1/exp_mu/Mram_RAM13>, <core0/exp_mu/Mram_RAM13> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <core1/exp_mu/Mram_RAM12>, <core0/exp_mu/Mram_RAM12> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <core1/exp_mu/Mram_RAM11>, <core0/exp_mu/Mram_RAM11> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <core1/exp_mu/Mram_RAM048>, <core0/exp_mu/Mram_RAM048> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <core1/exp_mu/Mram_RAM047>, <core0/exp_mu/Mram_RAM047> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <core1/exp_mu/Mram_RAM046>, <core0/exp_mu/Mram_RAM046> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <core1/exp_mu/Mram_RAM045>, <core0/exp_mu/Mram_RAM045> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <core1/exp_mu/Mram_RAM044>, <core0/exp_mu/Mram_RAM044> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <core1/exp_mu/Mram_RAM043>, <core0/exp_mu/Mram_RAM043> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <core1/exp_mu/Mram_RAM042>, <core0/exp_mu/Mram_RAM042> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <core1/exp_mu/Mram_RAM041>, <core0/exp_mu/Mram_RAM041> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <core1/exp_mu/Mram_RAM040>, <core0/exp_mu/Mram_RAM040> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <core1/exp_mu/Mram_RAM039>, <core0/exp_mu/Mram_RAM039> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <core1/exp_mu/Mram_RAM038>, <core0/exp_mu/Mram_RAM038> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <core1/exp_mu/Mram_RAM037>, <core0/exp_mu/Mram_RAM037> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <core1/exp_mu/Mram_RAM036>, <core0/exp_mu/Mram_RAM036> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <core1/exp_mu/Mram_RAM035>, <core0/exp_mu/Mram_RAM035> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <core1/exp_mu/Mram_RAM033>, <core0/exp_mu/Mram_RAM033> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <core1/exp_mu/Mram_RAM032>, <core0/exp_mu/Mram_RAM032> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <core1/exp_mu/Mram_RAM034>, <core0/exp_mu/Mram_RAM034> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <core1/exp_mu/Mram_RAM031>, <core0/exp_mu/Mram_RAM031> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <core1/exp_mu/Mram_RAM030>, <core0/exp_mu/Mram_RAM030> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <core1/exp_mu/Mram_RAM029>, <core0/exp_mu/Mram_RAM029> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <core1/exp_mu/Mram_RAM028>, <core0/exp_mu/Mram_RAM028> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <core1/exp_mu/Mram_RAM027>, <core0/exp_mu/Mram_RAM027> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <core1/exp_mu/Mram_RAM026>, <core0/exp_mu/Mram_RAM026> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <core1/exp_mu/Mram_RAM025>, <core0/exp_mu/Mram_RAM025> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <core1/exp_mu/Mram_RAM024>, <core0/exp_mu/Mram_RAM024> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <core1/exp_mu/Mram_RAM023>, <core0/exp_mu/Mram_RAM023> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <core1/exp_mu/Mram_RAM022>, <core0/exp_mu/Mram_RAM022> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <core1/exp_mu/Mram_RAM021>, <core0/exp_mu/Mram_RAM021> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <core1/exp_mu/Mram_RAM020>, <core0/exp_mu/Mram_RAM020> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <core1/exp_mu/Mram_RAM019>, <core0/exp_mu/Mram_RAM019> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <core1/exp_mu/Mram_RAM018>, <core0/exp_mu/Mram_RAM018> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <core1/exp_mu/Mram_RAM016>, <core0/exp_mu/Mram_RAM016> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <core1/exp_mu/Mram_RAM015>, <core0/exp_mu/Mram_RAM015> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <core1/exp_mu/Mram_RAM017>, <core0/exp_mu/Mram_RAM017> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <core1/exp_mu/Mram_RAM014>, <core0/exp_mu/Mram_RAM014> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <core1/exp_mu/Mram_RAM013>, <core0/exp_mu/Mram_RAM013> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <core1/exp_mu/Mram_RAM012>, <core0/exp_mu/Mram_RAM012> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <core1/exp_mu/Mram_RAM011>, <core0/exp_mu/Mram_RAM011> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <core1/exp_mu/Mram_RAM010>, <core0/exp_mu/Mram_RAM010> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <core1/exp_mu/Mram_RAM09>, <core0/exp_mu/Mram_RAM09> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <core1/exp_mu/Mram_RAM08>, <core0/exp_mu/Mram_RAM08> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <core1/exp_mu/Mram_RAM07>, <core0/exp_mu/Mram_RAM07> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <core1/exp_mu/Mram_RAM06>, <core0/exp_mu/Mram_RAM06> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <core1/exp_mu/Mram_RAM05>, <core0/exp_mu/Mram_RAM05> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <core1/exp_mu/Mram_RAM04>, <core0/exp_mu/Mram_RAM04> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <core1/exp_mu/Mram_RAM03>, <core0/exp_mu/Mram_RAM03> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <core1/exp_mu/Mram_RAM02>, <core0/exp_mu/Mram_RAM02> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <core1/exp_mu/Mram_RAM01>, <core0/exp_mu/Mram_RAM01> are equivalent, second RAM is removed
+Found area constraint ratio of 100 (+ 5) on block Main, actual ratio is 1.
 
 Final Macro Processing ...
+
+Processing Unit <Main> :
+	Found 3-bit shift register for signal <core0/MuReadData_d3_0>.
+	Found 3-bit shift register for signal <core0/MuReadData_d3_1>.
+	Found 3-bit shift register for signal <core0/MuReadData_d3_2>.
+	Found 3-bit shift register for signal <core0/MuReadData_d3_3>.
+	Found 3-bit shift register for signal <core0/MuReadData_d3_4>.
+	Found 3-bit shift register for signal <core0/MuReadData_d3_5>.
+	Found 3-bit shift register for signal <core0/MuReadData_d3_6>.
+	Found 3-bit shift register for signal <core0/MuReadData_d3_7>.
+	Found 3-bit shift register for signal <core0/MuReadData_d3_8>.
+	Found 3-bit shift register for signal <core0/MuReadData_d3_9>.
+	Found 3-bit shift register for signal <core0/MuReadData_d3_10>.
+	Found 3-bit shift register for signal <core0/MuReadData_d3_11>.
+	Found 3-bit shift register for signal <core0/MuReadData_d3_12>.
+	Found 3-bit shift register for signal <core0/MuReadData_d3_13>.
+	Found 3-bit shift register for signal <core0/MuReadData_d3_14>.
+	Found 3-bit shift register for signal <core0/MuReadData_d3_15>.
+	Found 3-bit shift register for signal <core0/MuReadData_d3_16>.
+	Found 3-bit shift register for signal <core0/MuReadData_d3_17>.
+	Found 3-bit shift register for signal <core1/MuReadData_d3_0>.
+	Found 3-bit shift register for signal <core1/MuReadData_d3_1>.
+	Found 3-bit shift register for signal <core1/MuReadData_d3_2>.
+	Found 3-bit shift register for signal <core1/MuReadData_d3_3>.
+	Found 3-bit shift register for signal <core1/MuReadData_d3_4>.
+	Found 3-bit shift register for signal <core1/MuReadData_d3_5>.
+	Found 3-bit shift register for signal <core1/MuReadData_d3_6>.
+	Found 3-bit shift register for signal <core1/MuReadData_d3_7>.
+	Found 3-bit shift register for signal <core1/MuReadData_d3_8>.
+	Found 3-bit shift register for signal <core1/MuReadData_d3_9>.
+	Found 3-bit shift register for signal <core1/MuReadData_d3_10>.
+	Found 3-bit shift register for signal <core1/MuReadData_d3_11>.
+	Found 3-bit shift register for signal <core1/MuReadData_d3_12>.
+	Found 3-bit shift register for signal <core1/MuReadData_d3_13>.
+	Found 3-bit shift register for signal <core1/MuReadData_d3_14>.
+	Found 3-bit shift register for signal <core1/MuReadData_d3_15>.
+	Found 3-bit shift register for signal <core1/MuReadData_d3_16>.
+	Found 3-bit shift register for signal <core1/MuReadData_d3_17>.
+	Found 6-bit shift register for signal <calcExpSigma/exp_int_d6_0>.
+	Found 6-bit shift register for signal <calcExpSigma/exp_int_d6_1>.
+	Found 6-bit shift register for signal <calcExpSigma/exp_int_d6_2>.
+	Found 6-bit shift register for signal <calcExpSigma/exp_int_d6_3>.
+	Found 6-bit shift register for signal <calcExpSigma/exp_int_d6_4>.
+	Found 6-bit shift register for signal <calcExpSigma/exp_int_d6_5>.
+	Found 6-bit shift register for signal <calcExpSigma/exp_int_d6_7>.
+	Found 6-bit shift register for signal <calcExpSigma/exp_int_d6_8>.
+	Found 6-bit shift register for signal <calcExpSigma/exp_int_d6_9>.
+	Found 6-bit shift register for signal <calcExpSigma/exp_int_d6_10>.
+	Found 6-bit shift register for signal <calcExpSigma/exp_int_d6_11>.
+	Found 4-bit shift register for signal <calcExpMu/exp/PolynomialEvaluator/a0_d4_19>.
+	Found 4-bit shift register for signal <calcExpMu/exp/PolynomialEvaluator/a0_d4_18>.
+	Found 4-bit shift register for signal <calcExpMu/exp/PolynomialEvaluator/a0_d4_17>.
+	Found 4-bit shift register for signal <calcExpMu/exp/PolynomialEvaluator/a0_d4_16>.
+	Found 4-bit shift register for signal <calcExpMu/exp/PolynomialEvaluator/a0_d4_15>.
+	Found 4-bit shift register for signal <calcExpMu/exp/PolynomialEvaluator/a0_d4_14>.
+	Found 4-bit shift register for signal <calcExpMu/exp/PolynomialEvaluator/a0_d4_13>.
+	Found 4-bit shift register for signal <calcExpMu/exp/PolynomialEvaluator/a0_d4_12>.
+	Found 4-bit shift register for signal <calcExpMu/exp/PolynomialEvaluator/a0_d4_11>.
+	Found 4-bit shift register for signal <calcExpMu/exp/PolynomialEvaluator/a0_d4_10>.
+	Found 4-bit shift register for signal <calcExpMu/exp/PolynomialEvaluator/a0_d4_9>.
+	Found 4-bit shift register for signal <calcExpMu/exp/PolynomialEvaluator/a0_d4_8>.
+	Found 4-bit shift register for signal <calcExpMu/exp/PolynomialEvaluator/a0_d4_7>.
+	Found 4-bit shift register for signal <calcExpMu/exp/PolynomialEvaluator/a0_d4_6>.
+	Found 4-bit shift register for signal <calcExpMu/exp/PolynomialEvaluator/a0_d4_5>.
+	Found 4-bit shift register for signal <calcExpMu/exp/PolynomialEvaluator/a0_d4_4>.
+	Found 4-bit shift register for signal <calcExpMu/exp/PolynomialEvaluator/a0_d4_3>.
+	Found 4-bit shift register for signal <calcExpMu/exp/PolynomialEvaluator/a0_d4_2>.
+	Found 4-bit shift register for signal <calcExpMu/exp/PolynomialEvaluator/a0_d4_1>.
+	Found 4-bit shift register for signal <calcExpMu/exp/PolynomialEvaluator/a0_d4_0>.
+	Found 2-bit shift register for signal <calcExpMu/exp/PolynomialEvaluator/a1_d2_12>.
+	Found 2-bit shift register for signal <calcExpMu/exp/PolynomialEvaluator/a1_d2_11>.
+	Found 2-bit shift register for signal <calcExpMu/exp/PolynomialEvaluator/a1_d2_10>.
+	Found 2-bit shift register for signal <calcExpMu/exp/PolynomialEvaluator/a1_d2_9>.
+	Found 2-bit shift register for signal <calcExpMu/exp/PolynomialEvaluator/a1_d2_8>.
+	Found 2-bit shift register for signal <calcExpMu/exp/PolynomialEvaluator/a1_d2_7>.
+	Found 2-bit shift register for signal <calcExpMu/exp/PolynomialEvaluator/a1_d2_6>.
+	Found 2-bit shift register for signal <calcExpMu/exp/PolynomialEvaluator/a1_d2_5>.
+	Found 2-bit shift register for signal <calcExpMu/exp/PolynomialEvaluator/a1_d2_4>.
+	Found 2-bit shift register for signal <calcExpMu/exp/PolynomialEvaluator/a1_d2_3>.
+	Found 2-bit shift register for signal <calcExpMu/exp/PolynomialEvaluator/a1_d2_2>.
+	Found 2-bit shift register for signal <calcExpMu/exp/PolynomialEvaluator/a1_d2_1>.
+	Found 2-bit shift register for signal <calcExpMu/exp/PolynomialEvaluator/a1_d2_0>.
+	Found 4-bit shift register for signal <calcExpSigma/exp_f/PolynomialEvaluator/a0_d4_14>.
+	Found 4-bit shift register for signal <calcExpSigma/exp_f/PolynomialEvaluator/a0_d4_13>.
+	Found 4-bit shift register for signal <calcExpSigma/exp_f/PolynomialEvaluator/a0_d4_12>.
+	Found 4-bit shift register for signal <calcExpSigma/exp_f/PolynomialEvaluator/a0_d4_11>.
+	Found 4-bit shift register for signal <calcExpSigma/exp_f/PolynomialEvaluator/a0_d4_10>.
+	Found 4-bit shift register for signal <calcExpSigma/exp_f/PolynomialEvaluator/a0_d4_9>.
+	Found 4-bit shift register for signal <calcExpSigma/exp_f/PolynomialEvaluator/a0_d4_8>.
+	Found 4-bit shift register for signal <calcExpSigma/exp_f/PolynomialEvaluator/a0_d4_7>.
+	Found 4-bit shift register for signal <calcExpSigma/exp_f/PolynomialEvaluator/a0_d4_6>.
+	Found 4-bit shift register for signal <calcExpSigma/exp_f/PolynomialEvaluator/a0_d4_5>.
+	Found 4-bit shift register for signal <calcExpSigma/exp_f/PolynomialEvaluator/a0_d4_4>.
+	Found 4-bit shift register for signal <calcExpSigma/exp_f/PolynomialEvaluator/a0_d4_3>.
+	Found 4-bit shift register for signal <calcExpSigma/exp_f/PolynomialEvaluator/a0_d4_2>.
+	Found 4-bit shift register for signal <calcExpSigma/exp_f/PolynomialEvaluator/a0_d4_1>.
+	Found 4-bit shift register for signal <calcExpSigma/exp_f/PolynomialEvaluator/a0_d4_0>.
+	Found 2-bit shift register for signal <calcExpSigma/exp_f/PolynomialEvaluator/a1_d2_8>.
+	Found 2-bit shift register for signal <calcExpSigma/exp_f/PolynomialEvaluator/a1_d2_7>.
+	Found 2-bit shift register for signal <calcExpSigma/exp_f/PolynomialEvaluator/a1_d2_6>.
+	Found 2-bit shift register for signal <calcExpSigma/exp_f/PolynomialEvaluator/a1_d2_5>.
+	Found 2-bit shift register for signal <calcExpSigma/exp_f/PolynomialEvaluator/a1_d2_4>.
+	Found 2-bit shift register for signal <calcExpSigma/exp_f/PolynomialEvaluator/a1_d2_3>.
+	Found 2-bit shift register for signal <calcExpSigma/exp_f/PolynomialEvaluator/a1_d2_2>.
+	Found 2-bit shift register for signal <calcExpSigma/exp_f/PolynomialEvaluator/a1_d2_1>.
+	Found 2-bit shift register for signal <calcExpSigma/exp_f/PolynomialEvaluator/a1_d2_0>.
+Unit <Main> processed.
 
 =========================================================================
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 1578
- Flip-Flops                                            : 1578
+# Registers                                            : 700
+ Flip-Flops                                            : 700
+# Shift Registers                                      : 104
+ 2-bit shift register                                  : 22
+ 3-bit shift register                                  : 36
+ 4-bit shift register                                  : 35
+ 6-bit shift register                                  : 11
 
 =========================================================================
 
@@ -1390,61 +1526,69 @@ Top Level Output File Name         : Main.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 1768
+# BELS                             : 1420
 #      GND                         : 1
-#      INV                         : 18
-#      LUT1                        : 69
-#      LUT2                        : 967
-#      LUT3                        : 98
-#      LUT4                        : 31
-#      LUT5                        : 75
-#      LUT6                        : 87
-#      MUXCY                       : 223
+#      INV                         : 8
+#      LUT1                        : 47
+#      LUT2                        : 389
+#      LUT3                        : 99
+#      LUT4                        : 21
+#      LUT5                        : 29
+#      LUT6                        : 348
+#      MUXCY                       : 147
+#      MUXF7                       : 144
+#      MUXF8                       : 36
 #      VCC                         : 1
-#      XORCY                       : 198
-# FlipFlops/Latches                : 1578
-#      FD                          : 1073
-#      FDE                         : 73
-#      FDR                         : 378
-#      FDRE                        : 54
-# RAMS                             : 11
-#      RAMB16BWER                  : 7
-#      RAMB8BWER                   : 4
+#      XORCY                       : 150
+# FlipFlops/Latches                : 820
+#      FD                          : 425
+#      FDE                         : 265
+#      FDR                         : 96
+#      FDRE                        : 34
+# RAMS                             : 294
+#      RAM64M                      : 288
+#      RAMB18E1                    : 5
+#      RAMB36E1                    : 1
+# Shift Registers                  : 104
+#      SRLC16E                     : 104
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
 # IO Buffers                       : 109
 #      IBUF                        : 55
 #      OBUF                        : 54
-# DSPs                             : 12
-#      DSP48A1                     : 12
+# DSPs                             : 4
+#      DSP48E1                     : 4
 
 Device utilization summary:
 ---------------------------
 
-Selected Device : 6slx45fgg484-3 
+Selected Device : 6vlx240tff1156-1 
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:            1578  out of  54576     2%  
- Number of Slice LUTs:                 1345  out of  27288     4%  
-    Number used as Logic:              1345  out of  27288     4%  
+ Number of Slice Registers:             820  out of  301440     0%  
+ Number of Slice LUTs:                 2197  out of  150720     1%  
+    Number used as Logic:               941  out of  150720     0%  
+    Number used as Memory:             1256  out of  58400     2%  
+       Number used as RAM:             1152
+       Number used as SRL:              104
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:   1816
-   Number with an unused Flip Flop:     238  out of   1816    13%  
-   Number with an unused LUT:           471  out of   1816    25%  
-   Number of fully used LUT-FF pairs:  1107  out of   1816    60%  
-   Number of unique control sets:        13
+ Number of LUT Flip Flop pairs used:   2340
+   Number with an unused Flip Flop:    1520  out of   2340    64%  
+   Number with an unused LUT:           143  out of   2340     6%  
+   Number of fully used LUT-FF pairs:   677  out of   2340    28%  
+   Number of unique control sets:        18
 
 IO Utilization: 
  Number of IOs:                         110
- Number of bonded IOBs:                 110  out of    316    34%  
+ Number of bonded IOBs:                 110  out of    600    18%  
 
 Specific Feature Utilization:
- Number of Block RAM/FIFO:                9  out of    116     7%  
-    Number using Block RAM only:          9
- Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
- Number of DSP48A1s:                     12  out of     58    20%  
+ Number of Block RAM/FIFO:                4  out of    416     0%  
+    Number using Block RAM only:          4
+ Number of BUFG/BUFGCTRLs:                1  out of     32     3%  
+ Number of DSP48E1s:                      4  out of    768     0%  
 
 ---------------------------
 Partition Resource Summary:
@@ -1467,20 +1611,26 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-CLK                                | BUFGP                  | 1612  |
+CLK                                | BUFGP                  | 1228  |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
 ----------------------------------------
-No asynchronous control signals found in this design
+-----------------------------------------------------+--------------------------------+-------+
+Control Signal                                       | Buffer(FF name)                | Load  |
+-----------------------------------------------------+--------------------------------+-------+
+calcExpMu/done_glue_ce(XST_GND:G)                    | NONE(core0/exp_sigma/Mram_RAM0)| 18    |
+core0/exp_sigma/BUS_0002(core0/exp_sigma/BUS_00021:O)| NONE(core0/exp_sigma/Mram_RAM1)| 2     |
+core0/exp_sigma/WE_0(core0/exp_sigma/WE_01:O)        | NONE(core0/exp_sigma/Mram_RAM0)| 2     |
+-----------------------------------------------------+--------------------------------+-------+
 
 Timing Summary:
 ---------------
-Speed Grade: -3
+Speed Grade: -1
 
-   Minimum period: 24.775ns (Maximum Frequency: 40.363MHz)
-   Minimum input arrival time before clock: 2.109ns
-   Maximum output required time after clock: 3.597ns
+   Minimum period: 4.901ns (Maximum Frequency: 204.040MHz)
+   Minimum input arrival time before clock: 1.377ns
+   Maximum output required time after clock: 0.777ns
    Maximum combinational path delay: No path found
 
 Timing Details:
@@ -1489,65 +1639,42 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'CLK'
-  Clock period: 24.775ns (frequency: 40.363MHz)
-  Total number of paths / destination ports: 9367915839 / 2816
+  Clock period: 4.901ns (frequency: 204.040MHz)
+  Total number of paths / destination ports: 16951 / 4547
 -------------------------------------------------------------------------
-Delay:               24.775ns (Levels of Logic = 35)
-  Source:            calcExpSigma0/exp_f/PolynomialEvaluator/Product_1/Mmult_DSP_bh9_ch0_0 (DSP)
-  Destination:       calcExpSigma0/exp_frac_d1_11 (FF)
+Delay:               4.901ns (Levels of Logic = 12)
+  Source:            calcExpMu/exp/PolynomialEvaluator/Product_1/Mmult_DSP_bh72_ch0_0 (DSP)
+  Destination:       calcExpMu/exp/PolynomialEvaluator/Product_2/Mmult_DSP_bh100_ch0_0 (DSP)
   Source Clock:      CLK rising
   Destination Clock: CLK rising
 
-  Data Path: calcExpSigma0/exp_f/PolynomialEvaluator/Product_1/Mmult_DSP_bh9_ch0_0 to calcExpSigma0/exp_frac_d1_11
+  Data Path: calcExpMu/exp/PolynomialEvaluator/Product_1/Mmult_DSP_bh72_ch0_0 to calcExpMu/exp/PolynomialEvaluator/Product_2/Mmult_DSP_bh100_ch0_0
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     DSP48A1:CLK->P47     18   6.742   1.049  calcExpSigma0/exp_f/PolynomialEvaluator/Product_1/Mmult_DSP_bh9_ch0_0 (calcExpSigma0/exp_f/PolynomialEvaluator/Product_1/Mmult_DSP_bh9_ch0_0_P47_to_calcExpSigma0/exp_f/PolynomialEvaluator/Product_1/Mmult_DSP_bh9_ch0_01)
-     DSP48A1:C30->P18      7   2.687   1.021  calcExpSigma0/exp_f/PolynomialEvaluator/Product_1/Mmult_DSP_bh9_ch0_01 (calcExpSigma0/exp_f/PolynomialEvaluator/Product_1/Adder_final9_0/Madd_R_lut<5>)
-     LUT4:I0->O            4   0.203   0.684  calcExpSigma0/exp_f/PolynomialEvaluator/piPT1<7>_SW0 (N58)
-     LUT6:I5->O            1   0.205   0.000  calcExpSigma0/exp_f/PolynomialEvaluator/Sum1/Madd_R_Madd_lut<7> (calcExpSigma0/exp_f/PolynomialEvaluator/Sum1/Madd_R_Madd_lut<7>)
-     MUXCY:S->O            1   0.172   0.000  calcExpSigma0/exp_f/PolynomialEvaluator/Sum1/Madd_R_Madd_cy<7> (calcExpSigma0/exp_f/PolynomialEvaluator/Sum1/Madd_R_Madd_cy<7>)
-     MUXCY:CI->O           1   0.019   0.000  calcExpSigma0/exp_f/PolynomialEvaluator/Sum1/Madd_R_Madd_cy<8> (calcExpSigma0/exp_f/PolynomialEvaluator/Sum1/Madd_R_Madd_cy<8>)
-     XORCY:CI->O           1   0.180   0.579  calcExpSigma0/exp_f/PolynomialEvaluator/Sum1/Madd_R_Madd_xor<9> (calcExpSigma0/exp_f/PolynomialEvaluator/sigmaP1<9>)
-     DSP48A1:A16->P47     18   4.560   1.049  calcExpSigma0/exp_f/PolynomialEvaluator/Product_2/Mmult_DSP_bh37_ch0_0 (calcExpSigma0/exp_f/PolynomialEvaluator/Product_2/Mmult_DSP_bh37_ch0_0_P47_to_calcExpSigma0/exp_f/PolynomialEvaluator/Product_2/Mmult_DSP_bh37_ch0_01)
-     DSP48A1:C30->P7       1   2.687   0.579  calcExpSigma0/exp_f/PolynomialEvaluator/Product_2/Mmult_DSP_bh37_ch0_01 (calcExpSigma0/exp_f/PolynomialEvaluator/Product_2/DSP_bh37_ch0_0<24>)
-     INV:I->O              1   0.206   0.000  calcExpSigma0/exp_f/PolynomialEvaluator/Product_2/Adder_final37_0/Madd_R_lut<3>_INV_0 (calcExpSigma0/exp_f/PolynomialEvaluator/Product_2/Adder_final37_0/Madd_R_lut<3>)
-     MUXCY:S->O            1   0.172   0.000  calcExpSigma0/exp_f/PolynomialEvaluator/Product_2/Adder_final37_0/Madd_R_cy<3> (calcExpSigma0/exp_f/PolynomialEvaluator/Product_2/Adder_final37_0/Madd_R_cy<3>)
-     MUXCY:CI->O           1   0.019   0.000  calcExpSigma0/exp_f/PolynomialEvaluator/Product_2/Adder_final37_0/Madd_R_cy<4> (calcExpSigma0/exp_f/PolynomialEvaluator/Product_2/Adder_final37_0/Madd_R_cy<4>)
-     MUXCY:CI->O           1   0.019   0.000  calcExpSigma0/exp_f/PolynomialEvaluator/Product_2/Adder_final37_0/Madd_R_cy<5> (calcExpSigma0/exp_f/PolynomialEvaluator/Product_2/Adder_final37_0/Madd_R_cy<5>)
-     MUXCY:CI->O           1   0.019   0.000  calcExpSigma0/exp_f/PolynomialEvaluator/Product_2/Adder_final37_0/Madd_R_cy<6> (calcExpSigma0/exp_f/PolynomialEvaluator/Product_2/Adder_final37_0/Madd_R_cy<6>)
-     MUXCY:CI->O           1   0.019   0.000  calcExpSigma0/exp_f/PolynomialEvaluator/Product_2/Adder_final37_0/Madd_R_cy<7> (calcExpSigma0/exp_f/PolynomialEvaluator/Product_2/Adder_final37_0/Madd_R_cy<7>)
-     MUXCY:CI->O           1   0.019   0.000  calcExpSigma0/exp_f/PolynomialEvaluator/Product_2/Adder_final37_0/Madd_R_cy<8> (calcExpSigma0/exp_f/PolynomialEvaluator/Product_2/Adder_final37_0/Madd_R_cy<8>)
-     MUXCY:CI->O           1   0.019   0.000  calcExpSigma0/exp_f/PolynomialEvaluator/Product_2/Adder_final37_0/Madd_R_cy<9> (calcExpSigma0/exp_f/PolynomialEvaluator/Product_2/Adder_final37_0/Madd_R_cy<9>)
-     MUXCY:CI->O           1   0.019   0.000  calcExpSigma0/exp_f/PolynomialEvaluator/Product_2/Adder_final37_0/Madd_R_cy<10> (calcExpSigma0/exp_f/PolynomialEvaluator/Product_2/Adder_final37_0/Madd_R_cy<10>)
-     MUXCY:CI->O           1   0.019   0.000  calcExpSigma0/exp_f/PolynomialEvaluator/Product_2/Adder_final37_0/Madd_R_cy<11> (calcExpSigma0/exp_f/PolynomialEvaluator/Product_2/Adder_final37_0/Madd_R_cy<11>)
-     MUXCY:CI->O           1   0.019   0.000  calcExpSigma0/exp_f/PolynomialEvaluator/Product_2/Adder_final37_0/Madd_R_cy<12> (calcExpSigma0/exp_f/PolynomialEvaluator/Product_2/Adder_final37_0/Madd_R_cy<12>)
-     MUXCY:CI->O           1   0.019   0.000  calcExpSigma0/exp_f/PolynomialEvaluator/Product_2/Adder_final37_0/Madd_R_cy<13> (calcExpSigma0/exp_f/PolynomialEvaluator/Product_2/Adder_final37_0/Madd_R_cy<13>)
-     MUXCY:CI->O           1   0.019   0.000  calcExpSigma0/exp_f/PolynomialEvaluator/Product_2/Adder_final37_0/Madd_R_cy<14> (calcExpSigma0/exp_f/PolynomialEvaluator/Product_2/Adder_final37_0/Madd_R_cy<14>)
-     MUXCY:CI->O           1   0.019   0.000  calcExpSigma0/exp_f/PolynomialEvaluator/Product_2/Adder_final37_0/Madd_R_cy<15> (calcExpSigma0/exp_f/PolynomialEvaluator/Product_2/Adder_final37_0/Madd_R_cy<15>)
-     MUXCY:CI->O           1   0.019   0.000  calcExpSigma0/exp_f/PolynomialEvaluator/Product_2/Adder_final37_0/Madd_R_cy<16> (calcExpSigma0/exp_f/PolynomialEvaluator/Product_2/Adder_final37_0/Madd_R_cy<16>)
-     MUXCY:CI->O           1   0.019   0.000  calcExpSigma0/exp_f/PolynomialEvaluator/Product_2/Adder_final37_0/Madd_R_cy<17> (calcExpSigma0/exp_f/PolynomialEvaluator/Product_2/Adder_final37_0/Madd_R_cy<17>)
-     MUXCY:CI->O           1   0.019   0.000  calcExpSigma0/exp_f/PolynomialEvaluator/Product_2/Adder_final37_0/Madd_R_cy<18> (calcExpSigma0/exp_f/PolynomialEvaluator/Product_2/Adder_final37_0/Madd_R_cy<18>)
-     MUXCY:CI->O           1   0.019   0.000  calcExpSigma0/exp_f/PolynomialEvaluator/Product_2/Adder_final37_0/Madd_R_cy<19> (calcExpSigma0/exp_f/PolynomialEvaluator/Product_2/Adder_final37_0/Madd_R_cy<19>)
-     MUXCY:CI->O           0   0.019   0.000  calcExpSigma0/exp_f/PolynomialEvaluator/Product_2/Adder_final37_0/Madd_R_cy<20> (calcExpSigma0/exp_f/PolynomialEvaluator/Product_2/Adder_final37_0/Madd_R_cy<20>)
-     XORCY:CI->O           6   0.180   0.745  calcExpSigma0/exp_f/PolynomialEvaluator/Product_2/Adder_final37_0/Madd_R_xor<21> (calcExpSigma0/exp_f/PolynomialEvaluator/piP2<17>)
-     LUT2:I1->O            1   0.205   0.000  calcExpSigma0/exp_f/PolynomialEvaluator/Sum2/Madd_R_Madd_lut<17> (calcExpSigma0/exp_f/PolynomialEvaluator/Sum2/Madd_R_Madd_lut<17>)
-     MUXCY:S->O            1   0.172   0.000  calcExpSigma0/exp_f/PolynomialEvaluator/Sum2/Madd_R_Madd_cy<17> (calcExpSigma0/exp_f/PolynomialEvaluator/Sum2/Madd_R_Madd_cy<17>)
-     MUXCY:CI->O           1   0.019   0.000  calcExpSigma0/exp_f/PolynomialEvaluator/Sum2/Madd_R_Madd_cy<18> (calcExpSigma0/exp_f/PolynomialEvaluator/Sum2/Madd_R_Madd_cy<18>)
-     MUXCY:CI->O           1   0.019   0.000  calcExpSigma0/exp_f/PolynomialEvaluator/Sum2/Madd_R_Madd_cy<19> (calcExpSigma0/exp_f/PolynomialEvaluator/Sum2/Madd_R_Madd_cy<19>)
-     MUXCY:CI->O           1   0.019   0.000  calcExpSigma0/exp_f/PolynomialEvaluator/Sum2/Madd_R_Madd_cy<20> (calcExpSigma0/exp_f/PolynomialEvaluator/Sum2/Madd_R_Madd_cy<20>)
-     MUXCY:CI->O           0   0.019   0.000  calcExpSigma0/exp_f/PolynomialEvaluator/Sum2/Madd_R_Madd_cy<21> (calcExpSigma0/exp_f/PolynomialEvaluator/Sum2/Madd_R_Madd_cy<21>)
-     XORCY:CI->O           1   0.180   0.000  calcExpSigma0/exp_f/PolynomialEvaluator/Sum2/Madd_R_Madd_xor<22> (calcExpSigma0/exp_frac<19>)
-     FDR:D                     0.102          calcExpSigma0/exp_frac_d1_11
+     DSP48E1:CLK->P37      3   0.494   0.792  calcExpMu/exp/PolynomialEvaluator/Product_1/Mmult_DSP_bh72_ch0_0 (calcExpMu/exp/PolynomialEvaluator/Product_1/Adder_final72_0/Madd_R_lut<6>)
+     LUT6:I0->O           10   0.068   0.476  calcExpMu/exp/PolynomialEvaluator/piPT1<4>1 (calcExpMu/exp/PolynomialEvaluator/piPT1<4>)
+     LUT2:I1->O            1   0.068   0.000  calcExpMu/exp/PolynomialEvaluator/Sum1/Madd_R_Madd_lut<4> (calcExpMu/exp/PolynomialEvaluator/Sum1/Madd_R_Madd_lut<4>)
+     MUXCY:S->O            1   0.290   0.000  calcExpMu/exp/PolynomialEvaluator/Sum1/Madd_R_Madd_cy<4> (calcExpMu/exp/PolynomialEvaluator/Sum1/Madd_R_Madd_cy<4>)
+     MUXCY:CI->O           1   0.020   0.000  calcExpMu/exp/PolynomialEvaluator/Sum1/Madd_R_Madd_cy<5> (calcExpMu/exp/PolynomialEvaluator/Sum1/Madd_R_Madd_cy<5>)
+     MUXCY:CI->O           1   0.020   0.000  calcExpMu/exp/PolynomialEvaluator/Sum1/Madd_R_Madd_cy<6> (calcExpMu/exp/PolynomialEvaluator/Sum1/Madd_R_Madd_cy<6>)
+     MUXCY:CI->O           1   0.020   0.000  calcExpMu/exp/PolynomialEvaluator/Sum1/Madd_R_Madd_cy<7> (calcExpMu/exp/PolynomialEvaluator/Sum1/Madd_R_Madd_cy<7>)
+     MUXCY:CI->O           1   0.020   0.000  calcExpMu/exp/PolynomialEvaluator/Sum1/Madd_R_Madd_cy<8> (calcExpMu/exp/PolynomialEvaluator/Sum1/Madd_R_Madd_cy<8>)
+     MUXCY:CI->O           1   0.020   0.000  calcExpMu/exp/PolynomialEvaluator/Sum1/Madd_R_Madd_cy<9> (calcExpMu/exp/PolynomialEvaluator/Sum1/Madd_R_Madd_cy<9>)
+     MUXCY:CI->O           1   0.020   0.000  calcExpMu/exp/PolynomialEvaluator/Sum1/Madd_R_Madd_cy<10> (calcExpMu/exp/PolynomialEvaluator/Sum1/Madd_R_Madd_cy<10>)
+     MUXCY:CI->O           1   0.020   0.000  calcExpMu/exp/PolynomialEvaluator/Sum1/Madd_R_Madd_cy<11> (calcExpMu/exp/PolynomialEvaluator/Sum1/Madd_R_Madd_cy<11>)
+     MUXCY:CI->O           0   0.020   0.000  calcExpMu/exp/PolynomialEvaluator/Sum1/Madd_R_Madd_cy<12> (calcExpMu/exp/PolynomialEvaluator/Sum1/Madd_R_Madd_cy<12>)
+     XORCY:CI->O           1   0.239   0.399  calcExpMu/exp/PolynomialEvaluator/Sum1/Madd_R_Madd_xor<13> (calcExpMu/exp/PolynomialEvaluator/sigmaP1<13>)
+     DSP48E1:A23               1.919          calcExpMu/exp/PolynomialEvaluator/Product_2/Mmult_DSP_bh100_ch0_0
     ----------------------------------------
-    Total                     24.775ns (19.071ns logic, 5.704ns route)
-                                       (77.0% logic, 23.0% route)
+    Total                      4.901ns (3.234ns logic, 1.667ns route)
+                                       (66.0% logic, 34.0% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK'
-  Total number of paths / destination ports: 163 / 163
+  Total number of paths / destination ports: 77 / 77
 -------------------------------------------------------------------------
-Offset:              2.109ns (Levels of Logic = 2)
+Offset:              1.377ns (Levels of Logic = 2)
   Source:            iDoneOptionCalc (PAD)
   Destination:       readyOption_control/Q (FF)
   Destination Clock: CLK rising
@@ -1556,18 +1683,18 @@ Offset:              2.109ns (Levels of Logic = 2)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             1   1.222   0.580  iDoneOptionCalc_IBUF (iDoneOptionCalc_IBUF)
-     LUT4:I3->O            1   0.205   0.000  readyOption_control/Q_rstpot (readyOption_control/Q_rstpot)
-     FD:D                      0.102          readyOption_control/Q
+     IBUF:I->O             2   0.003   0.644  iDoneOptionCalc_IBUF (iDoneOptionCalc_IBUF)
+     LUT4:I0->O            1   0.068   0.399  readyOption_control/_n0009_inv1 (readyOption_control/_n0009_inv)
+     FDE:CE                    0.263          readyOption_control/Q
     ----------------------------------------
-    Total                      2.109ns (1.529ns logic, 0.580ns route)
-                                       (72.5% logic, 27.5% route)
+    Total                      1.377ns (0.334ns logic, 1.043ns route)
+                                       (24.3% logic, 75.7% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK'
   Total number of paths / destination ports: 54 / 54
 -------------------------------------------------------------------------
-Offset:              3.597ns (Levels of Logic = 1)
+Offset:              0.777ns (Levels of Logic = 1)
   Source:            core0/out_26 (FF)
   Destination:       oAcc1<26> (PAD)
   Source Clock:      CLK rising
@@ -1576,11 +1703,11 @@ Offset:              3.597ns (Levels of Logic = 1)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDRE:C->Q             1   0.447   0.579  core0/out_26 (core0/out_26)
-     OBUF:I->O                 2.571          oAcc1_26_OBUF (oAcc1<26>)
+     FDE:C->Q              1   0.375   0.399  core0/out_26 (core0/out_26)
+     OBUF:I->O                 0.003          oAcc1_26_OBUF (oAcc1<26>)
     ----------------------------------------
-    Total                      3.597ns (3.018ns logic, 0.579ns route)
-                                       (83.9% logic, 16.1% route)
+    Total                      0.777ns (0.378ns logic, 0.399ns route)
+                                       (48.6% logic, 51.4% route)
 
 =========================================================================
 
@@ -1592,20 +1719,20 @@ Clock to Setup on destination clock CLK
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-CLK            |   24.775|         |         |         |
+CLK            |    4.901|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 32.00 secs
-Total CPU time to Xst completion: 31.71 secs
+Total REAL time to Xst completion: 25.00 secs
+Total CPU time to Xst completion: 25.44 secs
  
 --> 
 
-Total memory usage is 241400 kilobytes
+Total memory usage is 221240 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   88 (   0 filtered)
-Number of infos    :  178 (   0 filtered)
+Number of warnings :  207 (   0 filtered)
+Number of infos    :  191 (   0 filtered)
 
