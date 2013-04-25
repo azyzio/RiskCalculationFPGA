@@ -1,0 +1,14 @@
+# Output products list for <MuExpMult2>
+MuExpMult2.asy
+MuExpMult2.gise
+MuExpMult2.ngc
+MuExpMult2.v
+MuExpMult2.veo
+MuExpMult2.xco
+MuExpMult2.xise
+MuExpMult2\doc\mult_gen_ds255.pdf
+MuExpMult2\doc\mult_gen_v11_2_readme.txt
+MuExpMult2\doc\mult_gen_v11_2_vinfo.html
+MuExpMult2_flist.txt
+MuExpMult2_xmdf.tcl
+_xmsgs\pn_parser.xmsgs

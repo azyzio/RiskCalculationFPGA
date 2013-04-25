@@ -1,0 +1,13 @@
+# Output products list for <SigmaExpMult1>
+SigmaExpMult1.asy
+SigmaExpMult1.gise
+SigmaExpMult1.ngc
+SigmaExpMult1.v
+SigmaExpMult1.veo
+SigmaExpMult1.xco
+SigmaExpMult1.xise
+SigmaExpMult1\doc\mult_gen_ds255.pdf
+SigmaExpMult1\doc\mult_gen_v11_2_readme.txt
+SigmaExpMult1\doc\mult_gen_v11_2_vinfo.html
+SigmaExpMult1_flist.txt
+SigmaExpMult1_xmdf.tcl

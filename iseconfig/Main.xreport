@@ -1,10 +1,10 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2013-04-22T20:50:10</DateModified>
+  <DateModified>2013-04-25T20:37:05</DateModified>
   <ModuleName>Main</ModuleName>
   <SummaryTimeStamp>2013-04-22T08:17:38</SummaryTimeStamp>
-  <SavedFilePath>D:/Dropbox/NUS/FYP/RiskCalculationFPGA/iseconfig/Main.xreport</SavedFilePath>
+  <SavedFilePath>D:/Dropbox/NUS/FYP/RiskCalculationFPGA/iseconfig/main.xreport</SavedFilePath>
   <ImplementationReportsDirectory>D:/Dropbox/NUS/FYP/RiskCalculationFPGA\</ImplementationReportsDirectory>
   <DateInitialized>2013-04-19T16:36:16</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>

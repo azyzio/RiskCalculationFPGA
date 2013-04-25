@@ -16,22 +16,22 @@ module CalculateExpMu(
 	);
 
 parameter t_min = 0;
-parameter t_max = 511;
-parameter logT = 9;
+parameter t_max = 63;
+parameter logT = 6;
 
 input						CLK;
 input		[17:0]		iMu;			// 18 Franction Bits
-input		[17:0]		iS;			// 4 Integer bits. 14 Fraction bits.
+input		[16:0]		iS;			// 6 Integer bits. 12 Fraction bits.
 input						iStart;
 
-output	[17:0]		oData;
+output	[16:0]		oData;
 output	[logT-1:0]	oAddr;
 output					oValid;
 output					oDone;
 
 wire						enable;
 
-reg		[logT-1:0]	t;				// Unsigned integer
+reg		[logT:0]	t;				// Unsigned integer
 reg		[logT-1:0]	t_d1;
 reg		[logT-1:0]	t_d2;
 reg		[logT-1:0]	t_d3;
@@ -46,15 +46,15 @@ reg		[logT-1:0]	t_d11;
 reg		[logT-1:0]	t_d12;
 reg		[logT-1:0]	t_d13;
 
-reg		[logT-1:0]	t_add1;		// needed to make t correspond to Sexp((t+1)u)
+reg		[logT:0]	t_add1;		// needed to make t correspond to Sexp((t+1)mu). It can get value T, so needs one bit more not to overflow
 
 wire 		[17:0]		tmu;			// (t * mu) used for current exp calculation. 18 Franction Bits
 reg		[17:0]		tmu_d1;
 
-wire		[17:0]		exp_tmu;		// exp(t * mu). 4 Integer. 18 Franction Bits.
-reg		[17:0]		exp_tmu_d1;	// 4 LSB cut. 4 int, 14 frac
+wire		[17:0]		exp_tmu;		// exp(t * mu). 4 Integer. 14 Franction Bits.
+reg		[17:0]		exp_tmu_d1;
 
-wire		[17:0]		product;		// S0 * exp(t * mu). 3 Integer, 15 Franction Bits.
+wire		[16:0]		product;		// S0 * exp(t * mu). 6 Integer, 12 Franction Bits.
 											// Multiplier cuts 5 MSB and 13 LSB
 wire						valid;											
 wire						done;
@@ -84,6 +84,8 @@ always @ (posedge CLK) begin
 	if (enable) begin
 		if (t < t_max)
 			t <= t + 1;
+		else
+			t <= 0;
 		t_d1 <= t;
 		t_d2 <= t_d1;
 		t_d3 <= t_d2;
@@ -129,9 +131,9 @@ SR_FF done_control(CLK, (t_d13 == t_max), (done == 1), done);
 SR_FF valid_control(CLK, (t_d12 == t_min), (t_d13 == t_max), valid);
 SR_FF enable_control(CLK, iStart, done, enable);
 
-mult_9_18_18 mult1(CLK, t_add1, iMu, tmu);
+MuExp1 mult1(CLK, t_add1, iMu, tmu);
 exp_18_18 exp(CLK, ~enable, tmu_d1, exp_tmu);
-mult_18_18_18_muexp mult2(CLK, exp_tmu_d1, iS, product);
+MuExpMult2 mult2(CLK, exp_tmu_d1, iS, product);
 
 assign oData = product;
 assign oAddr = t_d13;

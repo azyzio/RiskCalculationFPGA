@@ -5,12 +5,12 @@ module test_CalculateExpMu;
 	// Inputs
 	reg CLK;
 	reg [17:0] iMu;
-	reg [17:0] iS;
+	reg [16:0] iS;
 	reg iStart;
 
 	// Outputs
-	wire [17:0] oData;
-	wire [8:0] oAddr;
+	wire [16:0] oData;
+	wire [5:0] oAddr;
 	wire oValid;
 	wire oDone;
 
@@ -29,8 +29,8 @@ module test_CalculateExpMu;
 	initial begin
 		// Initialize Inputs
 		CLK <= 0;
-		iMu <= 184;
-		iS <= 24576;
+		iMu <= 524;
+		iS <= 102400;
 		iStart <= 0;
 
 		// Wait 100 ns for global reset to finish

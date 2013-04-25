@@ -10,7 +10,7 @@ module RAM_X_18(
 	writeData
 );
 
-parameter addr_size = 10;
+parameter addr_size = 6;
  
 input 								CLK;
 input 		[addr_size-1:0] 	readAddr;
@@ -19,11 +19,11 @@ input 		[addr_size-1:0] 	writeAddr;
 input									WE;		// Write enable
 input									switch;	// 0 - WE on RAM0, 1 - WE on RAM1
 
-output reg	[17:0] 				readData;
-input			[17:0] 				writeData;
+output reg	[16:0] 				readData;
+input			[16:0] 				writeData;
 
-reg			[17:0]				RAM0 [0:2**addr_size-1];
-reg			[17:0]				RAM1 [0:2**addr_size-1];
+reg			[16:0]				RAM0 [0:2**addr_size-1];
+reg			[16:0]				RAM1 [0:2**addr_size-1];
 
 initial
 begin

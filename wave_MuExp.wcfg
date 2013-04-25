@@ -3,7 +3,7 @@
    <wave_state>
    </wave_state>
    <db_ref_list>
-      <db_ref path="D:/Dropbox/NUS/FYP/RiskCalculationFPGA/test_CalculateExpMu_isim_beh1.wdb" id="1" type="auto">
+      <db_ref path="D:/Dropbox/NUS/FYP/RiskCalculationFPGA/test_CalculateExpMu_isim_beh.wdb" id="1" type="auto">
          <top_modules>
             <top_module name="glbl" />
             <top_module name="numeric_std" />
@@ -16,15 +16,15 @@
          </top_modules>
       </db_ref>
    </db_ref_list>
-   <WVObjectSize size="13" />
+   <WVObjectSize size="15" />
    <wvobject fp_name="/test_CalculateExpMu/iMu" type="array" db_ref_id="1">
       <obj_property name="ElementShortName">iMu[17:0]</obj_property>
       <obj_property name="ObjectShortName">iMu[17:0]</obj_property>
       <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/test_CalculateExpMu/iS" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">iS[17:0]</obj_property>
-      <obj_property name="ObjectShortName">iS[17:0]</obj_property>
+      <obj_property name="ElementShortName">iS[16:0]</obj_property>
+      <obj_property name="ObjectShortName">iS[16:0]</obj_property>
       <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/test_CalculateExpMu/CLK" type="logic" db_ref_id="1">
@@ -40,8 +40,18 @@
       <obj_property name="ObjectShortName">enable</obj_property>
    </wvobject>
    <wvobject fp_name="/test_CalculateExpMu/uut/t" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">t[8:0]</obj_property>
-      <obj_property name="ObjectShortName">t[8:0]</obj_property>
+      <obj_property name="ElementShortName">t[6:0]</obj_property>
+      <obj_property name="ObjectShortName">t[6:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_CalculateExpMu/uut/t_d13" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">t_d13[5:0]</obj_property>
+      <obj_property name="ObjectShortName">t_d13[5:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_CalculateExpMu/uut/t_add1" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">t_add1[6:0]</obj_property>
+      <obj_property name="ObjectShortName">t_add1[6:0]</obj_property>
       <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/test_CalculateExpMu/uut/tmu" type="array" db_ref_id="1">
@@ -60,8 +70,8 @@
       <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/test_CalculateExpMu/oAddr" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">oAddr[8:0]</obj_property>
-      <obj_property name="ObjectShortName">oAddr[8:0]</obj_property>
+      <obj_property name="ElementShortName">oAddr[5:0]</obj_property>
+      <obj_property name="ObjectShortName">oAddr[5:0]</obj_property>
       <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/test_CalculateExpMu/oData" type="array" db_ref_id="1">

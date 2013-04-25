@@ -9,11 +9,15 @@ module ROM_path(
 // The parameter determining which instance of the core is the ROM used in
 parameter				N = "1";
  
-input 					CLK;
-input 		[8:0] 	iADDRESS;
-output reg	[9:0] 	oDATA;
+parameter T = 64;
+parameter logT = 6;
+parameter pathWidth = 6;
+ 
+input 								CLK;
+input 		[logT-1:0] 			iADDRESS;
+output reg	[pathWidth-1:0] 	oDATA;
 
-reg			[9:0]	ROM [0:511];
+reg			[pathWidth-1:0]	ROM [0:T-1];
 
 initial
 begin

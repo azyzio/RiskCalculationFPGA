@@ -1,7 +1,7 @@
 Release 14.4 par P.49d (nt)
 Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 
-ADAMZ_PC::  Mon Apr 22 21:13:17 2013
+ADAMZ_PC::  Thu Apr 25 20:33:24 2013
 
 par -w -intstyle ise -ol high -mt off main_map.ncd main.ncd main.pcf 
 
@@ -21,39 +21,39 @@ Device speed data version:  "PRODUCTION 1.23 2012-12-04".
 Device Utilization Summary:
 
 Slice Logic Utilization:
-  Number of Slice Registers:                   872 out of  54,576    1%
-    Number used as Flip Flops:                 872
+  Number of Slice Registers:                   688 out of  54,576    1%
+    Number used as Flip Flops:                 688
     Number used as Latches:                      0
     Number used as Latch-thrus:                  0
     Number used as AND/OR logics:                0
-  Number of Slice LUTs:                      2,013 out of  27,288    7%
-    Number used as logic:                      746 out of  27,288    2%
-      Number using O6 output only:             468
-      Number using O5 output only:              43
-      Number using O5 and O6:                  235
+  Number of Slice LUTs:                        602 out of  27,288    2%
+    Number used as logic:                      334 out of  27,288    1%
+      Number using O6 output only:             146
+      Number using O5 output only:              36
+      Number using O5 and O6:                  152
       Number used as ROM:                        0
-    Number used as Memory:                   1,212 out of   6,408   18%
-      Number used as Dual Port RAM:          1,152
-        Number using O6 output only:         1,152
+    Number used as Memory:                     201 out of   6,408    3%
+      Number used as Dual Port RAM:            144
+        Number using O6 output only:           144
         Number using O5 output only:             0
         Number using O5 and O6:                  0
       Number used as Single Port RAM:            0
-      Number used as Shift Register:            60
-        Number using O6 output only:            16
+      Number used as Shift Register:            57
+        Number using O6 output only:            17
         Number using O5 output only:             0
-        Number using O5 and O6:                 44
-    Number used exclusively as route-thrus:     55
-      Number with same-slice register load:     50
-      Number with same-slice carry load:         5
+        Number using O5 and O6:                 40
+    Number used exclusively as route-thrus:     67
+      Number with same-slice register load:     63
+      Number with same-slice carry load:         4
       Number with other load:                    0
 
 Slice Logic Distribution:
-  Number of occupied Slices:                   630 out of   6,822    9%
-  Number of MUXCYs used:                       176 out of  13,644    1%
-  Number of LUT Flip Flop pairs used:        2,132
-    Number with an unused Flip Flop:         1,551 out of   2,132   72%
-    Number with an unused LUT:                 119 out of   2,132    5%
-    Number of fully used LUT-FF pairs:         462 out of   2,132   21%
+  Number of occupied Slices:                   202 out of   6,822    2%
+  Number of MUXCYs used:                       160 out of  13,644    1%
+  Number of LUT Flip Flop pairs used:          672
+    Number with an unused Flip Flop:           224 out of     672   33%
+    Number with an unused LUT:                  70 out of     672   10%
+    Number of fully used LUT-FF pairs:         378 out of     672   56%
     Number of slice register sites lost
       to control set restrictions:               0 out of  54,576    0%
 
@@ -64,11 +64,11 @@ Slice Logic Distribution:
   over-mapped for a non-slice resource or if Placement fails.
 
 IO Utilization:
-  Number of bonded IOBs:                       110 out of     218   50%
+  Number of bonded IOBs:                       101 out of     218   46%
 
 Specific Feature Utilization:
-  Number of RAMB16BWERs:                         4 out of     116    3%
-  Number of RAMB8BWERs:                          2 out of     232    1%
+  Number of RAMB16BWERs:                         2 out of     116    1%
+  Number of RAMB8BWERs:                          0 out of     232    0%
   Number of BUFIO2/BUFIO2_2CLKs:                 0 out of      32    0%
   Number of BUFIO2FB/BUFIO2FB_2CLKs:             0 out of      32    0%
   Number of BUFG/BUFGMUXs:                       1 out of      16    6%
@@ -95,323 +95,65 @@ Specific Feature Utilization:
 Overall effort level (-ol):   High 
 Router effort level (-rl):    High 
 
-Starting initial Timing Analysis.  REAL time: 16 secs 
-Finished initial Timing Analysis.  REAL time: 16 secs 
+Starting initial Timing Analysis.  REAL time: 18 secs 
+Finished initial Timing Analysis.  REAL time: 18 secs 
 
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM149_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_mu/Mram_RAM029_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_mu/Mram_RAM027_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_mu/Mram_RAM037_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_mu/Mram_RAM119_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_mu/Mram_RAM117_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM13_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM11_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM12_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM19_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM18_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM140_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM135_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM133_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM141_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM157_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM160_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_mu/Mram_RAM024_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_mu/Mram_RAM017_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_mu/Mram_RAM022_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_mu/Mram_RAM023_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_mu/Mram_RAM032_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_mu/Mram_RAM031_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_mu/Mram_RAM028_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_mu/Mram_RAM025_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_mu/Mram_RAM040_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_mu/Mram_RAM034_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_mu/Mram_RAM039_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_mu/Mram_RAM036_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_mu/Mram_RAM033_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_mu/Mram_RAM123_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_mu/Mram_RAM121_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_mu/Mram_RAM124_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_mu/Mram_RAM120_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_mu/Mram_RAM044_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_mu/Mram_RAM042_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_mu/Mram_RAM045_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM112_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM110_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM113_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM111_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM16_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM142_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM147_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM143_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM144_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM134_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM137_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM154_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM159_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM153_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM162_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM152_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM151_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_mu/Mram_RAM021_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_mu/Mram_RAM020_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_mu/Mram_RAM019_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_mu/Mram_RAM018_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_mu/Mram_RAM026_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_mu/Mram_RAM038_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_mu/Mram_RAM035_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_mu/Mram_RAM122_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_mu/Mram_RAM118_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_mu/Mram_RAM043_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_mu/Mram_RAM047_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_mu/Mram_RAM046_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM114_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM116_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM115_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM14_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM17_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM136_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM148_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM145_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM138_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM164_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM161_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM158_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM155_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM163_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_mu/Mram_RAM016_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_mu/Mram_RAM015_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_mu/Mram_RAM013_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_mu/Mram_RAM012_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_mu/Mram_RAM030_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_mu/Mram_RAM146_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_mu/Mram_RAM147_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_mu/Mram_RAM041_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_mu/Mram_RAM048_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM15_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM146_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM139_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM156_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM150_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM173_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM169_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_mu/Mram_RAM09_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_mu/Mram_RAM014_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_mu/Mram_RAM011_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_mu/Mram_RAM010_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_mu/Mram_RAM01_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_mu/Mram_RAM03_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_mu/Mram_RAM06_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_mu/Mram_RAM145_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_mu/Mram_RAM141_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM039_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM181_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM174_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM176_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM178_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM166_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM167_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM079_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM075_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM077_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM070_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_mu/Mram_RAM04_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_mu/Mram_RAM02_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_mu/Mram_RAM05_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_mu/Mram_RAM07_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_mu/Mram_RAM08_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_mu/Mram_RAM142_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_mu/Mram_RAM144_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_mu/Mram_RAM143_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_mu/Mram_RAM148_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_mu/Mram_RAM136_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_mu/Mram_RAM139_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_mu/Mram_RAM140_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM05_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM06_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM038_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM187_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM193_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM177_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM175_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM171_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM168_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM165_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM172_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM080_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM078_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM072_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM065_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM071_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM066_RAMD_O has no load.  PAR will not attempt to route this signal.
 WARNING:Par:288 - The signal core1/exp_mu/Mram_RAM12_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_mu/Mram_RAM133_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_mu/Mram_RAM138_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM08_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM011_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM04_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM02_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM013_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM037_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM036_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM034_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM048_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM044_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM191_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM194_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM196_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM183_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM195_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM180_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM179_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM068_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM076_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM074_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM069_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_mu/Mram_RAM11_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_mu/Mram_RAM17_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_mu/Mram_RAM15_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_mu/Mram_RAM16_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_mu/Mram_RAM137_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_mu/Mram_RAM134_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_mu/Mram_RAM135_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM010_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM03_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM014_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM016_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM015_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM043_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM035_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM045_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM046_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM047_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM126_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM192_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM190_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM186_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM182_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM184_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM170_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM073_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM067_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_mu/Mram_RAM115_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_mu/Mram_RAM111_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal core1/exp_mu/Mram_RAM04_RAMD_O has no load.  PAR will not attempt to route this signal.
 WARNING:Par:288 - The signal core1/exp_mu/Mram_RAM14_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal core1/exp_mu/Mram_RAM01_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal core1/exp_mu/Mram_RAM02_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal core1/exp_mu/Mram_RAM03_RAMD_O has no load.  PAR will not attempt to route this signal.
 WARNING:Par:288 - The signal core1/exp_mu/Mram_RAM13_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_mu/Mram_RAM128_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_mu/Mram_RAM129_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal core1/exp_mu/Mram_RAM11_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal core1/exp_mu/Mram_RAM05_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal core1/exp_mu/Mram_RAM15_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM02_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM13_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM04_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM12_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM03_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM15_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM05_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM14_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM11_RAMD_O has no load.  PAR will not attempt to route this signal.
 WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM01_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM07_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM09_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM030_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM017_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM023_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM042_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM033_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM131_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM132_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM185_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM188_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM084_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM082_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM059_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_mu/Mram_RAM113_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_mu/Mram_RAM110_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_mu/Mram_RAM114_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_mu/Mram_RAM19_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_mu/Mram_RAM18_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_mu/Mram_RAM131_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_mu/Mram_RAM132_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_mu/Mram_RAM125_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM012_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM031_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM024_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM025_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM021_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM027_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM041_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM040_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM129_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM123_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM124_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM119_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM189_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM089_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM085_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM096_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM094_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM087_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM064_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM062_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM057_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM053_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM055_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM050_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_mu/Mram_RAM116_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_mu/Mram_RAM112_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_mu/Mram_RAM130_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_mu/Mram_RAM127_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_mu/Mram_RAM126_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM032_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM029_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM028_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM022_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM019_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM127_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM128_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM122_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM120_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM090_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM083_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM095_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM088_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM063_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM056_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM058_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM051_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM049_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM052_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM018_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM026_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM020_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM130_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM125_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM118_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM086_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM093_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM092_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM081_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM060_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM061_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM054_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM121_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM117_RAMD_O has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core1/exp_sigma/Mram_RAM091_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal core0/exp_sigma/Mram_RAM01_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal core0/exp_sigma/Mram_RAM02_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal core0/exp_sigma/Mram_RAM03_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal core0/exp_sigma/Mram_RAM15_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal core0/exp_sigma/Mram_RAM14_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal core0/exp_sigma/Mram_RAM11_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal core0/exp_sigma/Mram_RAM12_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal core0/exp_sigma/Mram_RAM13_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal core0/exp_sigma/Mram_RAM05_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal core0/exp_sigma/Mram_RAM04_RAMD_O has no load.  PAR will not attempt to route this signal.
 Starting Router
 
 
-Phase  1  : 15609 unrouted;      REAL time: 19 secs 
+Phase  1  : 5213 unrouted;      REAL time: 20 secs 
 
-Phase  2  : 12728 unrouted;      REAL time: 21 secs 
+Phase  2  : 2845 unrouted;      REAL time: 21 secs 
 
-Phase  3  : 2877 unrouted;      REAL time: 55 secs 
+Phase  3  : 651 unrouted;      REAL time: 27 secs 
 
-Phase  4  : 2877 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 58 secs 
+Phase  4  : 651 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 30 secs 
 
 Updating file: main.ncd with current fully routed design.
 
-Phase  5  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 1 mins 16 secs 
+Phase  5  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 34 secs 
 
-Phase  6  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 1 mins 16 secs 
+Phase  6  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 34 secs 
 
-Phase  7  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 1 mins 16 secs 
+Phase  7  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 34 secs 
 
-Phase  8  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 1 mins 16 secs 
+Phase  8  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 34 secs 
 
-Phase  9  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 1 mins 16 secs 
+Phase  9  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 34 secs 
 
-Phase 10  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 1 mins 17 secs 
-Total REAL time to Router completion: 1 mins 17 secs 
-Total CPU time to Router completion: 1 mins 10 secs 
+Phase 10  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 34 secs 
+Total REAL time to Router completion: 34 secs 
+Total CPU time to Router completion: 29 secs 
 
 Partition Implementation Status
 -------------------------------
@@ -429,7 +171,7 @@ Generating Clock Report
 +---------------------+--------------+------+------+------------+-------------+
 |        Clock Net    |   Resource   |Locked|Fanout|Net Skew(ns)|Max Delay(ns)|
 +---------------------+--------------+------+------+------------+-------------+
-|           clk_BUFGP | BUFGMUX_X3Y13| No   |  500 |  0.066     |  1.278      |
+|           clk_BUFGP | BUFGMUX_X3Y13| No   |  200 |  0.062     |  1.275      |
 +---------------------+--------------+------+------+------------+-------------+
 
 * Net Skew is the difference between the minimum and maximum routing
@@ -449,8 +191,8 @@ Asterisk (*) preceding a constraint indicates it was not met.
   Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
                                             |             |    Slack   | Achievable | Errors |    Score   
 ----------------------------------------------------------------------------------------------------------
-  TS_CLK = PERIOD TIMEGRP "CLK" 20 ns HIGH  | SETUP       |     7.336ns|    12.664ns|       0|           0
-  50%                                       | HOLD        |     0.314ns|            |       0|           0
+  TS_CLK = PERIOD TIMEGRP "CLK" 20 ns HIGH  | SETUP       |     8.366ns|    11.634ns|       0|           0
+  50%                                       | HOLD        |     0.280ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
 
 
@@ -461,19 +203,19 @@ Generating Pad Report.
 
 All signals are completely routed.
 
-WARNING:Par:283 - There are 288 loadless signals in this design. This design will cause Bitgen to issue DRC warnings.
+WARNING:Par:283 - There are 30 loadless signals in this design. This design will cause Bitgen to issue DRC warnings.
 
-Total REAL time to PAR completion: 1 mins 19 secs 
-Total CPU time to PAR completion: 1 mins 12 secs 
+Total REAL time to PAR completion: 36 secs 
+Total CPU time to PAR completion: 30 secs 
 
-Peak Memory Usage:  373 MB
+Peak Memory Usage:  304 MB
 
 Placer: Placement generated during map.
 Routing: Completed - No errors found.
 Timing: Completed - No errors found.
 
 Number of error messages: 0
-Number of warning messages: 290
+Number of warning messages: 32
 Number of info messages: 0
 
 Writing design to file main.ncd

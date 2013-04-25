@@ -9,8 +9,8 @@ module test_CalculateExpSigma;
 	reg iStart;
 
 	// Outputs
-	wire [17:0] oData;
-	wire [9:0] oAddr;
+	wire [16:0] oData;
+	wire [5:0] oAddr;
 	wire oDone;
 	wire oValid;
 	
@@ -28,7 +28,7 @@ module test_CalculateExpSigma;
 	initial begin
 		// Initialize Inputs
 		CLK <= 0;
-		iSigma <= 3408;
+		iSigma <= 6554;
 		iStart <= 0;
 
 		// Wait 100 ns for global reset to finish

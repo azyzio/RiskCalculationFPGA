@@ -1,300 +1,42 @@
 Release 14.4 - par P.49d (nt)
 Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 
-Mon Apr 22 21:14:37 2013
+Thu Apr 25 20:34:00 2013
 
 All signals are completely routed.
 
-WARNING:ParHelpers:361 - There are 288 loadless signals in this design. This design will cause Bitgen to issue DRC
+WARNING:ParHelpers:361 - There are 30 loadless signals in this design. This design will cause Bitgen to issue DRC
    warnings.
 
-   core1/exp_mu/Mram_RAM010_RAMD_O
-   core1/exp_mu/Mram_RAM011_RAMD_O
-   core1/exp_mu/Mram_RAM012_RAMD_O
-   core1/exp_mu/Mram_RAM013_RAMD_O
-   core1/exp_mu/Mram_RAM014_RAMD_O
-   core1/exp_mu/Mram_RAM015_RAMD_O
-   core1/exp_mu/Mram_RAM016_RAMD_O
-   core1/exp_mu/Mram_RAM017_RAMD_O
-   core1/exp_mu/Mram_RAM018_RAMD_O
-   core1/exp_mu/Mram_RAM019_RAMD_O
+   core0/exp_sigma/Mram_RAM01_RAMD_O
+   core0/exp_sigma/Mram_RAM02_RAMD_O
+   core0/exp_sigma/Mram_RAM03_RAMD_O
+   core0/exp_sigma/Mram_RAM04_RAMD_O
+   core0/exp_sigma/Mram_RAM05_RAMD_O
+   core0/exp_sigma/Mram_RAM11_RAMD_O
+   core0/exp_sigma/Mram_RAM12_RAMD_O
+   core0/exp_sigma/Mram_RAM13_RAMD_O
+   core0/exp_sigma/Mram_RAM14_RAMD_O
+   core0/exp_sigma/Mram_RAM15_RAMD_O
    core1/exp_mu/Mram_RAM01_RAMD_O
-   core1/exp_mu/Mram_RAM020_RAMD_O
-   core1/exp_mu/Mram_RAM021_RAMD_O
-   core1/exp_mu/Mram_RAM022_RAMD_O
-   core1/exp_mu/Mram_RAM023_RAMD_O
-   core1/exp_mu/Mram_RAM024_RAMD_O
-   core1/exp_mu/Mram_RAM025_RAMD_O
-   core1/exp_mu/Mram_RAM026_RAMD_O
-   core1/exp_mu/Mram_RAM027_RAMD_O
-   core1/exp_mu/Mram_RAM028_RAMD_O
-   core1/exp_mu/Mram_RAM029_RAMD_O
    core1/exp_mu/Mram_RAM02_RAMD_O
-   core1/exp_mu/Mram_RAM030_RAMD_O
-   core1/exp_mu/Mram_RAM031_RAMD_O
-   core1/exp_mu/Mram_RAM032_RAMD_O
-   core1/exp_mu/Mram_RAM033_RAMD_O
-   core1/exp_mu/Mram_RAM034_RAMD_O
-   core1/exp_mu/Mram_RAM035_RAMD_O
-   core1/exp_mu/Mram_RAM036_RAMD_O
-   core1/exp_mu/Mram_RAM037_RAMD_O
-   core1/exp_mu/Mram_RAM038_RAMD_O
-   core1/exp_mu/Mram_RAM039_RAMD_O
    core1/exp_mu/Mram_RAM03_RAMD_O
-   core1/exp_mu/Mram_RAM040_RAMD_O
-   core1/exp_mu/Mram_RAM041_RAMD_O
-   core1/exp_mu/Mram_RAM042_RAMD_O
-   core1/exp_mu/Mram_RAM043_RAMD_O
-   core1/exp_mu/Mram_RAM044_RAMD_O
-   core1/exp_mu/Mram_RAM045_RAMD_O
-   core1/exp_mu/Mram_RAM046_RAMD_O
-   core1/exp_mu/Mram_RAM047_RAMD_O
-   core1/exp_mu/Mram_RAM048_RAMD_O
    core1/exp_mu/Mram_RAM04_RAMD_O
    core1/exp_mu/Mram_RAM05_RAMD_O
-   core1/exp_mu/Mram_RAM06_RAMD_O
-   core1/exp_mu/Mram_RAM07_RAMD_O
-   core1/exp_mu/Mram_RAM08_RAMD_O
-   core1/exp_mu/Mram_RAM09_RAMD_O
-   core1/exp_mu/Mram_RAM110_RAMD_O
-   core1/exp_mu/Mram_RAM111_RAMD_O
-   core1/exp_mu/Mram_RAM112_RAMD_O
-   core1/exp_mu/Mram_RAM113_RAMD_O
-   core1/exp_mu/Mram_RAM114_RAMD_O
-   core1/exp_mu/Mram_RAM115_RAMD_O
-   core1/exp_mu/Mram_RAM116_RAMD_O
-   core1/exp_mu/Mram_RAM117_RAMD_O
-   core1/exp_mu/Mram_RAM118_RAMD_O
-   core1/exp_mu/Mram_RAM119_RAMD_O
    core1/exp_mu/Mram_RAM11_RAMD_O
-   core1/exp_mu/Mram_RAM120_RAMD_O
-   core1/exp_mu/Mram_RAM121_RAMD_O
-   core1/exp_mu/Mram_RAM122_RAMD_O
-   core1/exp_mu/Mram_RAM123_RAMD_O
-   core1/exp_mu/Mram_RAM124_RAMD_O
-   core1/exp_mu/Mram_RAM125_RAMD_O
-   core1/exp_mu/Mram_RAM126_RAMD_O
-   core1/exp_mu/Mram_RAM127_RAMD_O
-   core1/exp_mu/Mram_RAM128_RAMD_O
-   core1/exp_mu/Mram_RAM129_RAMD_O
    core1/exp_mu/Mram_RAM12_RAMD_O
-   core1/exp_mu/Mram_RAM130_RAMD_O
-   core1/exp_mu/Mram_RAM131_RAMD_O
-   core1/exp_mu/Mram_RAM132_RAMD_O
-   core1/exp_mu/Mram_RAM133_RAMD_O
-   core1/exp_mu/Mram_RAM134_RAMD_O
-   core1/exp_mu/Mram_RAM135_RAMD_O
-   core1/exp_mu/Mram_RAM136_RAMD_O
-   core1/exp_mu/Mram_RAM137_RAMD_O
-   core1/exp_mu/Mram_RAM138_RAMD_O
-   core1/exp_mu/Mram_RAM139_RAMD_O
    core1/exp_mu/Mram_RAM13_RAMD_O
-   core1/exp_mu/Mram_RAM140_RAMD_O
-   core1/exp_mu/Mram_RAM141_RAMD_O
-   core1/exp_mu/Mram_RAM142_RAMD_O
-   core1/exp_mu/Mram_RAM143_RAMD_O
-   core1/exp_mu/Mram_RAM144_RAMD_O
-   core1/exp_mu/Mram_RAM145_RAMD_O
-   core1/exp_mu/Mram_RAM146_RAMD_O
-   core1/exp_mu/Mram_RAM147_RAMD_O
-   core1/exp_mu/Mram_RAM148_RAMD_O
    core1/exp_mu/Mram_RAM14_RAMD_O
    core1/exp_mu/Mram_RAM15_RAMD_O
-   core1/exp_mu/Mram_RAM16_RAMD_O
-   core1/exp_mu/Mram_RAM17_RAMD_O
-   core1/exp_mu/Mram_RAM18_RAMD_O
-   core1/exp_mu/Mram_RAM19_RAMD_O
-   core1/exp_sigma/Mram_RAM010_RAMD_O
-   core1/exp_sigma/Mram_RAM011_RAMD_O
-   core1/exp_sigma/Mram_RAM012_RAMD_O
-   core1/exp_sigma/Mram_RAM013_RAMD_O
-   core1/exp_sigma/Mram_RAM014_RAMD_O
-   core1/exp_sigma/Mram_RAM015_RAMD_O
-   core1/exp_sigma/Mram_RAM016_RAMD_O
-   core1/exp_sigma/Mram_RAM017_RAMD_O
-   core1/exp_sigma/Mram_RAM018_RAMD_O
-   core1/exp_sigma/Mram_RAM019_RAMD_O
    core1/exp_sigma/Mram_RAM01_RAMD_O
-   core1/exp_sigma/Mram_RAM020_RAMD_O
-   core1/exp_sigma/Mram_RAM021_RAMD_O
-   core1/exp_sigma/Mram_RAM022_RAMD_O
-   core1/exp_sigma/Mram_RAM023_RAMD_O
-   core1/exp_sigma/Mram_RAM024_RAMD_O
-   core1/exp_sigma/Mram_RAM025_RAMD_O
-   core1/exp_sigma/Mram_RAM026_RAMD_O
-   core1/exp_sigma/Mram_RAM027_RAMD_O
-   core1/exp_sigma/Mram_RAM028_RAMD_O
-   core1/exp_sigma/Mram_RAM029_RAMD_O
    core1/exp_sigma/Mram_RAM02_RAMD_O
-   core1/exp_sigma/Mram_RAM030_RAMD_O
-   core1/exp_sigma/Mram_RAM031_RAMD_O
-   core1/exp_sigma/Mram_RAM032_RAMD_O
-   core1/exp_sigma/Mram_RAM033_RAMD_O
-   core1/exp_sigma/Mram_RAM034_RAMD_O
-   core1/exp_sigma/Mram_RAM035_RAMD_O
-   core1/exp_sigma/Mram_RAM036_RAMD_O
-   core1/exp_sigma/Mram_RAM037_RAMD_O
-   core1/exp_sigma/Mram_RAM038_RAMD_O
-   core1/exp_sigma/Mram_RAM039_RAMD_O
    core1/exp_sigma/Mram_RAM03_RAMD_O
-   core1/exp_sigma/Mram_RAM040_RAMD_O
-   core1/exp_sigma/Mram_RAM041_RAMD_O
-   core1/exp_sigma/Mram_RAM042_RAMD_O
-   core1/exp_sigma/Mram_RAM043_RAMD_O
-   core1/exp_sigma/Mram_RAM044_RAMD_O
-   core1/exp_sigma/Mram_RAM045_RAMD_O
-   core1/exp_sigma/Mram_RAM046_RAMD_O
-   core1/exp_sigma/Mram_RAM047_RAMD_O
-   core1/exp_sigma/Mram_RAM048_RAMD_O
-   core1/exp_sigma/Mram_RAM049_RAMD_O
    core1/exp_sigma/Mram_RAM04_RAMD_O
-   core1/exp_sigma/Mram_RAM050_RAMD_O
-   core1/exp_sigma/Mram_RAM051_RAMD_O
-   core1/exp_sigma/Mram_RAM052_RAMD_O
-   core1/exp_sigma/Mram_RAM053_RAMD_O
-   core1/exp_sigma/Mram_RAM054_RAMD_O
-   core1/exp_sigma/Mram_RAM055_RAMD_O
-   core1/exp_sigma/Mram_RAM056_RAMD_O
-   core1/exp_sigma/Mram_RAM057_RAMD_O
-   core1/exp_sigma/Mram_RAM058_RAMD_O
-   core1/exp_sigma/Mram_RAM059_RAMD_O
    core1/exp_sigma/Mram_RAM05_RAMD_O
-   core1/exp_sigma/Mram_RAM060_RAMD_O
-   core1/exp_sigma/Mram_RAM061_RAMD_O
-   core1/exp_sigma/Mram_RAM062_RAMD_O
-   core1/exp_sigma/Mram_RAM063_RAMD_O
-   core1/exp_sigma/Mram_RAM064_RAMD_O
-   core1/exp_sigma/Mram_RAM065_RAMD_O
-   core1/exp_sigma/Mram_RAM066_RAMD_O
-   core1/exp_sigma/Mram_RAM067_RAMD_O
-   core1/exp_sigma/Mram_RAM068_RAMD_O
-   core1/exp_sigma/Mram_RAM069_RAMD_O
-   core1/exp_sigma/Mram_RAM06_RAMD_O
-   core1/exp_sigma/Mram_RAM070_RAMD_O
-   core1/exp_sigma/Mram_RAM071_RAMD_O
-   core1/exp_sigma/Mram_RAM072_RAMD_O
-   core1/exp_sigma/Mram_RAM073_RAMD_O
-   core1/exp_sigma/Mram_RAM074_RAMD_O
-   core1/exp_sigma/Mram_RAM075_RAMD_O
-   core1/exp_sigma/Mram_RAM076_RAMD_O
-   core1/exp_sigma/Mram_RAM077_RAMD_O
-   core1/exp_sigma/Mram_RAM078_RAMD_O
-   core1/exp_sigma/Mram_RAM079_RAMD_O
-   core1/exp_sigma/Mram_RAM07_RAMD_O
-   core1/exp_sigma/Mram_RAM080_RAMD_O
-   core1/exp_sigma/Mram_RAM081_RAMD_O
-   core1/exp_sigma/Mram_RAM082_RAMD_O
-   core1/exp_sigma/Mram_RAM083_RAMD_O
-   core1/exp_sigma/Mram_RAM084_RAMD_O
-   core1/exp_sigma/Mram_RAM085_RAMD_O
-   core1/exp_sigma/Mram_RAM086_RAMD_O
-   core1/exp_sigma/Mram_RAM087_RAMD_O
-   core1/exp_sigma/Mram_RAM088_RAMD_O
-   core1/exp_sigma/Mram_RAM089_RAMD_O
-   core1/exp_sigma/Mram_RAM08_RAMD_O
-   core1/exp_sigma/Mram_RAM090_RAMD_O
-   core1/exp_sigma/Mram_RAM091_RAMD_O
-   core1/exp_sigma/Mram_RAM092_RAMD_O
-   core1/exp_sigma/Mram_RAM093_RAMD_O
-   core1/exp_sigma/Mram_RAM094_RAMD_O
-   core1/exp_sigma/Mram_RAM095_RAMD_O
-   core1/exp_sigma/Mram_RAM096_RAMD_O
-   core1/exp_sigma/Mram_RAM09_RAMD_O
-   core1/exp_sigma/Mram_RAM110_RAMD_O
-   core1/exp_sigma/Mram_RAM111_RAMD_O
-   core1/exp_sigma/Mram_RAM112_RAMD_O
-   core1/exp_sigma/Mram_RAM113_RAMD_O
-   core1/exp_sigma/Mram_RAM114_RAMD_O
-   core1/exp_sigma/Mram_RAM115_RAMD_O
-   core1/exp_sigma/Mram_RAM116_RAMD_O
-   core1/exp_sigma/Mram_RAM117_RAMD_O
-   core1/exp_sigma/Mram_RAM118_RAMD_O
-   core1/exp_sigma/Mram_RAM119_RAMD_O
    core1/exp_sigma/Mram_RAM11_RAMD_O
-   core1/exp_sigma/Mram_RAM120_RAMD_O
-   core1/exp_sigma/Mram_RAM121_RAMD_O
-   core1/exp_sigma/Mram_RAM122_RAMD_O
-   core1/exp_sigma/Mram_RAM123_RAMD_O
-   core1/exp_sigma/Mram_RAM124_RAMD_O
-   core1/exp_sigma/Mram_RAM125_RAMD_O
-   core1/exp_sigma/Mram_RAM126_RAMD_O
-   core1/exp_sigma/Mram_RAM127_RAMD_O
-   core1/exp_sigma/Mram_RAM128_RAMD_O
-   core1/exp_sigma/Mram_RAM129_RAMD_O
    core1/exp_sigma/Mram_RAM12_RAMD_O
-   core1/exp_sigma/Mram_RAM130_RAMD_O
-   core1/exp_sigma/Mram_RAM131_RAMD_O
-   core1/exp_sigma/Mram_RAM132_RAMD_O
-   core1/exp_sigma/Mram_RAM133_RAMD_O
-   core1/exp_sigma/Mram_RAM134_RAMD_O
-   core1/exp_sigma/Mram_RAM135_RAMD_O
-   core1/exp_sigma/Mram_RAM136_RAMD_O
-   core1/exp_sigma/Mram_RAM137_RAMD_O
-   core1/exp_sigma/Mram_RAM138_RAMD_O
-   core1/exp_sigma/Mram_RAM139_RAMD_O
    core1/exp_sigma/Mram_RAM13_RAMD_O
-   core1/exp_sigma/Mram_RAM140_RAMD_O
-   core1/exp_sigma/Mram_RAM141_RAMD_O
-   core1/exp_sigma/Mram_RAM142_RAMD_O
-   core1/exp_sigma/Mram_RAM143_RAMD_O
-   core1/exp_sigma/Mram_RAM144_RAMD_O
-   core1/exp_sigma/Mram_RAM145_RAMD_O
-   core1/exp_sigma/Mram_RAM146_RAMD_O
-   core1/exp_sigma/Mram_RAM147_RAMD_O
-   core1/exp_sigma/Mram_RAM148_RAMD_O
-   core1/exp_sigma/Mram_RAM149_RAMD_O
    core1/exp_sigma/Mram_RAM14_RAMD_O
-   core1/exp_sigma/Mram_RAM150_RAMD_O
-   core1/exp_sigma/Mram_RAM151_RAMD_O
-   core1/exp_sigma/Mram_RAM152_RAMD_O
-   core1/exp_sigma/Mram_RAM153_RAMD_O
-   core1/exp_sigma/Mram_RAM154_RAMD_O
-   core1/exp_sigma/Mram_RAM155_RAMD_O
-   core1/exp_sigma/Mram_RAM156_RAMD_O
-   core1/exp_sigma/Mram_RAM157_RAMD_O
-   core1/exp_sigma/Mram_RAM158_RAMD_O
-   core1/exp_sigma/Mram_RAM159_RAMD_O
    core1/exp_sigma/Mram_RAM15_RAMD_O
-   core1/exp_sigma/Mram_RAM160_RAMD_O
-   core1/exp_sigma/Mram_RAM161_RAMD_O
-   core1/exp_sigma/Mram_RAM162_RAMD_O
-   core1/exp_sigma/Mram_RAM163_RAMD_O
-   core1/exp_sigma/Mram_RAM164_RAMD_O
-   core1/exp_sigma/Mram_RAM165_RAMD_O
-   core1/exp_sigma/Mram_RAM166_RAMD_O
-   core1/exp_sigma/Mram_RAM167_RAMD_O
-   core1/exp_sigma/Mram_RAM168_RAMD_O
-   core1/exp_sigma/Mram_RAM169_RAMD_O
-   core1/exp_sigma/Mram_RAM16_RAMD_O
-   core1/exp_sigma/Mram_RAM170_RAMD_O
-   core1/exp_sigma/Mram_RAM171_RAMD_O
-   core1/exp_sigma/Mram_RAM172_RAMD_O
-   core1/exp_sigma/Mram_RAM173_RAMD_O
-   core1/exp_sigma/Mram_RAM174_RAMD_O
-   core1/exp_sigma/Mram_RAM175_RAMD_O
-   core1/exp_sigma/Mram_RAM176_RAMD_O
-   core1/exp_sigma/Mram_RAM177_RAMD_O
-   core1/exp_sigma/Mram_RAM178_RAMD_O
-   core1/exp_sigma/Mram_RAM179_RAMD_O
-   core1/exp_sigma/Mram_RAM17_RAMD_O
-   core1/exp_sigma/Mram_RAM180_RAMD_O
-   core1/exp_sigma/Mram_RAM181_RAMD_O
-   core1/exp_sigma/Mram_RAM182_RAMD_O
-   core1/exp_sigma/Mram_RAM183_RAMD_O
-   core1/exp_sigma/Mram_RAM184_RAMD_O
-   core1/exp_sigma/Mram_RAM185_RAMD_O
-   core1/exp_sigma/Mram_RAM186_RAMD_O
-   core1/exp_sigma/Mram_RAM187_RAMD_O
-   core1/exp_sigma/Mram_RAM188_RAMD_O
-   core1/exp_sigma/Mram_RAM189_RAMD_O
-   core1/exp_sigma/Mram_RAM18_RAMD_O
-   core1/exp_sigma/Mram_RAM190_RAMD_O
-   core1/exp_sigma/Mram_RAM191_RAMD_O
-   core1/exp_sigma/Mram_RAM192_RAMD_O
-   core1/exp_sigma/Mram_RAM193_RAMD_O
-   core1/exp_sigma/Mram_RAM194_RAMD_O
-   core1/exp_sigma/Mram_RAM195_RAMD_O
-   core1/exp_sigma/Mram_RAM196_RAMD_O
-   core1/exp_sigma/Mram_RAM19_RAMD_O
 
 

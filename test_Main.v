@@ -5,22 +5,22 @@ module test_Main;
 	reg CLK;
 	reg			iDoneOptionCalc;
 	reg [17:0] iMu;
-	reg [17:0] iS;
+	reg [16:0] iS;
 	reg [17:0] iSigma;
 	
 	// Outputs
-	wire [26:0] oAcc1;
-	wire [26:0] oAcc2;
+	wire [22:0] oAcc1;
+	wire [22:0] oAcc2;
 
 	// Instantiate the Unit Under Test (UUT)
-	Main uut (
-		.CLK(CLK),
-		.iDoneOptionCalc(iDoneOptionCalc),
-		.iMu(iMu), 
-		.iS(iS), 
-		.iSigma(iSigma),
-		.oAcc1(oAcc1),
-		.oAcc2(oAcc2)
+	main uut (
+		.clk(CLK),
+		.i_new_option(iDoneOptionCalc),
+		.i_mu(iMu),
+		.i_s(iS),
+		.i_sigma(iSigma),
+		.o_acc1(oAcc1),
+		.o_acc2(oAcc2)
 	);
 
 	initial begin
@@ -33,9 +33,9 @@ module test_Main;
 		#100;
         
 		// Add stimulus here
-		iMu <= 184;
-		iSigma <= 3408;
-		iS <= 24576;
+		iMu <= 524;
+		iS <= 102400;
+		iSigma <= 6554;
 		#1;
 		iDoneOptionCalc <= 1;
 		#2;

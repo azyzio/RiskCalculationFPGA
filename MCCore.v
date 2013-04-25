@@ -17,20 +17,20 @@ module MCCore(
    );
 
 parameter N = "1";					// the core identifier
-parameter T = 512;
-parameter logT = 9;
-parameter pathWidth = 10;
+parameter T = 64;
+parameter logT = 6;
+parameter pathWidth = 6;
 
 input 							CLK;
 input								iStart;
 input								iSwitch;		// Indicates which RAM is currently used as a buffer
 
 input		[pathWidth-1:0]	iSigmaWriteAddress;
-input		[17:0]				iSigmaWriteData;
+input		[16:0]				iSigmaWriteData;
 input								iSigmaWE;
 
 input		[logT-1:0]			iMuWriteAddress;
-input		[17:0]				iMuWriteData;
+input		[16:0]				iMuWriteData;
 input								iMuWE;
 											
 wire								enable;
@@ -46,27 +46,25 @@ reg		[logT-1:0]	t_d7;
 
 wire		[pathWidth-1:0]	pathOutput;			// The Brownian Motion variable. 10 integer
 reg		[pathWidth-1:0]	SigmaReadAddress;
-wire		[17:0]				SigmaReadData;		// Output of the exponential table. 3 integer, 15 fraction bits
-reg		[17:0]				SigmaReadData_d1;
+wire		[16:0]				SigmaReadData;		// Output of the exponential table. 3 integer, 15 fraction bits
+reg		[16:0]				SigmaReadData_d1;
 
-wire		[17:0]				MuReadData;			// 3 int, 15 fract
-reg		[17:0]				MuReadData_d1;
-reg		[17:0]				MuReadData_d2;
-reg		[17:0]				MuReadData_d3;
+wire		[16:0]				MuReadData;			// 3 int, 15 fract
+reg		[16:0]				MuReadData_d1;
+reg		[16:0]				MuReadData_d2;
+reg		[16:0]				MuReadData_d3;
 
 wire								validProduct;
-wire		[17:0]				product;	// S0 * exp (t*mu + W*sigma).
-												// 18 bits. 4 integer, 14 fraction. 2MSB and 16LSB cut down.
+wire		[16:0]				product;	// S0 * exp (t*mu + W*sigma).
+												// 6 integer, 15 fraction.
 											
-reg		[17+logT:0]			acc;	// Accumulator summing the products. 14 fract
+reg		[16+logT:0]			acc;	// Accumulator summing the products. 15 fract
 											// 27 bits as 18 bits can be maximally shifted left 9 times by adding them 8 times
-reg		[17+logT:0]			price;
+reg		[16+logT:0]			price;
 wire 								done;
 											
-output	[17+logT:0]			oPrice;		// 4 int, 23 fract. Shift tight by 8 performed in head
+output	[16+logT:0]			oPrice;		// 4 int, 23 fract. Shift tight by 8 performed in head
 output							oDone;
-
-// ------------- All the delays are twice as long to correspond to a slower clock
 
 initial
 begin
@@ -153,7 +151,7 @@ RAM_X_18 #(logT) exp_mu (
 	.writeData(iMuWriteData)
 );
 
-mult_18_18_18_core mult(CLK, MuReadData_d3, SigmaReadData_d1, product);
+CoreMult mult(CLK, MuReadData_d3, SigmaReadData_d1, product);
 
 assign oPrice = price;
 assign oPrice = price;

@@ -10,15 +10,15 @@ module main(
 	o_acc2
 	);
 
-parameter T = 512;
-parameter logT = 9;
-parameter pathWidth = 10;
+parameter T = 64;
+parameter logT = 6;
+parameter pathWidth = 6;
 parameter CoreN = 2;
 
 input 						clk;
 input							i_new_option;
 input	[17:0]				i_mu;			// 18 Fract
-input	[17:0]				i_s;			// 4 int, 14 fract
+input	[16:0]				i_s;			// 6 int, 11 fract
 input	[17:0]				i_sigma;		// 18 fract
 
 wire							enable;
@@ -33,25 +33,25 @@ wire							busyExpMu;		// indicates if the ExpMu core is currently working
 wire							doneExpMu;		// pulse indicating the end of operation
 wire	[logT-1:0]			addrExpMu;		// address output
 wire							validExpMu;
-wire	[17:0]				dataExpMu;		// data output
+wire	[16:0]				dataExpMu;		// data output
 wire							readyExpMu;		// signal indicating that the data produced by ExpMu is ready to be used
 
 wire							busyExpSigma;
 wire							doneExpSigma;
 wire	[pathWidth-1:0]	addrExpSigma;
 wire							validExpSigma;
-wire	[17:0]				dataExpSigma;
+wire	[16:0]				dataExpSigma;
 wire							readyExpSigma;
 
 wire							busyCores;
 wire 							startCores;
 wire							doneCore[0:CoreN-1];
 
-wire	[26:0]				oAcc[0:CoreN-1];
+wire	[22:0]				oAcc[0:CoreN-1];
 wire							oDone[0:CoreN-1];
 
-output	[26:0]			o_acc1;
-output	[26:0]			o_acc2;
+output	[22:0]			o_acc1;
+output	[22:0]			o_acc2;
 
 	initial begin
 		Switch <= 0;

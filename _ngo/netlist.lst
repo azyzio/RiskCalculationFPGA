@@ -1,7 +1,7 @@
-D:\Dropbox\NUS\FYP\RiskCalculationFPGA\main.ngc 1366636264
-ipcore_dir/mult_9_18_18.ngc 1366631803
-ipcore_dir/mult_18_18_18_muexp.ngc 1366631690
-ipcore_dir/mult_10_18_21.ngc 1366631143
-ipcore_dir/mult_12_13_18.ngc 1366631400
-ipcore_dir/mult_18_18_18_core.ngc 1366631569
+D:\Dropbox\NUS\FYP\RiskCalculationFPGA\main.ngc 1366893033
+ipcore_dir/MuExp1.ngc 1366862759
+ipcore_dir/MuExpMult2.ngc 1366871325
+ipcore_dir/SigmaExpMult1.ngc 1366854962
+ipcore_dir/SigmaExpMult2.ngc 1366874087
+ipcore_dir/CoreMult.ngc 1366875071
 OK

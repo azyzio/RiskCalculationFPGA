@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map P.49d on Mon Apr 22 21:13:08 2013
+// Written by: Map P.49d on Thu Apr 25 20:33:14 2013
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -14,39 +14,31 @@ PIN
         "calc_exp_mu/exp/PolynomialEvaluator/Product_1/Mmult_DSP_bh72_ch0_0"
         PINNAME CLK;
 PIN
-        calc_exp_sigma/exp_f/PolynomialEvaluator/Product_2/Mmult_DSP_bh37_ch0_0_pins<110>
+        calc_exp_sigma/exp_f/PolynomialEvaluator/Product_1/Mmult_DSP_bh72_ch0_0_pins<110>
         = BEL
-        "calc_exp_sigma/exp_f/PolynomialEvaluator/Product_2/Mmult_DSP_bh37_ch0_0"
+        "calc_exp_sigma/exp_f/PolynomialEvaluator/Product_1/Mmult_DSP_bh72_ch0_0"
         PINNAME CLK;
 PIN
-        calc_exp_sigma/exp_f/PolynomialEvaluator/Product_1/Mmult_DSP_bh9_ch0_0_pins<110>
+        calc_exp_sigma/exp_f/PolynomialEvaluator/Product_2/Mmult_DSP_bh100_ch0_0_pins<110>
         = BEL
-        "calc_exp_sigma/exp_f/PolynomialEvaluator/Product_1/Mmult_DSP_bh9_ch0_0"
+        "calc_exp_sigma/exp_f/PolynomialEvaluator/Product_2/Mmult_DSP_bh100_ch0_0"
         PINNAME CLK;
-PIN core0/exp_sigma/Mram_RAM0_pins<20> = BEL "core0/exp_sigma/Mram_RAM0"
-        PINNAME CLKA;
-PIN core0/exp_sigma/Mram_RAM0_pins<21> = BEL "core0/exp_sigma/Mram_RAM0"
-        PINNAME CLKB;
-PIN core0/exp_sigma/Mram_RAM1_pins<20> = BEL "core0/exp_sigma/Mram_RAM1"
-        PINNAME CLKA;
-PIN core0/exp_sigma/Mram_RAM1_pins<21> = BEL "core0/exp_sigma/Mram_RAM1"
-        PINNAME CLKB;
-PIN core0/path/Mram_ROM_pins<9> = BEL "core0/path/Mram_ROM" PINNAME CLKAWRCLK;
-PIN calc_exp_sigma/exp_f/GeneratedTable/Mram_rom_pins<9> = BEL
-        "calc_exp_sigma/exp_f/GeneratedTable/Mram_rom" PINNAME CLKA;
-PIN core1/path/Mram_ROM_pins<9> = BEL "core1/path/Mram_ROM" PINNAME CLKAWRCLK;
 PIN calc_exp_mu_exp/GeneratedTable/Mram_rom_pins<18> = BEL
         "calc_exp_mu_exp/GeneratedTable/Mram_rom" PINNAME CLKA;
 PIN calc_exp_mu_exp/GeneratedTable/Mram_rom_pins<19> = BEL
         "calc_exp_mu_exp/GeneratedTable/Mram_rom" PINNAME CLKB;
+PIN calc_exp_sigma_exp_f/GeneratedTable/Mram_rom_pins<18> = BEL
+        "calc_exp_sigma_exp_f/GeneratedTable/Mram_rom" PINNAME CLKA;
+PIN calc_exp_sigma_exp_f/GeneratedTable/Mram_rom_pins<19> = BEL
+        "calc_exp_sigma_exp_f/GeneratedTable/Mram_rom" PINNAME CLKB;
 PIN calc_exp_mu/mult1/blk00000001/blk00000004_pins<92> = BEL
         "calc_exp_mu/mult1/blk00000001/blk00000004" PINNAME CLK;
 PIN calc_exp_mu/mult2/blk00000001/blk00000004_pins<92> = BEL
         "calc_exp_mu/mult2/blk00000001/blk00000004" PINNAME CLK;
-PIN calc_exp_sigma/mult0/blk00000001/blk00000004_pins<92> = BEL
-        "calc_exp_sigma/mult0/blk00000001/blk00000004" PINNAME CLK;
 PIN calc_exp_sigma/mult1/blk00000001/blk00000004_pins<92> = BEL
         "calc_exp_sigma/mult1/blk00000001/blk00000004" PINNAME CLK;
+PIN calc_exp_sigma/mult2/blk00000001/blk00000004_pins<92> = BEL
+        "calc_exp_sigma/mult2/blk00000001/blk00000004" PINNAME CLK;
 PIN core1/mult/blk00000001/blk00000004_pins<92> = BEL
         "core1/mult/blk00000001/blk00000004" PINNAME CLK;
 PIN core0/mult/blk00000001/blk00000004_pins<92> = BEL
@@ -62,313 +54,153 @@ PIN
         "calc_exp_mu/exp/PolynomialEvaluator/Product_2/Mmult_DSP_bh100_ch0_01"
         PINNAME CLK;
 PIN
-        calc_exp_sigma/exp_f/PolynomialEvaluator/Product_1/Mmult_DSP_bh9_ch0_01_pins<110>
+        calc_exp_sigma/exp_f/PolynomialEvaluator/Product_1/Mmult_DSP_bh72_ch0_01_pins<110>
         = BEL
-        "calc_exp_sigma/exp_f/PolynomialEvaluator/Product_1/Mmult_DSP_bh9_ch0_01"
+        "calc_exp_sigma/exp_f/PolynomialEvaluator/Product_1/Mmult_DSP_bh72_ch0_01"
         PINNAME CLK;
 PIN
-        calc_exp_sigma/exp_f/PolynomialEvaluator/Product_2/Mmult_DSP_bh37_ch0_01_pins<110>
+        calc_exp_sigma/exp_f/PolynomialEvaluator/Product_2/Mmult_DSP_bh100_ch0_01_pins<110>
         = BEL
-        "calc_exp_sigma/exp_f/PolynomialEvaluator/Product_2/Mmult_DSP_bh37_ch0_01"
+        "calc_exp_sigma/exp_f/PolynomialEvaluator/Product_2/Mmult_DSP_bh100_ch0_01"
         PINNAME CLK;
-TIMEGRP CLK = BEL "Switch" BEL "calc_exp_sigma/x_d1_0" BEL
-        "calc_exp_sigma/x_d1_1" BEL "calc_exp_sigma/x_d1_2" BEL
-        "calc_exp_sigma/x_d1_3" BEL "calc_exp_sigma/x_d1_4" BEL
-        "calc_exp_sigma/x_d1_5" BEL "calc_exp_sigma/x_d1_6" BEL
-        "calc_exp_sigma/x_d1_7" BEL "calc_exp_sigma/x_d1_8" BEL
-        "calc_exp_sigma/x_d1_9" BEL "core0/SigmaReadAddress_0" BEL
-        "core0/SigmaReadAddress_1" BEL "core0/SigmaReadAddress_2" BEL
-        "core0/SigmaReadAddress_3" BEL "core0/SigmaReadAddress_4" BEL
-        "core0/SigmaReadAddress_5" BEL "core0/SigmaReadAddress_6" BEL
-        "core0/SigmaReadAddress_7" BEL "core0/SigmaReadAddress_8" BEL
-        "core0/SigmaReadAddress_9" BEL "core0/t_d1_0" BEL "core0/t_d1_1" BEL
-        "core0/t_d1_2" BEL "core0/t_d1_3" BEL "core0/t_d1_4" BEL
-        "core0/t_d1_5" BEL "core0/t_d1_6" BEL "core0/t_d1_7" BEL
-        "core0/t_d1_8" BEL "calc_exp_sigma/xsigma_shift_0" BEL
-        "calc_exp_sigma/xsigma_shift_1" BEL "calc_exp_sigma/xsigma_shift_2"
-        BEL "calc_exp_sigma/xsigma_shift_3" BEL
-        "calc_exp_sigma/xsigma_shift_4" BEL "calc_exp_sigma/xsigma_shift_5"
-        BEL "calc_exp_sigma/xsigma_shift_6" BEL
-        "calc_exp_sigma/xsigma_shift_7" BEL "calc_exp_sigma/xsigma_shift_8"
-        BEL "calc_exp_sigma/xsigma_shift_9" BEL
-        "calc_exp_sigma/xsigma_shift_10" BEL "calc_exp_sigma/xsigma_shift_11"
-        BEL "calc_exp_sigma/xsigma_shift_12" BEL
-        "calc_exp_sigma/xsigma_shift_13" BEL "calc_exp_sigma/xsigma_shift_14"
-        BEL "calc_exp_sigma/xsigma_shift_15" BEL
-        "calc_exp_sigma/xsigma_shift_16" BEL "calc_exp_sigma/xsigma_shift_17"
-        BEL "calc_exp_sigma/xsigma_shift_18" BEL
-        "calc_exp_sigma/xsigma_shift_19" BEL "calc_exp_sigma/xsigma_shift_20"
-        BEL "calc_exp_sigma/xsigma_i_0" BEL "calc_exp_sigma/xsigma_i_1" BEL
-        "calc_exp_sigma/xsigma_i_2" BEL "calc_exp_sigma/xsigma_f_0" BEL
-        "calc_exp_sigma/xsigma_f_1" BEL "calc_exp_sigma/xsigma_f_2" BEL
-        "calc_exp_sigma/xsigma_f_3" BEL "calc_exp_sigma/xsigma_f_4" BEL
-        "calc_exp_sigma/xsigma_f_5" BEL "calc_exp_sigma/xsigma_f_6" BEL
-        "calc_exp_sigma/xsigma_f_7" BEL "calc_exp_sigma/xsigma_f_8" BEL
-        "calc_exp_sigma/xsigma_f_9" BEL "calc_exp_sigma/xsigma_f_10" BEL
-        "calc_exp_sigma/xsigma_f_11" BEL "calc_exp_sigma/xsigma_f_12" BEL
-        "calc_exp_sigma/xsigma_f_13" BEL "calc_exp_sigma/xsigma_f_14" BEL
-        "calc_exp_sigma/xsigma_f_15" BEL "calc_exp_sigma/xsigma_f_16" BEL
-        "calc_exp_sigma/xsigma_f_17" BEL "calc_exp_sigma/x_d2_0" BEL
-        "calc_exp_sigma/x_d2_1" BEL "calc_exp_sigma/x_d2_2" BEL
-        "calc_exp_sigma/x_d2_3" BEL "calc_exp_sigma/x_d2_4" BEL
-        "calc_exp_sigma/x_d2_5" BEL "calc_exp_sigma/x_d2_6" BEL
-        "calc_exp_sigma/x_d2_7" BEL "calc_exp_sigma/x_d2_8" BEL
-        "calc_exp_sigma/x_d2_9" BEL "core0/t_d2_0" BEL "core0/t_d2_1" BEL
-        "core0/t_d2_2" BEL "core0/t_d2_3" BEL "core0/t_d2_4" BEL
-        "core0/t_d2_5" BEL "core0/t_d2_6" BEL "core0/t_d2_7" BEL
-        "core0/t_d2_8" BEL "calc_exp_sigma/exp_f/X_d1_0" BEL
-        "calc_exp_sigma/exp_f/X_d1_1" BEL "calc_exp_sigma/exp_f/X_d1_2" BEL
-        "calc_exp_sigma/exp_f/X_d1_3" BEL "calc_exp_sigma/exp_f/X_d1_4" BEL
-        "calc_exp_sigma/exp_f/X_d1_5" BEL "calc_exp_sigma/exp_f/X_d1_6" BEL
-        "calc_exp_sigma/exp_f/X_d1_7" BEL "calc_exp_sigma/exp_f/X_d1_8" BEL
-        "calc_exp_sigma/exp_f/X_d1_9" BEL "calc_exp_sigma/x_d3_0" BEL
-        "calc_exp_sigma/x_d3_1" BEL "calc_exp_sigma/x_d3_2" BEL
-        "calc_exp_sigma/x_d3_3" BEL "calc_exp_sigma/x_d3_4" BEL
-        "calc_exp_sigma/x_d3_5" BEL "calc_exp_sigma/x_d3_6" BEL
-        "calc_exp_sigma/x_d3_7" BEL "calc_exp_sigma/x_d3_8" BEL
-        "calc_exp_sigma/x_d3_9" BEL "calc_exp_sigma/exp_f/X_d2_0" BEL
-        "calc_exp_sigma/exp_f/X_d2_1" BEL "calc_exp_sigma/exp_f/X_d2_2" BEL
-        "calc_exp_sigma/exp_f/X_d2_3" BEL "calc_exp_sigma/exp_f/X_d2_4" BEL
-        "calc_exp_sigma/exp_f/X_d2_5" BEL "calc_exp_sigma/exp_f/X_d2_6" BEL
-        "calc_exp_sigma/exp_f/X_d2_7" BEL "calc_exp_sigma/exp_f/X_d2_8" BEL
-        "calc_exp_sigma/exp_f/X_d2_9" BEL "core0/t_d3_0" BEL "core0/t_d3_1"
-        BEL "core0/t_d3_2" BEL "core0/t_d3_3" BEL "core0/t_d3_4" BEL
-        "core0/t_d3_5" BEL "core0/t_d3_6" BEL "core0/t_d3_7" BEL
-        "core0/t_d3_8" BEL "calc_exp_sigma/exp_frac_d1_0" BEL
-        "calc_exp_sigma/exp_frac_d1_1" BEL "calc_exp_sigma/exp_frac_d1_2" BEL
-        "calc_exp_sigma/exp_frac_d1_3" BEL "calc_exp_sigma/exp_frac_d1_4" BEL
-        "calc_exp_sigma/exp_frac_d1_5" BEL "calc_exp_sigma/exp_frac_d1_6" BEL
-        "calc_exp_sigma/exp_frac_d1_7" BEL "calc_exp_sigma/exp_frac_d1_8" BEL
-        "calc_exp_sigma/exp_frac_d1_9" BEL "calc_exp_sigma/exp_frac_d1_10" BEL
-        "calc_exp_sigma/exp_frac_d1_11" BEL "calc_exp_sigma/x_d4_0" BEL
-        "calc_exp_sigma/x_d4_1" BEL "calc_exp_sigma/x_d4_2" BEL
-        "calc_exp_sigma/x_d4_3" BEL "calc_exp_sigma/x_d4_4" BEL
-        "calc_exp_sigma/x_d4_5" BEL "calc_exp_sigma/x_d4_6" BEL
-        "calc_exp_sigma/x_d4_7" BEL "calc_exp_sigma/x_d4_8" BEL
-        "calc_exp_sigma/x_d4_9" BEL "core0/t_d4_0" BEL "core0/t_d4_1" BEL
-        "core0/t_d4_2" BEL "core0/t_d4_3" BEL "core0/t_d4_4" BEL
-        "core0/t_d4_5" BEL "core0/t_d4_6" BEL "core0/t_d4_7" BEL
-        "core0/t_d4_8" BEL "calc_exp_sigma/x_d5_0" BEL "calc_exp_sigma/x_d5_1"
-        BEL "calc_exp_sigma/x_d5_2" BEL "calc_exp_sigma/x_d5_3" BEL
-        "calc_exp_sigma/x_d5_4" BEL "calc_exp_sigma/x_d5_5" BEL
-        "calc_exp_sigma/x_d5_6" BEL "calc_exp_sigma/x_d5_7" BEL
-        "calc_exp_sigma/x_d5_8" BEL "calc_exp_sigma/x_d5_9" BEL "core0/t_d5_0"
-        BEL "core0/t_d5_1" BEL "core0/t_d5_2" BEL "core0/t_d5_3" BEL
-        "core0/t_d5_4" BEL "core0/t_d5_5" BEL "core0/t_d5_6" BEL
-        "core0/t_d5_7" BEL "core0/t_d5_8" BEL "calc_exp_sigma/x_d6_0" BEL
-        "calc_exp_sigma/x_d6_1" BEL "calc_exp_sigma/x_d6_2" BEL
-        "calc_exp_sigma/x_d6_3" BEL "calc_exp_sigma/x_d6_4" BEL
-        "calc_exp_sigma/x_d6_5" BEL "calc_exp_sigma/x_d6_6" BEL
-        "calc_exp_sigma/x_d6_7" BEL "calc_exp_sigma/x_d6_8" BEL
-        "calc_exp_sigma/x_d6_9" BEL "core0/t_d6_0" BEL "core0/t_d6_1" BEL
-        "core0/t_d6_2" BEL "core0/t_d6_3" BEL "core0/t_d6_4" BEL
-        "core0/t_d6_5" BEL "core0/t_d6_6" BEL "core0/t_d6_7" BEL
-        "core0/t_d6_8" BEL "calc_exp_sigma/x_d7_0" BEL "calc_exp_sigma/x_d7_1"
-        BEL "calc_exp_sigma/x_d7_2" BEL "calc_exp_sigma/x_d7_3" BEL
-        "calc_exp_sigma/x_d7_4" BEL "calc_exp_sigma/x_d7_5" BEL
-        "calc_exp_sigma/x_d7_6" BEL "calc_exp_sigma/x_d7_7" BEL
-        "calc_exp_sigma/x_d7_8" BEL "calc_exp_sigma/x_d7_9" BEL "core0/t_d7_0"
-        BEL "core0/t_d7_1" BEL "core0/t_d7_2" BEL "core0/t_d7_3" BEL
-        "core0/t_d7_4" BEL "core0/t_d7_5" BEL "core0/t_d7_6" BEL
-        "core0/t_d7_7" BEL "core0/t_d7_8" BEL "calc_exp_sigma/x_d8_0" BEL
-        "calc_exp_sigma/x_d8_1" BEL "calc_exp_sigma/x_d8_2" BEL
-        "calc_exp_sigma/x_d8_3" BEL "calc_exp_sigma/x_d8_4" BEL
-        "calc_exp_sigma/x_d8_5" BEL "calc_exp_sigma/x_d8_6" BEL
-        "calc_exp_sigma/x_d8_7" BEL "calc_exp_sigma/x_d8_8" BEL
-        "calc_exp_sigma/x_d8_9" BEL "calc_exp_sigma/x_d9_0" BEL
-        "calc_exp_sigma/x_d9_1" BEL "calc_exp_sigma/x_d9_2" BEL
-        "calc_exp_sigma/x_d9_3" BEL "calc_exp_sigma/x_d9_4" BEL
-        "calc_exp_sigma/x_d9_5" BEL "calc_exp_sigma/x_d9_6" BEL
-        "calc_exp_sigma/x_d9_7" BEL "calc_exp_sigma/x_d9_8" BEL
-        "calc_exp_sigma/x_d9_9" BEL "calc_exp_sigma/x_d10_0" BEL
-        "calc_exp_sigma/x_d10_1" BEL "calc_exp_sigma/x_d10_2" BEL
-        "calc_exp_sigma/x_d10_3" BEL "calc_exp_sigma/x_d10_4" BEL
-        "calc_exp_sigma/x_d10_5" BEL "calc_exp_sigma/x_d10_6" BEL
-        "calc_exp_sigma/x_d10_7" BEL "calc_exp_sigma/x_d10_8" BEL
-        "calc_exp_sigma/x_d10_9" BEL "calc_exp_sigma/x_d11_0" BEL
-        "calc_exp_sigma/x_d11_1" BEL "calc_exp_sigma/x_d11_2" BEL
-        "calc_exp_sigma/x_d11_3" BEL "calc_exp_sigma/x_d11_4" BEL
-        "calc_exp_sigma/x_d11_5" BEL "calc_exp_sigma/x_d11_6" BEL
-        "calc_exp_sigma/x_d11_7" BEL "calc_exp_sigma/x_d11_8" BEL
-        "calc_exp_sigma/x_d11_9" BEL "calc_exp_sigma/x_d12_0" BEL
-        "calc_exp_sigma/x_d12_1" BEL "calc_exp_sigma/x_d12_2" BEL
-        "calc_exp_sigma/x_d12_3" BEL "calc_exp_sigma/x_d12_4" BEL
-        "calc_exp_sigma/x_d12_5" BEL "calc_exp_sigma/x_d12_6" BEL
-        "calc_exp_sigma/x_d12_7" BEL "calc_exp_sigma/x_d12_8" BEL
-        "calc_exp_sigma/x_d12_9" BEL "calc_exp_sigma/x_d13_0" BEL
-        "calc_exp_sigma/x_d13_1" BEL "calc_exp_sigma/x_d13_2" BEL
-        "calc_exp_sigma/x_d13_3" BEL "calc_exp_sigma/x_d13_4" BEL
-        "calc_exp_sigma/x_d13_5" BEL "calc_exp_sigma/x_d13_6" BEL
-        "calc_exp_sigma/x_d13_7" BEL "calc_exp_sigma/x_d13_8" BEL
-        "calc_exp_sigma/x_d13_9" BEL "core0/exp_sigma/readData_0" BEL
-        "core0/exp_sigma/readData_1" BEL "core0/exp_sigma/readData_2" BEL
-        "core0/exp_sigma/readData_3" BEL "core0/exp_sigma/readData_4" BEL
-        "core0/exp_sigma/readData_5" BEL "core0/exp_sigma/readData_6" BEL
-        "core0/exp_sigma/readData_7" BEL "core0/exp_sigma/readData_8" BEL
-        "core0/exp_sigma/readData_9" BEL "core0/exp_sigma/readData_10" BEL
-        "core0/exp_sigma/readData_11" BEL "core0/exp_sigma/readData_12" BEL
-        "core0/exp_sigma/readData_13" BEL "core0/exp_sigma/readData_14" BEL
-        "core0/exp_sigma/readData_15" BEL "core0/exp_sigma/readData_16" BEL
-        "core0/exp_sigma/readData_17" BEL "core1/exp_sigma/readData_0" BEL
-        "core1/exp_sigma/readData_1" BEL "core1/exp_sigma/readData_2" BEL
-        "core1/exp_sigma/readData_3" BEL "core1/exp_sigma/readData_4" BEL
-        "core1/exp_sigma/readData_5" BEL "core1/exp_sigma/readData_6" BEL
-        "core1/exp_sigma/readData_7" BEL "core1/exp_sigma/readData_8" BEL
-        "core1/exp_sigma/readData_9" BEL "core1/exp_sigma/readData_10" BEL
-        "core1/exp_sigma/readData_11" BEL "core1/exp_sigma/readData_12" BEL
-        "core1/exp_sigma/readData_13" BEL "core1/exp_sigma/readData_14" BEL
-        "core1/exp_sigma/readData_15" BEL "core1/exp_sigma/readData_16" BEL
-        "core1/exp_sigma/readData_17" BEL "core0/SigmaReadData_d1_0" BEL
-        "core0/SigmaReadData_d1_1" BEL "core0/SigmaReadData_d1_2" BEL
-        "core0/SigmaReadData_d1_3" BEL "core0/SigmaReadData_d1_4" BEL
-        "core0/SigmaReadData_d1_5" BEL "core0/SigmaReadData_d1_6" BEL
-        "core0/SigmaReadData_d1_7" BEL "core0/SigmaReadData_d1_8" BEL
-        "core0/SigmaReadData_d1_9" BEL "core0/SigmaReadData_d1_10" BEL
-        "core0/SigmaReadData_d1_11" BEL "core0/SigmaReadData_d1_12" BEL
-        "core0/SigmaReadData_d1_13" BEL "core0/SigmaReadData_d1_14" BEL
-        "core0/SigmaReadData_d1_15" BEL "core0/SigmaReadData_d1_16" BEL
-        "core0/SigmaReadData_d1_17" BEL "core1/SigmaReadData_d1_0" BEL
-        "core1/SigmaReadData_d1_1" BEL "core1/SigmaReadData_d1_2" BEL
-        "core1/SigmaReadData_d1_3" BEL "core1/SigmaReadData_d1_4" BEL
-        "core1/SigmaReadData_d1_5" BEL "core1/SigmaReadData_d1_6" BEL
-        "core1/SigmaReadData_d1_7" BEL "core1/SigmaReadData_d1_8" BEL
-        "core1/SigmaReadData_d1_9" BEL "core1/SigmaReadData_d1_10" BEL
-        "core1/SigmaReadData_d1_11" BEL "core1/SigmaReadData_d1_12" BEL
-        "core1/SigmaReadData_d1_13" BEL "core1/SigmaReadData_d1_14" BEL
-        "core1/SigmaReadData_d1_15" BEL "core1/SigmaReadData_d1_16" BEL
-        "core1/SigmaReadData_d1_17" BEL "core0/price_0" BEL "core0/price_1"
-        BEL "core0/price_2" BEL "core0/price_3" BEL "core0/price_4" BEL
-        "core0/price_5" BEL "core0/price_6" BEL "core0/price_7" BEL
-        "core0/price_8" BEL "core0/price_9" BEL "core0/price_10" BEL
-        "core0/price_11" BEL "core0/price_12" BEL "core0/price_13" BEL
-        "core0/price_14" BEL "core0/price_15" BEL "core0/price_16" BEL
-        "core0/price_17" BEL "core0/price_18" BEL "core0/price_19" BEL
-        "core0/price_20" BEL "core0/price_21" BEL "core0/price_22" BEL
-        "core0/price_23" BEL "core0/price_24" BEL "core0/price_25" BEL
-        "core0/price_26" BEL "core1/price_0" BEL "core1/price_1" BEL
-        "core1/price_2" BEL "core1/price_3" BEL "core1/price_4" BEL
-        "core1/price_5" BEL "core1/price_6" BEL "core1/price_7" BEL
-        "core1/price_8" BEL "core1/price_9" BEL "core1/price_10" BEL
-        "core1/price_11" BEL "core1/price_12" BEL "core1/price_13" BEL
-        "core1/price_14" BEL "core1/price_15" BEL "core1/price_16" BEL
-        "core1/price_17" BEL "core1/price_18" BEL "core1/price_19" BEL
-        "core1/price_20" BEL "core1/price_21" BEL "core1/price_22" BEL
-        "core1/price_23" BEL "core1/price_24" BEL "core1/price_25" BEL
-        "core1/price_26" BEL "core1/enable_control/Q" BEL
-        "core1/validProduct_control/Q" BEL "core1/done_control/Q" BEL
-        "calc_exp_sigma/valid_control/Q" BEL "calc_exp_sigma/done_control/Q"
-        BEL "readyMuExp_control/Q" BEL "readySigmaExp_control/Q" BEL
+TIMEGRP CLK = BEL "Switch" BEL "readyMuExp_control/Q" BEL
+        "readySigmaExp_control/Q" BEL "busyCores_control/Q" BEL
         "readyOption_control/Q" BEL "busyExpSigma_control/Q" BEL
-        "busyExpMu_control/Q" BEL "calc_exp_sigma/x_0" BEL
-        "calc_exp_sigma/x_1" BEL "calc_exp_sigma/x_2" BEL "calc_exp_sigma/x_3"
-        BEL "calc_exp_sigma/x_4" BEL "calc_exp_sigma/x_5" BEL
-        "calc_exp_sigma/x_6" BEL "calc_exp_sigma/x_7" BEL "calc_exp_sigma/x_8"
-        BEL "calc_exp_sigma/x_9" BEL "core0/acc_0" BEL "core0/acc_1" BEL
-        "core0/acc_2" BEL "core0/acc_3" BEL "core0/acc_4" BEL "core0/acc_5"
-        BEL "core0/acc_6" BEL "core0/acc_7" BEL "core0/acc_8" BEL
-        "core0/acc_9" BEL "core0/acc_10" BEL "core0/acc_11" BEL "core0/acc_12"
-        BEL "core0/acc_13" BEL "core0/acc_14" BEL "core0/acc_15" BEL
-        "core0/acc_16" BEL "core0/acc_17" BEL "core0/acc_18" BEL
-        "core0/acc_19" BEL "core0/acc_20" BEL "core0/acc_21" BEL
-        "core0/acc_22" BEL "core0/acc_23" BEL "core0/acc_24" BEL
-        "core0/acc_25" BEL "core0/acc_26" BEL "core1/acc_0" BEL "core1/acc_1"
-        BEL "core1/acc_2" BEL "core1/acc_3" BEL "core1/acc_4" BEL
-        "core1/acc_5" BEL "core1/acc_6" BEL "core1/acc_7" BEL "core1/acc_8"
-        BEL "core1/acc_9" BEL "core1/acc_10" BEL "core1/acc_11" BEL
-        "core1/acc_12" BEL "core1/acc_13" BEL "core1/acc_14" BEL
-        "core1/acc_15" BEL "core1/acc_16" BEL "core1/acc_17" BEL
-        "core1/acc_18" BEL "core1/acc_19" BEL "core1/acc_20" BEL
-        "core1/acc_21" BEL "core1/acc_22" BEL "core1/acc_23" BEL
-        "core1/acc_24" BEL "core1/acc_25" BEL "core1/acc_26" BEL "core0/t_0"
+        "busyExpMu_control/Q" BEL "core0/done_control/Q" BEL
+        "core0/validProduct_control/Q" BEL "core0/t_d7_5" BEL "core0/t_d7_4"
+        BEL "core0/t_d7_3" BEL "core0/t_d7_2" BEL "core0/t_d7_1" BEL
+        "core0/t_d7_0" BEL "core0/t_d6_5" BEL "core0/t_d6_4" BEL
+        "core0/t_d6_3" BEL "core0/t_d6_2" BEL "core0/t_d6_1" BEL
+        "core0/t_d6_0" BEL "core0/t_d5_5" BEL "core0/t_d5_4" BEL
+        "core0/t_d5_3" BEL "core0/t_d5_2" BEL "core0/t_d5_1" BEL
+        "core0/t_d5_0" BEL "core0/t_d4_5" BEL "core0/t_d4_4" BEL
+        "core0/t_d4_3" BEL "core0/t_d4_2" BEL "core0/t_d4_1" BEL
+        "core0/t_d4_0" BEL "core0/price_22" BEL "core0/price_21" BEL
+        "core0/price_20" BEL "core0/price_19" BEL "core0/price_18" BEL
+        "core0/price_17" BEL "core0/price_16" BEL "core0/price_15" BEL
+        "core0/price_14" BEL "core0/price_13" BEL "core0/price_12" BEL
+        "core0/price_11" BEL "core0/price_10" BEL "core0/price_9" BEL
+        "core0/price_8" BEL "core0/price_7" BEL "core0/price_6" BEL
+        "core0/price_5" BEL "core0/price_4" BEL "core0/price_3" BEL
+        "core0/price_2" BEL "core0/price_1" BEL "core0/price_0" BEL
+        "core0/t_d3_5" BEL "core0/t_d3_4" BEL "core0/t_d3_3" BEL
+        "core0/t_d3_2" BEL "core0/t_d3_1" BEL "core0/t_d3_0" BEL
+        "core0/SigmaReadData_d1_16" BEL "core0/SigmaReadData_d1_15" BEL
+        "core0/SigmaReadData_d1_14" BEL "core0/SigmaReadData_d1_13" BEL
+        "core0/SigmaReadData_d1_12" BEL "core0/SigmaReadData_d1_11" BEL
+        "core0/SigmaReadData_d1_10" BEL "core0/SigmaReadData_d1_9" BEL
+        "core0/SigmaReadData_d1_8" BEL "core0/SigmaReadData_d1_7" BEL
+        "core0/SigmaReadData_d1_6" BEL "core0/SigmaReadData_d1_5" BEL
+        "core0/SigmaReadData_d1_4" BEL "core0/SigmaReadData_d1_3" BEL
+        "core0/SigmaReadData_d1_2" BEL "core0/SigmaReadData_d1_1" BEL
+        "core0/SigmaReadData_d1_0" BEL "core0/t_d2_5" BEL "core0/t_d2_4" BEL
+        "core0/t_d2_3" BEL "core0/t_d2_2" BEL "core0/t_d2_1" BEL
+        "core0/t_d2_0" BEL "core0/t_d1_5" BEL "core0/t_d1_4" BEL
+        "core0/t_d1_3" BEL "core0/t_d1_2" BEL "core0/t_d1_1" BEL
+        "core0/t_d1_0" BEL "core1/price_22" BEL "core1/price_21" BEL
+        "core1/price_20" BEL "core1/price_19" BEL "core1/price_18" BEL
+        "core1/price_17" BEL "core1/price_16" BEL "core1/price_15" BEL
+        "core1/price_14" BEL "core1/price_13" BEL "core1/price_12" BEL
+        "core1/price_11" BEL "core1/price_10" BEL "core1/price_9" BEL
+        "core1/price_8" BEL "core1/price_7" BEL "core1/price_6" BEL
+        "core1/price_5" BEL "core1/price_4" BEL "core1/price_3" BEL
+        "core1/price_2" BEL "core1/price_1" BEL "core1/price_0" BEL
+        "core1/SigmaReadData_d1_16" BEL "core1/SigmaReadData_d1_15" BEL
+        "core1/SigmaReadData_d1_14" BEL "core1/SigmaReadData_d1_13" BEL
+        "core1/SigmaReadData_d1_12" BEL "core1/SigmaReadData_d1_11" BEL
+        "core1/SigmaReadData_d1_10" BEL "core1/SigmaReadData_d1_9" BEL
+        "core1/SigmaReadData_d1_8" BEL "core1/SigmaReadData_d1_7" BEL
+        "core1/SigmaReadData_d1_6" BEL "core1/SigmaReadData_d1_5" BEL
+        "core1/SigmaReadData_d1_4" BEL "core1/SigmaReadData_d1_3" BEL
+        "core1/SigmaReadData_d1_2" BEL "core1/SigmaReadData_d1_1" BEL
+        "core1/SigmaReadData_d1_0" BEL "core1/SigmaReadAddress_5" BEL
+        "core1/SigmaReadAddress_4" BEL "core1/SigmaReadAddress_3" BEL
+        "core1/SigmaReadAddress_2" BEL "core1/SigmaReadAddress_1" BEL
+        "core1/SigmaReadAddress_0" BEL "core1/path/oDATA_5" BEL
+        "core1/path/oDATA_4" BEL "core1/path/oDATA_3" BEL "core1/path/oDATA_2"
+        BEL "core1/path/oDATA_1" BEL "core1/path/oDATA_0" BEL "core1/acc_0"
+        BEL "core1/acc_1" BEL "core1/acc_2" BEL "core1/acc_3" BEL
+        "core1/acc_4" BEL "core1/acc_5" BEL "core1/acc_6" BEL "core1/acc_7"
+        BEL "core1/acc_8" BEL "core1/acc_9" BEL "core1/acc_10" BEL
+        "core1/acc_11" BEL "core1/acc_12" BEL "core1/acc_13" BEL
+        "core1/acc_14" BEL "core1/acc_15" BEL "core1/acc_16" BEL
+        "core1/acc_17" BEL "core1/acc_18" BEL "core1/acc_19" BEL
+        "core1/acc_20" BEL "core1/acc_21" BEL "core1/acc_22" BEL "core0/acc_0"
+        BEL "core0/acc_1" BEL "core0/acc_2" BEL "core0/acc_3" BEL
+        "core0/acc_4" BEL "core0/acc_5" BEL "core0/acc_6" BEL "core0/acc_7"
+        BEL "core0/acc_8" BEL "core0/acc_9" BEL "core0/acc_10" BEL
+        "core0/acc_11" BEL "core0/acc_12" BEL "core0/acc_13" BEL
+        "core0/acc_14" BEL "core0/acc_15" BEL "core0/acc_16" BEL
+        "core0/acc_17" BEL "core0/acc_18" BEL "core0/acc_19" BEL
+        "core0/acc_20" BEL "core0/acc_21" BEL "core0/acc_22" BEL "core0/t_0"
         BEL "core0/t_1" BEL "core0/t_2" BEL "core0/t_3" BEL "core0/t_4" BEL
-        "core0/t_5" BEL "core0/t_6" BEL "core0/t_7" BEL "core0/t_8" BEL
-        "calc_exp_mu/t_8" BEL "calc_exp_mu/t_7" BEL "calc_exp_mu/t_6" BEL
-        "calc_exp_mu/t_5" BEL "calc_exp_mu/t_4" BEL "calc_exp_mu/t_3" BEL
-        "calc_exp_mu/t_2" BEL "calc_exp_mu/t_1" BEL "calc_exp_mu/t_0" BEL
-        "calc_exp_mu/done_control/Q" BEL "calc_exp_mu/valid_control/Q" BEL
-        "calc_exp_mu/t_d13_8" BEL "calc_exp_mu/t_d13_7" BEL
-        "calc_exp_mu/t_d13_6" BEL "calc_exp_mu/t_d13_5" BEL
+        "core0/t_5" BEL "calc_exp_mu/done_control/Q" BEL
+        "calc_exp_mu/valid_control/Q" BEL "calc_exp_mu/t_d13_5" BEL
         "calc_exp_mu/t_d13_4" BEL "calc_exp_mu/t_d13_3" BEL
         "calc_exp_mu/t_d13_2" BEL "calc_exp_mu/t_d13_1" BEL
-        "calc_exp_mu/t_d13_0" BEL "calc_exp_mu/t_d12_8" BEL
-        "calc_exp_mu/t_d12_7" BEL "calc_exp_mu/t_d12_6" BEL
-        "calc_exp_mu/t_d12_5" BEL "calc_exp_mu/t_d12_4" BEL
-        "calc_exp_mu/t_d12_3" BEL "calc_exp_mu/t_d12_2" BEL
-        "calc_exp_mu/t_d12_1" BEL "calc_exp_mu/t_d12_0" BEL
-        "calc_exp_mu/t_d11_8" BEL "calc_exp_mu/t_d11_7" BEL
-        "calc_exp_mu/t_d11_6" BEL "calc_exp_mu/t_d11_5" BEL
+        "calc_exp_mu/t_d13_0" BEL "calc_exp_mu/t_d12_5" BEL
+        "calc_exp_mu/t_d12_4" BEL "calc_exp_mu/t_d12_3" BEL
+        "calc_exp_mu/t_d12_2" BEL "calc_exp_mu/t_d12_1" BEL
+        "calc_exp_mu/t_d12_0" BEL "calc_exp_mu/t_d11_5" BEL
         "calc_exp_mu/t_d11_4" BEL "calc_exp_mu/t_d11_3" BEL
         "calc_exp_mu/t_d11_2" BEL "calc_exp_mu/t_d11_1" BEL
-        "calc_exp_mu/t_d11_0" BEL "calc_exp_mu/t_d10_8" BEL
-        "calc_exp_mu/t_d10_7" BEL "calc_exp_mu/t_d10_6" BEL
-        "calc_exp_mu/t_d10_5" BEL "calc_exp_mu/t_d10_4" BEL
-        "calc_exp_mu/t_d10_3" BEL "calc_exp_mu/t_d10_2" BEL
-        "calc_exp_mu/t_d10_1" BEL "calc_exp_mu/t_d10_0" BEL
-        "calc_exp_mu/t_d9_8" BEL "calc_exp_mu/t_d9_7" BEL "calc_exp_mu/t_d9_6"
-        BEL "calc_exp_mu/t_d9_5" BEL "calc_exp_mu/t_d9_4" BEL
-        "calc_exp_mu/t_d9_3" BEL "calc_exp_mu/t_d9_2" BEL "calc_exp_mu/t_d9_1"
-        BEL "calc_exp_mu/t_d9_0" BEL "calc_exp_mu/t_d8_8" BEL
-        "calc_exp_mu/t_d8_7" BEL "calc_exp_mu/t_d8_6" BEL "calc_exp_mu/t_d8_5"
-        BEL "calc_exp_mu/t_d8_4" BEL "calc_exp_mu/t_d8_3" BEL
-        "calc_exp_mu/t_d8_2" BEL "calc_exp_mu/t_d8_1" BEL "calc_exp_mu/t_d8_0"
-        BEL "calc_exp_mu/t_d7_8" BEL "calc_exp_mu/t_d7_7" BEL
-        "calc_exp_mu/t_d7_6" BEL "calc_exp_mu/t_d7_5" BEL "calc_exp_mu/t_d7_4"
+        "calc_exp_mu/t_d11_0" BEL "calc_exp_mu/t_d10_5" BEL
+        "calc_exp_mu/t_d10_4" BEL "calc_exp_mu/t_d10_3" BEL
+        "calc_exp_mu/t_d10_2" BEL "calc_exp_mu/t_d10_1" BEL
+        "calc_exp_mu/t_d10_0" BEL "calc_exp_mu/t_d9_5" BEL
+        "calc_exp_mu/t_d9_4" BEL "calc_exp_mu/t_d9_3" BEL "calc_exp_mu/t_d9_2"
+        BEL "calc_exp_mu/t_d9_1" BEL "calc_exp_mu/t_d9_0" BEL
+        "calc_exp_mu/t_d8_5" BEL "calc_exp_mu/t_d8_4" BEL "calc_exp_mu/t_d8_3"
+        BEL "calc_exp_mu/t_d8_2" BEL "calc_exp_mu/t_d8_1" BEL
+        "calc_exp_mu/t_d8_0" BEL "calc_exp_mu/t_d7_5" BEL "calc_exp_mu/t_d7_4"
         BEL "calc_exp_mu/t_d7_3" BEL "calc_exp_mu/t_d7_2" BEL
-        "calc_exp_mu/t_d7_1" BEL "calc_exp_mu/t_d7_0" BEL "calc_exp_mu/t_d6_8"
-        BEL "calc_exp_mu/t_d6_7" BEL "calc_exp_mu/t_d6_6" BEL
-        "calc_exp_mu/t_d6_5" BEL "calc_exp_mu/t_d6_4" BEL "calc_exp_mu/t_d6_3"
-        BEL "calc_exp_mu/t_d6_2" BEL "calc_exp_mu/t_d6_1" BEL
-        "calc_exp_mu/t_d6_0" BEL "calc_exp_mu/t_d5_8" BEL "calc_exp_mu/t_d5_7"
-        BEL "calc_exp_mu/t_d5_6" BEL "calc_exp_mu/t_d5_5" BEL
-        "calc_exp_mu/t_d5_4" BEL "calc_exp_mu/t_d5_3" BEL "calc_exp_mu/t_d5_2"
-        BEL "calc_exp_mu/t_d5_1" BEL "calc_exp_mu/t_d5_0" BEL
-        "calc_exp_mu/exp_tmu_d1_17" BEL "calc_exp_mu/exp_tmu_d1_16" BEL
-        "calc_exp_mu/exp_tmu_d1_15" BEL "calc_exp_mu/exp_tmu_d1_14" BEL
-        "calc_exp_mu/exp_tmu_d1_13" BEL "calc_exp_mu/exp_tmu_d1_12" BEL
-        "calc_exp_mu/exp_tmu_d1_11" BEL "calc_exp_mu/exp_tmu_d1_10" BEL
-        "calc_exp_mu/exp_tmu_d1_9" BEL "calc_exp_mu/exp_tmu_d1_8" BEL
-        "calc_exp_mu/exp_tmu_d1_7" BEL "calc_exp_mu/exp_tmu_d1_6" BEL
-        "calc_exp_mu/exp_tmu_d1_5" BEL "calc_exp_mu/exp_tmu_d1_4" BEL
-        "calc_exp_mu/exp_tmu_d1_3" BEL "calc_exp_mu/exp_tmu_d1_2" BEL
-        "calc_exp_mu/exp_tmu_d1_1" BEL "calc_exp_mu/exp_tmu_d1_0" BEL
-        "calc_exp_mu/t_d4_8" BEL "calc_exp_mu/t_d4_7" BEL "calc_exp_mu/t_d4_6"
-        BEL "calc_exp_mu/t_d4_5" BEL "calc_exp_mu/t_d4_4" BEL
-        "calc_exp_mu/t_d4_3" BEL "calc_exp_mu/t_d4_2" BEL "calc_exp_mu/t_d4_1"
-        BEL "calc_exp_mu/t_d4_0" BEL "calc_exp_mu/exp/X_d2_9" BEL
-        "calc_exp_mu/exp/X_d2_8" BEL "calc_exp_mu/exp/X_d2_7" BEL
-        "calc_exp_mu/exp/X_d2_6" BEL "calc_exp_mu/exp/X_d2_5" BEL
-        "calc_exp_mu/exp/X_d2_4" BEL "calc_exp_mu/exp/X_d2_3" BEL
-        "calc_exp_mu/exp/X_d2_2" BEL "calc_exp_mu/exp/X_d2_1" BEL
-        "calc_exp_mu/exp/X_d2_0" BEL "calc_exp_mu/exp/X_d1_9" BEL
-        "calc_exp_mu/exp/X_d1_8" BEL "calc_exp_mu/exp/X_d1_7" BEL
-        "calc_exp_mu/exp/X_d1_6" BEL "calc_exp_mu/exp/X_d1_5" BEL
-        "calc_exp_mu/exp/X_d1_4" BEL "calc_exp_mu/exp/X_d1_3" BEL
-        "calc_exp_mu/exp/X_d1_2" BEL "calc_exp_mu/exp/X_d1_1" BEL
-        "calc_exp_mu/exp/X_d1_0" BEL "calc_exp_mu/t_d3_8" BEL
-        "calc_exp_mu/t_d3_7" BEL "calc_exp_mu/t_d3_6" BEL "calc_exp_mu/t_d3_5"
-        BEL "calc_exp_mu/t_d3_4" BEL "calc_exp_mu/t_d3_3" BEL
-        "calc_exp_mu/t_d3_2" BEL "calc_exp_mu/t_d3_1" BEL "calc_exp_mu/t_d3_0"
-        BEL "calc_exp_mu/tmu_d1_17" BEL "calc_exp_mu/tmu_d1_16" BEL
-        "calc_exp_mu/tmu_d1_15" BEL "calc_exp_mu/tmu_d1_14" BEL
-        "calc_exp_mu/tmu_d1_13" BEL "calc_exp_mu/tmu_d1_12" BEL
-        "calc_exp_mu/tmu_d1_11" BEL "calc_exp_mu/tmu_d1_10" BEL
-        "calc_exp_mu/tmu_d1_9" BEL "calc_exp_mu/tmu_d1_8" BEL
-        "calc_exp_mu/tmu_d1_7" BEL "calc_exp_mu/tmu_d1_6" BEL
-        "calc_exp_mu/tmu_d1_5" BEL "calc_exp_mu/tmu_d1_4" BEL
-        "calc_exp_mu/tmu_d1_3" BEL "calc_exp_mu/tmu_d1_2" BEL
-        "calc_exp_mu/tmu_d1_1" BEL "calc_exp_mu/tmu_d1_0" BEL
-        "calc_exp_mu/t_d2_8" BEL "calc_exp_mu/t_d2_7" BEL "calc_exp_mu/t_d2_6"
-        BEL "calc_exp_mu/t_d2_5" BEL "calc_exp_mu/t_d2_4" BEL
-        "calc_exp_mu/t_d2_3" BEL "calc_exp_mu/t_d2_2" BEL "calc_exp_mu/t_d2_1"
-        BEL "calc_exp_mu/t_d2_0" BEL "calc_exp_mu/t_add1_8" BEL
-        "calc_exp_mu/t_add1_7" BEL "calc_exp_mu/t_add1_6" BEL
-        "calc_exp_mu/t_add1_5" BEL "calc_exp_mu/t_add1_4" BEL
-        "calc_exp_mu/t_add1_3" BEL "calc_exp_mu/t_add1_2" BEL
-        "calc_exp_mu/t_add1_1" BEL "calc_exp_mu/t_add1_0" BEL
-        "calc_exp_mu/t_d1_8" BEL "calc_exp_mu/t_d1_7" BEL "calc_exp_mu/t_d1_6"
-        BEL "calc_exp_mu/t_d1_5" BEL "calc_exp_mu/t_d1_4" BEL
-        "calc_exp_mu/t_d1_3" BEL "calc_exp_mu/t_d1_2" BEL "calc_exp_mu/t_d1_1"
-        PIN
+        "calc_exp_mu/t_d7_1" BEL "calc_exp_mu/t_d7_0" BEL "calc_exp_mu/t_d6_5"
+        BEL "calc_exp_mu/t_d6_4" BEL "calc_exp_mu/t_d6_3" BEL
+        "calc_exp_mu/t_d6_2" BEL "calc_exp_mu/t_d6_1" BEL "calc_exp_mu/t_d6_0"
+        BEL "calc_exp_mu/t_d5_5" BEL "calc_exp_mu/t_d5_4" BEL
+        "calc_exp_mu/t_d5_3" BEL "calc_exp_mu/t_d5_2" BEL "calc_exp_mu/t_d5_1"
+        BEL "calc_exp_mu/t_d5_0" BEL "calc_exp_mu/exp_tmu_d1_17" BEL
+        "calc_exp_mu/exp_tmu_d1_16" BEL "calc_exp_mu/exp_tmu_d1_15" BEL
+        "calc_exp_mu/exp_tmu_d1_14" BEL "calc_exp_mu/exp_tmu_d1_13" BEL
+        "calc_exp_mu/exp_tmu_d1_12" BEL "calc_exp_mu/exp_tmu_d1_11" BEL
+        "calc_exp_mu/exp_tmu_d1_10" BEL "calc_exp_mu/exp_tmu_d1_9" BEL
+        "calc_exp_mu/exp_tmu_d1_8" BEL "calc_exp_mu/exp_tmu_d1_7" BEL
+        "calc_exp_mu/exp_tmu_d1_6" BEL "calc_exp_mu/exp_tmu_d1_5" BEL
+        "calc_exp_mu/exp_tmu_d1_4" BEL "calc_exp_mu/exp_tmu_d1_3" BEL
+        "calc_exp_mu/exp_tmu_d1_2" BEL "calc_exp_mu/exp_tmu_d1_1" BEL
+        "calc_exp_mu/exp_tmu_d1_0" BEL "calc_exp_mu/t_d4_5" BEL
+        "calc_exp_mu/t_d4_4" BEL "calc_exp_mu/t_d4_3" BEL "calc_exp_mu/t_d4_2"
+        BEL "calc_exp_mu/t_d4_1" BEL "calc_exp_mu/t_d4_0" BEL
+        "calc_exp_mu/exp/X_d2_9" BEL "calc_exp_mu/exp/X_d2_8" BEL
+        "calc_exp_mu/exp/X_d2_7" BEL "calc_exp_mu/exp/X_d2_6" BEL
+        "calc_exp_mu/exp/X_d2_5" BEL "calc_exp_mu/exp/X_d2_4" BEL
+        "calc_exp_mu/exp/X_d2_3" BEL "calc_exp_mu/exp/X_d2_2" BEL
+        "calc_exp_mu/exp/X_d2_1" BEL "calc_exp_mu/exp/X_d2_0" BEL
+        "calc_exp_mu/exp/X_d1_9" BEL "calc_exp_mu/exp/X_d1_8" BEL
+        "calc_exp_mu/exp/X_d1_7" BEL "calc_exp_mu/exp/X_d1_6" BEL
+        "calc_exp_mu/exp/X_d1_5" BEL "calc_exp_mu/exp/X_d1_4" BEL
+        "calc_exp_mu/exp/X_d1_3" BEL "calc_exp_mu/exp/X_d1_2" BEL
+        "calc_exp_mu/exp/X_d1_1" BEL "calc_exp_mu/exp/X_d1_0" BEL
+        "calc_exp_mu/t_d3_5" BEL "calc_exp_mu/t_d3_4" BEL "calc_exp_mu/t_d3_3"
+        BEL "calc_exp_mu/t_d3_2" BEL "calc_exp_mu/t_d3_1" BEL
+        "calc_exp_mu/t_d3_0" BEL "calc_exp_mu/tmu_d1_17" BEL
+        "calc_exp_mu/tmu_d1_16" BEL "calc_exp_mu/tmu_d1_15" BEL
+        "calc_exp_mu/tmu_d1_14" BEL "calc_exp_mu/tmu_d1_13" BEL
+        "calc_exp_mu/tmu_d1_12" BEL "calc_exp_mu/tmu_d1_11" BEL
+        "calc_exp_mu/tmu_d1_10" BEL "calc_exp_mu/tmu_d1_9" BEL
+        "calc_exp_mu/tmu_d1_8" BEL "calc_exp_mu/tmu_d1_7" BEL
+        "calc_exp_mu/tmu_d1_6" BEL "calc_exp_mu/tmu_d1_5" BEL
+        "calc_exp_mu/tmu_d1_4" BEL "calc_exp_mu/tmu_d1_3" BEL
+        "calc_exp_mu/tmu_d1_2" BEL "calc_exp_mu/tmu_d1_1" BEL
+        "calc_exp_mu/tmu_d1_0" BEL "calc_exp_mu/t_d2_5" BEL
+        "calc_exp_mu/t_d2_4" BEL "calc_exp_mu/t_d2_3" BEL "calc_exp_mu/t_d2_2"
+        BEL "calc_exp_mu/t_d2_1" BEL "calc_exp_mu/t_d2_0" BEL
+        "calc_exp_mu/t_add1_6" BEL "calc_exp_mu/t_add1_5" BEL
+        "calc_exp_mu/t_add1_4" BEL "calc_exp_mu/t_add1_3" BEL
+        "calc_exp_mu/t_add1_2" BEL "calc_exp_mu/t_add1_1" BEL
+        "calc_exp_mu/t_add1_0" BEL "calc_exp_mu/t_d1_5" BEL
+        "calc_exp_mu/t_d1_4" BEL "calc_exp_mu/t_d1_3" BEL "calc_exp_mu/t_d1_2"
+        BEL "calc_exp_mu/t_d1_1" BEL "calc_exp_mu/t_0" PIN
         "calc_exp_mu/exp/PolynomialEvaluator/Product_2/Mmult_DSP_bh100_ch0_0_pins<110>"
         PIN
         "calc_exp_mu/exp/PolynomialEvaluator/Product_1/Mmult_DSP_bh72_ch0_0_pins<110>"
@@ -395,123 +227,167 @@ TIMEGRP CLK = BEL "Switch" BEL "calc_exp_sigma/x_d1_0" BEL
         BEL "calc_exp_mu/exp/PolynomialEvaluator/Product_2/heap_bh100_w5_0_d1"
         BEL "calc_exp_mu/exp/PolynomialEvaluator/Product_2/heap_bh100_w4_0_d1"
         BEL "calc_exp_mu/exp/PolynomialEvaluator/Product_2/heap_bh100_w3_0_d1"
+        BEL
+        "calc_exp_sigma/exp_f/PolynomialEvaluator/Product_2/heap_bh100_w3_0_d1"
+        BEL
+        "calc_exp_sigma/exp_f/PolynomialEvaluator/Product_2/heap_bh100_w4_0_d1"
+        BEL
+        "calc_exp_sigma/exp_f/PolynomialEvaluator/Product_2/heap_bh100_w5_0_d1"
+        BEL
+        "calc_exp_sigma/exp_f/PolynomialEvaluator/Product_2/heap_bh100_w6_0_d1"
+        BEL
+        "calc_exp_sigma/exp_f/PolynomialEvaluator/Product_2/heap_bh100_w7_0_d1"
+        BEL
+        "calc_exp_sigma/exp_f/PolynomialEvaluator/Product_2/heap_bh100_w8_0_d1"
+        BEL
+        "calc_exp_sigma/exp_f/PolynomialEvaluator/Product_2/heap_bh100_w9_0_d1"
+        BEL
+        "calc_exp_sigma/exp_f/PolynomialEvaluator/Product_2/heap_bh100_w10_0_d1"
+        BEL
+        "calc_exp_sigma/exp_f/PolynomialEvaluator/Product_2/heap_bh100_w11_0_d1"
+        BEL
+        "calc_exp_sigma/exp_f/PolynomialEvaluator/Product_2/heap_bh100_w12_0_d1"
+        BEL
+        "calc_exp_sigma/exp_f/PolynomialEvaluator/Product_2/heap_bh100_w13_0_d1"
+        BEL
+        "calc_exp_sigma/exp_f/PolynomialEvaluator/Product_2/heap_bh100_w14_0_d1"
+        BEL
+        "calc_exp_sigma/exp_f/PolynomialEvaluator/Product_2/heap_bh100_w15_0_d1"
+        BEL
+        "calc_exp_sigma/exp_f/PolynomialEvaluator/Product_2/heap_bh100_w16_0_d1"
+        BEL
+        "calc_exp_sigma/exp_f/PolynomialEvaluator/Product_2/heap_bh100_w17_0_d1"
+        PIN
+        "calc_exp_sigma/exp_f/PolynomialEvaluator/Product_1/Mmult_DSP_bh72_ch0_0_pins<110>"
+        PIN
+        "calc_exp_sigma/exp_f/PolynomialEvaluator/Product_2/Mmult_DSP_bh100_ch0_0_pins<110>"
+        BEL "calc_exp_sigma/x_5" BEL "calc_exp_sigma/x_4" BEL
+        "calc_exp_sigma/x_3" BEL "calc_exp_sigma/x_2" BEL "calc_exp_sigma/x_1"
+        BEL "calc_exp_sigma/x_0" BEL "calc_exp_sigma/done_control/Q" BEL
+        "calc_exp_sigma/valid_control/Q" BEL "calc_exp_sigma/x_d12_5" BEL
+        "calc_exp_sigma/x_d12_4" BEL "calc_exp_sigma/x_d12_3" BEL
+        "calc_exp_sigma/x_d12_2" BEL "calc_exp_sigma/x_d12_1" BEL
+        "calc_exp_sigma/x_d12_0" BEL "calc_exp_sigma/x_d11_5" BEL
+        "calc_exp_sigma/x_d11_4" BEL "calc_exp_sigma/x_d11_3" BEL
+        "calc_exp_sigma/x_d11_2" BEL "calc_exp_sigma/x_d11_1" BEL
+        "calc_exp_sigma/x_d11_0" BEL "calc_exp_sigma/x_d10_5" BEL
+        "calc_exp_sigma/x_d10_4" BEL "calc_exp_sigma/x_d10_3" BEL
+        "calc_exp_sigma/x_d10_2" BEL "calc_exp_sigma/x_d10_1" BEL
+        "calc_exp_sigma/x_d10_0" BEL "calc_exp_sigma/x_d9_5" BEL
+        "calc_exp_sigma/x_d9_4" BEL "calc_exp_sigma/x_d9_3" BEL
+        "calc_exp_sigma/x_d9_2" BEL "calc_exp_sigma/x_d9_1" BEL
+        "calc_exp_sigma/x_d9_0" BEL "calc_exp_sigma/x_d8_5" BEL
+        "calc_exp_sigma/x_d8_4" BEL "calc_exp_sigma/x_d8_3" BEL
+        "calc_exp_sigma/x_d8_2" BEL "calc_exp_sigma/x_d8_1" BEL
+        "calc_exp_sigma/x_d8_0" BEL "calc_exp_sigma/x_d7_5" BEL
+        "calc_exp_sigma/x_d7_4" BEL "calc_exp_sigma/x_d7_3" BEL
+        "calc_exp_sigma/x_d7_2" BEL "calc_exp_sigma/x_d7_1" BEL
+        "calc_exp_sigma/x_d7_0" BEL "calc_exp_sigma/x_d6_5" BEL
+        "calc_exp_sigma/x_d6_4" BEL "calc_exp_sigma/x_d6_3" BEL
+        "calc_exp_sigma/x_d6_2" BEL "calc_exp_sigma/x_d6_1" BEL
+        "calc_exp_sigma/x_d6_0" BEL "calc_exp_sigma/x_d5_5" BEL
+        "calc_exp_sigma/x_d5_4" BEL "calc_exp_sigma/x_d5_3" BEL
+        "calc_exp_sigma/x_d5_2" BEL "calc_exp_sigma/x_d5_1" BEL
+        "calc_exp_sigma/x_d5_0" BEL "calc_exp_sigma/x_d4_5" BEL
+        "calc_exp_sigma/x_d4_4" BEL "calc_exp_sigma/x_d4_3" BEL
+        "calc_exp_sigma/x_d4_2" BEL "calc_exp_sigma/x_d4_1" BEL
+        "calc_exp_sigma/x_d4_0" BEL "calc_exp_sigma/exp_frac_d1_17" BEL
+        "calc_exp_sigma/exp_frac_d1_16" BEL "calc_exp_sigma/exp_frac_d1_15"
+        BEL "calc_exp_sigma/exp_frac_d1_14" BEL
+        "calc_exp_sigma/exp_frac_d1_13" BEL "calc_exp_sigma/exp_frac_d1_12"
+        BEL "calc_exp_sigma/exp_frac_d1_11" BEL
+        "calc_exp_sigma/exp_frac_d1_10" BEL "calc_exp_sigma/exp_frac_d1_9" BEL
+        "calc_exp_sigma/exp_frac_d1_8" BEL "calc_exp_sigma/exp_frac_d1_7" BEL
+        "calc_exp_sigma/exp_frac_d1_6" BEL "calc_exp_sigma/exp_frac_d1_5" BEL
+        "calc_exp_sigma/exp_frac_d1_4" BEL "calc_exp_sigma/exp_frac_d1_3" BEL
+        "calc_exp_sigma/exp_frac_d1_2" BEL "calc_exp_sigma/exp_frac_d1_1" BEL
+        "calc_exp_sigma/exp_frac_d1_0" BEL "calc_exp_sigma/x_d3_5" BEL
+        "calc_exp_sigma/x_d3_4" BEL "calc_exp_sigma/x_d3_3" BEL
+        "calc_exp_sigma/x_d3_2" BEL "calc_exp_sigma/x_d3_1" BEL
+        "calc_exp_sigma/x_d3_0" BEL "calc_exp_sigma/exp_f/X_d2_9" BEL
+        "calc_exp_sigma/exp_f/X_d2_8" BEL "calc_exp_sigma/exp_f/X_d2_7" BEL
+        "calc_exp_sigma/exp_f/X_d2_6" BEL "calc_exp_sigma/exp_f/X_d2_5" BEL
+        "calc_exp_sigma/exp_f/X_d2_4" BEL "calc_exp_sigma/exp_f/X_d2_3" BEL
+        "calc_exp_sigma/exp_f/X_d2_2" BEL "calc_exp_sigma/exp_f/X_d2_1" BEL
+        "calc_exp_sigma/exp_f/X_d2_0" BEL "calc_exp_sigma/x_d2_5" BEL
+        "calc_exp_sigma/x_d2_4" BEL "calc_exp_sigma/x_d2_3" BEL
+        "calc_exp_sigma/x_d2_2" BEL "calc_exp_sigma/x_d2_1" BEL
+        "calc_exp_sigma/x_d2_0" BEL "calc_exp_sigma/exp_f/X_d1_9" BEL
+        "calc_exp_sigma/exp_f/X_d1_8" BEL "calc_exp_sigma/exp_f/X_d1_7" BEL
+        "calc_exp_sigma/exp_f/X_d1_6" BEL "calc_exp_sigma/exp_f/X_d1_5" BEL
+        "calc_exp_sigma/exp_f/X_d1_4" BEL "calc_exp_sigma/exp_f/X_d1_3" BEL
+        "calc_exp_sigma/exp_f/X_d1_2" BEL "calc_exp_sigma/exp_f/X_d1_1" BEL
+        "calc_exp_sigma/exp_f/X_d1_0" BEL "calc_exp_sigma/xsigma_f_17" BEL
+        "calc_exp_sigma/xsigma_f_16" BEL "calc_exp_sigma/xsigma_f_15" BEL
+        "calc_exp_sigma/xsigma_f_14" BEL "calc_exp_sigma/xsigma_f_13" BEL
+        "calc_exp_sigma/xsigma_f_12" BEL "calc_exp_sigma/xsigma_f_11" BEL
+        "calc_exp_sigma/xsigma_f_10" BEL "calc_exp_sigma/xsigma_f_9" BEL
+        "calc_exp_sigma/xsigma_f_8" BEL "calc_exp_sigma/xsigma_f_7" BEL
+        "calc_exp_sigma/xsigma_f_6" BEL "calc_exp_sigma/xsigma_f_5" BEL
+        "calc_exp_sigma/xsigma_f_4" BEL "calc_exp_sigma/xsigma_f_3" BEL
+        "calc_exp_sigma/xsigma_f_2" BEL "calc_exp_sigma/xsigma_f_1" BEL
+        "calc_exp_sigma/xsigma_f_0" BEL "calc_exp_sigma/xsigma_i_2" BEL
+        "calc_exp_sigma/xsigma_i_1" BEL "calc_exp_sigma/xsigma_i_0" BEL
+        "calc_exp_sigma/x_d1_5" BEL "calc_exp_sigma/x_d1_4" BEL
+        "calc_exp_sigma/x_d1_3" BEL "calc_exp_sigma/x_d1_2" BEL
+        "calc_exp_sigma/x_d1_1" BEL "calc_exp_sigma/x_d1_0" BEL
+        "calc_exp_sigma/exp_i/oData_14" BEL "calc_exp_sigma/exp_i/oData_13"
         BEL "calc_exp_sigma/exp_i/oData_11" BEL
         "calc_exp_sigma/exp_i/oData_10" BEL "calc_exp_sigma/exp_i/oData_9" BEL
         "calc_exp_sigma/exp_i/oData_8" BEL "calc_exp_sigma/exp_i/oData_7" BEL
-        "calc_exp_sigma/exp_i/oData_5" BEL "calc_exp_sigma/exp_i/oData_4" BEL
-        "calc_exp_sigma/exp_i/oData_3" BEL "calc_exp_sigma/exp_i/oData_2" BEL
-        "calc_exp_sigma/exp_i/oData_1" BEL "calc_exp_sigma/exp_i/oData_0" PIN
-        "calc_exp_sigma/exp_f/PolynomialEvaluator/Product_2/Mmult_DSP_bh37_ch0_0_pins<110>"
-        PIN
-        "calc_exp_sigma/exp_f/PolynomialEvaluator/Product_1/Mmult_DSP_bh9_ch0_0_pins<110>"
-        BEL
-        "calc_exp_sigma/exp_f/PolynomialEvaluator/Product_2/heap_bh37_w13_0_d1"
-        BEL
-        "calc_exp_sigma/exp_f/PolynomialEvaluator/Product_2/heap_bh37_w12_0_d1"
-        BEL
-        "calc_exp_sigma/exp_f/PolynomialEvaluator/Product_2/heap_bh37_w11_0_d1"
-        BEL
-        "calc_exp_sigma/exp_f/PolynomialEvaluator/Product_2/heap_bh37_w9_0_d1"
-        BEL
-        "calc_exp_sigma/exp_f/PolynomialEvaluator/Product_2/heap_bh37_w8_0_d1"
-        BEL
-        "calc_exp_sigma/exp_f/PolynomialEvaluator/Product_2/heap_bh37_w10_0_d1"
-        BEL
-        "calc_exp_sigma/exp_f/PolynomialEvaluator/Product_2/heap_bh37_w7_0_d1"
-        BEL
-        "calc_exp_sigma/exp_f/PolynomialEvaluator/Product_2/heap_bh37_w6_0_d1"
-        BEL
-        "calc_exp_sigma/exp_f/PolynomialEvaluator/Product_2/heap_bh37_w5_0_d1"
-        BEL
-        "calc_exp_sigma/exp_f/PolynomialEvaluator/Product_2/heap_bh37_w4_0_d1"
-        BEL
-        "calc_exp_sigma/exp_f/PolynomialEvaluator/Product_2/heap_bh37_w3_0_d1"
-        BEL "core1/exp_mu/readData_17" BEL "core1/exp_mu/readData_16" BEL
-        "core1/exp_mu/readData_15" BEL "core1/exp_mu/readData_14" BEL
-        "core1/exp_mu/readData_13" BEL "core1/exp_mu/readData_12" BEL
-        "core1/exp_mu/readData_11" BEL "core1/exp_mu/readData_10" BEL
-        "core1/exp_mu/readData_9" BEL "core1/exp_mu/readData_8" BEL
-        "core1/exp_mu/readData_7" BEL "core1/exp_mu/readData_6" BEL
-        "core1/exp_mu/readData_5" BEL "core1/exp_mu/readData_4" BEL
-        "core1/exp_mu/readData_3" BEL "core1/exp_mu/readData_2" BEL
-        "core1/exp_mu/readData_1" BEL "core1/exp_mu/readData_0" BEL
-        "core0/exp_mu/readData_17" BEL "core0/exp_mu/readData_16" BEL
-        "core0/exp_mu/readData_15" BEL "core0/exp_mu/readData_14" BEL
-        "core0/exp_mu/readData_13" BEL "core0/exp_mu/readData_12" BEL
-        "core0/exp_mu/readData_11" BEL "core0/exp_mu/readData_10" BEL
-        "core0/exp_mu/readData_9" BEL "core0/exp_mu/readData_8" BEL
-        "core0/exp_mu/readData_7" BEL "core0/exp_mu/readData_6" BEL
-        "core0/exp_mu/readData_5" BEL "core0/exp_mu/readData_4" BEL
-        "core0/exp_mu/readData_3" BEL "core0/exp_mu/readData_2" BEL
-        "core0/exp_mu/readData_1" BEL "core0/exp_mu/readData_0" BEL
-        "clk_BUFGP/BUFG" PIN "core0/exp_sigma/Mram_RAM0_pins<20>" PIN
-        "core0/exp_sigma/Mram_RAM0_pins<21>" PIN
-        "core0/exp_sigma/Mram_RAM1_pins<20>" PIN
-        "core0/exp_sigma/Mram_RAM1_pins<21>" PIN "core0/path/Mram_ROM_pins<9>"
-        PIN "calc_exp_sigma/exp_f/GeneratedTable/Mram_rom_pins<9>" PIN
-        "core1/path/Mram_ROM_pins<9>" PIN
+        "calc_exp_sigma/exp_i/oData_6" BEL "calc_exp_sigma/exp_i/oData_5" BEL
+        "calc_exp_sigma/exp_i/oData_4" BEL "calc_exp_sigma/exp_i/oData_3" BEL
+        "calc_exp_sigma/exp_i/oData_2" BEL "calc_exp_sigma/exp_i/oData_1" BEL
+        "calc_exp_sigma/exp_i/oData_0" BEL "core1/exp_sigma/readData_16" BEL
+        "core1/exp_sigma/readData_15" BEL "core1/exp_sigma/readData_14" BEL
+        "core1/exp_sigma/readData_13" BEL "core1/exp_sigma/readData_12" BEL
+        "core1/exp_sigma/readData_11" BEL "core1/exp_sigma/readData_10" BEL
+        "core1/exp_sigma/readData_9" BEL "core1/exp_sigma/readData_8" BEL
+        "core1/exp_sigma/readData_7" BEL "core1/exp_sigma/readData_6" BEL
+        "core1/exp_sigma/readData_5" BEL "core1/exp_sigma/readData_4" BEL
+        "core1/exp_sigma/readData_3" BEL "core1/exp_sigma/readData_2" BEL
+        "core1/exp_sigma/readData_1" BEL "core1/exp_sigma/readData_0" BEL
+        "core1/exp_mu/readData_16" BEL "core1/exp_mu/readData_15" BEL
+        "core1/exp_mu/readData_14" BEL "core1/exp_mu/readData_13" BEL
+        "core1/exp_mu/readData_12" BEL "core1/exp_mu/readData_11" BEL
+        "core1/exp_mu/readData_10" BEL "core1/exp_mu/readData_9" BEL
+        "core1/exp_mu/readData_8" BEL "core1/exp_mu/readData_7" BEL
+        "core1/exp_mu/readData_6" BEL "core1/exp_mu/readData_5" BEL
+        "core1/exp_mu/readData_4" BEL "core1/exp_mu/readData_3" BEL
+        "core1/exp_mu/readData_2" BEL "core1/exp_mu/readData_1" BEL
+        "core1/exp_mu/readData_0" BEL "core0/exp_sigma/readData_16" BEL
+        "core0/exp_sigma/readData_15" BEL "core0/exp_sigma/readData_14" BEL
+        "core0/exp_sigma/readData_13" BEL "core0/exp_sigma/readData_12" BEL
+        "core0/exp_sigma/readData_11" BEL "core0/exp_sigma/readData_10" BEL
+        "core0/exp_sigma/readData_9" BEL "core0/exp_sigma/readData_8" BEL
+        "core0/exp_sigma/readData_7" BEL "core0/exp_sigma/readData_6" BEL
+        "core0/exp_sigma/readData_5" BEL "core0/exp_sigma/readData_4" BEL
+        "core0/exp_sigma/readData_3" BEL "core0/exp_sigma/readData_2" BEL
+        "core0/exp_sigma/readData_1" BEL "core0/exp_sigma/readData_0" BEL
+        "clk_BUFGP/BUFG" PIN
         "calc_exp_mu_exp/GeneratedTable/Mram_rom_pins<18>" PIN
-        "calc_exp_mu_exp/GeneratedTable/Mram_rom_pins<19>" BEL
-        "core0/Mshreg_MuReadData_d3_0" BEL "core0/MuReadData_d3_0" BEL
-        "core0/Mshreg_MuReadData_d3_1" BEL "core0/MuReadData_d3_1" BEL
-        "core0/Mshreg_MuReadData_d3_2" BEL "core0/MuReadData_d3_2" BEL
-        "core0/Mshreg_MuReadData_d3_3" BEL "core0/MuReadData_d3_3" BEL
-        "core0/Mshreg_MuReadData_d3_6" BEL "core0/MuReadData_d3_6" BEL
-        "core0/Mshreg_MuReadData_d3_4" BEL "core0/MuReadData_d3_4" BEL
-        "core0/Mshreg_MuReadData_d3_5" BEL "core0/MuReadData_d3_5" BEL
-        "core0/Mshreg_MuReadData_d3_9" BEL "core0/MuReadData_d3_9" BEL
-        "core0/Mshreg_MuReadData_d3_7" BEL "core0/MuReadData_d3_7" BEL
-        "core0/Mshreg_MuReadData_d3_8" BEL "core0/MuReadData_d3_8" BEL
-        "core0/Mshreg_MuReadData_d3_12" BEL "core0/MuReadData_d3_12" BEL
-        "core0/Mshreg_MuReadData_d3_10" BEL "core0/MuReadData_d3_10" BEL
-        "core0/Mshreg_MuReadData_d3_11" BEL "core0/MuReadData_d3_11" BEL
-        "core0/Mshreg_MuReadData_d3_13" BEL "core0/MuReadData_d3_13" BEL
-        "core0/Mshreg_MuReadData_d3_14" BEL "core0/MuReadData_d3_14" BEL
-        "core0/Mshreg_MuReadData_d3_15" BEL "core0/MuReadData_d3_15" BEL
+        "calc_exp_mu_exp/GeneratedTable/Mram_rom_pins<19>" PIN
+        "calc_exp_sigma_exp_f/GeneratedTable/Mram_rom_pins<18>" PIN
+        "calc_exp_sigma_exp_f/GeneratedTable/Mram_rom_pins<19>" BEL
         "core0/Mshreg_MuReadData_d3_16" BEL "core0/MuReadData_d3_16" BEL
-        "core1/Mshreg_MuReadData_d3_1" BEL "core1/MuReadData_d3_1" BEL
-        "core0/Mshreg_MuReadData_d3_17" BEL "core0/MuReadData_d3_17" BEL
-        "core1/Mshreg_MuReadData_d3_0" BEL "core1/MuReadData_d3_0" BEL
-        "core1/Mshreg_MuReadData_d3_4" BEL "core1/MuReadData_d3_4" BEL
-        "core1/Mshreg_MuReadData_d3_2" BEL "core1/MuReadData_d3_2" BEL
-        "core1/Mshreg_MuReadData_d3_3" BEL "core1/MuReadData_d3_3" BEL
-        "core1/Mshreg_MuReadData_d3_7" BEL "core1/MuReadData_d3_7" BEL
-        "core1/Mshreg_MuReadData_d3_5" BEL "core1/MuReadData_d3_5" BEL
-        "core1/Mshreg_MuReadData_d3_6" BEL "core1/MuReadData_d3_6" BEL
-        "core1/Mshreg_MuReadData_d3_8" BEL "core1/MuReadData_d3_8" BEL
-        "core1/Mshreg_MuReadData_d3_9" BEL "core1/MuReadData_d3_9" BEL
-        "core1/Mshreg_MuReadData_d3_10" BEL "core1/MuReadData_d3_10" BEL
-        "core1/Mshreg_MuReadData_d3_11" BEL "core1/MuReadData_d3_11" BEL
-        "core1/Mshreg_MuReadData_d3_14" BEL "core1/MuReadData_d3_14" BEL
-        "core1/Mshreg_MuReadData_d3_12" BEL "core1/MuReadData_d3_12" BEL
-        "core1/Mshreg_MuReadData_d3_13" BEL "core1/MuReadData_d3_13" BEL
-        "core1/Mshreg_MuReadData_d3_17" BEL "core1/MuReadData_d3_17" BEL
-        "core1/Mshreg_MuReadData_d3_15" BEL "core1/MuReadData_d3_15" BEL
-        "core1/Mshreg_MuReadData_d3_16" BEL "core1/MuReadData_d3_16" BEL
-        "calc_exp_sigma/Mshreg_exp_int_d6_2" BEL
-        "calc_exp_sigma/exp_int_d6_21" BEL
-        "calc_exp_sigma/Mshreg_exp_int_d6_0" BEL
-        "calc_exp_sigma/exp_int_d6_01" BEL
-        "calc_exp_sigma/Mshreg_exp_int_d6_1" BEL
-        "calc_exp_sigma/exp_int_d6_11" BEL
-        "calc_exp_sigma/Mshreg_exp_int_d6_3" BEL
-        "calc_exp_sigma/exp_int_d6_31" BEL
-        "calc_exp_sigma/Mshreg_exp_int_d6_4" BEL
-        "calc_exp_sigma/exp_int_d6_41" BEL
-        "calc_exp_sigma/Mshreg_exp_int_d6_5" BEL
-        "calc_exp_sigma/exp_int_d6_51" BEL
-        "calc_exp_sigma/Mshreg_exp_int_d6_7" BEL
-        "calc_exp_sigma/exp_int_d6_71" BEL
-        "calc_exp_sigma/Mshreg_exp_int_d6_10" BEL
-        "calc_exp_sigma/exp_int_d6_101" BEL
-        "calc_exp_sigma/Mshreg_exp_int_d6_8" BEL
-        "calc_exp_sigma/exp_int_d6_81" BEL
-        "calc_exp_sigma/Mshreg_exp_int_d6_9" BEL
-        "calc_exp_sigma/exp_int_d6_91" BEL
+        "core0/Mshreg_MuReadData_d3_15" BEL "core0/MuReadData_d3_15" BEL
+        "core0/Mshreg_MuReadData_d3_14" BEL "core0/MuReadData_d3_14" BEL
+        "core0/Mshreg_MuReadData_d3_13" BEL "core0/MuReadData_d3_13" BEL
+        "core0/Mshreg_MuReadData_d3_10" BEL "core0/MuReadData_d3_10" BEL
+        "core0/Mshreg_MuReadData_d3_12" BEL "core0/MuReadData_d3_12" BEL
+        "core0/Mshreg_MuReadData_d3_11" BEL "core0/MuReadData_d3_11" BEL
+        "core0/Mshreg_MuReadData_d3_7" BEL "core0/MuReadData_d3_7" BEL
+        "core0/Mshreg_MuReadData_d3_9" BEL "core0/MuReadData_d3_9" BEL
+        "core0/Mshreg_MuReadData_d3_8" BEL "core0/MuReadData_d3_8" BEL
+        "core0/Mshreg_MuReadData_d3_4" BEL "core0/MuReadData_d3_4" BEL
+        "core0/Mshreg_MuReadData_d3_6" BEL "core0/MuReadData_d3_6" BEL
+        "core0/Mshreg_MuReadData_d3_5" BEL "core0/MuReadData_d3_5" BEL
+        "core0/Mshreg_MuReadData_d3_1" BEL "core0/MuReadData_d3_1" BEL
+        "core0/Mshreg_MuReadData_d3_3" BEL "core0/MuReadData_d3_3" BEL
+        "core0/Mshreg_MuReadData_d3_2" BEL "core0/MuReadData_d3_2" BEL
         "calc_exp_mu/exp/PolynomialEvaluator/Mshreg_a0_d4_18" BEL
         "calc_exp_mu/exp/PolynomialEvaluator/a0_d4_18" BEL
-        "calc_exp_sigma/Mshreg_exp_int_d6_11" BEL
-        "calc_exp_sigma/exp_int_d6_111" BEL
+        "core0/Mshreg_MuReadData_d3_0" BEL "core0/MuReadData_d3_0" BEL
         "calc_exp_mu/exp/PolynomialEvaluator/Mshreg_a0_d4_19" BEL
         "calc_exp_mu/exp/PolynomialEvaluator/a0_d4_19" BEL
         "calc_exp_mu/exp/PolynomialEvaluator/Mshreg_a0_d4_15" BEL
@@ -520,1141 +396,294 @@ TIMEGRP CLK = BEL "Switch" BEL "calc_exp_sigma/x_d1_0" BEL
         "calc_exp_mu/exp/PolynomialEvaluator/a0_d4_17" BEL
         "calc_exp_mu/exp/PolynomialEvaluator/Mshreg_a0_d4_16" BEL
         "calc_exp_mu/exp/PolynomialEvaluator/a0_d4_16" BEL
+        "calc_exp_mu/exp/PolynomialEvaluator/Mshreg_a0_d4_12" BEL
+        "calc_exp_mu/exp/PolynomialEvaluator/a0_d4_12" BEL
         "calc_exp_mu/exp/PolynomialEvaluator/Mshreg_a0_d4_14" BEL
         "calc_exp_mu/exp/PolynomialEvaluator/a0_d4_14" BEL
         "calc_exp_mu/exp/PolynomialEvaluator/Mshreg_a0_d4_13" BEL
         "calc_exp_mu/exp/PolynomialEvaluator/a0_d4_13" BEL
-        "calc_exp_mu/exp/PolynomialEvaluator/Mshreg_a0_d4_12" BEL
-        "calc_exp_mu/exp/PolynomialEvaluator/a0_d4_12" BEL
-        "calc_exp_mu/exp/PolynomialEvaluator/Mshreg_a0_d4_11" BEL
-        "calc_exp_mu/exp/PolynomialEvaluator/a0_d4_11" BEL
-        "calc_exp_mu/exp/PolynomialEvaluator/Mshreg_a0_d4_8" BEL
-        "calc_exp_mu/exp/PolynomialEvaluator/a0_d4_8" BEL
-        "calc_exp_mu/exp/PolynomialEvaluator/Mshreg_a0_d4_10" BEL
-        "calc_exp_mu/exp/PolynomialEvaluator/a0_d4_10" BEL
         "calc_exp_mu/exp/PolynomialEvaluator/Mshreg_a0_d4_9" BEL
         "calc_exp_mu/exp/PolynomialEvaluator/a0_d4_9" BEL
-        "calc_exp_mu/exp/PolynomialEvaluator/Mshreg_a0_d4_5" BEL
-        "calc_exp_mu/exp/PolynomialEvaluator/a0_d4_5" BEL
-        "calc_exp_mu/exp/PolynomialEvaluator/Mshreg_a0_d4_7" BEL
-        "calc_exp_mu/exp/PolynomialEvaluator/a0_d4_7" BEL
+        "calc_exp_mu/exp/PolynomialEvaluator/Mshreg_a0_d4_11" BEL
+        "calc_exp_mu/exp/PolynomialEvaluator/a0_d4_11" BEL
+        "calc_exp_mu/exp/PolynomialEvaluator/Mshreg_a0_d4_10" BEL
+        "calc_exp_mu/exp/PolynomialEvaluator/a0_d4_10" BEL
         "calc_exp_mu/exp/PolynomialEvaluator/Mshreg_a0_d4_6" BEL
         "calc_exp_mu/exp/PolynomialEvaluator/a0_d4_6" BEL
-        "calc_exp_mu/exp/PolynomialEvaluator/Mshreg_a0_d4_2" BEL
-        "calc_exp_mu/exp/PolynomialEvaluator/a0_d4_2" BEL
-        "calc_exp_mu/exp/PolynomialEvaluator/Mshreg_a0_d4_4" BEL
-        "calc_exp_mu/exp/PolynomialEvaluator/a0_d4_4" BEL
+        "calc_exp_mu/exp/PolynomialEvaluator/Mshreg_a0_d4_8" BEL
+        "calc_exp_mu/exp/PolynomialEvaluator/a0_d4_8" BEL
+        "calc_exp_mu/exp/PolynomialEvaluator/Mshreg_a0_d4_7" BEL
+        "calc_exp_mu/exp/PolynomialEvaluator/a0_d4_7" BEL
         "calc_exp_mu/exp/PolynomialEvaluator/Mshreg_a0_d4_3" BEL
         "calc_exp_mu/exp/PolynomialEvaluator/a0_d4_3" BEL
-        "calc_exp_mu/exp/PolynomialEvaluator/Mshreg_a0_d4_1" BEL
-        "calc_exp_mu/exp/PolynomialEvaluator/a0_d4_1" BEL
+        "calc_exp_mu/exp/PolynomialEvaluator/Mshreg_a0_d4_5" BEL
+        "calc_exp_mu/exp/PolynomialEvaluator/a0_d4_5" BEL
+        "calc_exp_mu/exp/PolynomialEvaluator/Mshreg_a0_d4_4" BEL
+        "calc_exp_mu/exp/PolynomialEvaluator/a0_d4_4" BEL
         "calc_exp_mu/exp/PolynomialEvaluator/Mshreg_a0_d4_0" BEL
         "calc_exp_mu/exp/PolynomialEvaluator/a0_d4_0" BEL
+        "calc_exp_mu/exp/PolynomialEvaluator/Mshreg_a0_d4_2" BEL
+        "calc_exp_mu/exp/PolynomialEvaluator/a0_d4_2" BEL
+        "calc_exp_mu/exp/PolynomialEvaluator/Mshreg_a0_d4_1" BEL
+        "calc_exp_mu/exp/PolynomialEvaluator/a0_d4_1" BEL
+        "calc_exp_mu/exp/PolynomialEvaluator/Mshreg_a1_d2_10" BEL
+        "calc_exp_mu/exp/PolynomialEvaluator/a1_d2_10" BEL
         "calc_exp_mu/exp/PolynomialEvaluator/Mshreg_a1_d2_12" BEL
         "calc_exp_mu/exp/PolynomialEvaluator/a1_d2_12" BEL
         "calc_exp_mu/exp/PolynomialEvaluator/Mshreg_a1_d2_11" BEL
         "calc_exp_mu/exp/PolynomialEvaluator/a1_d2_11" BEL
-        "calc_exp_mu/exp/PolynomialEvaluator/Mshreg_a1_d2_8" BEL
-        "calc_exp_mu/exp/PolynomialEvaluator/a1_d2_8" BEL
-        "calc_exp_mu/exp/PolynomialEvaluator/Mshreg_a1_d2_10" BEL
-        "calc_exp_mu/exp/PolynomialEvaluator/a1_d2_10" BEL
-        "calc_exp_mu/exp/PolynomialEvaluator/Mshreg_a1_d2_9" BEL
-        "calc_exp_mu/exp/PolynomialEvaluator/a1_d2_9" BEL
-        "calc_exp_mu/exp/PolynomialEvaluator/Mshreg_a1_d2_5" BEL
-        "calc_exp_mu/exp/PolynomialEvaluator/a1_d2_5" BEL
         "calc_exp_mu/exp/PolynomialEvaluator/Mshreg_a1_d2_7" BEL
         "calc_exp_mu/exp/PolynomialEvaluator/a1_d2_7" BEL
-        "calc_exp_mu/exp/PolynomialEvaluator/Mshreg_a1_d2_6" BEL
-        "calc_exp_mu/exp/PolynomialEvaluator/a1_d2_6" BEL
-        "calc_exp_mu/exp/PolynomialEvaluator/Mshreg_a1_d2_2" BEL
-        "calc_exp_mu/exp/PolynomialEvaluator/a1_d2_2" BEL
+        "calc_exp_mu/exp/PolynomialEvaluator/Mshreg_a1_d2_9" BEL
+        "calc_exp_mu/exp/PolynomialEvaluator/a1_d2_9" BEL
+        "calc_exp_mu/exp/PolynomialEvaluator/Mshreg_a1_d2_8" BEL
+        "calc_exp_mu/exp/PolynomialEvaluator/a1_d2_8" BEL
         "calc_exp_mu/exp/PolynomialEvaluator/Mshreg_a1_d2_4" BEL
         "calc_exp_mu/exp/PolynomialEvaluator/a1_d2_4" BEL
-        "calc_exp_mu/exp/PolynomialEvaluator/Mshreg_a1_d2_3" BEL
-        "calc_exp_mu/exp/PolynomialEvaluator/a1_d2_3" BEL
+        "calc_exp_mu/exp/PolynomialEvaluator/Mshreg_a1_d2_6" BEL
+        "calc_exp_mu/exp/PolynomialEvaluator/a1_d2_6" BEL
+        "calc_exp_mu/exp/PolynomialEvaluator/Mshreg_a1_d2_5" BEL
+        "calc_exp_mu/exp/PolynomialEvaluator/a1_d2_5" BEL
         "calc_exp_mu/exp/PolynomialEvaluator/Mshreg_a1_d2_1" BEL
         "calc_exp_mu/exp/PolynomialEvaluator/a1_d2_1" BEL
-        "calc_exp_mu/exp/PolynomialEvaluator/Mshreg_a1_d2_0" BEL
-        "calc_exp_mu/exp/PolynomialEvaluator/a1_d2_0" BEL
-        "calc_exp_sigma/exp_f/PolynomialEvaluator/Mshreg_a0_d4_14" BEL
-        "calc_exp_sigma/exp_f/PolynomialEvaluator/a0_d4_14" BEL
-        "calc_exp_sigma/exp_f/PolynomialEvaluator/Mshreg_a0_d4_13" BEL
-        "calc_exp_sigma/exp_f/PolynomialEvaluator/a0_d4_13" BEL
-        "calc_exp_sigma/exp_f/PolynomialEvaluator/Mshreg_a0_d4_10" BEL
-        "calc_exp_sigma/exp_f/PolynomialEvaluator/a0_d4_10" BEL
-        "calc_exp_sigma/exp_f/PolynomialEvaluator/Mshreg_a0_d4_12" BEL
-        "calc_exp_sigma/exp_f/PolynomialEvaluator/a0_d4_12" BEL
-        "calc_exp_sigma/exp_f/PolynomialEvaluator/Mshreg_a0_d4_11" BEL
-        "calc_exp_sigma/exp_f/PolynomialEvaluator/a0_d4_11" BEL
-        "calc_exp_sigma/exp_f/PolynomialEvaluator/Mshreg_a0_d4_7" BEL
-        "calc_exp_sigma/exp_f/PolynomialEvaluator/a0_d4_7" BEL
-        "calc_exp_sigma/exp_f/PolynomialEvaluator/Mshreg_a0_d4_9" BEL
-        "calc_exp_sigma/exp_f/PolynomialEvaluator/a0_d4_9" BEL
-        "calc_exp_sigma/exp_f/PolynomialEvaluator/Mshreg_a0_d4_8" BEL
-        "calc_exp_sigma/exp_f/PolynomialEvaluator/a0_d4_8" BEL
-        "calc_exp_sigma/exp_f/PolynomialEvaluator/Mshreg_a0_d4_4" BEL
-        "calc_exp_sigma/exp_f/PolynomialEvaluator/a0_d4_4" BEL
-        "calc_exp_sigma/exp_f/PolynomialEvaluator/Mshreg_a0_d4_6" BEL
-        "calc_exp_sigma/exp_f/PolynomialEvaluator/a0_d4_6" BEL
-        "calc_exp_sigma/exp_f/PolynomialEvaluator/Mshreg_a0_d4_5" BEL
-        "calc_exp_sigma/exp_f/PolynomialEvaluator/a0_d4_5" BEL
-        "calc_exp_sigma/exp_f/PolynomialEvaluator/Mshreg_a0_d4_3" BEL
-        "calc_exp_sigma/exp_f/PolynomialEvaluator/a0_d4_3" BEL
-        "calc_exp_sigma/exp_f/PolynomialEvaluator/Mshreg_a0_d4_2" BEL
-        "calc_exp_sigma/exp_f/PolynomialEvaluator/a0_d4_2" BEL
-        "calc_exp_sigma/exp_f/PolynomialEvaluator/Mshreg_a0_d4_1" BEL
-        "calc_exp_sigma/exp_f/PolynomialEvaluator/a0_d4_1" BEL
-        "calc_exp_sigma/exp_f/PolynomialEvaluator/Mshreg_a0_d4_0" BEL
-        "calc_exp_sigma/exp_f/PolynomialEvaluator/a0_d4_0" BEL
-        "calc_exp_sigma/exp_f/PolynomialEvaluator/Mshreg_a1_d2_6" BEL
-        "calc_exp_sigma/exp_f/PolynomialEvaluator/a1_d2_6" BEL
-        "calc_exp_sigma/exp_f/PolynomialEvaluator/Mshreg_a1_d2_8" BEL
-        "calc_exp_sigma/exp_f/PolynomialEvaluator/a1_d2_8" BEL
-        "calc_exp_sigma/exp_f/PolynomialEvaluator/Mshreg_a1_d2_7" BEL
-        "calc_exp_sigma/exp_f/PolynomialEvaluator/a1_d2_7" BEL
-        "calc_exp_sigma/exp_f/PolynomialEvaluator/Mshreg_a1_d2_3" BEL
-        "calc_exp_sigma/exp_f/PolynomialEvaluator/a1_d2_3" BEL
-        "calc_exp_sigma/exp_f/PolynomialEvaluator/Mshreg_a1_d2_5" BEL
-        "calc_exp_sigma/exp_f/PolynomialEvaluator/a1_d2_5" BEL
-        "calc_exp_sigma/exp_f/PolynomialEvaluator/Mshreg_a1_d2_4" BEL
-        "calc_exp_sigma/exp_f/PolynomialEvaluator/a1_d2_4" BEL
-        "calc_exp_sigma/exp_f/PolynomialEvaluator/Mshreg_a1_d2_0" BEL
-        "calc_exp_sigma/exp_f/PolynomialEvaluator/a1_d2_0" BEL
-        "calc_exp_sigma/exp_f/PolynomialEvaluator/Mshreg_a1_d2_2" BEL
-        "calc_exp_sigma/exp_f/PolynomialEvaluator/a1_d2_2" BEL
+        "calc_exp_mu/exp/PolynomialEvaluator/Mshreg_a1_d2_3" BEL
+        "calc_exp_mu/exp/PolynomialEvaluator/a1_d2_3" BEL
+        "calc_exp_mu/exp/PolynomialEvaluator/Mshreg_a1_d2_2" BEL
+        "calc_exp_mu/exp/PolynomialEvaluator/a1_d2_2" BEL
         "calc_exp_sigma/exp_f/PolynomialEvaluator/Mshreg_a1_d2_1" BEL
         "calc_exp_sigma/exp_f/PolynomialEvaluator/a1_d2_1" BEL
-        "busyExpSigma_inv_shift1" BEL "busyExpSigma_inv_shift2" BEL
-        "busyExpSigma_inv_shift3" BEL "busyExpSigma_inv_shift4" BEL
-        "busyExpSigma_inv_shift5" BEL "calc_exp_sigma/exp_int_d6_0" BEL
-        "calc_exp_sigma/exp_int_d6_10" BEL "calc_exp_sigma/exp_int_d6_112" BEL
-        "calc_exp_sigma/exp_int_d6_1" BEL "calc_exp_sigma/exp_int_d6_2" BEL
-        "calc_exp_sigma/exp_int_d6_3" BEL "calc_exp_sigma/exp_int_d6_4" BEL
-        "calc_exp_sigma/exp_int_d6_5" BEL "calc_exp_sigma/exp_int_d6_7" BEL
-        "calc_exp_sigma/exp_int_d6_8" BEL "calc_exp_sigma/exp_int_d6_9" PIN
+        "calc_exp_mu/exp/PolynomialEvaluator/Mshreg_a1_d2_0" BEL
+        "calc_exp_mu/exp/PolynomialEvaluator/a1_d2_0" BEL
+        "calc_exp_sigma/exp_f/PolynomialEvaluator/Mshreg_a1_d2_0" BEL
+        "calc_exp_sigma/exp_f/PolynomialEvaluator/a1_d2_0" BEL
+        "calc_exp_sigma/exp_f/PolynomialEvaluator/Mshreg_a1_d2_4" BEL
+        "calc_exp_sigma/exp_f/PolynomialEvaluator/a1_d2_4" BEL
+        "calc_exp_sigma/exp_f/PolynomialEvaluator/Mshreg_a1_d2_2" BEL
+        "calc_exp_sigma/exp_f/PolynomialEvaluator/a1_d2_2" BEL
+        "calc_exp_sigma/exp_f/PolynomialEvaluator/Mshreg_a1_d2_3" BEL
+        "calc_exp_sigma/exp_f/PolynomialEvaluator/a1_d2_3" BEL
+        "calc_exp_sigma/exp_f/PolynomialEvaluator/Mshreg_a1_d2_7" BEL
+        "calc_exp_sigma/exp_f/PolynomialEvaluator/a1_d2_7" BEL
+        "calc_exp_sigma/exp_f/PolynomialEvaluator/Mshreg_a1_d2_5" BEL
+        "calc_exp_sigma/exp_f/PolynomialEvaluator/a1_d2_5" BEL
+        "calc_exp_sigma/exp_f/PolynomialEvaluator/Mshreg_a1_d2_6" BEL
+        "calc_exp_sigma/exp_f/PolynomialEvaluator/a1_d2_6" BEL
+        "calc_exp_sigma/exp_f/PolynomialEvaluator/Mshreg_a1_d2_10" BEL
+        "calc_exp_sigma/exp_f/PolynomialEvaluator/a1_d2_10" BEL
+        "calc_exp_sigma/exp_f/PolynomialEvaluator/Mshreg_a1_d2_8" BEL
+        "calc_exp_sigma/exp_f/PolynomialEvaluator/a1_d2_8" BEL
+        "calc_exp_sigma/exp_f/PolynomialEvaluator/Mshreg_a1_d2_9" BEL
+        "calc_exp_sigma/exp_f/PolynomialEvaluator/a1_d2_9" BEL
+        "calc_exp_sigma/exp_f/PolynomialEvaluator/Mshreg_a0_d4_0" BEL
+        "calc_exp_sigma/exp_f/PolynomialEvaluator/a0_d4_0" BEL
+        "calc_exp_sigma/exp_f/PolynomialEvaluator/Mshreg_a1_d2_11" BEL
+        "calc_exp_sigma/exp_f/PolynomialEvaluator/a1_d2_11" BEL
+        "calc_exp_sigma/exp_f/PolynomialEvaluator/Mshreg_a1_d2_12" BEL
+        "calc_exp_sigma/exp_f/PolynomialEvaluator/a1_d2_12" BEL
+        "calc_exp_sigma/exp_f/PolynomialEvaluator/Mshreg_a0_d4_3" BEL
+        "calc_exp_sigma/exp_f/PolynomialEvaluator/a0_d4_3" BEL
+        "calc_exp_sigma/exp_f/PolynomialEvaluator/Mshreg_a0_d4_1" BEL
+        "calc_exp_sigma/exp_f/PolynomialEvaluator/a0_d4_1" BEL
+        "calc_exp_sigma/exp_f/PolynomialEvaluator/Mshreg_a0_d4_2" BEL
+        "calc_exp_sigma/exp_f/PolynomialEvaluator/a0_d4_2" BEL
+        "calc_exp_sigma/exp_f/PolynomialEvaluator/Mshreg_a0_d4_6" BEL
+        "calc_exp_sigma/exp_f/PolynomialEvaluator/a0_d4_6" BEL
+        "calc_exp_sigma/exp_f/PolynomialEvaluator/Mshreg_a0_d4_4" BEL
+        "calc_exp_sigma/exp_f/PolynomialEvaluator/a0_d4_4" BEL
+        "calc_exp_sigma/exp_f/PolynomialEvaluator/Mshreg_a0_d4_5" BEL
+        "calc_exp_sigma/exp_f/PolynomialEvaluator/a0_d4_5" BEL
+        "calc_exp_sigma/exp_f/PolynomialEvaluator/Mshreg_a0_d4_9" BEL
+        "calc_exp_sigma/exp_f/PolynomialEvaluator/a0_d4_9" BEL
+        "calc_exp_sigma/exp_f/PolynomialEvaluator/Mshreg_a0_d4_7" BEL
+        "calc_exp_sigma/exp_f/PolynomialEvaluator/a0_d4_7" BEL
+        "calc_exp_sigma/exp_f/PolynomialEvaluator/Mshreg_a0_d4_8" BEL
+        "calc_exp_sigma/exp_f/PolynomialEvaluator/a0_d4_8" BEL
+        "calc_exp_sigma/exp_f/PolynomialEvaluator/Mshreg_a0_d4_12" BEL
+        "calc_exp_sigma/exp_f/PolynomialEvaluator/a0_d4_12" BEL
+        "calc_exp_sigma/exp_f/PolynomialEvaluator/Mshreg_a0_d4_10" BEL
+        "calc_exp_sigma/exp_f/PolynomialEvaluator/a0_d4_10" BEL
+        "calc_exp_sigma/exp_f/PolynomialEvaluator/Mshreg_a0_d4_11" BEL
+        "calc_exp_sigma/exp_f/PolynomialEvaluator/a0_d4_11" BEL
+        "calc_exp_sigma/exp_f/PolynomialEvaluator/Mshreg_a0_d4_15" BEL
+        "calc_exp_sigma/exp_f/PolynomialEvaluator/a0_d4_15" BEL
+        "calc_exp_sigma/exp_f/PolynomialEvaluator/Mshreg_a0_d4_13" BEL
+        "calc_exp_sigma/exp_f/PolynomialEvaluator/a0_d4_13" BEL
+        "calc_exp_sigma/exp_f/PolynomialEvaluator/Mshreg_a0_d4_14" BEL
+        "calc_exp_sigma/exp_f/PolynomialEvaluator/a0_d4_14" BEL
+        "calc_exp_sigma/exp_f/PolynomialEvaluator/Mshreg_a0_d4_18" BEL
+        "calc_exp_sigma/exp_f/PolynomialEvaluator/a0_d4_18" BEL
+        "calc_exp_sigma/exp_f/PolynomialEvaluator/Mshreg_a0_d4_16" BEL
+        "calc_exp_sigma/exp_f/PolynomialEvaluator/a0_d4_16" BEL
+        "calc_exp_sigma/exp_f/PolynomialEvaluator/Mshreg_a0_d4_17" BEL
+        "calc_exp_sigma/exp_f/PolynomialEvaluator/a0_d4_17" BEL
+        "calc_exp_sigma/Mshreg_exp_int_d6_15" BEL
+        "calc_exp_sigma/exp_int_d6_151" BEL
+        "calc_exp_sigma/exp_f/PolynomialEvaluator/Mshreg_a0_d4_19" BEL
+        "calc_exp_sigma/exp_f/PolynomialEvaluator/a0_d4_19" BEL
+        "calc_exp_sigma/Mshreg_exp_int_d6_16" BEL
+        "calc_exp_sigma/exp_int_d6_161" BEL
+        "calc_exp_sigma/Mshreg_exp_int_d6_12" BEL
+        "calc_exp_sigma/exp_int_d6_121" BEL
+        "calc_exp_sigma/Mshreg_exp_int_d6_14" BEL
+        "calc_exp_sigma/exp_int_d6_141" BEL
+        "calc_exp_sigma/Mshreg_exp_int_d6_13" BEL
+        "calc_exp_sigma/exp_int_d6_131" BEL
+        "calc_exp_sigma/Mshreg_exp_int_d6_9" BEL
+        "calc_exp_sigma/exp_int_d6_91" BEL
+        "calc_exp_sigma/Mshreg_exp_int_d6_11" BEL
+        "calc_exp_sigma/exp_int_d6_111" BEL
+        "calc_exp_sigma/Mshreg_exp_int_d6_10" BEL
+        "calc_exp_sigma/exp_int_d6_101" BEL
+        "calc_exp_sigma/Mshreg_exp_int_d6_5" BEL
+        "calc_exp_sigma/exp_int_d6_51" BEL
+        "calc_exp_sigma/Mshreg_exp_int_d6_8" BEL
+        "calc_exp_sigma/exp_int_d6_81" BEL
+        "calc_exp_sigma/Mshreg_exp_int_d6_7" BEL
+        "calc_exp_sigma/exp_int_d6_71" BEL
+        "calc_exp_sigma/Mshreg_exp_int_d6_0" BEL
+        "calc_exp_sigma/exp_int_d6_01" BEL
+        "calc_exp_sigma/Mshreg_exp_int_d6_4" BEL
+        "calc_exp_sigma/exp_int_d6_41" BEL
+        "calc_exp_sigma/Mshreg_exp_int_d6_3" BEL
+        "calc_exp_sigma/exp_int_d6_31" BEL "calc_exp_sigma/enable_inv_shift1"
+        BEL "calc_exp_sigma/enable_inv_shift2" BEL
+        "calc_exp_sigma/enable_inv_shift3" BEL
+        "calc_exp_sigma/enable_inv_shift4" BEL
+        "calc_exp_sigma/enable_inv_shift5" BEL "calc_exp_sigma/exp_int_d6_0"
+        BEL "calc_exp_sigma/exp_int_d6_10" BEL "calc_exp_sigma/exp_int_d6_11"
+        BEL "calc_exp_sigma/exp_int_d6_12" BEL "calc_exp_sigma/exp_int_d6_13"
+        BEL "calc_exp_sigma/exp_int_d6_14" BEL "calc_exp_sigma/exp_int_d6_15"
+        BEL "calc_exp_sigma/exp_int_d6_16" BEL "calc_exp_sigma/exp_int_d6_3"
+        BEL "calc_exp_sigma/exp_int_d6_4" BEL "calc_exp_sigma/exp_int_d6_5"
+        BEL "calc_exp_sigma/exp_int_d6_7" BEL "calc_exp_sigma/exp_int_d6_8"
+        BEL "calc_exp_sigma/exp_int_d6_9" PIN
         "calc_exp_mu/mult1/blk00000001/blk00000004_pins<92>" PIN
         "calc_exp_mu/mult2/blk00000001/blk00000004_pins<92>" PIN
-        "calc_exp_sigma/mult0/blk00000001/blk00000004_pins<92>" PIN
         "calc_exp_sigma/mult1/blk00000001/blk00000004_pins<92>" PIN
+        "calc_exp_sigma/mult2/blk00000001/blk00000004_pins<92>" PIN
         "core1/mult/blk00000001/blk00000004_pins<92>" PIN
         "core0/mult/blk00000001/blk00000004_pins<92>" BEL
-        "core1/exp_mu/Mram_RAM01_RAMA" BEL "core1/exp_mu/Mram_RAM01_RAMB" BEL
-        "core1/exp_mu/Mram_RAM01_RAMC" BEL "core1/exp_mu/Mram_RAM01_RAMD" BEL
-        "core1/exp_mu/Mram_RAM010_RAMA" BEL "core1/exp_mu/Mram_RAM010_RAMB"
-        BEL "core1/exp_mu/Mram_RAM010_RAMC" BEL
-        "core1/exp_mu/Mram_RAM010_RAMD" BEL "core1/exp_mu/Mram_RAM011_RAMA"
-        BEL "core1/exp_mu/Mram_RAM011_RAMB" BEL
-        "core1/exp_mu/Mram_RAM011_RAMC" BEL "core1/exp_mu/Mram_RAM011_RAMD"
-        BEL "core1/exp_mu/Mram_RAM012_RAMA" BEL
-        "core1/exp_mu/Mram_RAM012_RAMB" BEL "core1/exp_mu/Mram_RAM012_RAMC"
-        BEL "core1/exp_mu/Mram_RAM012_RAMD" BEL
-        "core1/exp_mu/Mram_RAM013_RAMA" BEL "core1/exp_mu/Mram_RAM013_RAMB"
-        BEL "core1/exp_mu/Mram_RAM013_RAMC" BEL
-        "core1/exp_mu/Mram_RAM013_RAMD" BEL "core1/exp_mu/Mram_RAM014_RAMA"
-        BEL "core1/exp_mu/Mram_RAM014_RAMB" BEL
-        "core1/exp_mu/Mram_RAM014_RAMC" BEL "core1/exp_mu/Mram_RAM014_RAMD"
-        BEL "core1/exp_mu/Mram_RAM015_RAMA" BEL
-        "core1/exp_mu/Mram_RAM015_RAMB" BEL "core1/exp_mu/Mram_RAM015_RAMC"
-        BEL "core1/exp_mu/Mram_RAM015_RAMD" BEL
-        "core1/exp_mu/Mram_RAM016_RAMA" BEL "core1/exp_mu/Mram_RAM016_RAMB"
-        BEL "core1/exp_mu/Mram_RAM016_RAMC" BEL
-        "core1/exp_mu/Mram_RAM016_RAMD" BEL "core1/exp_mu/Mram_RAM017_RAMA"
-        BEL "core1/exp_mu/Mram_RAM017_RAMB" BEL
-        "core1/exp_mu/Mram_RAM017_RAMC" BEL "core1/exp_mu/Mram_RAM017_RAMD"
-        BEL "core1/exp_mu/Mram_RAM018_RAMA" BEL
-        "core1/exp_mu/Mram_RAM018_RAMB" BEL "core1/exp_mu/Mram_RAM018_RAMC"
-        BEL "core1/exp_mu/Mram_RAM018_RAMD" BEL
-        "core1/exp_mu/Mram_RAM019_RAMA" BEL "core1/exp_mu/Mram_RAM019_RAMB"
-        BEL "core1/exp_mu/Mram_RAM019_RAMC" BEL
-        "core1/exp_mu/Mram_RAM019_RAMD" BEL "core1/exp_mu/Mram_RAM02_RAMA" BEL
-        "core1/exp_mu/Mram_RAM02_RAMB" BEL "core1/exp_mu/Mram_RAM02_RAMC" BEL
-        "core1/exp_mu/Mram_RAM02_RAMD" BEL "core1/exp_mu/Mram_RAM020_RAMA" BEL
-        "core1/exp_mu/Mram_RAM020_RAMB" BEL "core1/exp_mu/Mram_RAM020_RAMC"
-        BEL "core1/exp_mu/Mram_RAM020_RAMD" BEL
-        "core1/exp_mu/Mram_RAM021_RAMA" BEL "core1/exp_mu/Mram_RAM021_RAMB"
-        BEL "core1/exp_mu/Mram_RAM021_RAMC" BEL
-        "core1/exp_mu/Mram_RAM021_RAMD" BEL "core1/exp_mu/Mram_RAM022_RAMA"
-        BEL "core1/exp_mu/Mram_RAM022_RAMB" BEL
-        "core1/exp_mu/Mram_RAM022_RAMC" BEL "core1/exp_mu/Mram_RAM022_RAMD"
-        BEL "core1/exp_mu/Mram_RAM023_RAMA" BEL
-        "core1/exp_mu/Mram_RAM023_RAMB" BEL "core1/exp_mu/Mram_RAM023_RAMC"
-        BEL "core1/exp_mu/Mram_RAM023_RAMD" BEL
-        "core1/exp_mu/Mram_RAM024_RAMA" BEL "core1/exp_mu/Mram_RAM024_RAMB"
-        BEL "core1/exp_mu/Mram_RAM024_RAMC" BEL
-        "core1/exp_mu/Mram_RAM024_RAMD" BEL "core1/exp_mu/Mram_RAM025_RAMA"
-        BEL "core1/exp_mu/Mram_RAM025_RAMB" BEL
-        "core1/exp_mu/Mram_RAM025_RAMC" BEL "core1/exp_mu/Mram_RAM025_RAMD"
-        BEL "core1/exp_mu/Mram_RAM026_RAMA" BEL
-        "core1/exp_mu/Mram_RAM026_RAMB" BEL "core1/exp_mu/Mram_RAM026_RAMC"
-        BEL "core1/exp_mu/Mram_RAM026_RAMD" BEL
-        "core1/exp_mu/Mram_RAM027_RAMA" BEL "core1/exp_mu/Mram_RAM027_RAMB"
-        BEL "core1/exp_mu/Mram_RAM027_RAMC" BEL
-        "core1/exp_mu/Mram_RAM027_RAMD" BEL "core1/exp_mu/Mram_RAM028_RAMA"
-        BEL "core1/exp_mu/Mram_RAM028_RAMB" BEL
-        "core1/exp_mu/Mram_RAM028_RAMC" BEL "core1/exp_mu/Mram_RAM028_RAMD"
-        BEL "core1/exp_mu/Mram_RAM029_RAMA" BEL
-        "core1/exp_mu/Mram_RAM029_RAMB" BEL "core1/exp_mu/Mram_RAM029_RAMC"
-        BEL "core1/exp_mu/Mram_RAM029_RAMD" BEL "core1/exp_mu/Mram_RAM03_RAMA"
+        "core1/exp_sigma/Mram_RAM161/SP" BEL "core1/exp_sigma/Mram_RAM161/DP"
+        BEL "core1/exp_sigma/Mram_RAM162/SP" BEL
+        "core1/exp_sigma/Mram_RAM162/DP" BEL "core1/exp_sigma/Mram_RAM062/SP"
+        BEL "core1/exp_sigma/Mram_RAM062/DP" BEL
+        "core1/exp_sigma/Mram_RAM061/SP" BEL "core1/exp_sigma/Mram_RAM061/DP"
+        BEL "core1/exp_mu/Mram_RAM161/SP" BEL "core1/exp_mu/Mram_RAM161/DP"
+        BEL "core1/exp_mu/Mram_RAM162/SP" BEL "core1/exp_mu/Mram_RAM162/DP"
+        BEL "core1/exp_mu/Mram_RAM062/SP" BEL "core1/exp_mu/Mram_RAM062/DP"
+        BEL "core1/exp_mu/Mram_RAM061/SP" BEL "core1/exp_mu/Mram_RAM061/DP"
+        BEL "core0/exp_sigma/Mram_RAM161/SP" BEL
+        "core0/exp_sigma/Mram_RAM161/DP" BEL "core0/exp_sigma/Mram_RAM162/SP"
+        BEL "core0/exp_sigma/Mram_RAM162/DP" BEL
+        "core0/exp_sigma/Mram_RAM062/SP" BEL "core0/exp_sigma/Mram_RAM062/DP"
+        BEL "core0/exp_sigma/Mram_RAM061/SP" BEL
+        "core0/exp_sigma/Mram_RAM061/DP" BEL "core0/exp_sigma/Mram_RAM01_RAMA"
+        BEL "core0/exp_sigma/Mram_RAM01_RAMB" BEL
+        "core0/exp_sigma/Mram_RAM01_RAMC" BEL
+        "core0/exp_sigma/Mram_RAM01_RAMD" BEL
+        "core0/exp_sigma/Mram_RAM02_RAMA" BEL
+        "core0/exp_sigma/Mram_RAM02_RAMB" BEL
+        "core0/exp_sigma/Mram_RAM02_RAMC" BEL
+        "core0/exp_sigma/Mram_RAM02_RAMD" BEL
+        "core0/exp_sigma/Mram_RAM03_RAMA" BEL
+        "core0/exp_sigma/Mram_RAM03_RAMB" BEL
+        "core0/exp_sigma/Mram_RAM03_RAMC" BEL
+        "core0/exp_sigma/Mram_RAM03_RAMD" BEL
+        "core0/exp_sigma/Mram_RAM04_RAMA" BEL
+        "core0/exp_sigma/Mram_RAM04_RAMB" BEL
+        "core0/exp_sigma/Mram_RAM04_RAMC" BEL
+        "core0/exp_sigma/Mram_RAM04_RAMD" BEL
+        "core0/exp_sigma/Mram_RAM05_RAMA" BEL
+        "core0/exp_sigma/Mram_RAM05_RAMB" BEL
+        "core0/exp_sigma/Mram_RAM05_RAMC" BEL
+        "core0/exp_sigma/Mram_RAM05_RAMD" BEL
+        "core0/exp_sigma/Mram_RAM11_RAMA" BEL
+        "core0/exp_sigma/Mram_RAM11_RAMB" BEL
+        "core0/exp_sigma/Mram_RAM11_RAMC" BEL
+        "core0/exp_sigma/Mram_RAM11_RAMD" BEL
+        "core0/exp_sigma/Mram_RAM12_RAMA" BEL
+        "core0/exp_sigma/Mram_RAM12_RAMB" BEL
+        "core0/exp_sigma/Mram_RAM12_RAMC" BEL
+        "core0/exp_sigma/Mram_RAM12_RAMD" BEL
+        "core0/exp_sigma/Mram_RAM13_RAMA" BEL
+        "core0/exp_sigma/Mram_RAM13_RAMB" BEL
+        "core0/exp_sigma/Mram_RAM13_RAMC" BEL
+        "core0/exp_sigma/Mram_RAM13_RAMD" BEL
+        "core0/exp_sigma/Mram_RAM14_RAMA" BEL
+        "core0/exp_sigma/Mram_RAM14_RAMB" BEL
+        "core0/exp_sigma/Mram_RAM14_RAMC" BEL
+        "core0/exp_sigma/Mram_RAM14_RAMD" BEL
+        "core0/exp_sigma/Mram_RAM15_RAMA" BEL
+        "core0/exp_sigma/Mram_RAM15_RAMB" BEL
+        "core0/exp_sigma/Mram_RAM15_RAMC" BEL
+        "core0/exp_sigma/Mram_RAM15_RAMD" BEL "core1/exp_mu/Mram_RAM01_RAMA"
+        BEL "core1/exp_mu/Mram_RAM01_RAMB" BEL "core1/exp_mu/Mram_RAM01_RAMC"
+        BEL "core1/exp_mu/Mram_RAM01_RAMD" BEL "core1/exp_mu/Mram_RAM02_RAMA"
+        BEL "core1/exp_mu/Mram_RAM02_RAMB" BEL "core1/exp_mu/Mram_RAM02_RAMC"
+        BEL "core1/exp_mu/Mram_RAM02_RAMD" BEL "core1/exp_mu/Mram_RAM03_RAMA"
         BEL "core1/exp_mu/Mram_RAM03_RAMB" BEL "core1/exp_mu/Mram_RAM03_RAMC"
-        BEL "core1/exp_mu/Mram_RAM03_RAMD" BEL "core1/exp_mu/Mram_RAM030_RAMA"
-        BEL "core1/exp_mu/Mram_RAM030_RAMB" BEL
-        "core1/exp_mu/Mram_RAM030_RAMC" BEL "core1/exp_mu/Mram_RAM030_RAMD"
-        BEL "core1/exp_mu/Mram_RAM031_RAMA" BEL
-        "core1/exp_mu/Mram_RAM031_RAMB" BEL "core1/exp_mu/Mram_RAM031_RAMC"
-        BEL "core1/exp_mu/Mram_RAM031_RAMD" BEL
-        "core1/exp_mu/Mram_RAM032_RAMA" BEL "core1/exp_mu/Mram_RAM032_RAMB"
-        BEL "core1/exp_mu/Mram_RAM032_RAMC" BEL
-        "core1/exp_mu/Mram_RAM032_RAMD" BEL "core1/exp_mu/Mram_RAM033_RAMA"
-        BEL "core1/exp_mu/Mram_RAM033_RAMB" BEL
-        "core1/exp_mu/Mram_RAM033_RAMC" BEL "core1/exp_mu/Mram_RAM033_RAMD"
-        BEL "core1/exp_mu/Mram_RAM034_RAMA" BEL
-        "core1/exp_mu/Mram_RAM034_RAMB" BEL "core1/exp_mu/Mram_RAM034_RAMC"
-        BEL "core1/exp_mu/Mram_RAM034_RAMD" BEL
-        "core1/exp_mu/Mram_RAM035_RAMA" BEL "core1/exp_mu/Mram_RAM035_RAMB"
-        BEL "core1/exp_mu/Mram_RAM035_RAMC" BEL
-        "core1/exp_mu/Mram_RAM035_RAMD" BEL "core1/exp_mu/Mram_RAM036_RAMA"
-        BEL "core1/exp_mu/Mram_RAM036_RAMB" BEL
-        "core1/exp_mu/Mram_RAM036_RAMC" BEL "core1/exp_mu/Mram_RAM036_RAMD"
-        BEL "core1/exp_mu/Mram_RAM037_RAMA" BEL
-        "core1/exp_mu/Mram_RAM037_RAMB" BEL "core1/exp_mu/Mram_RAM037_RAMC"
-        BEL "core1/exp_mu/Mram_RAM037_RAMD" BEL
-        "core1/exp_mu/Mram_RAM038_RAMA" BEL "core1/exp_mu/Mram_RAM038_RAMB"
-        BEL "core1/exp_mu/Mram_RAM038_RAMC" BEL
-        "core1/exp_mu/Mram_RAM038_RAMD" BEL "core1/exp_mu/Mram_RAM039_RAMA"
-        BEL "core1/exp_mu/Mram_RAM039_RAMB" BEL
-        "core1/exp_mu/Mram_RAM039_RAMC" BEL "core1/exp_mu/Mram_RAM039_RAMD"
-        BEL "core1/exp_mu/Mram_RAM04_RAMA" BEL "core1/exp_mu/Mram_RAM04_RAMB"
-        BEL "core1/exp_mu/Mram_RAM04_RAMC" BEL "core1/exp_mu/Mram_RAM04_RAMD"
-        BEL "core1/exp_mu/Mram_RAM040_RAMA" BEL
-        "core1/exp_mu/Mram_RAM040_RAMB" BEL "core1/exp_mu/Mram_RAM040_RAMC"
-        BEL "core1/exp_mu/Mram_RAM040_RAMD" BEL
-        "core1/exp_mu/Mram_RAM041_RAMA" BEL "core1/exp_mu/Mram_RAM041_RAMB"
-        BEL "core1/exp_mu/Mram_RAM041_RAMC" BEL
-        "core1/exp_mu/Mram_RAM041_RAMD" BEL "core1/exp_mu/Mram_RAM042_RAMA"
-        BEL "core1/exp_mu/Mram_RAM042_RAMB" BEL
-        "core1/exp_mu/Mram_RAM042_RAMC" BEL "core1/exp_mu/Mram_RAM042_RAMD"
-        BEL "core1/exp_mu/Mram_RAM043_RAMA" BEL
-        "core1/exp_mu/Mram_RAM043_RAMB" BEL "core1/exp_mu/Mram_RAM043_RAMC"
-        BEL "core1/exp_mu/Mram_RAM043_RAMD" BEL
-        "core1/exp_mu/Mram_RAM044_RAMA" BEL "core1/exp_mu/Mram_RAM044_RAMB"
-        BEL "core1/exp_mu/Mram_RAM044_RAMC" BEL
-        "core1/exp_mu/Mram_RAM044_RAMD" BEL "core1/exp_mu/Mram_RAM045_RAMA"
-        BEL "core1/exp_mu/Mram_RAM045_RAMB" BEL
-        "core1/exp_mu/Mram_RAM045_RAMC" BEL "core1/exp_mu/Mram_RAM045_RAMD"
-        BEL "core1/exp_mu/Mram_RAM046_RAMA" BEL
-        "core1/exp_mu/Mram_RAM046_RAMB" BEL "core1/exp_mu/Mram_RAM046_RAMC"
-        BEL "core1/exp_mu/Mram_RAM046_RAMD" BEL
-        "core1/exp_mu/Mram_RAM047_RAMA" BEL "core1/exp_mu/Mram_RAM047_RAMB"
-        BEL "core1/exp_mu/Mram_RAM047_RAMC" BEL
-        "core1/exp_mu/Mram_RAM047_RAMD" BEL "core1/exp_mu/Mram_RAM048_RAMA"
-        BEL "core1/exp_mu/Mram_RAM048_RAMB" BEL
-        "core1/exp_mu/Mram_RAM048_RAMC" BEL "core1/exp_mu/Mram_RAM048_RAMD"
-        BEL "core1/exp_mu/Mram_RAM05_RAMA" BEL "core1/exp_mu/Mram_RAM05_RAMB"
-        BEL "core1/exp_mu/Mram_RAM05_RAMC" BEL "core1/exp_mu/Mram_RAM05_RAMD"
-        BEL "core1/exp_mu/Mram_RAM06_RAMA" BEL "core1/exp_mu/Mram_RAM06_RAMB"
-        BEL "core1/exp_mu/Mram_RAM06_RAMC" BEL "core1/exp_mu/Mram_RAM06_RAMD"
-        BEL "core1/exp_mu/Mram_RAM07_RAMA" BEL "core1/exp_mu/Mram_RAM07_RAMB"
-        BEL "core1/exp_mu/Mram_RAM07_RAMC" BEL "core1/exp_mu/Mram_RAM07_RAMD"
-        BEL "core1/exp_mu/Mram_RAM08_RAMA" BEL "core1/exp_mu/Mram_RAM08_RAMB"
-        BEL "core1/exp_mu/Mram_RAM08_RAMC" BEL "core1/exp_mu/Mram_RAM08_RAMD"
-        BEL "core1/exp_mu/Mram_RAM09_RAMA" BEL "core1/exp_mu/Mram_RAM09_RAMB"
-        BEL "core1/exp_mu/Mram_RAM09_RAMC" BEL "core1/exp_mu/Mram_RAM09_RAMD"
-        BEL "core1/exp_mu/Mram_RAM11_RAMA" BEL "core1/exp_mu/Mram_RAM11_RAMB"
-        BEL "core1/exp_mu/Mram_RAM11_RAMC" BEL "core1/exp_mu/Mram_RAM11_RAMD"
-        BEL "core1/exp_mu/Mram_RAM110_RAMA" BEL
-        "core1/exp_mu/Mram_RAM110_RAMB" BEL "core1/exp_mu/Mram_RAM110_RAMC"
-        BEL "core1/exp_mu/Mram_RAM110_RAMD" BEL
-        "core1/exp_mu/Mram_RAM111_RAMA" BEL "core1/exp_mu/Mram_RAM111_RAMB"
-        BEL "core1/exp_mu/Mram_RAM111_RAMC" BEL
-        "core1/exp_mu/Mram_RAM111_RAMD" BEL "core1/exp_mu/Mram_RAM112_RAMA"
-        BEL "core1/exp_mu/Mram_RAM112_RAMB" BEL
-        "core1/exp_mu/Mram_RAM112_RAMC" BEL "core1/exp_mu/Mram_RAM112_RAMD"
-        BEL "core1/exp_mu/Mram_RAM113_RAMA" BEL
-        "core1/exp_mu/Mram_RAM113_RAMB" BEL "core1/exp_mu/Mram_RAM113_RAMC"
-        BEL "core1/exp_mu/Mram_RAM113_RAMD" BEL
-        "core1/exp_mu/Mram_RAM114_RAMA" BEL "core1/exp_mu/Mram_RAM114_RAMB"
-        BEL "core1/exp_mu/Mram_RAM114_RAMC" BEL
-        "core1/exp_mu/Mram_RAM114_RAMD" BEL "core1/exp_mu/Mram_RAM115_RAMA"
-        BEL "core1/exp_mu/Mram_RAM115_RAMB" BEL
-        "core1/exp_mu/Mram_RAM115_RAMC" BEL "core1/exp_mu/Mram_RAM115_RAMD"
-        BEL "core1/exp_mu/Mram_RAM116_RAMA" BEL
-        "core1/exp_mu/Mram_RAM116_RAMB" BEL "core1/exp_mu/Mram_RAM116_RAMC"
-        BEL "core1/exp_mu/Mram_RAM116_RAMD" BEL
-        "core1/exp_mu/Mram_RAM117_RAMA" BEL "core1/exp_mu/Mram_RAM117_RAMB"
-        BEL "core1/exp_mu/Mram_RAM117_RAMC" BEL
-        "core1/exp_mu/Mram_RAM117_RAMD" BEL "core1/exp_mu/Mram_RAM118_RAMA"
-        BEL "core1/exp_mu/Mram_RAM118_RAMB" BEL
-        "core1/exp_mu/Mram_RAM118_RAMC" BEL "core1/exp_mu/Mram_RAM118_RAMD"
-        BEL "core1/exp_mu/Mram_RAM119_RAMA" BEL
-        "core1/exp_mu/Mram_RAM119_RAMB" BEL "core1/exp_mu/Mram_RAM119_RAMC"
-        BEL "core1/exp_mu/Mram_RAM119_RAMD" BEL "core1/exp_mu/Mram_RAM12_RAMA"
+        BEL "core1/exp_mu/Mram_RAM03_RAMD" BEL "core1/exp_mu/Mram_RAM04_RAMA"
+        BEL "core1/exp_mu/Mram_RAM04_RAMB" BEL "core1/exp_mu/Mram_RAM04_RAMC"
+        BEL "core1/exp_mu/Mram_RAM04_RAMD" BEL "core1/exp_mu/Mram_RAM05_RAMA"
+        BEL "core1/exp_mu/Mram_RAM05_RAMB" BEL "core1/exp_mu/Mram_RAM05_RAMC"
+        BEL "core1/exp_mu/Mram_RAM05_RAMD" BEL "core1/exp_mu/Mram_RAM11_RAMA"
+        BEL "core1/exp_mu/Mram_RAM11_RAMB" BEL "core1/exp_mu/Mram_RAM11_RAMC"
+        BEL "core1/exp_mu/Mram_RAM11_RAMD" BEL "core1/exp_mu/Mram_RAM12_RAMA"
         BEL "core1/exp_mu/Mram_RAM12_RAMB" BEL "core1/exp_mu/Mram_RAM12_RAMC"
-        BEL "core1/exp_mu/Mram_RAM12_RAMD" BEL "core1/exp_mu/Mram_RAM120_RAMA"
-        BEL "core1/exp_mu/Mram_RAM120_RAMB" BEL
-        "core1/exp_mu/Mram_RAM120_RAMC" BEL "core1/exp_mu/Mram_RAM120_RAMD"
-        BEL "core1/exp_mu/Mram_RAM121_RAMA" BEL
-        "core1/exp_mu/Mram_RAM121_RAMB" BEL "core1/exp_mu/Mram_RAM121_RAMC"
-        BEL "core1/exp_mu/Mram_RAM121_RAMD" BEL
-        "core1/exp_mu/Mram_RAM122_RAMA" BEL "core1/exp_mu/Mram_RAM122_RAMB"
-        BEL "core1/exp_mu/Mram_RAM122_RAMC" BEL
-        "core1/exp_mu/Mram_RAM122_RAMD" BEL "core1/exp_mu/Mram_RAM123_RAMA"
-        BEL "core1/exp_mu/Mram_RAM123_RAMB" BEL
-        "core1/exp_mu/Mram_RAM123_RAMC" BEL "core1/exp_mu/Mram_RAM123_RAMD"
-        BEL "core1/exp_mu/Mram_RAM124_RAMA" BEL
-        "core1/exp_mu/Mram_RAM124_RAMB" BEL "core1/exp_mu/Mram_RAM124_RAMC"
-        BEL "core1/exp_mu/Mram_RAM124_RAMD" BEL
-        "core1/exp_mu/Mram_RAM125_RAMA" BEL "core1/exp_mu/Mram_RAM125_RAMB"
-        BEL "core1/exp_mu/Mram_RAM125_RAMC" BEL
-        "core1/exp_mu/Mram_RAM125_RAMD" BEL "core1/exp_mu/Mram_RAM126_RAMA"
-        BEL "core1/exp_mu/Mram_RAM126_RAMB" BEL
-        "core1/exp_mu/Mram_RAM126_RAMC" BEL "core1/exp_mu/Mram_RAM126_RAMD"
-        BEL "core1/exp_mu/Mram_RAM127_RAMA" BEL
-        "core1/exp_mu/Mram_RAM127_RAMB" BEL "core1/exp_mu/Mram_RAM127_RAMC"
-        BEL "core1/exp_mu/Mram_RAM127_RAMD" BEL
-        "core1/exp_mu/Mram_RAM128_RAMA" BEL "core1/exp_mu/Mram_RAM128_RAMB"
-        BEL "core1/exp_mu/Mram_RAM128_RAMC" BEL
-        "core1/exp_mu/Mram_RAM128_RAMD" BEL "core1/exp_mu/Mram_RAM129_RAMA"
-        BEL "core1/exp_mu/Mram_RAM129_RAMB" BEL
-        "core1/exp_mu/Mram_RAM129_RAMC" BEL "core1/exp_mu/Mram_RAM129_RAMD"
-        BEL "core1/exp_mu/Mram_RAM13_RAMA" BEL "core1/exp_mu/Mram_RAM13_RAMB"
-        BEL "core1/exp_mu/Mram_RAM13_RAMC" BEL "core1/exp_mu/Mram_RAM13_RAMD"
-        BEL "core1/exp_mu/Mram_RAM130_RAMA" BEL
-        "core1/exp_mu/Mram_RAM130_RAMB" BEL "core1/exp_mu/Mram_RAM130_RAMC"
-        BEL "core1/exp_mu/Mram_RAM130_RAMD" BEL
-        "core1/exp_mu/Mram_RAM131_RAMA" BEL "core1/exp_mu/Mram_RAM131_RAMB"
-        BEL "core1/exp_mu/Mram_RAM131_RAMC" BEL
-        "core1/exp_mu/Mram_RAM131_RAMD" BEL "core1/exp_mu/Mram_RAM132_RAMA"
-        BEL "core1/exp_mu/Mram_RAM132_RAMB" BEL
-        "core1/exp_mu/Mram_RAM132_RAMC" BEL "core1/exp_mu/Mram_RAM132_RAMD"
-        BEL "core1/exp_mu/Mram_RAM133_RAMA" BEL
-        "core1/exp_mu/Mram_RAM133_RAMB" BEL "core1/exp_mu/Mram_RAM133_RAMC"
-        BEL "core1/exp_mu/Mram_RAM133_RAMD" BEL
-        "core1/exp_mu/Mram_RAM134_RAMA" BEL "core1/exp_mu/Mram_RAM134_RAMB"
-        BEL "core1/exp_mu/Mram_RAM134_RAMC" BEL
-        "core1/exp_mu/Mram_RAM134_RAMD" BEL "core1/exp_mu/Mram_RAM135_RAMA"
-        BEL "core1/exp_mu/Mram_RAM135_RAMB" BEL
-        "core1/exp_mu/Mram_RAM135_RAMC" BEL "core1/exp_mu/Mram_RAM135_RAMD"
-        BEL "core1/exp_mu/Mram_RAM136_RAMA" BEL
-        "core1/exp_mu/Mram_RAM136_RAMB" BEL "core1/exp_mu/Mram_RAM136_RAMC"
-        BEL "core1/exp_mu/Mram_RAM136_RAMD" BEL
-        "core1/exp_mu/Mram_RAM137_RAMA" BEL "core1/exp_mu/Mram_RAM137_RAMB"
-        BEL "core1/exp_mu/Mram_RAM137_RAMC" BEL
-        "core1/exp_mu/Mram_RAM137_RAMD" BEL "core1/exp_mu/Mram_RAM138_RAMA"
-        BEL "core1/exp_mu/Mram_RAM138_RAMB" BEL
-        "core1/exp_mu/Mram_RAM138_RAMC" BEL "core1/exp_mu/Mram_RAM138_RAMD"
-        BEL "core1/exp_mu/Mram_RAM139_RAMA" BEL
-        "core1/exp_mu/Mram_RAM139_RAMB" BEL "core1/exp_mu/Mram_RAM139_RAMC"
-        BEL "core1/exp_mu/Mram_RAM139_RAMD" BEL "core1/exp_mu/Mram_RAM14_RAMA"
+        BEL "core1/exp_mu/Mram_RAM12_RAMD" BEL "core1/exp_mu/Mram_RAM13_RAMA"
+        BEL "core1/exp_mu/Mram_RAM13_RAMB" BEL "core1/exp_mu/Mram_RAM13_RAMC"
+        BEL "core1/exp_mu/Mram_RAM13_RAMD" BEL "core1/exp_mu/Mram_RAM14_RAMA"
         BEL "core1/exp_mu/Mram_RAM14_RAMB" BEL "core1/exp_mu/Mram_RAM14_RAMC"
-        BEL "core1/exp_mu/Mram_RAM14_RAMD" BEL "core1/exp_mu/Mram_RAM140_RAMA"
-        BEL "core1/exp_mu/Mram_RAM140_RAMB" BEL
-        "core1/exp_mu/Mram_RAM140_RAMC" BEL "core1/exp_mu/Mram_RAM140_RAMD"
-        BEL "core1/exp_mu/Mram_RAM141_RAMA" BEL
-        "core1/exp_mu/Mram_RAM141_RAMB" BEL "core1/exp_mu/Mram_RAM141_RAMC"
-        BEL "core1/exp_mu/Mram_RAM141_RAMD" BEL
-        "core1/exp_mu/Mram_RAM142_RAMA" BEL "core1/exp_mu/Mram_RAM142_RAMB"
-        BEL "core1/exp_mu/Mram_RAM142_RAMC" BEL
-        "core1/exp_mu/Mram_RAM142_RAMD" BEL "core1/exp_mu/Mram_RAM143_RAMA"
-        BEL "core1/exp_mu/Mram_RAM143_RAMB" BEL
-        "core1/exp_mu/Mram_RAM143_RAMC" BEL "core1/exp_mu/Mram_RAM143_RAMD"
-        BEL "core1/exp_mu/Mram_RAM144_RAMA" BEL
-        "core1/exp_mu/Mram_RAM144_RAMB" BEL "core1/exp_mu/Mram_RAM144_RAMC"
-        BEL "core1/exp_mu/Mram_RAM144_RAMD" BEL
-        "core1/exp_mu/Mram_RAM145_RAMA" BEL "core1/exp_mu/Mram_RAM145_RAMB"
-        BEL "core1/exp_mu/Mram_RAM145_RAMC" BEL
-        "core1/exp_mu/Mram_RAM145_RAMD" BEL "core1/exp_mu/Mram_RAM146_RAMA"
-        BEL "core1/exp_mu/Mram_RAM146_RAMB" BEL
-        "core1/exp_mu/Mram_RAM146_RAMC" BEL "core1/exp_mu/Mram_RAM146_RAMD"
-        BEL "core1/exp_mu/Mram_RAM147_RAMA" BEL
-        "core1/exp_mu/Mram_RAM147_RAMB" BEL "core1/exp_mu/Mram_RAM147_RAMC"
-        BEL "core1/exp_mu/Mram_RAM147_RAMD" BEL
-        "core1/exp_mu/Mram_RAM148_RAMA" BEL "core1/exp_mu/Mram_RAM148_RAMB"
-        BEL "core1/exp_mu/Mram_RAM148_RAMC" BEL
-        "core1/exp_mu/Mram_RAM148_RAMD" BEL "core1/exp_mu/Mram_RAM15_RAMA" BEL
-        "core1/exp_mu/Mram_RAM15_RAMB" BEL "core1/exp_mu/Mram_RAM15_RAMC" BEL
-        "core1/exp_mu/Mram_RAM15_RAMD" BEL "core1/exp_mu/Mram_RAM16_RAMA" BEL
-        "core1/exp_mu/Mram_RAM16_RAMB" BEL "core1/exp_mu/Mram_RAM16_RAMC" BEL
-        "core1/exp_mu/Mram_RAM16_RAMD" BEL "core1/exp_mu/Mram_RAM17_RAMA" BEL
-        "core1/exp_mu/Mram_RAM17_RAMB" BEL "core1/exp_mu/Mram_RAM17_RAMC" BEL
-        "core1/exp_mu/Mram_RAM17_RAMD" BEL "core1/exp_mu/Mram_RAM18_RAMA" BEL
-        "core1/exp_mu/Mram_RAM18_RAMB" BEL "core1/exp_mu/Mram_RAM18_RAMC" BEL
-        "core1/exp_mu/Mram_RAM18_RAMD" BEL "core1/exp_mu/Mram_RAM19_RAMA" BEL
-        "core1/exp_mu/Mram_RAM19_RAMB" BEL "core1/exp_mu/Mram_RAM19_RAMC" BEL
-        "core1/exp_mu/Mram_RAM19_RAMD" BEL "core1/exp_sigma/Mram_RAM01_RAMA"
-        BEL "core1/exp_sigma/Mram_RAM01_RAMB" BEL
+        BEL "core1/exp_mu/Mram_RAM14_RAMD" BEL "core1/exp_mu/Mram_RAM15_RAMA"
+        BEL "core1/exp_mu/Mram_RAM15_RAMB" BEL "core1/exp_mu/Mram_RAM15_RAMC"
+        BEL "core1/exp_mu/Mram_RAM15_RAMD" BEL
+        "core1/exp_sigma/Mram_RAM01_RAMA" BEL
+        "core1/exp_sigma/Mram_RAM01_RAMB" BEL
         "core1/exp_sigma/Mram_RAM01_RAMC" BEL
         "core1/exp_sigma/Mram_RAM01_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM010_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM010_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM010_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM010_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM011_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM011_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM011_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM011_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM012_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM012_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM012_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM012_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM013_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM013_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM013_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM013_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM014_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM014_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM014_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM014_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM015_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM015_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM015_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM015_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM016_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM016_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM016_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM016_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM017_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM017_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM017_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM017_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM018_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM018_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM018_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM018_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM019_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM019_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM019_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM019_RAMD" BEL
         "core1/exp_sigma/Mram_RAM02_RAMA" BEL
         "core1/exp_sigma/Mram_RAM02_RAMB" BEL
         "core1/exp_sigma/Mram_RAM02_RAMC" BEL
         "core1/exp_sigma/Mram_RAM02_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM020_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM020_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM020_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM020_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM021_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM021_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM021_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM021_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM022_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM022_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM022_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM022_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM023_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM023_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM023_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM023_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM024_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM024_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM024_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM024_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM025_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM025_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM025_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM025_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM026_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM026_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM026_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM026_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM027_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM027_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM027_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM027_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM028_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM028_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM028_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM028_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM029_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM029_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM029_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM029_RAMD" BEL
         "core1/exp_sigma/Mram_RAM03_RAMA" BEL
         "core1/exp_sigma/Mram_RAM03_RAMB" BEL
         "core1/exp_sigma/Mram_RAM03_RAMC" BEL
         "core1/exp_sigma/Mram_RAM03_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM030_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM030_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM030_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM030_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM031_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM031_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM031_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM031_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM032_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM032_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM032_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM032_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM033_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM033_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM033_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM033_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM034_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM034_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM034_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM034_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM035_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM035_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM035_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM035_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM036_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM036_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM036_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM036_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM037_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM037_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM037_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM037_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM038_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM038_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM038_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM038_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM039_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM039_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM039_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM039_RAMD" BEL
         "core1/exp_sigma/Mram_RAM04_RAMA" BEL
         "core1/exp_sigma/Mram_RAM04_RAMB" BEL
         "core1/exp_sigma/Mram_RAM04_RAMC" BEL
         "core1/exp_sigma/Mram_RAM04_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM040_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM040_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM040_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM040_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM041_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM041_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM041_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM041_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM042_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM042_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM042_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM042_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM043_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM043_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM043_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM043_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM044_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM044_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM044_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM044_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM045_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM045_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM045_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM045_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM046_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM046_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM046_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM046_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM047_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM047_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM047_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM047_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM048_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM048_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM048_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM048_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM049_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM049_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM049_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM049_RAMD" BEL
         "core1/exp_sigma/Mram_RAM05_RAMA" BEL
         "core1/exp_sigma/Mram_RAM05_RAMB" BEL
         "core1/exp_sigma/Mram_RAM05_RAMC" BEL
         "core1/exp_sigma/Mram_RAM05_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM050_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM050_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM050_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM050_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM051_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM051_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM051_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM051_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM052_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM052_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM052_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM052_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM053_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM053_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM053_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM053_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM054_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM054_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM054_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM054_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM055_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM055_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM055_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM055_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM056_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM056_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM056_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM056_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM057_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM057_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM057_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM057_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM058_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM058_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM058_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM058_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM059_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM059_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM059_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM059_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM06_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM06_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM06_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM06_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM060_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM060_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM060_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM060_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM061_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM061_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM061_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM061_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM062_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM062_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM062_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM062_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM063_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM063_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM063_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM063_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM064_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM064_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM064_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM064_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM065_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM065_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM065_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM065_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM066_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM066_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM066_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM066_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM067_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM067_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM067_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM067_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM068_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM068_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM068_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM068_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM069_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM069_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM069_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM069_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM07_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM07_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM07_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM07_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM070_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM070_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM070_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM070_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM071_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM071_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM071_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM071_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM072_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM072_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM072_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM072_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM073_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM073_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM073_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM073_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM074_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM074_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM074_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM074_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM075_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM075_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM075_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM075_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM076_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM076_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM076_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM076_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM077_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM077_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM077_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM077_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM078_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM078_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM078_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM078_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM079_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM079_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM079_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM079_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM08_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM08_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM08_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM08_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM080_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM080_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM080_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM080_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM081_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM081_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM081_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM081_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM082_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM082_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM082_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM082_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM083_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM083_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM083_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM083_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM084_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM084_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM084_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM084_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM085_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM085_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM085_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM085_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM086_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM086_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM086_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM086_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM087_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM087_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM087_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM087_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM088_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM088_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM088_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM088_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM089_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM089_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM089_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM089_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM09_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM09_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM09_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM09_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM090_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM090_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM090_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM090_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM091_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM091_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM091_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM091_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM092_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM092_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM092_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM092_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM093_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM093_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM093_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM093_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM094_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM094_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM094_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM094_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM095_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM095_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM095_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM095_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM096_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM096_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM096_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM096_RAMD" BEL
         "core1/exp_sigma/Mram_RAM11_RAMA" BEL
         "core1/exp_sigma/Mram_RAM11_RAMB" BEL
         "core1/exp_sigma/Mram_RAM11_RAMC" BEL
         "core1/exp_sigma/Mram_RAM11_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM110_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM110_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM110_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM110_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM111_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM111_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM111_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM111_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM112_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM112_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM112_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM112_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM113_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM113_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM113_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM113_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM114_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM114_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM114_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM114_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM115_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM115_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM115_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM115_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM116_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM116_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM116_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM116_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM117_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM117_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM117_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM117_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM118_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM118_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM118_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM118_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM119_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM119_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM119_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM119_RAMD" BEL
         "core1/exp_sigma/Mram_RAM12_RAMA" BEL
         "core1/exp_sigma/Mram_RAM12_RAMB" BEL
         "core1/exp_sigma/Mram_RAM12_RAMC" BEL
         "core1/exp_sigma/Mram_RAM12_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM120_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM120_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM120_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM120_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM121_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM121_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM121_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM121_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM122_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM122_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM122_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM122_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM123_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM123_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM123_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM123_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM124_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM124_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM124_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM124_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM125_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM125_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM125_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM125_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM126_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM126_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM126_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM126_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM127_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM127_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM127_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM127_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM128_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM128_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM128_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM128_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM129_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM129_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM129_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM129_RAMD" BEL
         "core1/exp_sigma/Mram_RAM13_RAMA" BEL
         "core1/exp_sigma/Mram_RAM13_RAMB" BEL
         "core1/exp_sigma/Mram_RAM13_RAMC" BEL
         "core1/exp_sigma/Mram_RAM13_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM130_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM130_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM130_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM130_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM131_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM131_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM131_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM131_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM132_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM132_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM132_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM132_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM133_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM133_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM133_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM133_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM134_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM134_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM134_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM134_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM135_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM135_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM135_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM135_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM136_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM136_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM136_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM136_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM137_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM137_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM137_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM137_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM138_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM138_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM138_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM138_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM139_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM139_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM139_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM139_RAMD" BEL
         "core1/exp_sigma/Mram_RAM14_RAMA" BEL
         "core1/exp_sigma/Mram_RAM14_RAMB" BEL
         "core1/exp_sigma/Mram_RAM14_RAMC" BEL
         "core1/exp_sigma/Mram_RAM14_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM140_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM140_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM140_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM140_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM141_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM141_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM141_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM141_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM142_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM142_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM142_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM142_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM143_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM143_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM143_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM143_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM144_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM144_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM144_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM144_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM145_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM145_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM145_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM145_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM146_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM146_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM146_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM146_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM147_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM147_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM147_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM147_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM148_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM148_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM148_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM148_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM149_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM149_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM149_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM149_RAMD" BEL
         "core1/exp_sigma/Mram_RAM15_RAMA" BEL
         "core1/exp_sigma/Mram_RAM15_RAMB" BEL
         "core1/exp_sigma/Mram_RAM15_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM15_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM150_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM150_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM150_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM150_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM151_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM151_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM151_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM151_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM152_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM152_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM152_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM152_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM153_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM153_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM153_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM153_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM154_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM154_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM154_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM154_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM155_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM155_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM155_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM155_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM156_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM156_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM156_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM156_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM157_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM157_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM157_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM157_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM158_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM158_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM158_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM158_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM159_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM159_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM159_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM159_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM16_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM16_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM16_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM16_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM160_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM160_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM160_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM160_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM161_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM161_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM161_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM161_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM162_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM162_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM162_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM162_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM163_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM163_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM163_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM163_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM164_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM164_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM164_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM164_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM165_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM165_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM165_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM165_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM166_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM166_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM166_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM166_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM167_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM167_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM167_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM167_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM168_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM168_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM168_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM168_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM169_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM169_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM169_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM169_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM17_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM17_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM17_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM17_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM170_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM170_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM170_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM170_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM171_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM171_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM171_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM171_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM172_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM172_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM172_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM172_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM173_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM173_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM173_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM173_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM174_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM174_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM174_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM174_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM175_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM175_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM175_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM175_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM176_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM176_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM176_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM176_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM177_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM177_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM177_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM177_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM178_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM178_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM178_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM178_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM179_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM179_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM179_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM179_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM18_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM18_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM18_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM18_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM180_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM180_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM180_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM180_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM181_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM181_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM181_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM181_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM182_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM182_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM182_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM182_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM183_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM183_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM183_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM183_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM184_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM184_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM184_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM184_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM185_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM185_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM185_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM185_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM186_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM186_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM186_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM186_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM187_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM187_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM187_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM187_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM188_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM188_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM188_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM188_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM189_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM189_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM189_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM189_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM19_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM19_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM19_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM19_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM190_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM190_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM190_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM190_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM191_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM191_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM191_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM191_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM192_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM192_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM192_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM192_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM193_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM193_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM193_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM193_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM194_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM194_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM194_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM194_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM195_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM195_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM195_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM195_RAMD" BEL
-        "core1/exp_sigma/Mram_RAM196_RAMA" BEL
-        "core1/exp_sigma/Mram_RAM196_RAMB" BEL
-        "core1/exp_sigma/Mram_RAM196_RAMC" BEL
-        "core1/exp_sigma/Mram_RAM196_RAMD" PIN
+        "core1/exp_sigma/Mram_RAM15_RAMD" PIN
         "calc_exp_mu/exp/PolynomialEvaluator/Product_1/Mmult_DSP_bh72_ch0_01_pins<110>"
         PIN
         "calc_exp_mu/exp/PolynomialEvaluator/Product_2/Mmult_DSP_bh100_ch0_01_pins<110>"
         PIN
-        "calc_exp_sigma/exp_f/PolynomialEvaluator/Product_1/Mmult_DSP_bh9_ch0_01_pins<110>"
+        "calc_exp_sigma/exp_f/PolynomialEvaluator/Product_1/Mmult_DSP_bh72_ch0_01_pins<110>"
         PIN
-        "calc_exp_sigma/exp_f/PolynomialEvaluator/Product_2/Mmult_DSP_bh37_ch0_01_pins<110>";
+        "calc_exp_sigma/exp_f/PolynomialEvaluator/Product_2/Mmult_DSP_bh100_ch0_01_pins<110>";
 TS_CLK = PERIOD TIMEGRP "CLK" 20 ns HIGH 50%;
 SCHEMATIC END;
 
