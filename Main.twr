@@ -2,12 +2,12 @@
 Release 14.4 Trace  (nt)
 Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 
-C:\Xilinx\14.4\ISE_DS\ISE\bin\nt\unwrapped\trce.exe -intstyle ise -v 3 -s 1 -n
-3 -fastpaths -xml Main.twx Main.ncd -o Main.twr Main.pcf -ucf Main.ucf
+C:\Xilinx\14.4\ISE_DS\ISE\bin\nt\unwrapped\trce.exe -intstyle ise -v 3 -s 3 -n
+3 -fastpaths -xml main.twx main.ncd -o main.twr main.pcf -ucf Main.ucf
 
-Design file:              Main.ncd
-Physical constraint file: Main.pcf
-Device,package,speed:     xc6vlx240t,ff1156,C,-1 (PRODUCTION 1.17 2012-12-04, STEPPING level 0)
+Design file:              main.ncd
+Physical constraint file: main.pcf
+Device,package,speed:     xc6slx45,csg324,C,-3 (PRODUCTION 1.23 2012-12-04)
 Report level:             verbose report
 
 Environment Variable      Effect 
@@ -25,24 +25,24 @@ INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on
    please see the device datasheet.
 
 ================================================================================
-Timing constraint: TS_CLK = PERIOD TIMEGRP "CLK" 5 ns HIGH 50%;
+Timing constraint: TS_CLK = PERIOD TIMEGRP "CLK" 20 ns HIGH 50%;
 For more information, see Period Analysis in the Timing Closure User Guide (UG612).
 
- 33755 paths analyzed, 11545 endpoints analyzed, 0 failing endpoints
+ 62352 paths analyzed, 11953 endpoints analyzed, 0 failing endpoints
  0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
- Minimum period is   4.959ns.
+ Minimum period is  12.664ns.
 --------------------------------------------------------------------------------
 
-Paths for end point core1/exp_sigma/readData_1 (SLICE_X62Y103.D2), 123 paths
+Paths for end point calc_exp_mu/exp/PolynomialEvaluator/Product_2/Mmult_DSP_bh100_ch0_01 (DSP48_X1Y1.C36), 158 paths
 --------------------------------------------------------------------------------
-Slack (setup path):     0.041ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               core1/path/Mram_ROM (RAM)
-  Destination:          core1/exp_sigma/readData_1 (FF)
-  Requirement:          5.000ns
-  Data Path Delay:      4.767ns (Levels of Logic = 3)
-  Clock Path Skew:      -0.157ns (1.027 - 1.184)
-  Source Clock:         CLK_BUFGP rising at 0.000ns
-  Destination Clock:    CLK_BUFGP rising at 5.000ns
+Slack (setup path):     7.336ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               calc_exp_mu/exp/PolynomialEvaluator/Product_1/Mmult_DSP_bh72_ch0_01 (DSP)
+  Destination:          calc_exp_mu/exp/PolynomialEvaluator/Product_2/Mmult_DSP_bh100_ch0_01 (DSP)
+  Requirement:          20.000ns
+  Data Path Delay:      12.583ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.046ns (0.479 - 0.525)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
   Clock Uncertainty:    0.035ns
 
   Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
@@ -51,37 +51,38 @@ Slack (setup path):     0.041ns (requirement - (data path - clock path skew + un
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: core1/path/Mram_ROM to core1/exp_sigma/readData_1
+  Maximum Data Path at Slow Process Corner: calc_exp_mu/exp/PolynomialEvaluator/Product_1/Mmult_DSP_bh72_ch0_01 to calc_exp_mu/exp/PolynomialEvaluator/Product_2/Mmult_DSP_bh100_ch0_01
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    RAMB18_X3Y40.DO1     Trcko_DOA_REG         0.742   core1/path/Mram_ROM
-                                                       core1/path/Mram_ROM
-    SLICE_X48Y97.B2      net (fanout=576)      1.641   core1/SigmaReadAddress<1>
-    SLICE_X48Y97.B       Tilo                  0.068   core1/exp_sigma/Mram_RAM016_RAMD_O
-                                                       core1/exp_sigma/Mram_RAM016_RAMB
-    SLICE_X49Y98.A2      net (fanout=1)        0.584   N704
-    SLICE_X49Y98.BMUX    Topab                 0.395   core1/exp_sigma/_n0016<1>
-                                                       inst_LPM_MUX19_4
-                                                       inst_LPM_MUX19_3_f7
-                                                       inst_LPM_MUX19_2_f8
-    SLICE_X62Y103.D2     net (fanout=1)        1.295   core1/exp_sigma/_n0016<1>
-    SLICE_X62Y103.CLK    Tas                   0.042   core1/exp_sigma/readData<2>
-                                                       core1/exp_sigma/Mmux_readAddr[9]_readAddr[9]_mux_5_OUT101
-                                                       core1/exp_sigma/readData_1
+    DSP48_X0Y1.P20       Tdspcko_P_PREG        1.200   calc_exp_mu/exp/PolynomialEvaluator/Product_1/Mmult_DSP_bh72_ch0_01
+                                                       calc_exp_mu/exp/PolynomialEvaluator/Product_1/Mmult_DSP_bh72_ch0_01
+    SLICE_X9Y5.A4        net (fanout=3)        0.905   calc_exp_mu/exp/PolynomialEvaluator/Product_1/Adder_final72_0/Madd_R_lut<6>
+    SLICE_X9Y5.A         Tilo                  0.259   calc_exp_mu/exp/PolynomialEvaluator/piPT1<4>
+                                                       calc_exp_mu/exp/PolynomialEvaluator/piPT1<4>1
+    SLICE_X48Y4.B4       net (fanout=10)       2.419   calc_exp_mu/exp/PolynomialEvaluator/piPT1<4>
+    SLICE_X48Y4.CMUX     Topbc                 0.526   calc_exp_mu/exp/PolynomialEvaluator/Product_2/heap_bh100_w6_0_d1
+                                                       calc_exp_mu/exp/PolynomialEvaluator/Sum1/Madd_R_Madd_lut<5>
+                                                       calc_exp_mu/exp/PolynomialEvaluator/Sum1/Madd_R_Madd_cy<7>
+    DSP48_X1Y0.A16       net (fanout=1)        0.597   calc_exp_mu/exp/PolynomialEvaluator/sigmaP1<6>
+    DSP48_X1Y0.P47       Tdspdo_A_P            3.346   calc_exp_mu/exp/PolynomialEvaluator/Product_2/Mmult_DSP_bh100_ch0_0
+                                                       calc_exp_mu/exp/PolynomialEvaluator/Product_2/Mmult_DSP_bh100_ch0_0
+    DSP48_X1Y1.C36       net (fanout=18)       1.131   calc_exp_mu/exp/PolynomialEvaluator/Product_2/Mmult_DSP_bh100_ch0_0_P47_to_Product_2/Mmult_DSP_bh100_ch0_01
+    DSP48_X1Y1.CLK       Tdspdck_C_PREG        2.200   calc_exp_mu/exp/PolynomialEvaluator/Product_2/Mmult_DSP_bh100_ch0_01
+                                                       calc_exp_mu/exp/PolynomialEvaluator/Product_2/Mmult_DSP_bh100_ch0_01
     -------------------------------------------------  ---------------------------
-    Total                                      4.767ns (1.247ns logic, 3.520ns route)
-                                                       (26.2% logic, 73.8% route)
+    Total                                     12.583ns (7.531ns logic, 5.052ns route)
+                                                       (59.9% logic, 40.1% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     0.099ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               core1/path/Mram_ROM (RAM)
-  Destination:          core1/exp_sigma/readData_1 (FF)
-  Requirement:          5.000ns
-  Data Path Delay:      4.709ns (Levels of Logic = 3)
-  Clock Path Skew:      -0.157ns (1.027 - 1.184)
-  Source Clock:         CLK_BUFGP rising at 0.000ns
-  Destination Clock:    CLK_BUFGP rising at 5.000ns
+Slack (setup path):     7.372ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               calc_exp_mu/exp/PolynomialEvaluator/Product_1/Mmult_DSP_bh72_ch0_01 (DSP)
+  Destination:          calc_exp_mu/exp/PolynomialEvaluator/Product_2/Mmult_DSP_bh100_ch0_01 (DSP)
+  Requirement:          20.000ns
+  Data Path Delay:      12.547ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.046ns (0.479 - 0.525)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
   Clock Uncertainty:    0.035ns
 
   Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
@@ -90,37 +91,38 @@ Slack (setup path):     0.099ns (requirement - (data path - clock path skew + un
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: core1/path/Mram_ROM to core1/exp_sigma/readData_1
+  Maximum Data Path at Slow Process Corner: calc_exp_mu/exp/PolynomialEvaluator/Product_1/Mmult_DSP_bh72_ch0_01 to calc_exp_mu/exp/PolynomialEvaluator/Product_2/Mmult_DSP_bh100_ch0_01
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    RAMB18_X3Y40.DO1     Trcko_DOA_REG         0.742   core1/path/Mram_ROM
-                                                       core1/path/Mram_ROM
-    SLICE_X48Y100.B2     net (fanout=576)      1.354   core1/SigmaReadAddress<1>
-    SLICE_X48Y100.B      Tilo                  0.068   core1/exp_sigma/Mram_RAM012_RAMD_O
-                                                       core1/exp_sigma/Mram_RAM012_RAMB
-    SLICE_X49Y98.B4      net (fanout=1)        0.819   N680
-    SLICE_X49Y98.BMUX    Topbb                 0.389   core1/exp_sigma/_n0016<1>
-                                                       inst_LPM_MUX19_5
-                                                       inst_LPM_MUX19_3_f7
-                                                       inst_LPM_MUX19_2_f8
-    SLICE_X62Y103.D2     net (fanout=1)        1.295   core1/exp_sigma/_n0016<1>
-    SLICE_X62Y103.CLK    Tas                   0.042   core1/exp_sigma/readData<2>
-                                                       core1/exp_sigma/Mmux_readAddr[9]_readAddr[9]_mux_5_OUT101
-                                                       core1/exp_sigma/readData_1
+    DSP48_X0Y1.P20       Tdspcko_P_PREG        1.200   calc_exp_mu/exp/PolynomialEvaluator/Product_1/Mmult_DSP_bh72_ch0_01
+                                                       calc_exp_mu/exp/PolynomialEvaluator/Product_1/Mmult_DSP_bh72_ch0_01
+    SLICE_X9Y5.A4        net (fanout=3)        0.905   calc_exp_mu/exp/PolynomialEvaluator/Product_1/Adder_final72_0/Madd_R_lut<6>
+    SLICE_X9Y5.A         Tilo                  0.259   calc_exp_mu/exp/PolynomialEvaluator/piPT1<4>
+                                                       calc_exp_mu/exp/PolynomialEvaluator/piPT1<4>1
+    SLICE_X48Y4.A5       net (fanout=10)       2.372   calc_exp_mu/exp/PolynomialEvaluator/piPT1<4>
+    SLICE_X48Y4.CMUX     Topac                 0.537   calc_exp_mu/exp/PolynomialEvaluator/Product_2/heap_bh100_w6_0_d1
+                                                       calc_exp_mu/exp/PolynomialEvaluator/Sum1/Madd_R_Madd_lut<4>
+                                                       calc_exp_mu/exp/PolynomialEvaluator/Sum1/Madd_R_Madd_cy<7>
+    DSP48_X1Y0.A16       net (fanout=1)        0.597   calc_exp_mu/exp/PolynomialEvaluator/sigmaP1<6>
+    DSP48_X1Y0.P47       Tdspdo_A_P            3.346   calc_exp_mu/exp/PolynomialEvaluator/Product_2/Mmult_DSP_bh100_ch0_0
+                                                       calc_exp_mu/exp/PolynomialEvaluator/Product_2/Mmult_DSP_bh100_ch0_0
+    DSP48_X1Y1.C36       net (fanout=18)       1.131   calc_exp_mu/exp/PolynomialEvaluator/Product_2/Mmult_DSP_bh100_ch0_0_P47_to_Product_2/Mmult_DSP_bh100_ch0_01
+    DSP48_X1Y1.CLK       Tdspdck_C_PREG        2.200   calc_exp_mu/exp/PolynomialEvaluator/Product_2/Mmult_DSP_bh100_ch0_01
+                                                       calc_exp_mu/exp/PolynomialEvaluator/Product_2/Mmult_DSP_bh100_ch0_01
     -------------------------------------------------  ---------------------------
-    Total                                      4.709ns (1.241ns logic, 3.468ns route)
-                                                       (26.4% logic, 73.6% route)
+    Total                                     12.547ns (7.542ns logic, 5.005ns route)
+                                                       (60.1% logic, 39.9% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     0.109ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               core1/path/Mram_ROM (RAM)
-  Destination:          core1/exp_sigma/readData_1 (FF)
-  Requirement:          5.000ns
-  Data Path Delay:      4.699ns (Levels of Logic = 3)
-  Clock Path Skew:      -0.157ns (1.027 - 1.184)
-  Source Clock:         CLK_BUFGP rising at 0.000ns
-  Destination Clock:    CLK_BUFGP rising at 5.000ns
+Slack (setup path):     7.380ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               calc_exp_mu/exp/PolynomialEvaluator/Product_1/Mmult_DSP_bh72_ch0_01 (DSP)
+  Destination:          calc_exp_mu/exp/PolynomialEvaluator/Product_2/Mmult_DSP_bh100_ch0_01 (DSP)
+  Requirement:          20.000ns
+  Data Path Delay:      12.539ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.046ns (0.479 - 0.525)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
   Clock Uncertainty:    0.035ns
 
   Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
@@ -129,40 +131,41 @@ Slack (setup path):     0.109ns (requirement - (data path - clock path skew + un
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: core1/path/Mram_ROM to core1/exp_sigma/readData_1
+  Maximum Data Path at Slow Process Corner: calc_exp_mu/exp/PolynomialEvaluator/Product_1/Mmult_DSP_bh72_ch0_01 to calc_exp_mu/exp/PolynomialEvaluator/Product_2/Mmult_DSP_bh100_ch0_01
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    RAMB18_X3Y40.DO1     Trcko_DOA_REG         0.742   core1/path/Mram_ROM
-                                                       core1/path/Mram_ROM
-    SLICE_X46Y97.B2      net (fanout=576)      1.619   core1/SigmaReadAddress<1>
-    SLICE_X46Y97.B       Tilo                  0.068   core1/exp_sigma/Mram_RAM014_RAMD_O
-                                                       core1/exp_sigma/Mram_RAM014_RAMB
-    SLICE_X49Y98.A4      net (fanout=1)        0.538   N692
-    SLICE_X49Y98.BMUX    Topab                 0.395   core1/exp_sigma/_n0016<1>
-                                                       inst_LPM_MUX19_4
-                                                       inst_LPM_MUX19_3_f7
-                                                       inst_LPM_MUX19_2_f8
-    SLICE_X62Y103.D2     net (fanout=1)        1.295   core1/exp_sigma/_n0016<1>
-    SLICE_X62Y103.CLK    Tas                   0.042   core1/exp_sigma/readData<2>
-                                                       core1/exp_sigma/Mmux_readAddr[9]_readAddr[9]_mux_5_OUT101
-                                                       core1/exp_sigma/readData_1
+    DSP48_X0Y1.P21       Tdspcko_P_PREG        1.200   calc_exp_mu/exp/PolynomialEvaluator/Product_1/Mmult_DSP_bh72_ch0_01
+                                                       calc_exp_mu/exp/PolynomialEvaluator/Product_1/Mmult_DSP_bh72_ch0_01
+    SLICE_X9Y5.A2        net (fanout=2)        0.861   calc_exp_mu/exp/PolynomialEvaluator/Product_1/Adder_final72_0/Madd_R_lut<7>
+    SLICE_X9Y5.A         Tilo                  0.259   calc_exp_mu/exp/PolynomialEvaluator/piPT1<4>
+                                                       calc_exp_mu/exp/PolynomialEvaluator/piPT1<4>1
+    SLICE_X48Y4.B4       net (fanout=10)       2.419   calc_exp_mu/exp/PolynomialEvaluator/piPT1<4>
+    SLICE_X48Y4.CMUX     Topbc                 0.526   calc_exp_mu/exp/PolynomialEvaluator/Product_2/heap_bh100_w6_0_d1
+                                                       calc_exp_mu/exp/PolynomialEvaluator/Sum1/Madd_R_Madd_lut<5>
+                                                       calc_exp_mu/exp/PolynomialEvaluator/Sum1/Madd_R_Madd_cy<7>
+    DSP48_X1Y0.A16       net (fanout=1)        0.597   calc_exp_mu/exp/PolynomialEvaluator/sigmaP1<6>
+    DSP48_X1Y0.P47       Tdspdo_A_P            3.346   calc_exp_mu/exp/PolynomialEvaluator/Product_2/Mmult_DSP_bh100_ch0_0
+                                                       calc_exp_mu/exp/PolynomialEvaluator/Product_2/Mmult_DSP_bh100_ch0_0
+    DSP48_X1Y1.C36       net (fanout=18)       1.131   calc_exp_mu/exp/PolynomialEvaluator/Product_2/Mmult_DSP_bh100_ch0_0_P47_to_Product_2/Mmult_DSP_bh100_ch0_01
+    DSP48_X1Y1.CLK       Tdspdck_C_PREG        2.200   calc_exp_mu/exp/PolynomialEvaluator/Product_2/Mmult_DSP_bh100_ch0_01
+                                                       calc_exp_mu/exp/PolynomialEvaluator/Product_2/Mmult_DSP_bh100_ch0_01
     -------------------------------------------------  ---------------------------
-    Total                                      4.699ns (1.247ns logic, 3.452ns route)
-                                                       (26.5% logic, 73.5% route)
+    Total                                     12.539ns (7.531ns logic, 5.008ns route)
+                                                       (60.1% logic, 39.9% route)
 
 --------------------------------------------------------------------------------
 
-Paths for end point core1/exp_sigma/readData_14 (SLICE_X62Y103.C4), 123 paths
+Paths for end point calc_exp_mu/exp/PolynomialEvaluator/Product_2/Mmult_DSP_bh100_ch0_01 (DSP48_X1Y1.C13), 158 paths
 --------------------------------------------------------------------------------
-Slack (setup path):     0.046ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               core1/path/Mram_ROM (RAM)
-  Destination:          core1/exp_sigma/readData_14 (FF)
-  Requirement:          5.000ns
-  Data Path Delay:      4.762ns (Levels of Logic = 3)
-  Clock Path Skew:      -0.157ns (1.027 - 1.184)
-  Source Clock:         CLK_BUFGP rising at 0.000ns
-  Destination Clock:    CLK_BUFGP rising at 5.000ns
+Slack (setup path):     7.364ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               calc_exp_mu/exp/PolynomialEvaluator/Product_1/Mmult_DSP_bh72_ch0_01 (DSP)
+  Destination:          calc_exp_mu/exp/PolynomialEvaluator/Product_2/Mmult_DSP_bh100_ch0_01 (DSP)
+  Requirement:          20.000ns
+  Data Path Delay:      12.555ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.046ns (0.479 - 0.525)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
   Clock Uncertainty:    0.035ns
 
   Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
@@ -171,37 +174,38 @@ Slack (setup path):     0.046ns (requirement - (data path - clock path skew + un
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: core1/path/Mram_ROM to core1/exp_sigma/readData_14
+  Maximum Data Path at Slow Process Corner: calc_exp_mu/exp/PolynomialEvaluator/Product_1/Mmult_DSP_bh72_ch0_01 to calc_exp_mu/exp/PolynomialEvaluator/Product_2/Mmult_DSP_bh100_ch0_01
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    RAMB18_X3Y40.DO3     Trcko_DOA_REG         0.742   core1/path/Mram_ROM
-                                                       core1/path/Mram_ROM
-    SLICE_X64Y112.C4     net (fanout=576)      2.059   core1/SigmaReadAddress<3>
-    SLICE_X64Y112.C      Tilo                  0.068   core1/exp_sigma/Mram_RAM069_RAMD_O
-                                                       core1/exp_sigma/Mram_RAM069_RAMC
-    SLICE_X61Y108.C6     net (fanout=1)        0.729   N1023
-    SLICE_X61Y108.BMUX   Topcb                 0.412   core1/exp_sigma/_n0016<14>
-                                                       inst_LPM_MUX32_51
-                                                       inst_LPM_MUX32_4_f7
-                                                       inst_LPM_MUX32_2_f8
-    SLICE_X62Y103.C4     net (fanout=1)        0.679   core1/exp_sigma/_n0016<14>
-    SLICE_X62Y103.CLK    Tas                   0.073   core1/exp_sigma/readData<2>
-                                                       core1/exp_sigma/Mmux_readAddr[9]_readAddr[9]_mux_5_OUT61
-                                                       core1/exp_sigma/readData_14
+    DSP48_X0Y1.P20       Tdspcko_P_PREG        1.200   calc_exp_mu/exp/PolynomialEvaluator/Product_1/Mmult_DSP_bh72_ch0_01
+                                                       calc_exp_mu/exp/PolynomialEvaluator/Product_1/Mmult_DSP_bh72_ch0_01
+    SLICE_X9Y5.A4        net (fanout=3)        0.905   calc_exp_mu/exp/PolynomialEvaluator/Product_1/Adder_final72_0/Madd_R_lut<6>
+    SLICE_X9Y5.A         Tilo                  0.259   calc_exp_mu/exp/PolynomialEvaluator/piPT1<4>
+                                                       calc_exp_mu/exp/PolynomialEvaluator/piPT1<4>1
+    SLICE_X48Y4.B4       net (fanout=10)       2.419   calc_exp_mu/exp/PolynomialEvaluator/piPT1<4>
+    SLICE_X48Y4.CMUX     Topbc                 0.526   calc_exp_mu/exp/PolynomialEvaluator/Product_2/heap_bh100_w6_0_d1
+                                                       calc_exp_mu/exp/PolynomialEvaluator/Sum1/Madd_R_Madd_lut<5>
+                                                       calc_exp_mu/exp/PolynomialEvaluator/Sum1/Madd_R_Madd_cy<7>
+    DSP48_X1Y0.A16       net (fanout=1)        0.597   calc_exp_mu/exp/PolynomialEvaluator/sigmaP1<6>
+    DSP48_X1Y0.P30       Tdspdo_A_P            3.346   calc_exp_mu/exp/PolynomialEvaluator/Product_2/Mmult_DSP_bh100_ch0_0
+                                                       calc_exp_mu/exp/PolynomialEvaluator/Product_2/Mmult_DSP_bh100_ch0_0
+    DSP48_X1Y1.C13       net (fanout=1)        1.103   calc_exp_mu/exp/PolynomialEvaluator/Product_2/Mmult_DSP_bh100_ch0_0_P30_to_Product_2/Mmult_DSP_bh100_ch0_01
+    DSP48_X1Y1.CLK       Tdspdck_C_PREG        2.200   calc_exp_mu/exp/PolynomialEvaluator/Product_2/Mmult_DSP_bh100_ch0_01
+                                                       calc_exp_mu/exp/PolynomialEvaluator/Product_2/Mmult_DSP_bh100_ch0_01
     -------------------------------------------------  ---------------------------
-    Total                                      4.762ns (1.295ns logic, 3.467ns route)
-                                                       (27.2% logic, 72.8% route)
+    Total                                     12.555ns (7.531ns logic, 5.024ns route)
+                                                       (60.0% logic, 40.0% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     0.109ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               core1/path/Mram_ROM (RAM)
-  Destination:          core1/exp_sigma/readData_14 (FF)
-  Requirement:          5.000ns
-  Data Path Delay:      4.699ns (Levels of Logic = 3)
-  Clock Path Skew:      -0.157ns (1.027 - 1.184)
-  Source Clock:         CLK_BUFGP rising at 0.000ns
-  Destination Clock:    CLK_BUFGP rising at 5.000ns
+Slack (setup path):     7.400ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               calc_exp_mu/exp/PolynomialEvaluator/Product_1/Mmult_DSP_bh72_ch0_01 (DSP)
+  Destination:          calc_exp_mu/exp/PolynomialEvaluator/Product_2/Mmult_DSP_bh100_ch0_01 (DSP)
+  Requirement:          20.000ns
+  Data Path Delay:      12.519ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.046ns (0.479 - 0.525)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
   Clock Uncertainty:    0.035ns
 
   Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
@@ -210,37 +214,38 @@ Slack (setup path):     0.109ns (requirement - (data path - clock path skew + un
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: core1/path/Mram_ROM to core1/exp_sigma/readData_14
+  Maximum Data Path at Slow Process Corner: calc_exp_mu/exp/PolynomialEvaluator/Product_1/Mmult_DSP_bh72_ch0_01 to calc_exp_mu/exp/PolynomialEvaluator/Product_2/Mmult_DSP_bh100_ch0_01
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    RAMB18_X3Y40.DO1     Trcko_DOA_REG         0.742   core1/path/Mram_ROM
-                                                       core1/path/Mram_ROM
-    SLICE_X68Y108.C2     net (fanout=576)      2.145   core1/SigmaReadAddress<1>
-    SLICE_X68Y108.C      Tilo                  0.068   core1/exp_sigma/Mram_RAM065_RAMD_O
-                                                       core1/exp_sigma/Mram_RAM065_RAMC
-    SLICE_X61Y108.D6     net (fanout=1)        0.584   N999
-    SLICE_X61Y108.BMUX   Topdb                 0.408   core1/exp_sigma/_n0016<14>
-                                                       inst_LPM_MUX32_6
-                                                       inst_LPM_MUX32_4_f7
-                                                       inst_LPM_MUX32_2_f8
-    SLICE_X62Y103.C4     net (fanout=1)        0.679   core1/exp_sigma/_n0016<14>
-    SLICE_X62Y103.CLK    Tas                   0.073   core1/exp_sigma/readData<2>
-                                                       core1/exp_sigma/Mmux_readAddr[9]_readAddr[9]_mux_5_OUT61
-                                                       core1/exp_sigma/readData_14
+    DSP48_X0Y1.P20       Tdspcko_P_PREG        1.200   calc_exp_mu/exp/PolynomialEvaluator/Product_1/Mmult_DSP_bh72_ch0_01
+                                                       calc_exp_mu/exp/PolynomialEvaluator/Product_1/Mmult_DSP_bh72_ch0_01
+    SLICE_X9Y5.A4        net (fanout=3)        0.905   calc_exp_mu/exp/PolynomialEvaluator/Product_1/Adder_final72_0/Madd_R_lut<6>
+    SLICE_X9Y5.A         Tilo                  0.259   calc_exp_mu/exp/PolynomialEvaluator/piPT1<4>
+                                                       calc_exp_mu/exp/PolynomialEvaluator/piPT1<4>1
+    SLICE_X48Y4.A5       net (fanout=10)       2.372   calc_exp_mu/exp/PolynomialEvaluator/piPT1<4>
+    SLICE_X48Y4.CMUX     Topac                 0.537   calc_exp_mu/exp/PolynomialEvaluator/Product_2/heap_bh100_w6_0_d1
+                                                       calc_exp_mu/exp/PolynomialEvaluator/Sum1/Madd_R_Madd_lut<4>
+                                                       calc_exp_mu/exp/PolynomialEvaluator/Sum1/Madd_R_Madd_cy<7>
+    DSP48_X1Y0.A16       net (fanout=1)        0.597   calc_exp_mu/exp/PolynomialEvaluator/sigmaP1<6>
+    DSP48_X1Y0.P30       Tdspdo_A_P            3.346   calc_exp_mu/exp/PolynomialEvaluator/Product_2/Mmult_DSP_bh100_ch0_0
+                                                       calc_exp_mu/exp/PolynomialEvaluator/Product_2/Mmult_DSP_bh100_ch0_0
+    DSP48_X1Y1.C13       net (fanout=1)        1.103   calc_exp_mu/exp/PolynomialEvaluator/Product_2/Mmult_DSP_bh100_ch0_0_P30_to_Product_2/Mmult_DSP_bh100_ch0_01
+    DSP48_X1Y1.CLK       Tdspdck_C_PREG        2.200   calc_exp_mu/exp/PolynomialEvaluator/Product_2/Mmult_DSP_bh100_ch0_01
+                                                       calc_exp_mu/exp/PolynomialEvaluator/Product_2/Mmult_DSP_bh100_ch0_01
     -------------------------------------------------  ---------------------------
-    Total                                      4.699ns (1.291ns logic, 3.408ns route)
-                                                       (27.5% logic, 72.5% route)
+    Total                                     12.519ns (7.542ns logic, 4.977ns route)
+                                                       (60.2% logic, 39.8% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     0.146ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               core1/path/Mram_ROM (RAM)
-  Destination:          core1/exp_sigma/readData_14 (FF)
-  Requirement:          5.000ns
-  Data Path Delay:      4.662ns (Levels of Logic = 3)
-  Clock Path Skew:      -0.157ns (1.027 - 1.184)
-  Source Clock:         CLK_BUFGP rising at 0.000ns
-  Destination Clock:    CLK_BUFGP rising at 5.000ns
+Slack (setup path):     7.408ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               calc_exp_mu/exp/PolynomialEvaluator/Product_1/Mmult_DSP_bh72_ch0_01 (DSP)
+  Destination:          calc_exp_mu/exp/PolynomialEvaluator/Product_2/Mmult_DSP_bh100_ch0_01 (DSP)
+  Requirement:          20.000ns
+  Data Path Delay:      12.511ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.046ns (0.479 - 0.525)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
   Clock Uncertainty:    0.035ns
 
   Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
@@ -249,40 +254,41 @@ Slack (setup path):     0.146ns (requirement - (data path - clock path skew + un
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: core1/path/Mram_ROM to core1/exp_sigma/readData_14
+  Maximum Data Path at Slow Process Corner: calc_exp_mu/exp/PolynomialEvaluator/Product_1/Mmult_DSP_bh72_ch0_01 to calc_exp_mu/exp/PolynomialEvaluator/Product_2/Mmult_DSP_bh100_ch0_01
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    RAMB18_X3Y40.DO2     Trcko_DOA_REG         0.742   core1/path/Mram_ROM
-                                                       core1/path/Mram_ROM
-    SLICE_X64Y112.C3     net (fanout=576)      1.959   core1/SigmaReadAddress<2>
-    SLICE_X64Y112.C      Tilo                  0.068   core1/exp_sigma/Mram_RAM069_RAMD_O
-                                                       core1/exp_sigma/Mram_RAM069_RAMC
-    SLICE_X61Y108.C6     net (fanout=1)        0.729   N1023
-    SLICE_X61Y108.BMUX   Topcb                 0.412   core1/exp_sigma/_n0016<14>
-                                                       inst_LPM_MUX32_51
-                                                       inst_LPM_MUX32_4_f7
-                                                       inst_LPM_MUX32_2_f8
-    SLICE_X62Y103.C4     net (fanout=1)        0.679   core1/exp_sigma/_n0016<14>
-    SLICE_X62Y103.CLK    Tas                   0.073   core1/exp_sigma/readData<2>
-                                                       core1/exp_sigma/Mmux_readAddr[9]_readAddr[9]_mux_5_OUT61
-                                                       core1/exp_sigma/readData_14
+    DSP48_X0Y1.P21       Tdspcko_P_PREG        1.200   calc_exp_mu/exp/PolynomialEvaluator/Product_1/Mmult_DSP_bh72_ch0_01
+                                                       calc_exp_mu/exp/PolynomialEvaluator/Product_1/Mmult_DSP_bh72_ch0_01
+    SLICE_X9Y5.A2        net (fanout=2)        0.861   calc_exp_mu/exp/PolynomialEvaluator/Product_1/Adder_final72_0/Madd_R_lut<7>
+    SLICE_X9Y5.A         Tilo                  0.259   calc_exp_mu/exp/PolynomialEvaluator/piPT1<4>
+                                                       calc_exp_mu/exp/PolynomialEvaluator/piPT1<4>1
+    SLICE_X48Y4.B4       net (fanout=10)       2.419   calc_exp_mu/exp/PolynomialEvaluator/piPT1<4>
+    SLICE_X48Y4.CMUX     Topbc                 0.526   calc_exp_mu/exp/PolynomialEvaluator/Product_2/heap_bh100_w6_0_d1
+                                                       calc_exp_mu/exp/PolynomialEvaluator/Sum1/Madd_R_Madd_lut<5>
+                                                       calc_exp_mu/exp/PolynomialEvaluator/Sum1/Madd_R_Madd_cy<7>
+    DSP48_X1Y0.A16       net (fanout=1)        0.597   calc_exp_mu/exp/PolynomialEvaluator/sigmaP1<6>
+    DSP48_X1Y0.P30       Tdspdo_A_P            3.346   calc_exp_mu/exp/PolynomialEvaluator/Product_2/Mmult_DSP_bh100_ch0_0
+                                                       calc_exp_mu/exp/PolynomialEvaluator/Product_2/Mmult_DSP_bh100_ch0_0
+    DSP48_X1Y1.C13       net (fanout=1)        1.103   calc_exp_mu/exp/PolynomialEvaluator/Product_2/Mmult_DSP_bh100_ch0_0_P30_to_Product_2/Mmult_DSP_bh100_ch0_01
+    DSP48_X1Y1.CLK       Tdspdck_C_PREG        2.200   calc_exp_mu/exp/PolynomialEvaluator/Product_2/Mmult_DSP_bh100_ch0_01
+                                                       calc_exp_mu/exp/PolynomialEvaluator/Product_2/Mmult_DSP_bh100_ch0_01
     -------------------------------------------------  ---------------------------
-    Total                                      4.662ns (1.295ns logic, 3.367ns route)
-                                                       (27.8% logic, 72.2% route)
+    Total                                     12.511ns (7.531ns logic, 4.980ns route)
+                                                       (60.2% logic, 39.8% route)
 
 --------------------------------------------------------------------------------
 
-Paths for end point core1/exp_sigma/readData_11 (SLICE_X63Y98.C1), 123 paths
+Paths for end point calc_exp_mu/exp/PolynomialEvaluator/Product_2/Mmult_DSP_bh100_ch0_01 (DSP48_X1Y1.C14), 158 paths
 --------------------------------------------------------------------------------
-Slack (setup path):     0.048ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               core1/path/Mram_ROM (RAM)
-  Destination:          core1/exp_sigma/readData_11 (FF)
-  Requirement:          5.000ns
-  Data Path Delay:      4.757ns (Levels of Logic = 3)
-  Clock Path Skew:      -0.160ns (1.024 - 1.184)
-  Source Clock:         CLK_BUFGP rising at 0.000ns
-  Destination Clock:    CLK_BUFGP rising at 5.000ns
+Slack (setup path):     7.428ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               calc_exp_mu/exp/PolynomialEvaluator/Product_1/Mmult_DSP_bh72_ch0_01 (DSP)
+  Destination:          calc_exp_mu/exp/PolynomialEvaluator/Product_2/Mmult_DSP_bh100_ch0_01 (DSP)
+  Requirement:          20.000ns
+  Data Path Delay:      12.491ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.046ns (0.479 - 0.525)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
   Clock Uncertainty:    0.035ns
 
   Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
@@ -291,37 +297,38 @@ Slack (setup path):     0.048ns (requirement - (data path - clock path skew + un
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: core1/path/Mram_ROM to core1/exp_sigma/readData_11
+  Maximum Data Path at Slow Process Corner: calc_exp_mu/exp/PolynomialEvaluator/Product_1/Mmult_DSP_bh72_ch0_01 to calc_exp_mu/exp/PolynomialEvaluator/Product_2/Mmult_DSP_bh100_ch0_01
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    RAMB18_X3Y40.DO3     Trcko_DOA_REG         0.742   core1/path/Mram_ROM
-                                                       core1/path/Mram_ROM
-    SLICE_X64Y88.C4      net (fanout=576)      2.190   core1/SigmaReadAddress<3>
-    SLICE_X64Y88.C       Tilo                  0.068   core1/exp_sigma/Mram_RAM157_RAMD_O
-                                                       core1/exp_sigma/Mram_RAM157_RAMC
-    SLICE_X65Y97.B5      net (fanout=1)        0.599   N359
-    SLICE_X65Y97.BMUX    Topbb                 0.389   core1/exp_sigma/_n0017<11>
-                                                       inst_LPM_MUX11_5
-                                                       inst_LPM_MUX11_3_f7
-                                                       inst_LPM_MUX11_2_f8
-    SLICE_X63Y98.C1      net (fanout=1)        0.724   core1/exp_sigma/_n0017<11>
-    SLICE_X63Y98.CLK     Tas                   0.045   core1/exp_sigma/readData<12>
-                                                       core1/exp_sigma/Mmux_readAddr[9]_readAddr[9]_mux_5_OUT31
-                                                       core1/exp_sigma/readData_11
+    DSP48_X0Y1.P20       Tdspcko_P_PREG        1.200   calc_exp_mu/exp/PolynomialEvaluator/Product_1/Mmult_DSP_bh72_ch0_01
+                                                       calc_exp_mu/exp/PolynomialEvaluator/Product_1/Mmult_DSP_bh72_ch0_01
+    SLICE_X9Y5.A4        net (fanout=3)        0.905   calc_exp_mu/exp/PolynomialEvaluator/Product_1/Adder_final72_0/Madd_R_lut<6>
+    SLICE_X9Y5.A         Tilo                  0.259   calc_exp_mu/exp/PolynomialEvaluator/piPT1<4>
+                                                       calc_exp_mu/exp/PolynomialEvaluator/piPT1<4>1
+    SLICE_X48Y4.B4       net (fanout=10)       2.419   calc_exp_mu/exp/PolynomialEvaluator/piPT1<4>
+    SLICE_X48Y4.CMUX     Topbc                 0.526   calc_exp_mu/exp/PolynomialEvaluator/Product_2/heap_bh100_w6_0_d1
+                                                       calc_exp_mu/exp/PolynomialEvaluator/Sum1/Madd_R_Madd_lut<5>
+                                                       calc_exp_mu/exp/PolynomialEvaluator/Sum1/Madd_R_Madd_cy<7>
+    DSP48_X1Y0.A16       net (fanout=1)        0.597   calc_exp_mu/exp/PolynomialEvaluator/sigmaP1<6>
+    DSP48_X1Y0.P31       Tdspdo_A_P            3.346   calc_exp_mu/exp/PolynomialEvaluator/Product_2/Mmult_DSP_bh100_ch0_0
+                                                       calc_exp_mu/exp/PolynomialEvaluator/Product_2/Mmult_DSP_bh100_ch0_0
+    DSP48_X1Y1.C14       net (fanout=1)        1.039   calc_exp_mu/exp/PolynomialEvaluator/Product_2/Mmult_DSP_bh100_ch0_0_P31_to_Product_2/Mmult_DSP_bh100_ch0_01
+    DSP48_X1Y1.CLK       Tdspdck_C_PREG        2.200   calc_exp_mu/exp/PolynomialEvaluator/Product_2/Mmult_DSP_bh100_ch0_01
+                                                       calc_exp_mu/exp/PolynomialEvaluator/Product_2/Mmult_DSP_bh100_ch0_01
     -------------------------------------------------  ---------------------------
-    Total                                      4.757ns (1.244ns logic, 3.513ns route)
-                                                       (26.2% logic, 73.8% route)
+    Total                                     12.491ns (7.531ns logic, 4.960ns route)
+                                                       (60.3% logic, 39.7% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     0.086ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               core1/path/Mram_ROM (RAM)
-  Destination:          core1/exp_sigma/readData_11 (FF)
-  Requirement:          5.000ns
-  Data Path Delay:      4.719ns (Levels of Logic = 3)
-  Clock Path Skew:      -0.160ns (1.024 - 1.184)
-  Source Clock:         CLK_BUFGP rising at 0.000ns
-  Destination Clock:    CLK_BUFGP rising at 5.000ns
+Slack (setup path):     7.464ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               calc_exp_mu/exp/PolynomialEvaluator/Product_1/Mmult_DSP_bh72_ch0_01 (DSP)
+  Destination:          calc_exp_mu/exp/PolynomialEvaluator/Product_2/Mmult_DSP_bh100_ch0_01 (DSP)
+  Requirement:          20.000ns
+  Data Path Delay:      12.455ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.046ns (0.479 - 0.525)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
   Clock Uncertainty:    0.035ns
 
   Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
@@ -330,37 +337,38 @@ Slack (setup path):     0.086ns (requirement - (data path - clock path skew + un
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: core1/path/Mram_ROM to core1/exp_sigma/readData_11
+  Maximum Data Path at Slow Process Corner: calc_exp_mu/exp/PolynomialEvaluator/Product_1/Mmult_DSP_bh72_ch0_01 to calc_exp_mu/exp/PolynomialEvaluator/Product_2/Mmult_DSP_bh100_ch0_01
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    RAMB18_X3Y40.DO1     Trcko_DOA_REG         0.742   core1/path/Mram_ROM
-                                                       core1/path/Mram_ROM
-    SLICE_X68Y94.C2      net (fanout=576)      2.047   core1/SigmaReadAddress<1>
-    SLICE_X68Y94.C       Tilo                  0.068   core1/exp_sigma/Mram_RAM159_RAMD_O
-                                                       core1/exp_sigma/Mram_RAM159_RAMC
-    SLICE_X65Y97.B3      net (fanout=1)        0.704   N371
-    SLICE_X65Y97.BMUX    Topbb                 0.389   core1/exp_sigma/_n0017<11>
-                                                       inst_LPM_MUX11_5
-                                                       inst_LPM_MUX11_3_f7
-                                                       inst_LPM_MUX11_2_f8
-    SLICE_X63Y98.C1      net (fanout=1)        0.724   core1/exp_sigma/_n0017<11>
-    SLICE_X63Y98.CLK     Tas                   0.045   core1/exp_sigma/readData<12>
-                                                       core1/exp_sigma/Mmux_readAddr[9]_readAddr[9]_mux_5_OUT31
-                                                       core1/exp_sigma/readData_11
+    DSP48_X0Y1.P20       Tdspcko_P_PREG        1.200   calc_exp_mu/exp/PolynomialEvaluator/Product_1/Mmult_DSP_bh72_ch0_01
+                                                       calc_exp_mu/exp/PolynomialEvaluator/Product_1/Mmult_DSP_bh72_ch0_01
+    SLICE_X9Y5.A4        net (fanout=3)        0.905   calc_exp_mu/exp/PolynomialEvaluator/Product_1/Adder_final72_0/Madd_R_lut<6>
+    SLICE_X9Y5.A         Tilo                  0.259   calc_exp_mu/exp/PolynomialEvaluator/piPT1<4>
+                                                       calc_exp_mu/exp/PolynomialEvaluator/piPT1<4>1
+    SLICE_X48Y4.A5       net (fanout=10)       2.372   calc_exp_mu/exp/PolynomialEvaluator/piPT1<4>
+    SLICE_X48Y4.CMUX     Topac                 0.537   calc_exp_mu/exp/PolynomialEvaluator/Product_2/heap_bh100_w6_0_d1
+                                                       calc_exp_mu/exp/PolynomialEvaluator/Sum1/Madd_R_Madd_lut<4>
+                                                       calc_exp_mu/exp/PolynomialEvaluator/Sum1/Madd_R_Madd_cy<7>
+    DSP48_X1Y0.A16       net (fanout=1)        0.597   calc_exp_mu/exp/PolynomialEvaluator/sigmaP1<6>
+    DSP48_X1Y0.P31       Tdspdo_A_P            3.346   calc_exp_mu/exp/PolynomialEvaluator/Product_2/Mmult_DSP_bh100_ch0_0
+                                                       calc_exp_mu/exp/PolynomialEvaluator/Product_2/Mmult_DSP_bh100_ch0_0
+    DSP48_X1Y1.C14       net (fanout=1)        1.039   calc_exp_mu/exp/PolynomialEvaluator/Product_2/Mmult_DSP_bh100_ch0_0_P31_to_Product_2/Mmult_DSP_bh100_ch0_01
+    DSP48_X1Y1.CLK       Tdspdck_C_PREG        2.200   calc_exp_mu/exp/PolynomialEvaluator/Product_2/Mmult_DSP_bh100_ch0_01
+                                                       calc_exp_mu/exp/PolynomialEvaluator/Product_2/Mmult_DSP_bh100_ch0_01
     -------------------------------------------------  ---------------------------
-    Total                                      4.719ns (1.244ns logic, 3.475ns route)
-                                                       (26.4% logic, 73.6% route)
+    Total                                     12.455ns (7.542ns logic, 4.913ns route)
+                                                       (60.6% logic, 39.4% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     0.086ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               core1/path/Mram_ROM (RAM)
-  Destination:          core1/exp_sigma/readData_11 (FF)
-  Requirement:          5.000ns
-  Data Path Delay:      4.719ns (Levels of Logic = 3)
-  Clock Path Skew:      -0.160ns (1.024 - 1.184)
-  Source Clock:         CLK_BUFGP rising at 0.000ns
-  Destination Clock:    CLK_BUFGP rising at 5.000ns
+Slack (setup path):     7.472ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               calc_exp_mu/exp/PolynomialEvaluator/Product_1/Mmult_DSP_bh72_ch0_01 (DSP)
+  Destination:          calc_exp_mu/exp/PolynomialEvaluator/Product_2/Mmult_DSP_bh100_ch0_01 (DSP)
+  Requirement:          20.000ns
+  Data Path Delay:      12.447ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.046ns (0.479 - 0.525)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
   Clock Uncertainty:    0.035ns
 
   Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
@@ -369,139 +377,140 @@ Slack (setup path):     0.086ns (requirement - (data path - clock path skew + un
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: core1/path/Mram_ROM to core1/exp_sigma/readData_11
+  Maximum Data Path at Slow Process Corner: calc_exp_mu/exp/PolynomialEvaluator/Product_1/Mmult_DSP_bh72_ch0_01 to calc_exp_mu/exp/PolynomialEvaluator/Product_2/Mmult_DSP_bh100_ch0_01
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    RAMB18_X3Y40.DO0     Trcko_DOA_REG         0.742   core1/path/Mram_ROM
-                                                       core1/path/Mram_ROM
-    SLICE_X64Y88.C1      net (fanout=576)      2.152   core1/SigmaReadAddress<0>
-    SLICE_X64Y88.C       Tilo                  0.068   core1/exp_sigma/Mram_RAM157_RAMD_O
-                                                       core1/exp_sigma/Mram_RAM157_RAMC
-    SLICE_X65Y97.B5      net (fanout=1)        0.599   N359
-    SLICE_X65Y97.BMUX    Topbb                 0.389   core1/exp_sigma/_n0017<11>
-                                                       inst_LPM_MUX11_5
-                                                       inst_LPM_MUX11_3_f7
-                                                       inst_LPM_MUX11_2_f8
-    SLICE_X63Y98.C1      net (fanout=1)        0.724   core1/exp_sigma/_n0017<11>
-    SLICE_X63Y98.CLK     Tas                   0.045   core1/exp_sigma/readData<12>
-                                                       core1/exp_sigma/Mmux_readAddr[9]_readAddr[9]_mux_5_OUT31
-                                                       core1/exp_sigma/readData_11
+    DSP48_X0Y1.P21       Tdspcko_P_PREG        1.200   calc_exp_mu/exp/PolynomialEvaluator/Product_1/Mmult_DSP_bh72_ch0_01
+                                                       calc_exp_mu/exp/PolynomialEvaluator/Product_1/Mmult_DSP_bh72_ch0_01
+    SLICE_X9Y5.A2        net (fanout=2)        0.861   calc_exp_mu/exp/PolynomialEvaluator/Product_1/Adder_final72_0/Madd_R_lut<7>
+    SLICE_X9Y5.A         Tilo                  0.259   calc_exp_mu/exp/PolynomialEvaluator/piPT1<4>
+                                                       calc_exp_mu/exp/PolynomialEvaluator/piPT1<4>1
+    SLICE_X48Y4.B4       net (fanout=10)       2.419   calc_exp_mu/exp/PolynomialEvaluator/piPT1<4>
+    SLICE_X48Y4.CMUX     Topbc                 0.526   calc_exp_mu/exp/PolynomialEvaluator/Product_2/heap_bh100_w6_0_d1
+                                                       calc_exp_mu/exp/PolynomialEvaluator/Sum1/Madd_R_Madd_lut<5>
+                                                       calc_exp_mu/exp/PolynomialEvaluator/Sum1/Madd_R_Madd_cy<7>
+    DSP48_X1Y0.A16       net (fanout=1)        0.597   calc_exp_mu/exp/PolynomialEvaluator/sigmaP1<6>
+    DSP48_X1Y0.P31       Tdspdo_A_P            3.346   calc_exp_mu/exp/PolynomialEvaluator/Product_2/Mmult_DSP_bh100_ch0_0
+                                                       calc_exp_mu/exp/PolynomialEvaluator/Product_2/Mmult_DSP_bh100_ch0_0
+    DSP48_X1Y1.C14       net (fanout=1)        1.039   calc_exp_mu/exp/PolynomialEvaluator/Product_2/Mmult_DSP_bh100_ch0_0_P31_to_Product_2/Mmult_DSP_bh100_ch0_01
+    DSP48_X1Y1.CLK       Tdspdck_C_PREG        2.200   calc_exp_mu/exp/PolynomialEvaluator/Product_2/Mmult_DSP_bh100_ch0_01
+                                                       calc_exp_mu/exp/PolynomialEvaluator/Product_2/Mmult_DSP_bh100_ch0_01
     -------------------------------------------------  ---------------------------
-    Total                                      4.719ns (1.244ns logic, 3.475ns route)
-                                                       (26.4% logic, 73.6% route)
+    Total                                     12.447ns (7.531ns logic, 4.916ns route)
+                                                       (60.5% logic, 39.5% route)
 
 --------------------------------------------------------------------------------
 
-Hold Paths: TS_CLK = PERIOD TIMEGRP "CLK" 5 ns HIGH 50%;
+Hold Paths: TS_CLK = PERIOD TIMEGRP "CLK" 20 ns HIGH 50%;
 --------------------------------------------------------------------------------
 
-Paths for end point calcExpSigma/exp_f/PolynomialEvaluator/Product_1/Mmult_DSP_bh9_ch0_0 (DSP48_X1Y30.A22), 1 path
+Paths for end point calc_exp_sigma/mult1/blk00000001/blk00000004 (DSP48_X1Y19.B8), 1 path
 --------------------------------------------------------------------------------
-Slack (hold path):      0.009ns (requirement - (clock path skew + uncertainty - data path))
-  Source:               calcExpSigma/exp_f/X_d1_9 (FF)
-  Destination:          calcExpSigma/exp_f/PolynomialEvaluator/Product_1/Mmult_DSP_bh9_ch0_0 (DSP)
+Slack (hold path):      0.314ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               calc_exp_sigma/exp_int_d6_8 (FF)
+  Destination:          calc_exp_sigma/mult1/blk00000001/blk00000004 (DSP)
   Requirement:          0.000ns
-  Data Path Delay:      0.183ns (Levels of Logic = 0)
-  Clock Path Skew:      0.174ns (0.817 - 0.643)
-  Source Clock:         CLK_BUFGP rising at 5.000ns
-  Destination Clock:    CLK_BUFGP rising at 5.000ns
+  Data Path Delay:      0.320ns (Levels of Logic = 0)
+  Clock Path Skew:      0.006ns (0.076 - 0.070)
+  Source Clock:         clk_BUFGP rising at 20.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
   Clock Uncertainty:    0.000ns
 
-  Minimum Data Path at Fast Process Corner: calcExpSigma/exp_f/X_d1_9 to calcExpSigma/exp_f/PolynomialEvaluator/Product_1/Mmult_DSP_bh9_ch0_0
+  Minimum Data Path at Fast Process Corner: calc_exp_sigma/exp_int_d6_8 to calc_exp_sigma/mult1/blk00000001/blk00000004
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X23Y82.BQ      Tcko                  0.098   calcExpSigma/exp_f/X_d1<9>
-                                                       calcExpSigma/exp_f/X_d1_9
-    DSP48_X1Y30.A22      net (fanout=2)        0.229   calcExpSigma/exp_f/X_d1<9>
-    DSP48_X1Y30.CLK      Tdspckd_A_AREG(-Th)     0.144   calcExpSigma/exp_f/PolynomialEvaluator/Product_1/Mmult_DSP_bh9_ch0_0
-                                                       calcExpSigma/exp_f/PolynomialEvaluator/Product_1/Mmult_DSP_bh9_ch0_0
+    SLICE_X49Y76.DQ      Tcko                  0.198   calc_exp_sigma/exp_int_d6<8>
+                                                       calc_exp_sigma/exp_int_d6_8
+    DSP48_X1Y19.B8       net (fanout=1)        0.159   calc_exp_sigma/exp_int_d6<8>
+    DSP48_X1Y19.CLK      Tdspckd_B_B0REG(-Th)     0.037   calc_exp_sigma/mult1/blk00000001/blk00000004
+                                                       calc_exp_sigma/mult1/blk00000001/blk00000004
     -------------------------------------------------  ---------------------------
-    Total                                      0.183ns (-0.046ns logic, 0.229ns route)
-                                                       (-25.1% logic, 125.1% route)
+    Total                                      0.320ns (0.161ns logic, 0.159ns route)
+                                                       (50.3% logic, 49.7% route)
 
 --------------------------------------------------------------------------------
 
-Paths for end point core1/exp_mu/Mram_RAM113_RAMA (SLICE_X54Y79.D2), 1 path
+Paths for end point core0/Mshreg_MuReadData_d3_15 (SLICE_X14Y21.DX), 1 path
 --------------------------------------------------------------------------------
-Slack (hold path):      0.010ns (requirement - (clock path skew + uncertainty - data path))
-  Source:               calcExpMu/t_d12_1 (FF)
-  Destination:          core1/exp_mu/Mram_RAM113_RAMA (RAM)
+Slack (hold path):      0.320ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               core0/exp_mu/readData_15 (FF)
+  Destination:          core0/Mshreg_MuReadData_d3_15 (FF)
   Requirement:          0.000ns
-  Data Path Delay:      0.119ns (Levels of Logic = 0)
-  Clock Path Skew:      0.109ns (0.773 - 0.664)
-  Source Clock:         CLK_BUFGP rising at 5.000ns
-  Destination Clock:    CLK_BUFGP rising at 5.000ns
+  Data Path Delay:      0.327ns (Levels of Logic = 0)
+  Clock Path Skew:      0.007ns (0.036 - 0.029)
+  Source Clock:         clk_BUFGP rising at 20.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
   Clock Uncertainty:    0.000ns
 
-  Minimum Data Path at Fast Process Corner: calcExpMu/t_d12_1 to core1/exp_mu/Mram_RAM113_RAMA
+  Minimum Data Path at Fast Process Corner: core0/exp_mu/readData_15 to core0/Mshreg_MuReadData_d3_15
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X55Y82.BQ      Tcko                  0.098   calcExpMu/t_d12<5>
-                                                       calcExpMu/t_d12_1
-    SLICE_X54Y79.D2      net (fanout=97)       0.300   calcExpMu/t_d12<1>
-    SLICE_X54Y79.CLK     Tah         (-Th)     0.279   core1/exp_mu/Mram_RAM113_RAMD_O
-                                                       core1/exp_mu/Mram_RAM113_RAMA
+    SLICE_X15Y23.DQ      Tcko                  0.198   core0/exp_mu/readData<15>
+                                                       core0/exp_mu/readData_15
+    SLICE_X14Y21.DX      net (fanout=1)        0.229   core0/exp_mu/readData<15>
+    SLICE_X14Y21.CLK     Tdh         (-Th)     0.100   core0/MuReadData_d3<10>
+                                                       core0/Mshreg_MuReadData_d3_15
     -------------------------------------------------  ---------------------------
-    Total                                      0.119ns (-0.181ns logic, 0.300ns route)
-                                                       (-152.1% logic, 252.1% route)
+    Total                                      0.327ns (0.098ns logic, 0.229ns route)
+                                                       (30.0% logic, 70.0% route)
 
 --------------------------------------------------------------------------------
 
-Paths for end point core1/exp_mu/Mram_RAM113_RAMB (SLICE_X54Y79.D2), 1 path
+Paths for end point calc_exp_sigma/mult1/blk00000001/blk00000004 (DSP48_X1Y19.B10), 1 path
 --------------------------------------------------------------------------------
-Slack (hold path):      0.010ns (requirement - (clock path skew + uncertainty - data path))
-  Source:               calcExpMu/t_d12_1 (FF)
-  Destination:          core1/exp_mu/Mram_RAM113_RAMB (RAM)
+Slack (hold path):      0.323ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               calc_exp_sigma/exp_int_d6_10 (FF)
+  Destination:          calc_exp_sigma/mult1/blk00000001/blk00000004 (DSP)
   Requirement:          0.000ns
-  Data Path Delay:      0.119ns (Levels of Logic = 0)
-  Clock Path Skew:      0.109ns (0.773 - 0.664)
-  Source Clock:         CLK_BUFGP rising at 5.000ns
-  Destination Clock:    CLK_BUFGP rising at 5.000ns
+  Data Path Delay:      0.329ns (Levels of Logic = 0)
+  Clock Path Skew:      0.006ns (0.076 - 0.070)
+  Source Clock:         clk_BUFGP rising at 20.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
   Clock Uncertainty:    0.000ns
 
-  Minimum Data Path at Fast Process Corner: calcExpMu/t_d12_1 to core1/exp_mu/Mram_RAM113_RAMB
+  Minimum Data Path at Fast Process Corner: calc_exp_sigma/exp_int_d6_10 to calc_exp_sigma/mult1/blk00000001/blk00000004
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X55Y82.BQ      Tcko                  0.098   calcExpMu/t_d12<5>
-                                                       calcExpMu/t_d12_1
-    SLICE_X54Y79.D2      net (fanout=97)       0.300   calcExpMu/t_d12<1>
-    SLICE_X54Y79.CLK     Tah         (-Th)     0.279   core1/exp_mu/Mram_RAM113_RAMD_O
-                                                       core1/exp_mu/Mram_RAM113_RAMB
+    SLICE_X53Y76.BQ      Tcko                  0.198   calc_exp_sigma/exp_int_d6<10>
+                                                       calc_exp_sigma/exp_int_d6_10
+    DSP48_X1Y19.B10      net (fanout=1)        0.168   calc_exp_sigma/exp_int_d6<10>
+    DSP48_X1Y19.CLK      Tdspckd_B_B0REG(-Th)     0.037   calc_exp_sigma/mult1/blk00000001/blk00000004
+                                                       calc_exp_sigma/mult1/blk00000001/blk00000004
     -------------------------------------------------  ---------------------------
-    Total                                      0.119ns (-0.181ns logic, 0.300ns route)
-                                                       (-152.1% logic, 252.1% route)
+    Total                                      0.329ns (0.161ns logic, 0.168ns route)
+                                                       (48.9% logic, 51.1% route)
 
 --------------------------------------------------------------------------------
 
-Component Switching Limit Checks: TS_CLK = PERIOD TIMEGRP "CLK" 5 ns HIGH 50%;
+Component Switching Limit Checks: TS_CLK = PERIOD TIMEGRP "CLK" 20 ns HIGH 50%;
 --------------------------------------------------------------------------------
-Slack: 1.195ns (period - min period limit)
-  Period: 5.000ns
-  Min period limit: 3.805ns (262.812MHz) (Tdspper_AREG_PREG_MULT)
-  Physical resource: calcExpSigma/mult1/blk00000001/blk00000004/CLK
-  Logical resource: calcExpSigma/mult1/blk00000001/blk00000004/CLK
-  Location pin: DSP48_X3Y37.CLK
-  Clock network: CLK_BUFGP
+Slack: 15.857ns (period - min period limit)
+  Period: 20.000ns
+  Min period limit: 4.143ns (241.371MHz) (Tdspper_AREG_PREG)
+  Physical resource: calc_exp_mu/exp/PolynomialEvaluator/Product_1/Mmult_DSP_bh72_ch0_01/CLK
+  Logical resource: calc_exp_mu/exp/PolynomialEvaluator/Product_1/Mmult_DSP_bh72_ch0_01/CLK
+  Location pin: DSP48_X0Y1.CLK
+  Clock network: clk_BUFGP
 --------------------------------------------------------------------------------
-Slack: 1.195ns (period - min period limit)
-  Period: 5.000ns
-  Min period limit: 3.805ns (262.812MHz) (Tdspper_AREG_PREG_MULT)
-  Physical resource: calcExpMu/mult1/blk00000001/blk00000004/CLK
-  Logical resource: calcExpMu/mult1/blk00000001/blk00000004/CLK
-  Location pin: DSP48_X3Y31.CLK
-  Clock network: CLK_BUFGP
+Slack: 15.857ns (period - min period limit)
+  Period: 20.000ns
+  Min period limit: 4.143ns (241.371MHz) (Tdspper_AREG_PREG)
+  Physical resource: calc_exp_sigma/exp_f/PolynomialEvaluator/Product_2/Mmult_DSP_bh37_ch0_01/CLK
+  Logical resource: calc_exp_sigma/exp_f/PolynomialEvaluator/Product_2/Mmult_DSP_bh37_ch0_01/CLK
+  Location pin: DSP48_X1Y24.CLK
+  Clock network: clk_BUFGP
 --------------------------------------------------------------------------------
-Slack: 1.195ns (period - min period limit)
-  Period: 5.000ns
-  Min period limit: 3.805ns (262.812MHz) (Tdspper_AREG_PREG_MULT)
-  Physical resource: core1/mult/blk00000001/blk00000004/CLK
-  Logical resource: core1/mult/blk00000001/blk00000004/CLK
-  Location pin: DSP48_X3Y41.CLK
-  Clock network: CLK_BUFGP
+Slack: 15.857ns (period - min period limit)
+  Period: 20.000ns
+  Min period limit: 4.143ns (241.371MHz) (Tdspper_AREG_PREG)
+  Physical resource: calc_exp_sigma/exp_f/PolynomialEvaluator/Product_1/Mmult_DSP_bh9_ch0_01/CLK
+  Logical resource: calc_exp_sigma/exp_f/PolynomialEvaluator/Product_1/Mmult_DSP_bh9_ch0_01/CLK
+  Location pin: DSP48_X1Y22.CLK
+  Clock network: clk_BUFGP
 --------------------------------------------------------------------------------
 
 
@@ -512,12 +521,12 @@ Data Sheet report:
 -----------------
 All values displayed in nanoseconds (ns)
 
-Clock to Setup on destination clock CLK
+Clock to Setup on destination clock clk
 ---------------+---------+---------+---------+---------+
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-CLK            |    4.959|         |         |         |
+clk            |   12.664|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 
@@ -526,23 +535,23 @@ Timing summary:
 
 Timing errors: 0  Score: 0  (Setup/Max: 0, Hold: 0)
 
-Constraints cover 33755 paths, 0 nets, and 12799 connections
+Constraints cover 62352 paths, 0 nets, and 13152 connections
 
 Design statistics:
-   Minimum period:   4.959ns{1}   (Maximum frequency: 201.654MHz)
+   Minimum period:  12.664ns{1}   (Maximum frequency:  78.964MHz)
 
 
 ------------------------------------Footnotes-----------------------------------
 1)  The minimum period statistic assumes all single cycle delays.
 
-Analysis completed Mon Apr 22 07:53:39 2013 
+Analysis completed Mon Apr 22 21:14:57 2013 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 499 MB
+Peak Memory Usage: 217 MB
 
 
 

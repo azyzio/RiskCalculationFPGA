@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=D:\Dropbox\NUS\FYP\RiskCalculationFPGA\main.ncd
+OUTFILE=D:\Dropbox\NUS\FYP\RiskCalculationFPGA\main.bit
+FAMILY=Spartan6
+PART=xc6slx45-3csg324
+WORKINGDIR=D:\Dropbox\NUS\FYP\RiskCalculationFPGA
+LICENSE=ISE
+USER_INFO=174413354_207303390_210547622_963

@@ -1,13 +1,13 @@
 `timescale 1ns / 1ps
 
-module Main(	
-	CLK,
-	iDoneOptionCalc,
-	iMu,
-	iS,
-	iSigma,
-	oAcc1,
-	oAcc2
+module main(	
+	clk,
+	i_new_option,
+	i_mu,
+	i_s,
+	i_sigma,
+	o_acc1,
+	o_acc2
 	);
 
 parameter T = 512;
@@ -15,11 +15,11 @@ parameter logT = 9;
 parameter pathWidth = 10;
 parameter CoreN = 2;
 
-input 						CLK;
-input							iDoneOptionCalc;
-input	[17:0]				iMu;			// 18 Fract
-input	[17:0]				iS;			// 4 int, 14 fract
-input	[17:0]				iSigma;		// 18 fract
+input 						clk;
+input							i_new_option;
+input	[17:0]				i_mu;			// 18 Fract
+input	[17:0]				i_s;			// 4 int, 14 fract
+input	[17:0]				i_sigma;		// 18 fract
 
 wire							enable;
 
@@ -50,14 +50,14 @@ wire							doneCore[0:CoreN-1];
 wire	[26:0]				oAcc[0:CoreN-1];
 wire							oDone[0:CoreN-1];
 
-output	[26:0]			oAcc1;
-output	[26:0]			oAcc2;
+output	[26:0]			o_acc1;
+output	[26:0]			o_acc2;
 
 	initial begin
 		Switch <= 0;
 	end
 	
-	always @ (posedge CLK)
+	always @ (posedge clk)
 	begin
 		if (startCores)
 			Switch <= ~Switch;
@@ -66,30 +66,30 @@ output	[26:0]			oAcc2;
 	assign	startCalc = (~busyExpMu && ~busyExpSigma && readyOption);
 	assign	startCores = (~busyCores && readyExpSigma && readyExpMu);
 	
-	SR_FF busyExpMu_control(CLK, startCalc, doneExpMu, busyExpMu);
-	SR_FF busyExpSigma_control(CLK, startCalc, doneExpSigma, busyExpSigma);
-	SR_FF readyOption_control(CLK, iDoneOptionCalc, startCalc, readyOption);
+	SR_FF busyExpMu_control(clk, startCalc, doneExpMu, busyExpMu);
+	SR_FF busyExpSigma_control(clk, startCalc, doneExpSigma, busyExpSigma);
+	SR_FF readyOption_control(clk, i_new_option, startCalc, readyOption);
 	
-	SR_FF busyCores_control(CLK, startCores, doneCore[0], busyCores);
-	SR_FF readySigmaExp_control(CLK, doneExpSigma, startCores, readyExpSigma);
-	SR_FF readyMuExp_control(CLK, doneExpMu, startCores, readyExpMu);
+	SR_FF busyCores_control(clk, startCores, doneCore[0], busyCores);
+	SR_FF readySigmaExp_control(clk, doneExpSigma, startCores, readyExpSigma);
+	SR_FF readyMuExp_control(clk, doneExpMu, startCores, readyExpMu);
 	
 	// 512 is not divisible by 3. First module has to be longer (171) as it controls the done signal.
-	CalculateExpMu calcExpMu
+	CalculateExpMu calc_exp_mu
 	(
-		.CLK(CLK), 
-		.iMu(iMu), 
-		.iS(iS), 
+		.CLK(clk), 
+		.iMu(i_mu), 
+		.iS(i_s), 
 		.iStart(startCalc), 
 		.oData(dataExpMu),
 		.oAddr(addrExpMu),
 		.oValid(validExpMu),
 		.oDone(doneExpMu)
 	);
-	CalculateExpSigma calcExpSigma
+	CalculateExpSigma calc_exp_sigma
 	(
-		.CLK(CLK),
-		.iSigma(iSigma),
+		.CLK(clk),
+		.iSigma(i_sigma),
 		.iStart(startCalc),
 		.oData(dataExpSigma),
 		.oAddr(addrExpSigma),
@@ -108,42 +108,42 @@ generate
    for (i = 0; i < n; i = i + 1)
 	begin : gen_loop
       MCCore #(i)
-		 core (CLK, EXP_MU, oAcc[i]);
+		 core (clk, EXP_MU, oAcc[i]);
    end
 endgenerate*/
 MCCore #("0") core0 
 (
-	CLK,
-	startCores,
-	Switch,
-	addrExpSigma,
-	dataExpSigma,
-	validExpSigma,
-	addrExpMu,
-	dataExpMu,
-	validExpMu,
-	oAcc[0],
-	doneCore[0]
+	.CLK(clk),
+	.iStart(startCores),
+	.iSwitch(Switch),
+	.iSigmaWriteAddress(addrExpSigma),
+	.iSigmaWriteData(dataExpSigma),
+	.iSigmaWE(validExpSigma),
+	.iMuWriteAddress(addrExpMu),
+	.iMuWriteData(dataExpMu),
+	.iMuWE(validExpMu),
+	.oPrice(oAcc[0]),
+	.oDone(doneCore[0])
 );
 MCCore #("1") core1 
 (
-	CLK,
-	startCores,
-	Switch,
-	addrExpSigma,
-	dataExpSigma,
-	validExpSigma,
-	addrExpMu,
-	dataExpMu,
-	validExpMu,
-	oAcc[1],
-	doneCore[1]
+	.CLK(clk),
+	.iStart(startCores),
+	.iSwitch(Switch),
+	.iSigmaWriteAddress(addrExpSigma),
+	.iSigmaWriteData(dataExpSigma),
+	.iSigmaWE(validExpSigma),
+	.iMuWriteAddress(addrExpMu),
+	.iMuWriteData(dataExpMu),
+	.iMuWE(validExpMu),
+	.oPrice(oAcc[1]),
+	.oDone(doneCore[1])
 );
 
 assign oDone[0] = doneCore[0];
 assign oDone[1] = doneCore[1];
 
-assign oAcc1 = oAcc[0];
-assign oAcc2 = oAcc[1];
+assign o_acc1 = oAcc[0];
+assign o_acc2 = oAcc[1];
 
 endmodule

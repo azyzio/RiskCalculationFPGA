@@ -2,4 +2,5 @@
 #Created by Constraints Editor (xc6slx45-fgg484-3) - 2013/04/20
 NET "CLK" TNM_NET = CLK;
 #Created by Constraints Editor (xc6slx45-fgg484-3) - 2013/04/20
-TIMESPEC TS_CLK = PERIOD "CLK" 5 ns HIGH 50%;
+#Created by Constraints Editor (xc6slx45-csg324-3) - 2013/04/22
+TIMESPEC TS_CLK = PERIOD "CLK" 20 ns HIGH 50%;

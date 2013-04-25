@@ -4,15 +4,15 @@ Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.25 secs
+Total CPU time to Xst completion: 0.29 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.25 secs
+Total CPU time to Xst completion: 0.29 secs
  
---> Reading design: Main.prj
+--> Reading design: main.prj
 
 TABLE OF CONTENTS
   1) Synthesis Options Summary
@@ -40,16 +40,16 @@ TABLE OF CONTENTS
 *                      Synthesis Options Summary                        *
 =========================================================================
 ---- Source Parameters
-Input File Name                    : "Main.prj"
+Input File Name                    : "main.prj"
 Ignore Synthesis Constraint File   : NO
 
 ---- Target Parameters
-Output File Name                   : "Main"
+Output File Name                   : "main"
 Output Format                      : NGC
-Target Device                      : xc6vlx240t-1-ff1156
+Target Device                      : xc6slx45-3-csg324
 
 ---- Source Options
-Top Module Name                    : Main
+Top Module Name                    : main
 Automatic FSM Extraction           : YES
 FSM Encoding Algorithm             : Auto
 Safe Implementation                : No
@@ -133,7 +133,7 @@ Parsing module <CalculateExpSigma>.
 Analyzing Verilog file "D:\Dropbox\NUS\FYP\RiskCalculationFPGA\CalculateExpMu.v" into library work
 Parsing module <CalculateExpMu>.
 Analyzing Verilog file "D:\Dropbox\NUS\FYP\RiskCalculationFPGA\Main.v" into library work
-Parsing module <Main>.
+Parsing module <main>.
 Parsing VHDL file "D:\Dropbox\NUS\FYP\RiskCalculationFPGA\flopoco.vhdl" into library work
 Parsing entity <Compressor_2_2>.
 Parsing architecture <arch> of entity <compressor_2_2>.
@@ -180,12 +180,13 @@ Parsing architecture <arch> of entity <exp_18_18>.
 *                            HDL Elaboration                            *
 =========================================================================
 
-Elaborating module <Main>.
+Elaborating module <main>.
 
 Elaborating module <SR_FF>.
 
 Elaborating module <CalculateExpMu>.
-WARNING:HDLCompiler:413 - "D:\Dropbox\NUS\FYP\RiskCalculationFPGA\CalculateExpMu.v" Line 83: Result of 10-bit expression is truncated to fit in 9-bit target.
+WARNING:HDLCompiler:413 - "D:\Dropbox\NUS\FYP\RiskCalculationFPGA\CalculateExpMu.v" Line 86: Result of 10-bit expression is truncated to fit in 9-bit target.
+WARNING:HDLCompiler:413 - "D:\Dropbox\NUS\FYP\RiskCalculationFPGA\CalculateExpMu.v" Line 101: Result of 10-bit expression is truncated to fit in 9-bit target.
 
 Elaborating module <mult_9_18_18>.
 Going to vhdl side to elaborate module exp_18_18
@@ -212,8 +213,8 @@ Back to verilog to continue elaboration
 Elaborating module <mult_18_18_18_muexp>.
 
 Elaborating module <CalculateExpSigma>.
-WARNING:HDLCompiler:413 - "D:\Dropbox\NUS\FYP\RiskCalculationFPGA\CalculateExpSigma.v" Line 97: Result of 11-bit expression is truncated to fit in 10-bit target.
-WARNING:HDLCompiler:413 - "D:\Dropbox\NUS\FYP\RiskCalculationFPGA\CalculateExpSigma.v" Line 112: Result of 22-bit expression is truncated to fit in 21-bit target.
+WARNING:HDLCompiler:413 - "D:\Dropbox\NUS\FYP\RiskCalculationFPGA\CalculateExpSigma.v" Line 96: Result of 11-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:413 - "D:\Dropbox\NUS\FYP\RiskCalculationFPGA\CalculateExpSigma.v" Line 111: Result of 22-bit expression is truncated to fit in 21-bit target.
 
 Elaborating module <mult_10_18_21>.
 
@@ -244,8 +245,7 @@ Back to verilog to continue elaboration
 Elaborating module <mult_12_13_18>.
 
 Elaborating module <MCCore(N="0")>.
-WARNING:HDLCompiler:413 - "D:\Dropbox\NUS\FYP\RiskCalculationFPGA\MCCore.v" Line 96: Result of 10-bit expression is truncated to fit in 9-bit target.
-WARNING:HDLCompiler:1127 - "D:\Dropbox\NUS\FYP\RiskCalculationFPGA\MCCore.v" Line 92: Assignment to t_d7 ignored, since the identifier is never used
+WARNING:HDLCompiler:413 - "D:\Dropbox\NUS\FYP\RiskCalculationFPGA\MCCore.v" Line 95: Result of 10-bit expression is truncated to fit in 9-bit target.
 
 Elaborating module <ROM_path(N="0")>.
 Reading initialization file \"memory_data/path0.data\".
@@ -257,8 +257,7 @@ Elaborating module <RAM_X_18(addr_size=9)>.
 Elaborating module <mult_18_18_18_core>.
 
 Elaborating module <MCCore(N="1")>.
-WARNING:HDLCompiler:413 - "D:\Dropbox\NUS\FYP\RiskCalculationFPGA\MCCore.v" Line 96: Result of 10-bit expression is truncated to fit in 9-bit target.
-WARNING:HDLCompiler:1127 - "D:\Dropbox\NUS\FYP\RiskCalculationFPGA\MCCore.v" Line 92: Assignment to t_d7 ignored, since the identifier is never used
+WARNING:HDLCompiler:413 - "D:\Dropbox\NUS\FYP\RiskCalculationFPGA\MCCore.v" Line 95: Result of 10-bit expression is truncated to fit in 9-bit target.
 
 Elaborating module <ROM_path(N="1")>.
 Reading initialization file \"memory_data/path1.data\".
@@ -269,7 +268,7 @@ WARNING:HDLCompiler:1127 - "D:\Dropbox\NUS\FYP\RiskCalculationFPGA\Main.v" Line 
 *                           HDL Synthesis                               *
 =========================================================================
 
-Synthesizing Unit <Main>.
+Synthesizing Unit <main>.
     Related source file is "D:\Dropbox\NUS\FYP\RiskCalculationFPGA\Main.v".
         T = 512
         logT = 9
@@ -279,7 +278,7 @@ INFO:Xst:3210 - "D:\Dropbox\NUS\FYP\RiskCalculationFPGA\Main.v" line 128: Output
     Found 1-bit register for signal <Switch>.
     Summary:
 	inferred   1 D-type flip-flop(s).
-Unit <Main> synthesized.
+Unit <main> synthesized.
 
 Synthesizing Unit <SR_FF>.
     Related source file is "D:\Dropbox\NUS\FYP\RiskCalculationFPGA\SR_FF.v".
@@ -306,18 +305,18 @@ Synthesizing Unit <CalculateExpMu>.
     Found 9-bit register for signal <t_d10>.
     Found 9-bit register for signal <t_d11>.
     Found 9-bit register for signal <t_d12>.
+    Found 9-bit register for signal <t_d13>.
+    Found 9-bit register for signal <t_add1>.
     Found 18-bit register for signal <tmu_d1>.
     Found 18-bit register for signal <exp_tmu_d1>.
-    Found 1-bit register for signal <done>.
-    Found 1-bit register for signal <valid>.
     Found 9-bit register for signal <t>.
-    Found 9-bit adder for signal <t[8]_GND_3_o_add_2_OUT> created at line 83.
-    Found 9-bit comparator greater for signal <t[8]_PWR_3_o_LessThan_2_o> created at line 82
+    Found 9-bit adder for signal <t[8]_GND_3_o_add_4_OUT> created at line 101.
+    Found 9-bit comparator greater for signal <t[8]_PWR_3_o_LessThan_2_o> created at line 85
     Summary:
 	inferred   1 Adder/Subtractor(s).
-	inferred 155 D-type flip-flop(s).
+	inferred 171 D-type flip-flop(s).
 	inferred   1 Comparator(s).
-	inferred  12 Multiplexer(s).
+	inferred  14 Multiplexer(s).
 Unit <CalculateExpMu> synthesized.
 
 Synthesizing Unit <exp_18_18>.
@@ -463,14 +462,12 @@ Synthesizing Unit <CalculateExpSigma>.
     Found 13-bit register for signal <exp_int_d4>.
     Found 13-bit register for signal <exp_int_d5>.
     Found 13-bit register for signal <exp_int_d6>.
-    Found 1-bit register for signal <done>.
-    Found 1-bit register for signal <valid>.
     Found 10-bit register for signal <x>.
-    Found 11-bit adder for signal <n0096> created at line 97.
-    Found 22-bit adder for signal <n0097> created at line 112.
+    Found 11-bit adder for signal <n0088> created at line 96.
+    Found 22-bit adder for signal <n0089> created at line 111.
     Summary:
 	inferred   2 Adder/Subtractor(s).
-	inferred 274 D-type flip-flop(s).
+	inferred 272 D-type flip-flop(s).
 	inferred  14 Multiplexer(s).
 Unit <CalculateExpSigma> synthesized.
 
@@ -607,22 +604,21 @@ Synthesizing Unit <MCCore_1>.
     Found 9-bit register for signal <t_d4>.
     Found 9-bit register for signal <t_d5>.
     Found 9-bit register for signal <t_d6>.
+    Found 9-bit register for signal <t_d7>.
     Found 10-bit register for signal <SigmaReadAddress>.
     Found 18-bit register for signal <SigmaReadData_d1>.
     Found 18-bit register for signal <MuReadData_d1>.
     Found 18-bit register for signal <MuReadData_d2>.
     Found 18-bit register for signal <MuReadData_d3>.
-    Found 27-bit register for signal <out>.
-    Found 1-bit register for signal <done>.
-    Found 1-bit register for signal <validProduct>.
+    Found 27-bit register for signal <price>.
     Found 27-bit register for signal <acc>.
     Found 9-bit register for signal <t>.
-    Found 9-bit adder for signal <t[8]_GND_36_o_add_2_OUT> created at line 96.
-    Found 27-bit adder for signal <acc[26]_GND_36_o_add_9_OUT> created at line 127.
+    Found 9-bit adder for signal <t[8]_GND_36_o_add_2_OUT> created at line 95.
+    Found 27-bit adder for signal <acc[26]_GND_36_o_add_6_OUT> created at line 112.
     Summary:
 	inferred   2 Adder/Subtractor(s).
-	inferred 201 D-type flip-flop(s).
-	inferred   6 Multiplexer(s).
+	inferred 208 D-type flip-flop(s).
+	inferred   7 Multiplexer(s).
 Unit <MCCore_1> synthesized.
 
 Synthesizing Unit <ROM_path_1>.
@@ -672,22 +668,21 @@ Synthesizing Unit <MCCore_2>.
     Found 9-bit register for signal <t_d4>.
     Found 9-bit register for signal <t_d5>.
     Found 9-bit register for signal <t_d6>.
+    Found 9-bit register for signal <t_d7>.
     Found 10-bit register for signal <SigmaReadAddress>.
     Found 18-bit register for signal <SigmaReadData_d1>.
     Found 18-bit register for signal <MuReadData_d1>.
     Found 18-bit register for signal <MuReadData_d2>.
     Found 18-bit register for signal <MuReadData_d3>.
-    Found 27-bit register for signal <out>.
-    Found 1-bit register for signal <done>.
-    Found 1-bit register for signal <validProduct>.
+    Found 27-bit register for signal <price>.
     Found 27-bit register for signal <acc>.
     Found 9-bit register for signal <t>.
-    Found 9-bit adder for signal <t[8]_GND_41_o_add_2_OUT> created at line 96.
-    Found 27-bit adder for signal <acc[26]_GND_41_o_add_9_OUT> created at line 127.
+    Found 9-bit adder for signal <t[8]_GND_41_o_add_2_OUT> created at line 95.
+    Found 27-bit adder for signal <acc[26]_GND_41_o_add_6_OUT> created at line 112.
     Summary:
 	inferred   2 Adder/Subtractor(s).
-	inferred 201 D-type flip-flop(s).
-	inferred   6 Multiplexer(s).
+	inferred 208 D-type flip-flop(s).
+	inferred   7 Multiplexer(s).
 Unit <MCCore_2> synthesized.
 
 Synthesizing Unit <ROM_path_2>.
@@ -725,7 +720,7 @@ Macro Statistics
  22-bit adder                                          : 1
  27-bit adder                                          : 2
  9-bit adder                                           : 3
-# Registers                                            : 155
+# Registers                                            : 159
  1-bit register                                        : 51
  10-bit register                                       : 24
  12-bit register                                       : 1
@@ -740,14 +735,14 @@ Macro Statistics
  39-bit register                                       : 2
  43-bit register                                       : 4
  6-bit register                                        : 2
- 9-bit register                                        : 29
+ 9-bit register                                        : 33
 # Comparators                                          : 1
  9-bit comparator greater                              : 1
-# Multiplexers                                         : 56
- 1-bit 2-to-1 multiplexer                              : 14
+# Multiplexers                                         : 68
+ 1-bit 2-to-1 multiplexer                              : 22
  10-bit 2-to-1 multiplexer                             : 14
  18-bit 2-to-1 multiplexer                             : 4
- 9-bit 2-to-1 multiplexer                              : 24
+ 9-bit 2-to-1 multiplexer                              : 28
 
 =========================================================================
 
@@ -968,85 +963,6 @@ INFO:Xst:3226 - The RAM <path/Mram_ROM> will be implemented as a BLOCK RAM, abso
     -----------------------------------------------------------------------
 Unit <MCCore_2> synthesized (advanced).
 
-Synthesizing (advanced) Unit <Main>.
-INFO:Xst:3226 - The RAM <core0/exp_sigma/Mram_RAM1> will be implemented as a BLOCK RAM, absorbing the following register(s): <core0/SigmaReadAddress>
-    -----------------------------------------------------------------------
-    | ram_type           | Block                               |          |
-    -----------------------------------------------------------------------
-    | Port A                                                              |
-    |     aspect ratio   | 1024-word x 18-bit                  |          |
-    |     mode           | read-first                          |          |
-    |     clkA           | connected to signal <CLK>           | rise     |
-    |     weA            | connected to internal node          | high     |
-    |     addrA          | connected to signal <addrExpSigma>  |          |
-    |     diA            | connected to signal <dataExpSigma>  |          |
-    -----------------------------------------------------------------------
-    | optimization       | speed                               |          |
-    -----------------------------------------------------------------------
-    | Port B                                                              |
-    |     aspect ratio   | 1024-word x 18-bit                  |          |
-    |     mode           | write-first                         |          |
-    |     clkB           | connected to signal <CLK>           | rise     |
-    |     addrB          | connected to signal <core0/pathOutput> |          |
-    |     doB            | connected to internal node          |          |
-    -----------------------------------------------------------------------
-    | optimization       | speed                               |          |
-    -----------------------------------------------------------------------
-INFO:Xst:3226 - The RAM <core0/exp_sigma/Mram_RAM0> will be implemented as a BLOCK RAM, absorbing the following register(s): <core0/SigmaReadAddress>
-    -----------------------------------------------------------------------
-    | ram_type           | Block                               |          |
-    -----------------------------------------------------------------------
-    | Port A                                                              |
-    |     aspect ratio   | 1024-word x 18-bit                  |          |
-    |     mode           | read-first                          |          |
-    |     clkA           | connected to signal <CLK>           | rise     |
-    |     weA            | connected to signal <core0/exp_sigma/WE_0> | high     |
-    |     addrA          | connected to signal <addrExpSigma>  |          |
-    |     diA            | connected to signal <dataExpSigma>  |          |
-    -----------------------------------------------------------------------
-    | optimization       | speed                               |          |
-    -----------------------------------------------------------------------
-    | Port B                                                              |
-    |     aspect ratio   | 1024-word x 18-bit                  |          |
-    |     mode           | write-first                         |          |
-    |     clkB           | connected to signal <CLK>           | rise     |
-    |     addrB          | connected to signal <core0/pathOutput> |          |
-    |     doB            | connected to internal node          |          |
-    -----------------------------------------------------------------------
-    | optimization       | speed                               |          |
-    -----------------------------------------------------------------------
-INFO:Xst:3226 - The RAM <calcExpSigma/exp_f/GeneratedTable/Mram_rom> will be implemented as a BLOCK RAM, absorbing the following register(s): <calcExpSigma/exp_f/GeneratedTable/Y0> <calcExpSigma/exp_f/Coef_d1>
-    -----------------------------------------------------------------------
-    | ram_type           | Block                               |          |
-    -----------------------------------------------------------------------
-    | Port A                                                              |
-    |     aspect ratio   | 256-word x 31-bit                   |          |
-    |     mode           | write-first                         |          |
-    |     clkA           | connected to signal <CLK>           | rise     |
-    |     weA            | connected to signal <GND>           | high     |
-    |     addrA          | connected to signal <calcExpSigma/xsigma_f<17:10>> |          |
-    |     diA            | connected to signal <GND>           |          |
-    |     doA            | connected to signal <calcExpSigma/exp_f/Coef_d1> |          |
-    -----------------------------------------------------------------------
-    | optimization       | speed                               |          |
-    -----------------------------------------------------------------------
-INFO:Xst:3226 - The RAM <core0/path/Mram_ROM> will be implemented as a BLOCK RAM, absorbing the following register(s): <core0/path/oDATA>
-    -----------------------------------------------------------------------
-    | ram_type           | Block                               |          |
-    -----------------------------------------------------------------------
-    | Port A                                                              |
-    |     aspect ratio   | 512-word x 10-bit                   |          |
-    |     mode           | write-first                         |          |
-    |     clkA           | connected to signal <CLK>           | rise     |
-    |     weA            | connected to signal <GND>           | high     |
-    |     addrA          | connected to signal <core0/t>       |          |
-    |     diA            | connected to signal <GND>           |          |
-    |     doA            | connected to signal <core0/pathOutput> |          |
-    -----------------------------------------------------------------------
-    | optimization       | speed                               |          |
-    -----------------------------------------------------------------------
-Unit <Main> synthesized (advanced).
-
 Synthesizing (advanced) Unit <PolynomialEvaluator_degree2_uid5>.
 	Found pipelined multiplier on signal <Product_2/DSP_bh37_ch0_0>:
 		- 1 pipeline level(s) found in a register connected to the multiplier macro output.
@@ -1054,8 +970,8 @@ Synthesizing (advanced) Unit <PolynomialEvaluator_degree2_uid5>.
 	Found pipelined multiplier on signal <Product_1/DSP_bh9_ch0_0>:
 		- 1 pipeline level(s) found in a register connected to the multiplier macro output.
 		Pushing register(s) into the multiplier macro.
-INFO:Xst:2385 - HDL ADVISOR - You can improve the performance of the multiplier Product_2/Mmult_DSP_bh37_ch0_0 by adding 1 register level(s).
-INFO:Xst:2385 - HDL ADVISOR - You can improve the performance of the multiplier Product_1/Mmult_DSP_bh9_ch0_0 by adding 1 register level(s).
+INFO:Xst:2385 - HDL ADVISOR - You can improve the performance of the multiplier Product_2/Mmult_DSP_bh37_ch0_0 by adding 3 register level(s).
+INFO:Xst:2385 - HDL ADVISOR - You can improve the performance of the multiplier Product_1/Mmult_DSP_bh9_ch0_0 by adding 3 register level(s).
 Unit <PolynomialEvaluator_degree2_uid5> synthesized (advanced).
 
 Synthesizing (advanced) Unit <PolynomialEvaluator_degree2_uid68>.
@@ -1065,8 +981,8 @@ Synthesizing (advanced) Unit <PolynomialEvaluator_degree2_uid68>.
 	Found pipelined multiplier on signal <Product_1/DSP_bh72_ch0_0>:
 		- 1 pipeline level(s) found in a register connected to the multiplier macro output.
 		Pushing register(s) into the multiplier macro.
-INFO:Xst:2385 - HDL ADVISOR - You can improve the performance of the multiplier Product_2/Mmult_DSP_bh100_ch0_0 by adding 1 register level(s).
-INFO:Xst:2385 - HDL ADVISOR - You can improve the performance of the multiplier Product_1/Mmult_DSP_bh72_ch0_0 by adding 1 register level(s).
+INFO:Xst:2385 - HDL ADVISOR - You can improve the performance of the multiplier Product_2/Mmult_DSP_bh100_ch0_0 by adding 3 register level(s).
+INFO:Xst:2385 - HDL ADVISOR - You can improve the performance of the multiplier Product_1/Mmult_DSP_bh72_ch0_0 by adding 3 register level(s).
 Unit <PolynomialEvaluator_degree2_uid68> synthesized (advanced).
 
 Synthesizing (advanced) Unit <RAM_X_18_2>.
@@ -1117,6 +1033,85 @@ INFO:Xst:3231 - The small RAM <Mram_ROM> will be implemented on LUTs in order to
     |     doA            | connected to internal node          |          |
     -----------------------------------------------------------------------
 Unit <ROM_3_13> synthesized (advanced).
+
+Synthesizing (advanced) Unit <main>.
+INFO:Xst:3226 - The RAM <core0/exp_sigma/Mram_RAM1> will be implemented as a BLOCK RAM, absorbing the following register(s): <core0/SigmaReadAddress>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 1024-word x 18-bit                  |          |
+    |     mode           | read-first                          |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to internal node          | high     |
+    |     addrA          | connected to signal <addrExpSigma>  |          |
+    |     diA            | connected to signal <dataExpSigma>  |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 1024-word x 18-bit                  |          |
+    |     mode           | write-first                         |          |
+    |     clkB           | connected to signal <clk>           | rise     |
+    |     addrB          | connected to signal <core0/pathOutput> |          |
+    |     doB            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <core0/exp_sigma/Mram_RAM0> will be implemented as a BLOCK RAM, absorbing the following register(s): <core0/SigmaReadAddress>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 1024-word x 18-bit                  |          |
+    |     mode           | read-first                          |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <core0/exp_sigma/WE_0> | high     |
+    |     addrA          | connected to signal <addrExpSigma>  |          |
+    |     diA            | connected to signal <dataExpSigma>  |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 1024-word x 18-bit                  |          |
+    |     mode           | write-first                         |          |
+    |     clkB           | connected to signal <clk>           | rise     |
+    |     addrB          | connected to signal <core0/pathOutput> |          |
+    |     doB            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <calc_exp_sigma/exp_f/GeneratedTable/Mram_rom> will be implemented as a BLOCK RAM, absorbing the following register(s): <calc_exp_sigma/exp_f/GeneratedTable/Y0> <calc_exp_sigma/exp_f/Coef_d1>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 31-bit                   |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <calc_exp_sigma/xsigma_f<17:10>> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <calc_exp_sigma/exp_f/Coef_d1> |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <core0/path/Mram_ROM> will be implemented as a BLOCK RAM, absorbing the following register(s): <core0/path/oDATA>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 512-word x 10-bit                   |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <core0/t>       |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <core0/pathOutput> |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+Unit <main> synthesized (advanced).
 WARNING:Xst:2677 - Node <exp/X_d1_10> of sequential type is unconnected in block <CalculateExpMu>.
 WARNING:Xst:2677 - Node <exp/X_d1_11> of sequential type is unconnected in block <CalculateExpMu>.
 WARNING:Xst:2677 - Node <exp/X_d1_12> of sequential type is unconnected in block <CalculateExpMu>.
@@ -1125,14 +1120,14 @@ WARNING:Xst:2677 - Node <exp/X_d1_14> of sequential type is unconnected in block
 WARNING:Xst:2677 - Node <exp/X_d1_15> of sequential type is unconnected in block <CalculateExpMu>.
 WARNING:Xst:2677 - Node <exp/X_d1_16> of sequential type is unconnected in block <CalculateExpMu>.
 WARNING:Xst:2677 - Node <exp/X_d1_17> of sequential type is unconnected in block <CalculateExpMu>.
-WARNING:Xst:2677 - Node <calcExpSigma/exp_f/X_d1_10> of sequential type is unconnected in block <Main>.
-WARNING:Xst:2677 - Node <calcExpSigma/exp_f/X_d1_11> of sequential type is unconnected in block <Main>.
-WARNING:Xst:2677 - Node <calcExpSigma/exp_f/X_d1_12> of sequential type is unconnected in block <Main>.
-WARNING:Xst:2677 - Node <calcExpSigma/exp_f/X_d1_13> of sequential type is unconnected in block <Main>.
-WARNING:Xst:2677 - Node <calcExpSigma/exp_f/X_d1_14> of sequential type is unconnected in block <Main>.
-WARNING:Xst:2677 - Node <calcExpSigma/exp_f/X_d1_15> of sequential type is unconnected in block <Main>.
-WARNING:Xst:2677 - Node <calcExpSigma/exp_f/X_d1_16> of sequential type is unconnected in block <Main>.
-WARNING:Xst:2677 - Node <calcExpSigma/exp_f/X_d1_17> of sequential type is unconnected in block <Main>.
+WARNING:Xst:2677 - Node <calc_exp_sigma/exp_f/X_d1_10> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <calc_exp_sigma/exp_f/X_d1_11> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <calc_exp_sigma/exp_f/X_d1_12> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <calc_exp_sigma/exp_f/X_d1_13> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <calc_exp_sigma/exp_f/X_d1_14> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <calc_exp_sigma/exp_f/X_d1_15> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <calc_exp_sigma/exp_f/X_d1_16> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <calc_exp_sigma/exp_f/X_d1_17> of sequential type is unconnected in block <main>.
 
 =========================================================================
 Advanced HDL Synthesis Report
@@ -1148,7 +1143,7 @@ Macro Statistics
  8x13-bit single-port distributed Read Only RAM        : 1
 # Multipliers                                          : 4
  25x18-bit registered multiplier                       : 4
-# Adders/Subtractors                                   : 9
+# Adders/Subtractors                                   : 10
  10-bit adder                                          : 1
  10-bit adder carry in                                 : 1
  11-bit adder                                          : 1
@@ -1158,28 +1153,29 @@ Macro Statistics
  19-bit adder                                          : 1
  21-bit adder                                          : 1
  21-bit adder carry in                                 : 1
+ 9-bit adder                                           : 1
 # Counters                                             : 4
  10-bit up counter                                     : 1
  9-bit up counter                                      : 3
 # Accumulators                                         : 2
  27-bit up accumulator                                 : 2
-# Registers                                            : 1138
- Flip-Flops                                            : 1138
+# Registers                                            : 1174
+ Flip-Flops                                            : 1174
 # Comparators                                          : 1
  9-bit comparator greater                              : 1
-# Multiplexers                                         : 45
+# Multiplexers                                         : 49
  1-bit 2-to-1 multiplexer                              : 4
  10-bit 2-to-1 multiplexer                             : 13
  18-bit 2-to-1 multiplexer                             : 4
- 9-bit 2-to-1 multiplexer                              : 24
+ 9-bit 2-to-1 multiplexer                              : 28
 
 =========================================================================
 
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
-WARNING:Xst:1989 - Unit <Main>: instances <busyExpSigma_control>, <calcExpSigma/enable_control> of unit <SR_FF> are equivalent, second instance is removed
-WARNING:Xst:1989 - Unit <Main>: instances <busyCores_control>, <core0/enable_control> of unit <SR_FF> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <main>: instances <busyExpSigma_control>, <calc_exp_sigma/enable_control> of unit <SR_FF> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <main>: instances <busyCores_control>, <core0/enable_control> of unit <SR_FF> are equivalent, second instance is removed
 WARNING:Xst:2677 - Node <Product_2/heap_bh100_w0_0_d1> of sequential type is unconnected in block <PolynomialEvaluator_degree2_uid68>.
 WARNING:Xst:2677 - Node <Product_2/heap_bh100_w1_0_d1> of sequential type is unconnected in block <PolynomialEvaluator_degree2_uid68>.
 WARNING:Xst:2677 - Node <Product_2/heap_bh100_w2_0_d1> of sequential type is unconnected in block <PolynomialEvaluator_degree2_uid68>.
@@ -1189,7 +1185,7 @@ WARNING:Xst:2677 - Node <Product_2/heap_bh37_w2_0_d1> of sequential type is unco
 INFO:Xst:2261 - The FF/Latch <oData_2> in Unit <ROM_3_13> is equivalent to the following FF/Latch, which will be removed : <oData_12> 
 INFO:Xst:2261 - The FF/Latch <oData_5> in Unit <ROM_3_13> is equivalent to the following FF/Latch, which will be removed : <oData_6> 
 
-Optimizing unit <Main> ...
+Optimizing unit <main> ...
 
 Optimizing unit <CalculateExpMu> ...
 
@@ -1200,89 +1196,99 @@ Optimizing unit <ROM_3_13> ...
 Optimizing unit <PolynomialEvaluator_degree2_uid5> ...
 
 Optimizing unit <RAM_X_18_2> ...
-WARNING:Xst:2677 - Node <calcExpSigma/exp_f/PolynomialEvaluator/a0_d4_15> of sequential type is unconnected in block <Main>.
-WARNING:Xst:2677 - Node <calcExpSigma/exp_f/PolynomialEvaluator/a0_d3_15> of sequential type is unconnected in block <Main>.
-WARNING:Xst:2677 - Node <calcExpSigma/exp_f/PolynomialEvaluator/a0_d2_15> of sequential type is unconnected in block <Main>.
-WARNING:Xst:2677 - Node <calcExpSigma/exp_f/PolynomialEvaluator/a0_d1_15> of sequential type is unconnected in block <Main>.
-INFO:Xst:2261 - The FF/Latch <calcExpSigma/exp_int_d6_2> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <calcExpSigma/exp_int_d6_12> 
-INFO:Xst:2261 - The FF/Latch <calcExpSigma/exp_int_d6_5> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <calcExpSigma/exp_int_d6_6> 
-INFO:Xst:2261 - The FF/Latch <core1/enable_control/Q> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <busyCores_control/Q> 
-INFO:Xst:2261 - The FF/Latch <core0/t_d1_0> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <core1/t_d1_0> 
-INFO:Xst:2261 - The FF/Latch <core0/t_d1_1> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <core1/t_d1_1> 
-INFO:Xst:2261 - The FF/Latch <core0/t_d1_2> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <core1/t_d1_2> 
-INFO:Xst:2261 - The FF/Latch <core0/t_d1_3> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <core1/t_d1_3> 
-INFO:Xst:2261 - The FF/Latch <core0/t_d1_4> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <core1/t_d1_4> 
-INFO:Xst:2261 - The FF/Latch <core0/t_d1_5> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <core1/t_d1_5> 
-INFO:Xst:2261 - The FF/Latch <core0/t_d1_6> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <core1/t_d1_6> 
-INFO:Xst:2261 - The FF/Latch <core0/t_d1_7> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <core1/t_d1_7> 
-INFO:Xst:2261 - The FF/Latch <core0/t_d1_8> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <core1/t_d1_8> 
-INFO:Xst:2261 - The FF/Latch <core0/t_d2_0> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <core1/t_d2_0> 
-INFO:Xst:2261 - The FF/Latch <core0/t_d2_1> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <core1/t_d2_1> 
-INFO:Xst:2261 - The FF/Latch <core0/t_d2_2> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <core1/t_d2_2> 
-INFO:Xst:2261 - The FF/Latch <core0/t_d2_3> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <core1/t_d2_3> 
-INFO:Xst:2261 - The FF/Latch <core0/t_d2_4> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <core1/t_d2_4> 
-INFO:Xst:2261 - The FF/Latch <core0/t_d2_5> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <core1/t_d2_5> 
-INFO:Xst:2261 - The FF/Latch <core0/t_d2_6> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <core1/t_d2_6> 
-INFO:Xst:2261 - The FF/Latch <core0/t_d2_7> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <core1/t_d2_7> 
-INFO:Xst:2261 - The FF/Latch <core0/t_d2_8> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <core1/t_d2_8> 
-INFO:Xst:2261 - The FF/Latch <core1/done> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <core0/done> 
-INFO:Xst:2261 - The FF/Latch <core0/validProduct> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <core1/validProduct> 
-INFO:Xst:2261 - The FF/Latch <calcExpSigma/exp_int_d1_2> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <calcExpSigma/exp_int_d1_12> 
-INFO:Xst:2261 - The FF/Latch <calcExpSigma/exp_int_d1_5> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <calcExpSigma/exp_int_d1_6> 
-INFO:Xst:2261 - The FF/Latch <core0/t_d3_0> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <core1/t_d3_0> 
-INFO:Xst:2261 - The FF/Latch <core0/t_d3_1> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <core1/t_d3_1> 
-INFO:Xst:2261 - The FF/Latch <core0/t_d3_2> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <core1/t_d3_2> 
-INFO:Xst:2261 - The FF/Latch <core0/t_d3_3> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <core1/t_d3_3> 
-INFO:Xst:2261 - The FF/Latch <core0/t_d3_4> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <core1/t_d3_4> 
-INFO:Xst:2261 - The FF/Latch <core0/t_d3_5> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <core1/t_d3_5> 
-INFO:Xst:2261 - The FF/Latch <core0/t_d3_6> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <core1/t_d3_6> 
-INFO:Xst:2261 - The FF/Latch <core0/t_d3_7> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <core1/t_d3_7> 
-INFO:Xst:2261 - The FF/Latch <core0/t_d3_8> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <core1/t_d3_8> 
-INFO:Xst:2261 - The FF/Latch <core0/t_0> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <core1/t_0> 
-INFO:Xst:2261 - The FF/Latch <core0/t_1> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <core1/t_1> 
-INFO:Xst:2261 - The FF/Latch <core0/t_2> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <core1/t_2> 
-INFO:Xst:2261 - The FF/Latch <core0/t_3> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <core1/t_3> 
-INFO:Xst:2261 - The FF/Latch <core0/t_4> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <core1/t_4> 
-INFO:Xst:2261 - The FF/Latch <core0/t_5> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <core1/t_5> 
-INFO:Xst:2261 - The FF/Latch <calcExpSigma/exp_int_d2_2> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <calcExpSigma/exp_int_d2_12> 
-INFO:Xst:2261 - The FF/Latch <core0/t_6> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <core1/t_6> 
-INFO:Xst:2261 - The FF/Latch <core0/t_7> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <core1/t_7> 
-INFO:Xst:2261 - The FF/Latch <core0/t_8> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <core1/t_8> 
-INFO:Xst:2261 - The FF/Latch <calcExpSigma/exp_int_d2_5> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <calcExpSigma/exp_int_d2_6> 
-INFO:Xst:2261 - The FF/Latch <core0/t_d4_0> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <core1/t_d4_0> 
-INFO:Xst:2261 - The FF/Latch <core0/t_d4_1> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <core1/t_d4_1> 
-INFO:Xst:2261 - The FF/Latch <core0/t_d4_2> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <core1/t_d4_2> 
-INFO:Xst:2261 - The FF/Latch <core0/t_d4_3> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <core1/t_d4_3> 
-INFO:Xst:2261 - The FF/Latch <core0/t_d4_4> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <core1/t_d4_4> 
-INFO:Xst:2261 - The FF/Latch <core0/t_d4_5> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <core1/t_d4_5> 
-INFO:Xst:2261 - The FF/Latch <core0/t_d4_6> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <core1/t_d4_6> 
-INFO:Xst:2261 - The FF/Latch <core0/t_d4_7> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <core1/t_d4_7> 
-INFO:Xst:2261 - The FF/Latch <core0/t_d4_8> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <core1/t_d4_8> 
-INFO:Xst:2261 - The FF/Latch <calcExpSigma/exp_int_d3_2> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <calcExpSigma/exp_int_d3_12> 
-INFO:Xst:2261 - The FF/Latch <calcExpSigma/exp_int_d3_5> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <calcExpSigma/exp_int_d3_6> 
-INFO:Xst:2261 - The FF/Latch <core0/t_d5_0> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <core1/t_d5_0> 
-INFO:Xst:2261 - The FF/Latch <core0/t_d5_1> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <core1/t_d5_1> 
-INFO:Xst:2261 - The FF/Latch <core0/t_d5_2> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <core1/t_d5_2> 
-INFO:Xst:2261 - The FF/Latch <core0/t_d5_3> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <core1/t_d5_3> 
-INFO:Xst:2261 - The FF/Latch <core0/t_d5_4> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <core1/t_d5_4> 
-INFO:Xst:2261 - The FF/Latch <core0/t_d5_5> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <core1/t_d5_5> 
-INFO:Xst:2261 - The FF/Latch <core0/t_d5_6> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <core1/t_d5_6> 
-INFO:Xst:2261 - The FF/Latch <core0/t_d5_7> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <core1/t_d5_7> 
-INFO:Xst:2261 - The FF/Latch <busyExpMu_control/Q> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <calcExpMu/enable_control/Q> 
-INFO:Xst:2261 - The FF/Latch <core0/t_d5_8> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <core1/t_d5_8> 
-INFO:Xst:2261 - The FF/Latch <calcExpSigma/exp_int_d4_2> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <calcExpSigma/exp_int_d4_12> 
-INFO:Xst:2261 - The FF/Latch <calcExpSigma/exp_int_d4_5> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <calcExpSigma/exp_int_d4_6> 
-INFO:Xst:2261 - The FF/Latch <core0/t_d6_0> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <core1/t_d6_0> 
-INFO:Xst:2261 - The FF/Latch <core0/t_d6_1> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <core1/t_d6_1> 
-INFO:Xst:2261 - The FF/Latch <core0/t_d6_2> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <core1/t_d6_2> 
-INFO:Xst:2261 - The FF/Latch <core0/t_d6_3> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <core1/t_d6_3> 
-INFO:Xst:2261 - The FF/Latch <core0/t_d6_4> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <core1/t_d6_4> 
-INFO:Xst:2261 - The FF/Latch <core0/t_d6_5> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <core1/t_d6_5> 
-INFO:Xst:2261 - The FF/Latch <core0/t_d6_6> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <core1/t_d6_6> 
-INFO:Xst:2261 - The FF/Latch <core0/t_d6_7> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <core1/t_d6_7> 
-INFO:Xst:2261 - The FF/Latch <core0/t_d6_8> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <core1/t_d6_8> 
-INFO:Xst:2261 - The FF/Latch <calcExpSigma/exp_int_d5_2> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <calcExpSigma/exp_int_d5_12> 
-INFO:Xst:2261 - The FF/Latch <calcExpSigma/exp_int_d5_5> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <calcExpSigma/exp_int_d5_6> 
+WARNING:Xst:2677 - Node <calc_exp_sigma/exp_f/PolynomialEvaluator/a0_d4_15> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <calc_exp_sigma/exp_f/PolynomialEvaluator/a0_d3_15> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <calc_exp_sigma/exp_f/PolynomialEvaluator/a0_d2_15> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <calc_exp_sigma/exp_f/PolynomialEvaluator/a0_d1_15> of sequential type is unconnected in block <main>.
+INFO:Xst:2261 - The FF/Latch <core0/t_d7_7> in Unit <main> is equivalent to the following FF/Latch, which will be removed : <core1/t_d7_7> 
+INFO:Xst:2261 - The FF/Latch <core0/t_d7_8> in Unit <main> is equivalent to the following FF/Latch, which will be removed : <core1/t_d7_8> 
+INFO:Xst:2261 - The FF/Latch <calc_exp_sigma/exp_int_d1_2> in Unit <main> is equivalent to the following FF/Latch, which will be removed : <calc_exp_sigma/exp_int_d1_12> 
+INFO:Xst:2261 - The FF/Latch <core1/enable_control/Q> in Unit <main> is equivalent to the following FF/Latch, which will be removed : <busyCores_control/Q> 
+INFO:Xst:2261 - The FF/Latch <calc_exp_sigma/exp_int_d1_5> in Unit <main> is equivalent to the following FF/Latch, which will be removed : <calc_exp_sigma/exp_int_d1_6> 
+INFO:Xst:2261 - The FF/Latch <core0/t_d1_0> in Unit <main> is equivalent to the following FF/Latch, which will be removed : <core1/t_d1_0> 
+INFO:Xst:2261 - The FF/Latch <core0/t_d1_1> in Unit <main> is equivalent to the following FF/Latch, which will be removed : <core1/t_d1_1> 
+INFO:Xst:2261 - The FF/Latch <core0/t_d1_2> in Unit <main> is equivalent to the following FF/Latch, which will be removed : <core1/t_d1_2> 
+INFO:Xst:2261 - The FF/Latch <core0/t_d1_3> in Unit <main> is equivalent to the following FF/Latch, which will be removed : <core1/t_d1_3> 
+INFO:Xst:2261 - The FF/Latch <core0/t_d1_4> in Unit <main> is equivalent to the following FF/Latch, which will be removed : <core1/t_d1_4> 
+INFO:Xst:2261 - The FF/Latch <core0/t_d1_5> in Unit <main> is equivalent to the following FF/Latch, which will be removed : <core1/t_d1_5> 
+INFO:Xst:2261 - The FF/Latch <core1/done_control/Q> in Unit <main> is equivalent to the following FF/Latch, which will be removed : <core0/done_control/Q> 
+INFO:Xst:2261 - The FF/Latch <core0/t_d1_6> in Unit <main> is equivalent to the following FF/Latch, which will be removed : <core1/t_d1_6> 
+INFO:Xst:2261 - The FF/Latch <core0/t_d1_7> in Unit <main> is equivalent to the following FF/Latch, which will be removed : <core1/t_d1_7> 
+INFO:Xst:2261 - The FF/Latch <core0/t_d1_8> in Unit <main> is equivalent to the following FF/Latch, which will be removed : <core1/t_d1_8> 
+INFO:Xst:2261 - The FF/Latch <calc_exp_sigma/exp_int_d2_2> in Unit <main> is equivalent to the following FF/Latch, which will be removed : <calc_exp_sigma/exp_int_d2_12> 
+INFO:Xst:2261 - The FF/Latch <calc_exp_sigma/exp_int_d2_5> in Unit <main> is equivalent to the following FF/Latch, which will be removed : <calc_exp_sigma/exp_int_d2_6> 
+INFO:Xst:2261 - The FF/Latch <core0/t_d2_0> in Unit <main> is equivalent to the following FF/Latch, which will be removed : <core1/t_d2_0> 
+INFO:Xst:2261 - The FF/Latch <core0/t_d2_1> in Unit <main> is equivalent to the following FF/Latch, which will be removed : <core1/t_d2_1> 
+INFO:Xst:2261 - The FF/Latch <core0/t_d2_2> in Unit <main> is equivalent to the following FF/Latch, which will be removed : <core1/t_d2_2> 
+INFO:Xst:2261 - The FF/Latch <core0/t_d2_3> in Unit <main> is equivalent to the following FF/Latch, which will be removed : <core1/t_d2_3> 
+INFO:Xst:2261 - The FF/Latch <core0/t_d2_4> in Unit <main> is equivalent to the following FF/Latch, which will be removed : <core1/t_d2_4> 
+INFO:Xst:2261 - The FF/Latch <core0/t_d2_5> in Unit <main> is equivalent to the following FF/Latch, which will be removed : <core1/t_d2_5> 
+INFO:Xst:2261 - The FF/Latch <core0/t_d2_6> in Unit <main> is equivalent to the following FF/Latch, which will be removed : <core1/t_d2_6> 
+INFO:Xst:2261 - The FF/Latch <core0/t_d2_7> in Unit <main> is equivalent to the following FF/Latch, which will be removed : <core1/t_d2_7> 
+INFO:Xst:2261 - The FF/Latch <core0/t_d2_8> in Unit <main> is equivalent to the following FF/Latch, which will be removed : <core1/t_d2_8> 
+INFO:Xst:2261 - The FF/Latch <calc_exp_sigma/exp_int_d3_2> in Unit <main> is equivalent to the following FF/Latch, which will be removed : <calc_exp_sigma/exp_int_d3_12> 
+INFO:Xst:2261 - The FF/Latch <calc_exp_sigma/exp_int_d3_5> in Unit <main> is equivalent to the following FF/Latch, which will be removed : <calc_exp_sigma/exp_int_d3_6> 
+INFO:Xst:2261 - The FF/Latch <core0/t_d3_0> in Unit <main> is equivalent to the following FF/Latch, which will be removed : <core1/t_d3_0> 
+INFO:Xst:2261 - The FF/Latch <core0/t_d3_1> in Unit <main> is equivalent to the following FF/Latch, which will be removed : <core1/t_d3_1> 
+INFO:Xst:2261 - The FF/Latch <core0/t_d3_2> in Unit <main> is equivalent to the following FF/Latch, which will be removed : <core1/t_d3_2> 
+INFO:Xst:2261 - The FF/Latch <core0/t_d3_3> in Unit <main> is equivalent to the following FF/Latch, which will be removed : <core1/t_d3_3> 
+INFO:Xst:2261 - The FF/Latch <core0/t_d3_4> in Unit <main> is equivalent to the following FF/Latch, which will be removed : <core1/t_d3_4> 
+INFO:Xst:2261 - The FF/Latch <core0/t_d3_5> in Unit <main> is equivalent to the following FF/Latch, which will be removed : <core1/t_d3_5> 
+INFO:Xst:2261 - The FF/Latch <core0/t_d3_6> in Unit <main> is equivalent to the following FF/Latch, which will be removed : <core1/t_d3_6> 
+INFO:Xst:2261 - The FF/Latch <core0/t_d3_7> in Unit <main> is equivalent to the following FF/Latch, which will be removed : <core1/t_d3_7> 
+INFO:Xst:2261 - The FF/Latch <core0/t_d3_8> in Unit <main> is equivalent to the following FF/Latch, which will be removed : <core1/t_d3_8> 
+INFO:Xst:2261 - The FF/Latch <core0/t_0> in Unit <main> is equivalent to the following FF/Latch, which will be removed : <core1/t_0> 
+INFO:Xst:2261 - The FF/Latch <core0/t_1> in Unit <main> is equivalent to the following FF/Latch, which will be removed : <core1/t_1> 
+INFO:Xst:2261 - The FF/Latch <core0/t_2> in Unit <main> is equivalent to the following FF/Latch, which will be removed : <core1/t_2> 
+INFO:Xst:2261 - The FF/Latch <calc_exp_sigma/exp_int_d4_2> in Unit <main> is equivalent to the following FF/Latch, which will be removed : <calc_exp_sigma/exp_int_d4_12> 
+INFO:Xst:2261 - The FF/Latch <core0/t_3> in Unit <main> is equivalent to the following FF/Latch, which will be removed : <core1/t_3> 
+INFO:Xst:2261 - The FF/Latch <core1/validProduct_control/Q> in Unit <main> is equivalent to the following FF/Latch, which will be removed : <core0/validProduct_control/Q> 
+INFO:Xst:2261 - The FF/Latch <core0/t_4> in Unit <main> is equivalent to the following FF/Latch, which will be removed : <core1/t_4> 
+INFO:Xst:2261 - The FF/Latch <core0/t_5> in Unit <main> is equivalent to the following FF/Latch, which will be removed : <core1/t_5> 
+INFO:Xst:2261 - The FF/Latch <calc_exp_sigma/exp_int_d4_5> in Unit <main> is equivalent to the following FF/Latch, which will be removed : <calc_exp_sigma/exp_int_d4_6> 
+INFO:Xst:2261 - The FF/Latch <core0/t_6> in Unit <main> is equivalent to the following FF/Latch, which will be removed : <core1/t_6> 
+INFO:Xst:2261 - The FF/Latch <core0/t_7> in Unit <main> is equivalent to the following FF/Latch, which will be removed : <core1/t_7> 
+INFO:Xst:2261 - The FF/Latch <core0/t_8> in Unit <main> is equivalent to the following FF/Latch, which will be removed : <core1/t_8> 
+INFO:Xst:2261 - The FF/Latch <core0/t_d4_0> in Unit <main> is equivalent to the following FF/Latch, which will be removed : <core1/t_d4_0> 
+INFO:Xst:2261 - The FF/Latch <core0/t_d4_1> in Unit <main> is equivalent to the following FF/Latch, which will be removed : <core1/t_d4_1> 
+INFO:Xst:2261 - The FF/Latch <core0/t_d4_2> in Unit <main> is equivalent to the following FF/Latch, which will be removed : <core1/t_d4_2> 
+INFO:Xst:2261 - The FF/Latch <core0/t_d4_3> in Unit <main> is equivalent to the following FF/Latch, which will be removed : <core1/t_d4_3> 
+INFO:Xst:2261 - The FF/Latch <core0/t_d4_4> in Unit <main> is equivalent to the following FF/Latch, which will be removed : <core1/t_d4_4> 
+INFO:Xst:2261 - The FF/Latch <core0/t_d4_5> in Unit <main> is equivalent to the following FF/Latch, which will be removed : <core1/t_d4_5> 
+INFO:Xst:2261 - The FF/Latch <core0/t_d4_6> in Unit <main> is equivalent to the following FF/Latch, which will be removed : <core1/t_d4_6> 
+INFO:Xst:2261 - The FF/Latch <core0/t_d4_7> in Unit <main> is equivalent to the following FF/Latch, which will be removed : <core1/t_d4_7> 
+INFO:Xst:2261 - The FF/Latch <core0/t_d4_8> in Unit <main> is equivalent to the following FF/Latch, which will be removed : <core1/t_d4_8> 
+INFO:Xst:2261 - The FF/Latch <calc_exp_sigma/exp_int_d5_2> in Unit <main> is equivalent to the following FF/Latch, which will be removed : <calc_exp_sigma/exp_int_d5_12> 
+INFO:Xst:2261 - The FF/Latch <calc_exp_sigma/exp_int_d5_5> in Unit <main> is equivalent to the following FF/Latch, which will be removed : <calc_exp_sigma/exp_int_d5_6> 
+INFO:Xst:2261 - The FF/Latch <core0/t_d5_0> in Unit <main> is equivalent to the following FF/Latch, which will be removed : <core1/t_d5_0> 
+INFO:Xst:2261 - The FF/Latch <core0/t_d5_1> in Unit <main> is equivalent to the following FF/Latch, which will be removed : <core1/t_d5_1> 
+INFO:Xst:2261 - The FF/Latch <core0/t_d5_2> in Unit <main> is equivalent to the following FF/Latch, which will be removed : <core1/t_d5_2> 
+INFO:Xst:2261 - The FF/Latch <core0/t_d5_3> in Unit <main> is equivalent to the following FF/Latch, which will be removed : <core1/t_d5_3> 
+INFO:Xst:2261 - The FF/Latch <core0/t_d5_4> in Unit <main> is equivalent to the following FF/Latch, which will be removed : <core1/t_d5_4> 
+INFO:Xst:2261 - The FF/Latch <core0/t_d5_5> in Unit <main> is equivalent to the following FF/Latch, which will be removed : <core1/t_d5_5> 
+INFO:Xst:2261 - The FF/Latch <core0/t_d5_6> in Unit <main> is equivalent to the following FF/Latch, which will be removed : <core1/t_d5_6> 
+INFO:Xst:2261 - The FF/Latch <core0/t_d5_7> in Unit <main> is equivalent to the following FF/Latch, which will be removed : <core1/t_d5_7> 
+INFO:Xst:2261 - The FF/Latch <busyExpMu_control/Q> in Unit <main> is equivalent to the following FF/Latch, which will be removed : <calc_exp_mu/enable_control/Q> 
+INFO:Xst:2261 - The FF/Latch <core0/t_d5_8> in Unit <main> is equivalent to the following FF/Latch, which will be removed : <core1/t_d5_8> 
+INFO:Xst:2261 - The FF/Latch <calc_exp_sigma/exp_int_d6_2> in Unit <main> is equivalent to the following FF/Latch, which will be removed : <calc_exp_sigma/exp_int_d6_12> 
+INFO:Xst:2261 - The FF/Latch <calc_exp_sigma/exp_int_d6_5> in Unit <main> is equivalent to the following FF/Latch, which will be removed : <calc_exp_sigma/exp_int_d6_6> 
+INFO:Xst:2261 - The FF/Latch <core0/t_d6_0> in Unit <main> is equivalent to the following FF/Latch, which will be removed : <core1/t_d6_0> 
+INFO:Xst:2261 - The FF/Latch <core0/t_d6_1> in Unit <main> is equivalent to the following FF/Latch, which will be removed : <core1/t_d6_1> 
+INFO:Xst:2261 - The FF/Latch <core0/t_d6_2> in Unit <main> is equivalent to the following FF/Latch, which will be removed : <core1/t_d6_2> 
+INFO:Xst:2261 - The FF/Latch <core0/t_d6_3> in Unit <main> is equivalent to the following FF/Latch, which will be removed : <core1/t_d6_3> 
+INFO:Xst:2261 - The FF/Latch <core0/t_d6_4> in Unit <main> is equivalent to the following FF/Latch, which will be removed : <core1/t_d6_4> 
+INFO:Xst:2261 - The FF/Latch <core0/t_d6_5> in Unit <main> is equivalent to the following FF/Latch, which will be removed : <core1/t_d6_5> 
+INFO:Xst:2261 - The FF/Latch <core0/t_d6_6> in Unit <main> is equivalent to the following FF/Latch, which will be removed : <core1/t_d6_6> 
+INFO:Xst:2261 - The FF/Latch <core0/t_d6_7> in Unit <main> is equivalent to the following FF/Latch, which will be removed : <core1/t_d6_7> 
+INFO:Xst:2261 - The FF/Latch <core0/t_d6_8> in Unit <main> is equivalent to the following FF/Latch, which will be removed : <core1/t_d6_8> 
+INFO:Xst:2261 - The FF/Latch <core0/t_d7_0> in Unit <main> is equivalent to the following FF/Latch, which will be removed : <core1/t_d7_0> 
+INFO:Xst:2261 - The FF/Latch <core0/t_d7_1> in Unit <main> is equivalent to the following FF/Latch, which will be removed : <core1/t_d7_1> 
+INFO:Xst:2261 - The FF/Latch <core0/t_d7_2> in Unit <main> is equivalent to the following FF/Latch, which will be removed : <core1/t_d7_2> 
+INFO:Xst:2261 - The FF/Latch <core0/t_d7_3> in Unit <main> is equivalent to the following FF/Latch, which will be removed : <core1/t_d7_3> 
+INFO:Xst:2261 - The FF/Latch <core0/t_d7_4> in Unit <main> is equivalent to the following FF/Latch, which will be removed : <core1/t_d7_4> 
+INFO:Xst:2261 - The FF/Latch <core0/t_d7_5> in Unit <main> is equivalent to the following FF/Latch, which will be removed : <core1/t_d7_5> 
+INFO:Xst:2261 - The FF/Latch <core0/t_d7_6> in Unit <main> is equivalent to the following FF/Latch, which will be removed : <core1/t_d7_6> 
+INFO:Xst:3203 - The FF/Latch <calc_exp_mu/t_add1_0> in Unit <main> is the opposite to the following FF/Latch, which will be removed : <calc_exp_mu/t_d1_0> 
 
 Mapping all equations...
 Building and optimizing final netlist ...
@@ -1382,11 +1388,11 @@ INFO:Xst:2399 - RAMs <core1/exp_mu/Mram_RAM04>, <core0/exp_mu/Mram_RAM04> are eq
 INFO:Xst:2399 - RAMs <core1/exp_mu/Mram_RAM03>, <core0/exp_mu/Mram_RAM03> are equivalent, second RAM is removed
 INFO:Xst:2399 - RAMs <core1/exp_mu/Mram_RAM02>, <core0/exp_mu/Mram_RAM02> are equivalent, second RAM is removed
 INFO:Xst:2399 - RAMs <core1/exp_mu/Mram_RAM01>, <core0/exp_mu/Mram_RAM01> are equivalent, second RAM is removed
-Found area constraint ratio of 100 (+ 5) on block Main, actual ratio is 1.
+Found area constraint ratio of 100 (+ 5) on block main, actual ratio is 7.
 
 Final Macro Processing ...
 
-Processing Unit <Main> :
+Processing Unit <main> :
 	Found 3-bit shift register for signal <core0/MuReadData_d3_0>.
 	Found 3-bit shift register for signal <core0/MuReadData_d3_1>.
 	Found 3-bit shift register for signal <core0/MuReadData_d3_2>.
@@ -1423,82 +1429,82 @@ Processing Unit <Main> :
 	Found 3-bit shift register for signal <core1/MuReadData_d3_15>.
 	Found 3-bit shift register for signal <core1/MuReadData_d3_16>.
 	Found 3-bit shift register for signal <core1/MuReadData_d3_17>.
-	Found 6-bit shift register for signal <calcExpSigma/exp_int_d6_0>.
-	Found 6-bit shift register for signal <calcExpSigma/exp_int_d6_1>.
-	Found 6-bit shift register for signal <calcExpSigma/exp_int_d6_2>.
-	Found 6-bit shift register for signal <calcExpSigma/exp_int_d6_3>.
-	Found 6-bit shift register for signal <calcExpSigma/exp_int_d6_4>.
-	Found 6-bit shift register for signal <calcExpSigma/exp_int_d6_5>.
-	Found 6-bit shift register for signal <calcExpSigma/exp_int_d6_7>.
-	Found 6-bit shift register for signal <calcExpSigma/exp_int_d6_8>.
-	Found 6-bit shift register for signal <calcExpSigma/exp_int_d6_9>.
-	Found 6-bit shift register for signal <calcExpSigma/exp_int_d6_10>.
-	Found 6-bit shift register for signal <calcExpSigma/exp_int_d6_11>.
-	Found 4-bit shift register for signal <calcExpMu/exp/PolynomialEvaluator/a0_d4_19>.
-	Found 4-bit shift register for signal <calcExpMu/exp/PolynomialEvaluator/a0_d4_18>.
-	Found 4-bit shift register for signal <calcExpMu/exp/PolynomialEvaluator/a0_d4_17>.
-	Found 4-bit shift register for signal <calcExpMu/exp/PolynomialEvaluator/a0_d4_16>.
-	Found 4-bit shift register for signal <calcExpMu/exp/PolynomialEvaluator/a0_d4_15>.
-	Found 4-bit shift register for signal <calcExpMu/exp/PolynomialEvaluator/a0_d4_14>.
-	Found 4-bit shift register for signal <calcExpMu/exp/PolynomialEvaluator/a0_d4_13>.
-	Found 4-bit shift register for signal <calcExpMu/exp/PolynomialEvaluator/a0_d4_12>.
-	Found 4-bit shift register for signal <calcExpMu/exp/PolynomialEvaluator/a0_d4_11>.
-	Found 4-bit shift register for signal <calcExpMu/exp/PolynomialEvaluator/a0_d4_10>.
-	Found 4-bit shift register for signal <calcExpMu/exp/PolynomialEvaluator/a0_d4_9>.
-	Found 4-bit shift register for signal <calcExpMu/exp/PolynomialEvaluator/a0_d4_8>.
-	Found 4-bit shift register for signal <calcExpMu/exp/PolynomialEvaluator/a0_d4_7>.
-	Found 4-bit shift register for signal <calcExpMu/exp/PolynomialEvaluator/a0_d4_6>.
-	Found 4-bit shift register for signal <calcExpMu/exp/PolynomialEvaluator/a0_d4_5>.
-	Found 4-bit shift register for signal <calcExpMu/exp/PolynomialEvaluator/a0_d4_4>.
-	Found 4-bit shift register for signal <calcExpMu/exp/PolynomialEvaluator/a0_d4_3>.
-	Found 4-bit shift register for signal <calcExpMu/exp/PolynomialEvaluator/a0_d4_2>.
-	Found 4-bit shift register for signal <calcExpMu/exp/PolynomialEvaluator/a0_d4_1>.
-	Found 4-bit shift register for signal <calcExpMu/exp/PolynomialEvaluator/a0_d4_0>.
-	Found 2-bit shift register for signal <calcExpMu/exp/PolynomialEvaluator/a1_d2_12>.
-	Found 2-bit shift register for signal <calcExpMu/exp/PolynomialEvaluator/a1_d2_11>.
-	Found 2-bit shift register for signal <calcExpMu/exp/PolynomialEvaluator/a1_d2_10>.
-	Found 2-bit shift register for signal <calcExpMu/exp/PolynomialEvaluator/a1_d2_9>.
-	Found 2-bit shift register for signal <calcExpMu/exp/PolynomialEvaluator/a1_d2_8>.
-	Found 2-bit shift register for signal <calcExpMu/exp/PolynomialEvaluator/a1_d2_7>.
-	Found 2-bit shift register for signal <calcExpMu/exp/PolynomialEvaluator/a1_d2_6>.
-	Found 2-bit shift register for signal <calcExpMu/exp/PolynomialEvaluator/a1_d2_5>.
-	Found 2-bit shift register for signal <calcExpMu/exp/PolynomialEvaluator/a1_d2_4>.
-	Found 2-bit shift register for signal <calcExpMu/exp/PolynomialEvaluator/a1_d2_3>.
-	Found 2-bit shift register for signal <calcExpMu/exp/PolynomialEvaluator/a1_d2_2>.
-	Found 2-bit shift register for signal <calcExpMu/exp/PolynomialEvaluator/a1_d2_1>.
-	Found 2-bit shift register for signal <calcExpMu/exp/PolynomialEvaluator/a1_d2_0>.
-	Found 4-bit shift register for signal <calcExpSigma/exp_f/PolynomialEvaluator/a0_d4_14>.
-	Found 4-bit shift register for signal <calcExpSigma/exp_f/PolynomialEvaluator/a0_d4_13>.
-	Found 4-bit shift register for signal <calcExpSigma/exp_f/PolynomialEvaluator/a0_d4_12>.
-	Found 4-bit shift register for signal <calcExpSigma/exp_f/PolynomialEvaluator/a0_d4_11>.
-	Found 4-bit shift register for signal <calcExpSigma/exp_f/PolynomialEvaluator/a0_d4_10>.
-	Found 4-bit shift register for signal <calcExpSigma/exp_f/PolynomialEvaluator/a0_d4_9>.
-	Found 4-bit shift register for signal <calcExpSigma/exp_f/PolynomialEvaluator/a0_d4_8>.
-	Found 4-bit shift register for signal <calcExpSigma/exp_f/PolynomialEvaluator/a0_d4_7>.
-	Found 4-bit shift register for signal <calcExpSigma/exp_f/PolynomialEvaluator/a0_d4_6>.
-	Found 4-bit shift register for signal <calcExpSigma/exp_f/PolynomialEvaluator/a0_d4_5>.
-	Found 4-bit shift register for signal <calcExpSigma/exp_f/PolynomialEvaluator/a0_d4_4>.
-	Found 4-bit shift register for signal <calcExpSigma/exp_f/PolynomialEvaluator/a0_d4_3>.
-	Found 4-bit shift register for signal <calcExpSigma/exp_f/PolynomialEvaluator/a0_d4_2>.
-	Found 4-bit shift register for signal <calcExpSigma/exp_f/PolynomialEvaluator/a0_d4_1>.
-	Found 4-bit shift register for signal <calcExpSigma/exp_f/PolynomialEvaluator/a0_d4_0>.
-	Found 2-bit shift register for signal <calcExpSigma/exp_f/PolynomialEvaluator/a1_d2_8>.
-	Found 2-bit shift register for signal <calcExpSigma/exp_f/PolynomialEvaluator/a1_d2_7>.
-	Found 2-bit shift register for signal <calcExpSigma/exp_f/PolynomialEvaluator/a1_d2_6>.
-	Found 2-bit shift register for signal <calcExpSigma/exp_f/PolynomialEvaluator/a1_d2_5>.
-	Found 2-bit shift register for signal <calcExpSigma/exp_f/PolynomialEvaluator/a1_d2_4>.
-	Found 2-bit shift register for signal <calcExpSigma/exp_f/PolynomialEvaluator/a1_d2_3>.
-	Found 2-bit shift register for signal <calcExpSigma/exp_f/PolynomialEvaluator/a1_d2_2>.
-	Found 2-bit shift register for signal <calcExpSigma/exp_f/PolynomialEvaluator/a1_d2_1>.
-	Found 2-bit shift register for signal <calcExpSigma/exp_f/PolynomialEvaluator/a1_d2_0>.
-Unit <Main> processed.
+	Found 6-bit shift register for signal <calc_exp_sigma/exp_int_d6_0>.
+	Found 6-bit shift register for signal <calc_exp_sigma/exp_int_d6_1>.
+	Found 6-bit shift register for signal <calc_exp_sigma/exp_int_d6_2>.
+	Found 6-bit shift register for signal <calc_exp_sigma/exp_int_d6_3>.
+	Found 6-bit shift register for signal <calc_exp_sigma/exp_int_d6_4>.
+	Found 6-bit shift register for signal <calc_exp_sigma/exp_int_d6_5>.
+	Found 6-bit shift register for signal <calc_exp_sigma/exp_int_d6_7>.
+	Found 6-bit shift register for signal <calc_exp_sigma/exp_int_d6_8>.
+	Found 6-bit shift register for signal <calc_exp_sigma/exp_int_d6_9>.
+	Found 6-bit shift register for signal <calc_exp_sigma/exp_int_d6_10>.
+	Found 6-bit shift register for signal <calc_exp_sigma/exp_int_d6_11>.
+	Found 4-bit shift register for signal <calc_exp_mu/exp/PolynomialEvaluator/a0_d4_19>.
+	Found 4-bit shift register for signal <calc_exp_mu/exp/PolynomialEvaluator/a0_d4_18>.
+	Found 4-bit shift register for signal <calc_exp_mu/exp/PolynomialEvaluator/a0_d4_17>.
+	Found 4-bit shift register for signal <calc_exp_mu/exp/PolynomialEvaluator/a0_d4_16>.
+	Found 4-bit shift register for signal <calc_exp_mu/exp/PolynomialEvaluator/a0_d4_15>.
+	Found 4-bit shift register for signal <calc_exp_mu/exp/PolynomialEvaluator/a0_d4_14>.
+	Found 4-bit shift register for signal <calc_exp_mu/exp/PolynomialEvaluator/a0_d4_13>.
+	Found 4-bit shift register for signal <calc_exp_mu/exp/PolynomialEvaluator/a0_d4_12>.
+	Found 4-bit shift register for signal <calc_exp_mu/exp/PolynomialEvaluator/a0_d4_11>.
+	Found 4-bit shift register for signal <calc_exp_mu/exp/PolynomialEvaluator/a0_d4_10>.
+	Found 4-bit shift register for signal <calc_exp_mu/exp/PolynomialEvaluator/a0_d4_9>.
+	Found 4-bit shift register for signal <calc_exp_mu/exp/PolynomialEvaluator/a0_d4_8>.
+	Found 4-bit shift register for signal <calc_exp_mu/exp/PolynomialEvaluator/a0_d4_7>.
+	Found 4-bit shift register for signal <calc_exp_mu/exp/PolynomialEvaluator/a0_d4_6>.
+	Found 4-bit shift register for signal <calc_exp_mu/exp/PolynomialEvaluator/a0_d4_5>.
+	Found 4-bit shift register for signal <calc_exp_mu/exp/PolynomialEvaluator/a0_d4_4>.
+	Found 4-bit shift register for signal <calc_exp_mu/exp/PolynomialEvaluator/a0_d4_3>.
+	Found 4-bit shift register for signal <calc_exp_mu/exp/PolynomialEvaluator/a0_d4_2>.
+	Found 4-bit shift register for signal <calc_exp_mu/exp/PolynomialEvaluator/a0_d4_1>.
+	Found 4-bit shift register for signal <calc_exp_mu/exp/PolynomialEvaluator/a0_d4_0>.
+	Found 2-bit shift register for signal <calc_exp_mu/exp/PolynomialEvaluator/a1_d2_12>.
+	Found 2-bit shift register for signal <calc_exp_mu/exp/PolynomialEvaluator/a1_d2_11>.
+	Found 2-bit shift register for signal <calc_exp_mu/exp/PolynomialEvaluator/a1_d2_10>.
+	Found 2-bit shift register for signal <calc_exp_mu/exp/PolynomialEvaluator/a1_d2_9>.
+	Found 2-bit shift register for signal <calc_exp_mu/exp/PolynomialEvaluator/a1_d2_8>.
+	Found 2-bit shift register for signal <calc_exp_mu/exp/PolynomialEvaluator/a1_d2_7>.
+	Found 2-bit shift register for signal <calc_exp_mu/exp/PolynomialEvaluator/a1_d2_6>.
+	Found 2-bit shift register for signal <calc_exp_mu/exp/PolynomialEvaluator/a1_d2_5>.
+	Found 2-bit shift register for signal <calc_exp_mu/exp/PolynomialEvaluator/a1_d2_4>.
+	Found 2-bit shift register for signal <calc_exp_mu/exp/PolynomialEvaluator/a1_d2_3>.
+	Found 2-bit shift register for signal <calc_exp_mu/exp/PolynomialEvaluator/a1_d2_2>.
+	Found 2-bit shift register for signal <calc_exp_mu/exp/PolynomialEvaluator/a1_d2_1>.
+	Found 2-bit shift register for signal <calc_exp_mu/exp/PolynomialEvaluator/a1_d2_0>.
+	Found 4-bit shift register for signal <calc_exp_sigma/exp_f/PolynomialEvaluator/a0_d4_14>.
+	Found 4-bit shift register for signal <calc_exp_sigma/exp_f/PolynomialEvaluator/a0_d4_13>.
+	Found 4-bit shift register for signal <calc_exp_sigma/exp_f/PolynomialEvaluator/a0_d4_12>.
+	Found 4-bit shift register for signal <calc_exp_sigma/exp_f/PolynomialEvaluator/a0_d4_11>.
+	Found 4-bit shift register for signal <calc_exp_sigma/exp_f/PolynomialEvaluator/a0_d4_10>.
+	Found 4-bit shift register for signal <calc_exp_sigma/exp_f/PolynomialEvaluator/a0_d4_9>.
+	Found 4-bit shift register for signal <calc_exp_sigma/exp_f/PolynomialEvaluator/a0_d4_8>.
+	Found 4-bit shift register for signal <calc_exp_sigma/exp_f/PolynomialEvaluator/a0_d4_7>.
+	Found 4-bit shift register for signal <calc_exp_sigma/exp_f/PolynomialEvaluator/a0_d4_6>.
+	Found 4-bit shift register for signal <calc_exp_sigma/exp_f/PolynomialEvaluator/a0_d4_5>.
+	Found 4-bit shift register for signal <calc_exp_sigma/exp_f/PolynomialEvaluator/a0_d4_4>.
+	Found 4-bit shift register for signal <calc_exp_sigma/exp_f/PolynomialEvaluator/a0_d4_3>.
+	Found 4-bit shift register for signal <calc_exp_sigma/exp_f/PolynomialEvaluator/a0_d4_2>.
+	Found 4-bit shift register for signal <calc_exp_sigma/exp_f/PolynomialEvaluator/a0_d4_1>.
+	Found 4-bit shift register for signal <calc_exp_sigma/exp_f/PolynomialEvaluator/a0_d4_0>.
+	Found 2-bit shift register for signal <calc_exp_sigma/exp_f/PolynomialEvaluator/a1_d2_8>.
+	Found 2-bit shift register for signal <calc_exp_sigma/exp_f/PolynomialEvaluator/a1_d2_7>.
+	Found 2-bit shift register for signal <calc_exp_sigma/exp_f/PolynomialEvaluator/a1_d2_6>.
+	Found 2-bit shift register for signal <calc_exp_sigma/exp_f/PolynomialEvaluator/a1_d2_5>.
+	Found 2-bit shift register for signal <calc_exp_sigma/exp_f/PolynomialEvaluator/a1_d2_4>.
+	Found 2-bit shift register for signal <calc_exp_sigma/exp_f/PolynomialEvaluator/a1_d2_3>.
+	Found 2-bit shift register for signal <calc_exp_sigma/exp_f/PolynomialEvaluator/a1_d2_2>.
+	Found 2-bit shift register for signal <calc_exp_sigma/exp_f/PolynomialEvaluator/a1_d2_1>.
+	Found 2-bit shift register for signal <calc_exp_sigma/exp_f/PolynomialEvaluator/a1_d2_0>.
+Unit <main> processed.
 
 =========================================================================
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 700
- Flip-Flops                                            : 700
+# Registers                                            : 752
+ Flip-Flops                                            : 752
 # Shift Registers                                      : 104
  2-bit shift register                                  : 22
  3-bit shift register                                  : 36
@@ -1522,33 +1528,33 @@ Partition Implementation Status
 *                            Design Summary                             *
 =========================================================================
 
-Top Level Output File Name         : Main.ngc
+Top Level Output File Name         : main.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 1420
+# BELS                             : 1452
 #      GND                         : 1
 #      INV                         : 8
 #      LUT1                        : 47
-#      LUT2                        : 389
+#      LUT2                        : 415
 #      LUT3                        : 99
 #      LUT4                        : 21
-#      LUT5                        : 29
-#      LUT6                        : 348
+#      LUT5                        : 32
+#      LUT6                        : 351
 #      MUXCY                       : 147
 #      MUXF7                       : 144
 #      MUXF8                       : 36
 #      VCC                         : 1
 #      XORCY                       : 150
-# FlipFlops/Latches                : 820
-#      FD                          : 425
-#      FDE                         : 265
-#      FDR                         : 96
+# FlipFlops/Latches                : 872
+#      FD                          : 477
+#      FDE                         : 271
+#      FDR                         : 90
 #      FDRE                        : 34
 # RAMS                             : 294
 #      RAM64M                      : 288
-#      RAMB18E1                    : 5
-#      RAMB36E1                    : 1
+#      RAMB16BWER                  : 4
+#      RAMB8BWER                   : 2
 # Shift Registers                  : 104
 #      SRLC16E                     : 104
 # Clock Buffers                    : 1
@@ -1556,39 +1562,39 @@ Primitive and Black Box Usage:
 # IO Buffers                       : 109
 #      IBUF                        : 55
 #      OBUF                        : 54
-# DSPs                             : 4
-#      DSP48E1                     : 4
+# DSPs                             : 8
+#      DSP48A1                     : 8
 
 Device utilization summary:
 ---------------------------
 
-Selected Device : 6vlx240tff1156-1 
+Selected Device : 6slx45csg324-3 
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:             820  out of  301440     0%  
- Number of Slice LUTs:                 2197  out of  150720     1%  
-    Number used as Logic:               941  out of  150720     0%  
-    Number used as Memory:             1256  out of  58400     2%  
+ Number of Slice Registers:             872  out of  54576     1%  
+ Number of Slice LUTs:                 2229  out of  27288     8%  
+    Number used as Logic:               973  out of  27288     3%  
+    Number used as Memory:             1256  out of   6408    19%  
        Number used as RAM:             1152
        Number used as SRL:              104
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:   2340
-   Number with an unused Flip Flop:    1520  out of   2340    64%  
-   Number with an unused LUT:           143  out of   2340     6%  
-   Number of fully used LUT-FF pairs:   677  out of   2340    28%  
-   Number of unique control sets:        18
+ Number of LUT Flip Flop pairs used:   2400
+   Number with an unused Flip Flop:    1528  out of   2400    63%  
+   Number with an unused LUT:           171  out of   2400     7%  
+   Number of fully used LUT-FF pairs:   701  out of   2400    29%  
+   Number of unique control sets:        23
 
 IO Utilization: 
  Number of IOs:                         110
- Number of bonded IOBs:                 110  out of    600    18%  
+ Number of bonded IOBs:                 110  out of    218    50%  
 
 Specific Feature Utilization:
- Number of Block RAM/FIFO:                4  out of    416     0%  
-    Number using Block RAM only:          4
- Number of BUFG/BUFGCTRLs:                1  out of     32     3%  
- Number of DSP48E1s:                      4  out of    768     0%  
+ Number of Block RAM/FIFO:                5  out of    116     4%  
+    Number using Block RAM only:          5
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
+ Number of DSP48A1s:                      8  out of     58    13%  
 
 ---------------------------
 Partition Resource Summary:
@@ -1611,26 +1617,20 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-CLK                                | BUFGP                  | 1228  |
+clk                                | BUFGP                  | 1284  |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
 ----------------------------------------
------------------------------------------------------+--------------------------------+-------+
-Control Signal                                       | Buffer(FF name)                | Load  |
------------------------------------------------------+--------------------------------+-------+
-calcExpMu/done_glue_ce(XST_GND:G)                    | NONE(core0/exp_sigma/Mram_RAM0)| 18    |
-core0/exp_sigma/BUS_0002(core0/exp_sigma/BUS_00021:O)| NONE(core0/exp_sigma/Mram_RAM1)| 2     |
-core0/exp_sigma/WE_0(core0/exp_sigma/WE_01:O)        | NONE(core0/exp_sigma/Mram_RAM0)| 2     |
------------------------------------------------------+--------------------------------+-------+
+No asynchronous control signals found in this design
 
 Timing Summary:
 ---------------
-Speed Grade: -1
+Speed Grade: -3
 
-   Minimum period: 4.901ns (Maximum Frequency: 204.040MHz)
-   Minimum input arrival time before clock: 1.377ns
-   Maximum output required time after clock: 0.777ns
+   Minimum period: 12.185ns (Maximum Frequency: 82.068MHz)
+   Minimum input arrival time before clock: 2.945ns
+   Maximum output required time after clock: 3.597ns
    Maximum combinational path delay: No path found
 
 Timing Details:
@@ -1638,101 +1638,95 @@ Timing Details:
 All values displayed in nanoseconds (ns)
 
 =========================================================================
-Timing constraint: Default period analysis for Clock 'CLK'
-  Clock period: 4.901ns (frequency: 204.040MHz)
-  Total number of paths / destination ports: 16951 / 4547
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 12.185ns (frequency: 82.068MHz)
+  Total number of paths / destination ports: 39668 / 4756
 -------------------------------------------------------------------------
-Delay:               4.901ns (Levels of Logic = 12)
-  Source:            calcExpMu/exp/PolynomialEvaluator/Product_1/Mmult_DSP_bh72_ch0_0 (DSP)
-  Destination:       calcExpMu/exp/PolynomialEvaluator/Product_2/Mmult_DSP_bh100_ch0_0 (DSP)
-  Source Clock:      CLK rising
-  Destination Clock: CLK rising
+Delay:               12.185ns (Levels of Logic = 6)
+  Source:            calc_exp_mu/exp/PolynomialEvaluator/Product_1/Mmult_DSP_bh72_ch0_01 (DSP)
+  Destination:       calc_exp_mu/exp/PolynomialEvaluator/Product_2/Mmult_DSP_bh100_ch0_01 (DSP)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
 
-  Data Path: calcExpMu/exp/PolynomialEvaluator/Product_1/Mmult_DSP_bh72_ch0_0 to calcExpMu/exp/PolynomialEvaluator/Product_2/Mmult_DSP_bh100_ch0_0
+  Data Path: calc_exp_mu/exp/PolynomialEvaluator/Product_1/Mmult_DSP_bh72_ch0_01 to calc_exp_mu/exp/PolynomialEvaluator/Product_2/Mmult_DSP_bh100_ch0_01
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     DSP48E1:CLK->P37      3   0.494   0.792  calcExpMu/exp/PolynomialEvaluator/Product_1/Mmult_DSP_bh72_ch0_0 (calcExpMu/exp/PolynomialEvaluator/Product_1/Adder_final72_0/Madd_R_lut<6>)
-     LUT6:I0->O           10   0.068   0.476  calcExpMu/exp/PolynomialEvaluator/piPT1<4>1 (calcExpMu/exp/PolynomialEvaluator/piPT1<4>)
-     LUT2:I1->O            1   0.068   0.000  calcExpMu/exp/PolynomialEvaluator/Sum1/Madd_R_Madd_lut<4> (calcExpMu/exp/PolynomialEvaluator/Sum1/Madd_R_Madd_lut<4>)
-     MUXCY:S->O            1   0.290   0.000  calcExpMu/exp/PolynomialEvaluator/Sum1/Madd_R_Madd_cy<4> (calcExpMu/exp/PolynomialEvaluator/Sum1/Madd_R_Madd_cy<4>)
-     MUXCY:CI->O           1   0.020   0.000  calcExpMu/exp/PolynomialEvaluator/Sum1/Madd_R_Madd_cy<5> (calcExpMu/exp/PolynomialEvaluator/Sum1/Madd_R_Madd_cy<5>)
-     MUXCY:CI->O           1   0.020   0.000  calcExpMu/exp/PolynomialEvaluator/Sum1/Madd_R_Madd_cy<6> (calcExpMu/exp/PolynomialEvaluator/Sum1/Madd_R_Madd_cy<6>)
-     MUXCY:CI->O           1   0.020   0.000  calcExpMu/exp/PolynomialEvaluator/Sum1/Madd_R_Madd_cy<7> (calcExpMu/exp/PolynomialEvaluator/Sum1/Madd_R_Madd_cy<7>)
-     MUXCY:CI->O           1   0.020   0.000  calcExpMu/exp/PolynomialEvaluator/Sum1/Madd_R_Madd_cy<8> (calcExpMu/exp/PolynomialEvaluator/Sum1/Madd_R_Madd_cy<8>)
-     MUXCY:CI->O           1   0.020   0.000  calcExpMu/exp/PolynomialEvaluator/Sum1/Madd_R_Madd_cy<9> (calcExpMu/exp/PolynomialEvaluator/Sum1/Madd_R_Madd_cy<9>)
-     MUXCY:CI->O           1   0.020   0.000  calcExpMu/exp/PolynomialEvaluator/Sum1/Madd_R_Madd_cy<10> (calcExpMu/exp/PolynomialEvaluator/Sum1/Madd_R_Madd_cy<10>)
-     MUXCY:CI->O           1   0.020   0.000  calcExpMu/exp/PolynomialEvaluator/Sum1/Madd_R_Madd_cy<11> (calcExpMu/exp/PolynomialEvaluator/Sum1/Madd_R_Madd_cy<11>)
-     MUXCY:CI->O           0   0.020   0.000  calcExpMu/exp/PolynomialEvaluator/Sum1/Madd_R_Madd_cy<12> (calcExpMu/exp/PolynomialEvaluator/Sum1/Madd_R_Madd_cy<12>)
-     XORCY:CI->O           1   0.239   0.399  calcExpMu/exp/PolynomialEvaluator/Sum1/Madd_R_Madd_xor<13> (calcExpMu/exp/PolynomialEvaluator/sigmaP1<13>)
-     DSP48E1:A23               1.919          calcExpMu/exp/PolynomialEvaluator/Product_2/Mmult_DSP_bh100_ch0_0
+     DSP48A1:CLK->P21      2   1.200   0.961  calc_exp_mu/exp/PolynomialEvaluator/Product_1/Mmult_DSP_bh72_ch0_01 (calc_exp_mu/exp/PolynomialEvaluator/Product_1/Adder_final72_0/Madd_R_lut<7>)
+     LUT6:I1->O           10   0.203   0.857  calc_exp_mu/exp/PolynomialEvaluator/piPT1<4>1 (calc_exp_mu/exp/PolynomialEvaluator/piPT1<4>)
+     LUT2:I1->O            1   0.205   0.000  calc_exp_mu/exp/PolynomialEvaluator/Sum1/Madd_R_Madd_lut<4> (calc_exp_mu/exp/PolynomialEvaluator/Sum1/Madd_R_Madd_lut<4>)
+     MUXCY:S->O            1   0.172   0.000  calc_exp_mu/exp/PolynomialEvaluator/Sum1/Madd_R_Madd_cy<4> (calc_exp_mu/exp/PolynomialEvaluator/Sum1/Madd_R_Madd_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  calc_exp_mu/exp/PolynomialEvaluator/Sum1/Madd_R_Madd_cy<5> (calc_exp_mu/exp/PolynomialEvaluator/Sum1/Madd_R_Madd_cy<5>)
+     XORCY:CI->O           1   0.180   0.579  calc_exp_mu/exp/PolynomialEvaluator/Sum1/Madd_R_Madd_xor<6> (calc_exp_mu/exp/PolynomialEvaluator/sigmaP1<6>)
+     DSP48A1:A16->P47     18   4.560   1.049  calc_exp_mu/exp/PolynomialEvaluator/Product_2/Mmult_DSP_bh100_ch0_0 (calc_exp_mu/exp/PolynomialEvaluator/Product_2/Mmult_DSP_bh100_ch0_0_P47_to_Product_2/Mmult_DSP_bh100_ch0_01)
+     DSP48A1:C30               2.200          calc_exp_mu/exp/PolynomialEvaluator/Product_2/Mmult_DSP_bh100_ch0_01
     ----------------------------------------
-    Total                      4.901ns (3.234ns logic, 1.667ns route)
-                                       (66.0% logic, 34.0% route)
+    Total                     12.185ns (8.739ns logic, 3.446ns route)
+                                       (71.7% logic, 28.3% route)
 
 =========================================================================
-Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK'
-  Total number of paths / destination ports: 77 / 77
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 56 / 56
 -------------------------------------------------------------------------
-Offset:              1.377ns (Levels of Logic = 2)
-  Source:            iDoneOptionCalc (PAD)
+Offset:              2.945ns (Levels of Logic = 2)
+  Source:            i_new_option (PAD)
   Destination:       readyOption_control/Q (FF)
-  Destination Clock: CLK rising
+  Destination Clock: clk rising
 
-  Data Path: iDoneOptionCalc to readyOption_control/Q
+  Data Path: i_new_option to readyOption_control/Q
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             2   0.003   0.644  iDoneOptionCalc_IBUF (iDoneOptionCalc_IBUF)
-     LUT4:I0->O            1   0.068   0.399  readyOption_control/_n0009_inv1 (readyOption_control/_n0009_inv)
-     FDE:CE                    0.263          readyOption_control/Q
+     IBUF:I->O             2   1.222   0.617  i_new_option_IBUF (i_new_option_IBUF)
+     LUT4:I3->O            1   0.205   0.579  readyOption_control/_n0009_inv1 (readyOption_control/_n0009_inv)
+     FDE:CE                    0.322          readyOption_control/Q
     ----------------------------------------
-    Total                      1.377ns (0.334ns logic, 1.043ns route)
-                                       (24.3% logic, 75.7% route)
+    Total                      2.945ns (1.749ns logic, 1.196ns route)
+                                       (59.4% logic, 40.6% route)
 
 =========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK'
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
   Total number of paths / destination ports: 54 / 54
 -------------------------------------------------------------------------
-Offset:              0.777ns (Levels of Logic = 1)
-  Source:            core0/out_26 (FF)
-  Destination:       oAcc1<26> (PAD)
-  Source Clock:      CLK rising
+Offset:              3.597ns (Levels of Logic = 1)
+  Source:            core0/price_26 (FF)
+  Destination:       o_acc1<26> (PAD)
+  Source Clock:      clk rising
 
-  Data Path: core0/out_26 to oAcc1<26>
+  Data Path: core0/price_26 to o_acc1<26>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDE:C->Q              1   0.375   0.399  core0/out_26 (core0/out_26)
-     OBUF:I->O                 0.003          oAcc1_26_OBUF (oAcc1<26>)
+     FDE:C->Q              1   0.447   0.579  core0/price_26 (core0/price_26)
+     OBUF:I->O                 2.571          o_acc1_26_OBUF (o_acc1<26>)
     ----------------------------------------
-    Total                      0.777ns (0.378ns logic, 0.399ns route)
-                                       (48.6% logic, 51.4% route)
+    Total                      3.597ns (3.018ns logic, 0.579ns route)
+                                       (83.9% logic, 16.1% route)
 
 =========================================================================
 
 Cross Clock Domains Report:
 --------------------------
 
-Clock to Setup on destination clock CLK
+Clock to Setup on destination clock clk
 ---------------+---------+---------+---------+---------+
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-CLK            |    4.901|         |         |         |
+clk            |   12.185|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 25.00 secs
-Total CPU time to Xst completion: 25.44 secs
+Total REAL time to Xst completion: 32.00 secs
+Total CPU time to Xst completion: 31.81 secs
  
 --> 
 
-Total memory usage is 221240 kilobytes
+Total memory usage is 241848 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :  207 (   0 filtered)
-Number of infos    :  191 (   0 filtered)
+Number of warnings :  206 (   0 filtered)
+Number of infos    :  201 (   0 filtered)
 
